@@ -7,6 +7,18 @@
   <meta name="description" content="Stand out with a featured listing. Get more visibility, traffic, and reach more people looking for a church home.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --navy: #1a2744;
+      --navy-dark: #111c33;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --white: #faf9f7;
+      --surface: #f0ede8;
+      --text: #2d2d2d;
+      --muted: #6b6b6b;
+      --border: #e0dbd3;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,8 +27,8 @@
 
     body {
       font-family: 'Inter', -apple-system, system-ui, sans-serif;
-      background: #fafafa;
-      color: #1a1a1a;
+      background: var(--white);
+      color: var(--text);
       line-height: 1.6;
     }
 
@@ -27,8 +39,8 @@
     }
 
     header {
-      background: white;
-      border-bottom: 1px solid #e5e5e5;
+      background: var(--navy);
+      border-bottom: 1px solid var(--navy-dark);
       padding: 20px 0;
       margin-bottom: 40px;
     }
@@ -36,7 +48,7 @@
     .logo {
       font-size: 24px;
       font-weight: 700;
-      color: #2563eb;
+      color: var(--gold);
       text-align: center;
     }
 
@@ -79,7 +91,7 @@
     }
 
     .pricing-card.featured {
-      border-color: #2563eb;
+      border-color: var(--gold);
       position: relative;
     }
 
@@ -87,7 +99,7 @@
       position: absolute;
       top: -12px;
       right: 24px;
-      background: #2563eb;
+      background: var(--gold);
       color: white;
       padding: 6px 16px;
       border-radius: 20px;
@@ -104,7 +116,7 @@
     .price {
       font-size: 48px;
       font-weight: 700;
-      color: #2563eb;
+      color: var(--gold);
       margin-bottom: 4px;
     }
 
@@ -121,7 +133,7 @@
 
     .features li {
       padding: 12px 0;
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid var(--surface);
       display: flex;
       align-items: start;
       gap: 12px;
@@ -139,8 +151,8 @@
     }
 
     .btn-cta {
-      background: #2563eb;
-      color: white;
+      background: var(--gold);
+      color: var(--navy);
       border: none;
       padding: 16px;
       border-radius: 8px;
@@ -154,17 +166,17 @@
     }
 
     .btn-cta:hover {
-      background: #1d4ed8;
+      background: var(--gold-light);
     }
 
     .btn-secondary {
       background: white;
-      color: #2563eb;
-      border: 2px solid #2563eb;
+      color: var(--gold);
+      border: 2px solid var(--gold);
     }
 
     .btn-secondary:hover {
-      background: #f0f9ff;
+      background: var(--surface);
     }
 
     .faq {
@@ -184,7 +196,7 @@
     .faq-item {
       margin-bottom: 24px;
       padding-bottom: 24px;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid var(--border);
     }
 
     .faq-item:last-child {
