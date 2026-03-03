@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches Near Me South Africa | Find Local Churches by City & Denomination</title>
+  <meta name="description" content="Find churches near you in South Africa. Search by city, denomination, and service times. Free listings for all churches. Verified information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #525252;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .search-bar {
+      background: white;
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      gap: 8px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .search-bar input, .search-bar select {
+      flex: 1;
+      border: none;
+      padding: 12px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      background: #f5f5f5;
+    }
+
+    .search-bar input:focus, .search-bar select:focus {
+      outline: 2px solid #2563eb;
+      background: white;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .filters {
+      background: white;
+      padding: 20px;
+      margin: 24px 0;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .filter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .filter-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #525252;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #d4d4d4;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .results {
+      margin-top: 32px;
+    }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .results-header h2 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 8px;
+    }
+
+    .view-toggle button {
+      padding: 8px 16px;
+      border: 1px solid #d4d4d4;
+      background: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .view-toggle button.active {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    .church-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .church-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .church-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .church-card.featured {
+      border: 2px solid #2563eb;
+      position: relative;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #2563eb;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .church-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .church-denomination {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .church-address {
+      color: #525252;
+      font-size: 14px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: start;
+      gap: 6px;
+    }
+
+    .church-contact {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .church-contact a {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .church-contact a:hover {
+      text-decoration: underline;
+    }
+
+    #map {
+      height: 500px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      display: none;
+    }
+
+    #map.active {
+      display: block;
+    }
+
+    footer {
+      background: white;
+      border-top: 1px solid #e5e5e5;
+      padding: 40px 0;
+      margin-top: 60px;
+      text-align: center;
+      color: #737373;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: #737373;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .empty-state h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #404040;
+    }
+
+    .empty-state p {
+      color: #737373;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .search-bar {
+        flex-direction: column;
+      }
+
+      .filter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .church-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">⛪ ChurchesNearMe</div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/submit.html">Add Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Find Your Church Home</h1>
+      <p>Discover churches across South Africa by city, denomination, and service times</p>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search churches, cities, denominations...">
+        <button class="btn-primary" onclick="search()">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="filters">
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label>City</label>
+          <select id="cityFilter" onchange="applyFilters()">
+            <option value="">All Cities</option>
+            <option value="Cape Town">Cape Town</option>
+            <option value="Johannesburg">Johannesburg</option>
+            <option value="Durban">Durban</option>
+            <option value="Pretoria">Pretoria</option>
+            <option value="Port Elizabeth">Port Elizabeth</option>
+            <option value="Bloemfontein">Bloemfontein</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Denomination</label>
+          <select id="denominationFilter" onchange="applyFilters()">
+            <option value="">All Denominations</option>
+            <option value="Anglican">Anglican</option>
+            <option value="Baptist">Baptist</option>
+            <option value="Catholic">Catholic</option>
+            <option value="Dutch Reformed">Dutch Reformed</option>
+            <option value="Methodist">Methodist</option>
+            <option value="Pentecostal">Pentecostal</option>
+            <option value="Non-Denominational">Non-Denominational</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Province</label>
+          <select id="provinceFilter" onchange="applyFilters()">
+            <option value="">All Provinces</option>
+            <option value="Western Cape">Western Cape</option>
+            <option value="Gauteng">Gauteng</option>
+            <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+            <option value="Eastern Cape">Eastern Cape</option>
+            <option value="Free State">Free State</option>
+            <option value="Limpopo">Limpopo</option>
+            <option value="Mpumalanga">Mpumalanga</option>
+            <option value="Northern Cape">Northern Cape</option>
+            <option value="North West">North West</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>&nbsp;</label>
+          <button class="btn-primary" style="width: 100%;" onclick="findNearMe()">📍 Near Me</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="results-header">
+        <h2 id="resultsTitle">All Churches</h2>
+        <div class="view-toggle">
+          <button class="active" onclick="setView('list')">List</button>
+          <button onclick="setView('map')">Map</button>
+        </div>
+      </div>
+
+      <div id="map"></div>
+
+      <div id="churchList" class="church-grid">
+        <div class="loading">Loading churches...</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/submit.html" style="color: #2563eb; text-decoration: none;">Add Your Church</a> | 
+        <a href="/featured.html" style="color: #2563eb; text-decoration: none;">Get Featured (R199/mo)</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // Supabase client (you'll need to fill in your project URL and anon key)
+    const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    let allChurches = [];
+    let filteredChurches = [];
+    let map, markers = [];
+
+    // Load churches on page load
+    async function loadChurches() {
+      try {
+        const { data, error } = await supabase
+          .from('churches')
+          .select('*')
+          .eq('verified', true)
+          .order('featured', { ascending: false })
+          .order('name', { ascending: true });
+
+        if (error) throw error;
+
+        allChurches = data || [];
+        filteredChurches = allChurches;
+        renderChurches();
+      } catch (err) {
+        console.error('Error loading churches:', err);
+        document.getElementById('churchList').innerHTML = `
+          <div class="empty-state">
+            <h3>⚠️ Unable to load churches</h3>
+            <p>Please check your internet connection and try again.</p>
+          </div>
+        `;
+      }
+    }
+
+    function renderChurches() {
+      const container = document.getElementById('churchList');
+      
+      if (filteredChurches.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <h3>No churches found</h3>
+            <p>Try adjusting your search filters or browse all churches.</p>
+            <button class="btn-primary" onclick="clearFilters()">Clear Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filteredChurches.map(church => `
+        <div class="church-card ${church.featured ? 'featured' : ''}">
+          ${church.featured ? '<span class="featured-badge">FEATURED</span>' : ''}
+          <h3>${church.name}</h3>
+          ${church.denomination ? `<div class="church-denomination">${church.denomination}</div>` : ''}
+          <div class="church-address">
+            📍 ${church.address}, ${church.city}
+          </div>
+          <div class="church-contact">
+            ${church.website ? `<a href="${church.website}" target="_blank">Website</a>` : ''}
+            ${church.phone ? `<a href="tel:${church.phone}">Call</a>` : ''}
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('resultsTitle').textContent = `${filteredChurches.length} Churches Found`;
+    }
+
+    function applyFilters() {
+      const city = document.getElementById('cityFilter').value;
+      const denomination = document.getElementById('denominationFilter').value;
+      const province = document.getElementById('provinceFilter').value;
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+      filteredChurches = allChurches.filter(church => {
+        const matchesCity = !city || church.city === city;
+        const matchesDenomination = !denomination || church.denomination === denomination;
+        const matchesProvince = !province || church.province === province;
+        const matchesSearch = !searchTerm || 
+          church.name.toLowerCase().includes(searchTerm) ||
+          (church.city && church.city.toLowerCase().includes(searchTerm)) ||
+          (church.denomination && church.denomination.toLowerCase().includes(searchTerm));
+
+        return matchesCity && matchesDenomination && matchesProvince && matchesSearch;
+      });
+
+      renderChurches();
+    }
+
+    function search() {
+      applyFilters();
+    }
+
+    function clearFilters() {
+      document.getElementById('cityFilter').value = '';
+      document.getElementById('denominationFilter').value = '';
+      document.getElementById('provinceFilter').value = '';
+      document.getElementById('searchInput').value = '';
+      applyFilters();
+    }
+
+    function setView(view) {
+      const buttons = document.querySelectorAll('.view-toggle button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      if (view === 'map') {
+        document.getElementById('map').classList.add('active');
+        initMap();
+      } else {
+        document.getElementById('map').classList.remove('active');
+      }
+    }
+
+    function initMap() {
+      // TODO: Add Google Maps integration
+      // For now, show placeholder
+      if (!map) {
+        document.getElementById('map').innerHTML = '<div style="padding: 60px; text-align: center; background: #f5f5f5; border-radius: 12px;"><p style="color: #737373;">Map view coming soon. Add Google Maps API key to enable.</p></div>';
+      }
+    }
+
+    function findNearMe() {
+      if (!navigator.geolocation) {
+        alert('Geolocation is not supported by your browser');
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          const userLat = position.coords.latitude;
+          const userLng = position.coords.longitude;
+
+          // Calculate distances and sort
+          filteredChurches = allChurches.map(church => {
+            if (!church.lat || !church.lng) return { ...church, distance: Infinity };
+            
+            const distance = getDistance(userLat, userLng, church.lat, church.lng);
+            return { ...church, distance };
+          }).sort((a, b) => a.distance - b.distance);
+
+          renderChurches();
+          document.getElementById('resultsTitle').textContent = 'Closest Churches to You';
+        },
+        error => {
+          alert('Unable to get your location. Please enable location services.');
+        }
+      );
+    }
+
+    function getDistance(lat1, lon1, lat2, lon2) {
+      const R = 6371; // Earth radius in km
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLon = (lon2 - lon1) * Math.PI / 180;
+      const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLon/2) * Math.sin(dLon/2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      return R * c;
+    }
+
+    // Search on Enter key
+    document.getElementById('searchInput').addEventListener('keypress', e => {
+      if (e.key === 'Enter') search();
+    });
+
+    // Load churches on page load
+    loadChurches();
+  </script>
+</body>
+</html>

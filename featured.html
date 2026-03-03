@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Featured | ChurchesNearMe South Africa</title>
+  <meta name="description" content="Stand out with a featured listing. Get more visibility, traffic, and reach more people looking for a church home.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px 0;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2563eb;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .intro {
+      color: #525252;
+      font-size: 20px;
+      margin-bottom: 48px;
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .pricing-card {
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border: 2px solid transparent;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .pricing-card.featured {
+      border-color: #2563eb;
+      position: relative;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: #2563eb;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .pricing-card h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 48px;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 4px;
+    }
+
+    .price-period {
+      color: #737373;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .features li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f5f5f5;
+      display: flex;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .features li:last-child {
+      border-bottom: none;
+    }
+
+    .check {
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .btn-cta {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+
+    .btn-cta:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+    }
+
+    .btn-secondary:hover {
+      background: #f0f9ff;
+    }
+
+    .faq {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .faq h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .faq-item {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .faq-answer {
+      color: #525252;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">⛪ ChurchesNearMe</div>
+  </header>
+
+  <main class="container">
+    <h1>Get More Visitors</h1>
+    <p class="intro">Stand out with a featured listing and reach more people searching for a church home in your area.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h2>Free</h2>
+        <div class="price">R0</div>
+        <div class="price-period">forever</div>
+        <ul class="features">
+          <li><span class="check">✓</span> <span>Basic church listing</span></li>
+          <li><span class="check">✓</span> <span>Appears in search results</span></li>
+          <li><span class="check">✓</span> <span>Church name & address</span></li>
+          <li><span class="check">✓</span> <span>Contact details</span></li>
+          <li><span class="check">✓</span> <span>Service times</span></li>
+        </ul>
+        <a href="/submit.html" class="btn-cta btn-secondary">Add Your Church Free</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="popular-badge">MOST POPULAR</span>
+        <h2>Featured</h2>
+        <div class="price">R199</div>
+        <div class="price-period">per month</div>
+        <ul class="features">
+          <li><span class="check">✓</span> <span>Everything in Free</span></li>
+          <li><span class="check">✓</span> <span><strong>Top of search results</strong></span></li>
+          <li><span class="check">✓</span> <span><strong>Featured badge</strong></span></li>
+          <li><span class="check">✓</span> <span><strong>Highlighted listing</strong></span></li>
+          <li><span class="check">✓</span> <span>Priority support</span></li>
+          <li><span class="check">✓</span> <span>Monthly analytics</span></li>
+        </ul>
+        <a href="mailto:brandonkz@gmail.com?subject=Featured Listing - ChurchesNearMe" class="btn-cta">Get Featured</a>
+      </div>
+
+      <div class="pricing-card">
+        <h2>Premium</h2>
+        <div class="price">R499</div>
+        <div class="price-period">per month</div>
+        <ul class="features">
+          <li><span class="check">✓</span> <span>Everything in Featured</span></li>
+          <li><span class="check">✓</span> <span><strong>Homepage featured spot</strong></span></li>
+          <li><span class="check">✓</span> <span><strong>Photo gallery (6 photos)</strong></span></li>
+          <li><span class="check">✓</span> <span><strong>Video embed</strong></span></li>
+          <li><span class="check">✓</span> <span><strong>Extended description</strong></span></li>
+          <li><span class="check">✓</span> <span>Social media sharing</span></li>
+          <li><span class="check">✓</span> <span>Weekly analytics</span></li>
+        </ul>
+        <a href="mailto:brandonkz@gmail.com?subject=Premium Listing - ChurchesNearMe" class="btn-cta">Go Premium</a>
+      </div>
+    </div>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I get started?</div>
+        <div class="faq-answer">
+          First, add your church for free using the "Add Your Church" form. Once your listing is approved, email us at brandonkz@gmail.com to upgrade to Featured or Premium.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I cancel anytime?</div>
+        <div class="faq-answer">
+          Yes! No contracts. Cancel anytime with 7 days notice. Your listing will remain as a free listing after cancellation.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I pay?</div>
+        <div class="faq-answer">
+          We accept EFT, SnapScan, or monthly debit order. Contact us at brandonkz@gmail.com to set up payment.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What makes a listing "Featured"?</div>
+        <div class="faq-answer">
+          Featured listings appear at the top of search results with a blue highlighted border and "FEATURED" badge. They get 3-5x more views than regular listings.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I update my listing details?</div>
+        <div class="faq-answer">
+          Yes! Email us anytime at brandonkz@gmail.com with updates to your service times, contact details, or other information. Premium listings get a self-service dashboard for instant updates.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you offer discounts for multiple locations?</div>
+        <div class="faq-answer">
+          Yes! If your church has multiple campuses, contact us for multi-location pricing. We offer discounts starting at 2+ locations.
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
