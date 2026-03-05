@@ -485,7 +485,7 @@
       const visibleChurches = filteredChurches.slice(0, visibleCount);
 
       container.innerHTML = visibleChurches.map(church => `
-        <a href="/church.html?slug=${church.slug}" class="church-card-link">
+        <a href="/churches/${church.slug}/" class="church-card-link">
           <div class="church-card ${church.featured ? 'featured' : ''}">
             ${church.featured ? '<span class="featured-badge">FEATURED</span>' : ''}
             <h3>${church.name}</h3>

@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Church Details | ChurchesNearMe</title>
   <meta name="description" content="Find church details, service times, contact info, and directions.">
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get('slug');
+      if (slug) {
+        window.location.replace('/churches/' + encodeURIComponent(slug) + '/');
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -295,7 +304,7 @@
             if (nearby.length > 0) {
               html += '<div class="nearby-section"><h3>Nearby Churches</h3><div class="nearby-grid">';
               nearby.forEach(function(c) {
-                html += '<a href="/church.html?slug=' + c.slug + '" class="nearby-card">';
+                html += '<a href="/churches/' + c.slug + '/" class="nearby-card">';
                 html += '<h4>' + c.name + '</h4>';
                 html += '<div class="nearby-denom">' + (c.denomination || '') + '</div>';
                 html += '<div class="nearby-addr">📍 ' + c.address + ', ' + c.city + ' · ' + c.distance.toFixed(1) + ' km</div>';
