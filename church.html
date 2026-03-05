@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Church Details | ChurchesNearMe</title>
+  <meta name="description" content="Find church details, service times, contact info, and directions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <style>
+    .church-detail {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    .back-link:hover { color: var(--gold-light); }
+    .detail-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+    .detail-card h1 {
+      font-size: 1.8rem;
+      color: var(--navy);
+      margin: 0 0 0.5rem 0;
+    }
+    .church-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .featured-tag {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { font-size: 1.2rem; min-width: 28px; text-align: center; }
+    .info-content { flex: 1; }
+    .info-label { font-size: 0.85rem; color: #64748b; margin-bottom: 2px; }
+    .info-value { font-size: 1rem; color: #1e293b; font-weight: 500; }
+    .info-value a { color: var(--gold); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .actions-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .action-btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .action-btn-primary:hover { background: var(--gold-light); }
+    .action-btn-secondary {
+      background: var(--navy);
+      color: white;
+    }
+    .action-btn-secondary:hover { opacity: 0.9; }
+    .action-btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .action-btn-outline:hover { background: var(--navy); color: white; }
+    .map-container {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .loading-detail {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #64748b;
+    }
+    .error-detail {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .error-detail h2 { color: var(--navy); }
+    .nearby-section { margin-top: 2rem; }
+    .nearby-section h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 1rem; }
+    .nearby-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .nearby-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s;
+    }
+    .nearby-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .nearby-card h4 { color: var(--navy); margin: 0 0 4px 0; font-size: 1rem; }
+    .nearby-card .nearby-denom { color: var(--gold); font-size: 0.85rem; }
+    .nearby-card .nearby-addr { color: #64748b; font-size: 0.85rem; margin-top: 4px; }
+    @media (max-width: 768px) {
+      .detail-card { padding: 1.5rem; }
+      .detail-card h1 { font-size: 1.4rem; }
+      .actions-row { flex-direction: column; }
+      .action-btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">⛪ ChurchesNearMe</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/submit.html">Add Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="church-detail">
+    <a href="/" class="back-link">← Back to directory</a>
+    <div id="churchContent">
+      <div class="loading-detail">Loading church details...</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p><a href="/submit.html">Add Your Church</a> | <a href="/featured.html">Get Featured (R199/mo)</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    var SUPABASE_URL = 'https://npfbrorgnwhrbpfbqiuh.supabase.co';
+    var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wZmJyb3JnbndocmJwZmJxaXVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1MjAyNTcsImV4cCI6MjA4ODA5NjI1N30.uQ5fMaYuQmaBCXmq84QWTpkUp9U-cZ3gEQyB4-kMzZ4';
+    var db = null;
+
+    function initSupabase() {
+      if (typeof window.supabase === 'undefined') return false;
+      db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      return true;
+    }
+
+    async function loadChurch() {
+      if (!db && !initSupabase()) {
+        document.getElementById('churchContent').innerHTML = '<div class="error-detail"><h2>Failed to load</h2><p>Please refresh the page.</p><a href="/" class="action-btn action-btn-primary">Back to Directory</a></div>';
+        return;
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get('slug');
+
+      if (!slug) {
+        document.getElementById('churchContent').innerHTML = '<div class="error-detail"><h2>Church not found</h2><p>No church specified.</p><a href="/" class="action-btn action-btn-primary">Browse All Churches</a></div>';
+        return;
+      }
+
+      try {
+        var result = await db.from('churches').select('*').eq('slug', slug).eq('verified', true).single();
+        
+        if (result.error || !result.data) {
+          document.getElementById('churchContent').innerHTML = '<div class="error-detail"><h2>Church not found</h2><p>This church listing may have been removed or the link is incorrect.</p><a href="/" class="action-btn action-btn-primary">Browse All Churches</a></div>';
+          return;
+        }
+
+        var church = result.data;
+        
+        // Update page title and meta
+        document.title = church.name + ' - ' + church.city + ' | ChurchesNearMe';
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.content = church.name + ' in ' + church.city + ', ' + church.province + '. ' + (church.denomination || '') + ' church. Find service times, contact details, and directions.';
+
+        var html = '<div class="detail-card">';
+        html += '<h1>' + church.name + '</h1>';
+        html += '<span class="church-badge">' + (church.denomination || 'Church') + '</span>';
+        if (church.featured) html += '<span class="featured-tag">⭐ Featured</span>';
+        
+        html += '<div style="margin-top: 1.5rem;">';
+        
+        // Address
+        html += '<div class="info-row"><div class="info-icon">📍</div><div class="info-content"><div class="info-label">Address</div><div class="info-value">' + church.address + ', ' + church.city + ', ' + church.province + '</div></div></div>';
+        
+        // Phone
+        if (church.phone) {
+          html += '<div class="info-row"><div class="info-icon">📞</div><div class="info-content"><div class="info-label">Phone</div><div class="info-value"><a href="tel:' + church.phone + '">' + church.phone + '</a></div></div></div>';
+        }
+        
+        // Email
+        if (church.email) {
+          html += '<div class="info-row"><div class="info-icon">✉️</div><div class="info-content"><div class="info-label">Email</div><div class="info-value"><a href="mailto:' + church.email + '">' + church.email + '</a></div></div></div>';
+        }
+        
+        // Website
+        if (church.website) {
+          html += '<div class="info-row"><div class="info-icon">🌐</div><div class="info-content"><div class="info-label">Website</div><div class="info-value"><a href="' + church.website + '" target="_blank" rel="noopener">' + church.website.replace('https://', '').replace('http://', '').replace(/\/$/, '') + '</a></div></div></div>';
+        }
+        
+        // Service times
+        if (church.service_times) {
+          html += '<div class="info-row"><div class="info-icon">🕐</div><div class="info-content"><div class="info-label">Service Times</div><div class="info-value">' + church.service_times.replace(/\n/g, '<br>') + '</div></div></div>';
+        }
+        
+        html += '</div>';
+        
+        // Action buttons
+        html += '<div class="actions-row">';
+        if (church.lat && church.lng) {
+          html += '<a href="https://www.google.com/maps/dir/?api=1&destination=' + church.lat + ',' + church.lng + '" target="_blank" class="action-btn action-btn-primary">📍 Get Directions</a>';
+        }
+        if (church.phone) {
+          html += '<a href="tel:' + church.phone + '" class="action-btn action-btn-secondary">📞 Call</a>';
+        }
+        if (church.website) {
+          html += '<a href="' + church.website + '" target="_blank" rel="noopener" class="action-btn action-btn-outline">🌐 Visit Website</a>';
+        }
+        html += '</div>';
+        
+        // Map
+        if (church.lat && church.lng) {
+          html += '<div class="map-container"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=' + (church.lng - 0.005) + ',' + (church.lat - 0.003) + ',' + (church.lng + 0.005) + ',' + (church.lat + 0.003) + '&marker=' + church.lat + ',' + church.lng + '&layers=M" allowfullscreen></iframe></div>';
+        }
+        
+        html += '</div>';
+
+        // Nearby churches
+        if (church.lat && church.lng) {
+          var nearbyResult = await db.from('churches').select('name,slug,denomination,address,city,lat,lng').eq('verified', true).neq('slug', slug).limit(100);
+          if (nearbyResult.data && nearbyResult.data.length > 0) {
+            var nearby = nearbyResult.data
+              .filter(function(c) { return c.lat && c.lng; })
+              .map(function(c) {
+                var d = getDistance(church.lat, church.lng, c.lat, c.lng);
+                return Object.assign(c, { distance: d });
+              })
+              .sort(function(a, b) { return a.distance - b.distance; })
+              .slice(0, 3);
+            
+            if (nearby.length > 0) {
+              html += '<div class="nearby-section"><h3>Nearby Churches</h3><div class="nearby-grid">';
+              nearby.forEach(function(c) {
+                html += '<a href="/church.html?slug=' + c.slug + '" class="nearby-card">';
+                html += '<h4>' + c.name + '</h4>';
+                html += '<div class="nearby-denom">' + (c.denomination || '') + '</div>';
+                html += '<div class="nearby-addr">📍 ' + c.address + ', ' + c.city + ' · ' + c.distance.toFixed(1) + ' km</div>';
+                html += '</a>';
+              });
+              html += '</div></div>';
+            }
+          }
+        }
+
+        document.getElementById('churchContent').innerHTML = html;
+
+      } catch(e) {
+        document.getElementById('churchContent').innerHTML = '<div class="error-detail"><h2>Something went wrong</h2><p>' + e.message + '</p><a href="/" class="action-btn action-btn-primary">Back to Directory</a></div>';
+      }
+    }
+
+    function getDistance(lat1, lon1, lat2, lon2) {
+      var R = 6371;
+      var dLat = (lat2 - lat1) * Math.PI / 180;
+      var dLon = (lon2 - lon1) * Math.PI / 180;
+      var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon/2) * Math.sin(dLon/2);
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    }
+
+    // Nav toggle
+    var header = document.querySelector('header');
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && header) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+
+    // Init
+    (function() {
+      if (initSupabase()) { loadChurch(); }
+      else {
+        var retries = 0;
+        var interval = setInterval(function() {
+          retries++;
+          if (initSupabase()) { clearInterval(interval); loadChurch(); }
+          else if (retries > 10) { clearInterval(interval); document.getElementById('churchContent').innerHTML = '<div class="error-detail"><h2>Failed to load</h2><button class="action-btn action-btn-primary" onclick="location.reload()">Refresh</button></div>'; }
+        }, 500);
+      }
+    })();
+  </script>
+</body>
+</html>

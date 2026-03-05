@@ -485,20 +485,22 @@
       const visibleChurches = filteredChurches.slice(0, visibleCount);
 
       container.innerHTML = visibleChurches.map(church => `
-        <div class="church-card ${church.featured ? 'featured' : ''}">
-          ${church.featured ? '<span class="featured-badge">FEATURED</span>' : ''}
-          <h3>${church.name}</h3>
-          ${church.denomination ? `<div class="church-denomination">${church.denomination}</div>` : ''}
-          <div class="church-address">
-            📍 ${church.address}, ${church.city}
+        <a href="/church.html?slug=${church.slug}" class="church-card-link">
+          <div class="church-card ${church.featured ? 'featured' : ''}">
+            ${church.featured ? '<span class="featured-badge">FEATURED</span>' : ''}
+            <h3>${church.name}</h3>
+            ${church.denomination ? `<div class="church-denomination">${church.denomination}</div>` : ''}
+            <div class="church-address">
+              📍 ${church.address}, ${church.city}
+            </div>
+            ${renderServiceTimes(church.service_times)}
+            ${renderDistance(church.distance)}
+            <div class="church-contact">
+              ${church.website ? `<span class="church-link-tag">🌐 Website</span>` : ''}
+              ${church.phone ? `<span class="church-link-tag">📞 Call</span>` : ''}
+            </div>
           </div>
-          ${renderServiceTimes(church.service_times)}
-          ${renderDistance(church.distance)}
-          <div class="church-contact">
-            ${church.website ? `<a href="${church.website}" target="_blank">Website</a>` : ''}
-            ${church.phone ? `<a href="tel:${church.phone}">Call</a>` : ''}
-          </div>
-        </div>
+        </a>
       `).join('');
 
       const loadMoreContainer = document.getElementById('loadMoreContainer');

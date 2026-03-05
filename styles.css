@@ -107,6 +107,27 @@ header.nav-open .nav-toggle span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+.church-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.church-card-link .church-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.church-card-link:hover .church-card {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.church-link-tag {
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
 .btn-primary {
   background: var(--gold);
   color: var(--navy);
