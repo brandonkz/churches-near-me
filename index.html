@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=2">
   <style>
     .hero {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
@@ -419,22 +419,34 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    // Supabase client (you'll need to fill in your project URL and anon key)
-    const SUPABASE_URL = 'https://npfbrorgnwhrbpfbqiuh.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wZmJyb3JnbndocmJwZmJxaXVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1MjAyNTcsImV4cCI6MjA4ODA5NjI1N30.uQ5fMaYuQmaBCXmq84QWTpkUp9U-cZ3gEQyB4-kMzZ4';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    // Supabase config
+    var SUPABASE_URL = 'https://npfbrorgnwhrbpfbqiuh.supabase.co';
+    var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wZmJyb3JnbndocmJwZmJxaXVoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI1MjAyNTcsImV4cCI6MjA4ODA5NjI1N30.uQ5fMaYuQmaBCXmq84QWTpkUp9U-cZ3gEQyB4-kMzZ4';
+    var db = null;
+    var PAGE_SIZE = 12;
+    var allChurches = [];
+    var filteredChurches = [];
+    var visibleCount = PAGE_SIZE;
+    var nearMeLocation = null;
+    var isNearMeLoading = false;
 
-    const PAGE_SIZE = 12;
-    let allChurches = [];
-    let filteredChurches = [];
-    let visibleCount = PAGE_SIZE;
-    let nearMeLocation = null;
-    let isNearMeLoading = false;
+    // Init supabase client safely
+    function initSupabase() {
+      if (typeof window.supabase === 'undefined' || !window.supabase.createClient) {
+        return false;
+      }
+      db = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      return true;
+    }
 
-    // Load churches on page load
+    // Load churches with retry
     async function loadChurches() {
+      if (!db && !initSupabase()) {
+        document.getElementById('churchList').innerHTML = '<div class="empty-state"><h3>⚠️ Loading library failed</h3><p>Please refresh the page.</p><button class="btn-primary" onclick="location.reload()">Refresh</button></div>';
+        return;
+      }
       try {
-        const { data, error } = await supabase
+        const { data, error } = await db
           .from('churches')
           .select('*')
           .eq('verified', true)
@@ -449,12 +461,8 @@
         updateFilterCounts();
       } catch (err) {
         console.error('Error loading churches:', err);
-        document.getElementById('churchList').innerHTML = `
-          <div class="empty-state">
-            <h3>⚠️ Unable to load churches</h3>
-            <p>Please check your internet connection and try again.</p>
-          </div>
-        `;
+        document.getElementById('churchList').innerHTML =
+          '<div class="empty-state"><h3>⚠️ Unable to load churches</h3><p>' + (err.message || 'Connection error') + '</p><button class="btn-primary" onclick="loadChurches()">Try Again</button></div>';
       }
     }
 
@@ -748,8 +756,26 @@
       });
     }
 
-    // Load churches on page load
-    loadChurches();
+    // Load churches on page load with timeout safety
+    (function init() {
+      if (initSupabase()) {
+        loadChurches();
+      } else {
+        // Supabase CDN may not have loaded yet — retry after a moment
+        var retries = 0;
+        var interval = setInterval(function() {
+          retries++;
+          if (initSupabase()) {
+            clearInterval(interval);
+            loadChurches();
+          } else if (retries > 10) {
+            clearInterval(interval);
+            document.getElementById('churchList').innerHTML =
+              '<div class="empty-state"><h3>⚠️ Failed to load</h3><p>The page library did not load. Please refresh.</p><button class="btn-primary" onclick="location.reload()">Refresh</button></div>';
+          }
+        }, 500);
+      }
+    })();
   </script>
 </body>
 </html>
