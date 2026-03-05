@@ -6,50 +6,10 @@
   <title>Add Your Church | ChurchesNearMe South Africa</title>
   <meta name="description" content="Submit your church to ChurchesNearMe. Free listing for all South African churches. Get discovered by people looking for a church home.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
   <style>
-    :root {
-      --navy: #1a2744;
-      --navy-dark: #111c33;
-      --gold: #c9a84c;
-      --gold-light: #e8c96a;
-      --white: #faf9f7;
-      --surface: #f0ede8;
-      --text: #2d2d2d;
-      --muted: #6b6b6b;
-      --border: #e0dbd3;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, system-ui, sans-serif;
-      background: var(--white);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
     header {
-      background: var(--navy);
-      border-bottom: 1px solid var(--navy-dark);
-      padding: 20px 0;
       margin-bottom: 40px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--gold);
-      text-align: center;
     }
 
     h1 {
@@ -75,31 +35,9 @@
       margin-bottom: 24px;
     }
 
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-
     label.required::after {
       content: ' *';
       color: #dc2626;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 16px;
-      font-family: inherit;
-      background: var(--white);
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: 2px solid var(--gold);
-      border-color: transparent;
     }
 
     textarea {
@@ -135,6 +73,24 @@
       cursor: not-allowed;
     }
 
+    .form-group.invalid input,
+    .form-group.invalid select,
+    .form-group.invalid textarea {
+      border-color: #dc2626;
+      background: #fff5f5;
+    }
+
+    .error-text {
+      color: #dc2626;
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .form-group.invalid .error-text {
+      display: block;
+    }
+
     .success-message {
       background: #dcfce7;
       border: 1px solid #86efac;
@@ -158,10 +114,24 @@
 </head>
 <body>
   <header>
-    <div class="logo">⛪ ChurchesNearMe</div>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">⛪ ChurchesNearMe</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/submit.html">Add Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="container container--narrow">
     <h1>Add Your Church</h1>
     <p class="intro">List your church for free on ChurchesNearMe. Help people in your community find your church home.</p>
 
@@ -175,6 +145,7 @@
       <div class="form-group">
         <label for="name" class="required">Church Name</label>
         <input type="text" id="name" required placeholder="e.g., Grace Community Church">
+        <div class="error-text" id="error-name"></div>
       </div>
 
       <div class="form-group">
@@ -191,16 +162,19 @@
           <option value="Non-Denominational">Non-Denominational</option>
           <option value="Other">Other</option>
         </select>
+        <div class="error-text" id="error-denomination"></div>
       </div>
 
       <div class="form-group">
         <label for="address" class="required">Street Address</label>
         <input type="text" id="address" required placeholder="123 Main Street, Suburb">
+        <div class="error-text" id="error-address"></div>
       </div>
 
       <div class="form-group">
         <label for="city" class="required">City</label>
         <input type="text" id="city" required placeholder="Cape Town">
+        <div class="error-text" id="error-city"></div>
       </div>
 
       <div class="form-group">
@@ -217,44 +191,61 @@
           <option value="Northern Cape">Northern Cape</option>
           <option value="North West">North West</option>
         </select>
+        <div class="error-text" id="error-province"></div>
       </div>
 
       <div class="form-group">
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" placeholder="021 123 4567">
+        <div class="error-text" id="error-phone"></div>
       </div>
 
       <div class="form-group">
         <label for="email">Email Address</label>
         <input type="email" id="email" placeholder="info@church.co.za">
+        <div class="error-text" id="error-email"></div>
       </div>
 
       <div class="form-group">
         <label for="website">Website</label>
         <input type="url" id="website" placeholder="https://www.church.co.za">
+        <div class="error-text" id="error-website"></div>
       </div>
 
       <div class="form-group">
         <label for="serviceTimes">Service Times</label>
         <textarea id="serviceTimes" placeholder="Sunday: 9:00 AM, 6:00 PM&#10;Wednesday: 7:00 PM"></textarea>
         <div class="help-text">List your regular service times (optional)</div>
+        <div class="error-text" id="error-serviceTimes"></div>
       </div>
 
       <div class="form-group">
         <label for="submitterName" class="required">Your Name</label>
         <input type="text" id="submitterName" required placeholder="John Smith">
         <div class="help-text">For verification purposes only</div>
+        <div class="error-text" id="error-submitterName"></div>
       </div>
 
       <div class="form-group">
         <label for="submitterEmail" class="required">Your Email</label>
         <input type="email" id="submitterEmail" required placeholder="john@example.com">
         <div class="help-text">We'll contact you when your church is approved</div>
+        <div class="error-text" id="error-submitterEmail"></div>
       </div>
 
       <button type="submit" class="btn-submit">Submit Church</button>
     </form>
   </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/submit.html">Add Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a>
+      </p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
@@ -264,6 +255,11 @@
 
     document.getElementById('submitForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      document.getElementById('errorMessage').style.display = 'none';
+      if (!validateForm()) {
+        return;
+      }
 
       const submitBtn = e.target.querySelector('.btn-submit');
       submitBtn.disabled = true;
@@ -306,6 +302,90 @@
         submitBtn.textContent = 'Submit Church';
       }
     });
+
+    const fieldConfigs = [
+      { id: 'name', label: 'Church Name', required: true },
+      { id: 'address', label: 'Street Address', required: true },
+      { id: 'city', label: 'City', required: true },
+      { id: 'province', label: 'Province', required: true },
+      { id: 'submitterName', label: 'Your Name', required: true },
+      { id: 'submitterEmail', label: 'Your Email', required: true, type: 'email' },
+      { id: 'email', label: 'Email Address', required: false, type: 'email' }
+    ];
+
+    function validateForm() {
+      let isValid = true;
+      fieldConfigs.forEach(config => {
+        const { valid } = validateField(config);
+        if (!valid) isValid = false;
+      });
+
+      return isValid;
+    }
+
+    function validateField(config) {
+      const input = document.getElementById(config.id);
+      const value = input.value.trim();
+      let message = '';
+
+      if (config.required && !value) {
+        message = `${config.label} is required.`;
+      } else if (config.type === 'email' && value && !isValidEmail(value)) {
+        message = 'Please enter a valid email address.';
+      }
+
+      if (message) {
+        setFieldError(config.id, message);
+        return { valid: false };
+      }
+
+      clearFieldError(config.id);
+      return { valid: true };
+    }
+
+    function setFieldError(fieldId, message) {
+      const input = document.getElementById(fieldId);
+      const group = input.closest('.form-group');
+      const errorText = document.getElementById(`error-${fieldId}`);
+      if (group) group.classList.add('invalid');
+      if (errorText) errorText.textContent = message;
+    }
+
+    function clearFieldError(fieldId) {
+      const input = document.getElementById(fieldId);
+      const group = input.closest('.form-group');
+      const errorText = document.getElementById(`error-${fieldId}`);
+      if (group) group.classList.remove('invalid');
+      if (errorText) errorText.textContent = '';
+    }
+
+    function isValidEmail(value) {
+      return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(value);
+    }
+
+    fieldConfigs.forEach(config => {
+      const input = document.getElementById(config.id);
+      if (!input) return;
+      input.addEventListener('input', () => {
+        if (input.value.trim()) {
+          clearFieldError(config.id);
+        }
+      });
+      input.addEventListener('blur', () => {
+        if (config.required || input.value.trim()) {
+          validateField(config);
+        }
+      });
+    });
+
+    const header = document.querySelector('header');
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && header) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
   </script>
 </body>
 </html>

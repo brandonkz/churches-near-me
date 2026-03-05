@@ -6,50 +6,10 @@
   <title>Get Featured | ChurchesNearMe South Africa</title>
   <meta name="description" content="Stand out with a featured listing. Get more visibility, traffic, and reach more people looking for a church home.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
   <style>
-    :root {
-      --navy: #1a2744;
-      --navy-dark: #111c33;
-      --gold: #c9a84c;
-      --gold-light: #e8c96a;
-      --white: #faf9f7;
-      --surface: #f0ede8;
-      --text: #2d2d2d;
-      --muted: #6b6b6b;
-      --border: #e0dbd3;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, system-ui, sans-serif;
-      background: var(--white);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
     header {
-      background: var(--navy);
-      border-bottom: 1px solid var(--navy-dark);
-      padding: 20px 0;
       margin-bottom: 40px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--gold);
-      text-align: center;
     }
 
     h1 {
@@ -230,10 +190,24 @@
 </head>
 <body>
   <header>
-    <div class="logo">⛪ ChurchesNearMe</div>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">⛪ ChurchesNearMe</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/submit.html">Add Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="container container--medium">
     <h1>Get More Visitors</h1>
     <p class="intro">Stand out with a featured listing and reach more people searching for a church home in your area.</p>
 
@@ -331,5 +305,26 @@
       </div>
     </div>
   </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/submit.html">Add Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('header');
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && header) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
 </body>
 </html>
