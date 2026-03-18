@@ -200,6 +200,7 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    z-index: 999;
   }
 
   header.nav-open .nav-menu {
