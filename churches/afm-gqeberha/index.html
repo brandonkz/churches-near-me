@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFM Gqeberha - Apostolic Faith Mission Church in Gqeberha | ChurchesNearMe</title>
+  <meta name="description" content="Visit AFM Gqeberha, a Apostolic Faith Mission church in Gqeberha, Eastern Cape. Find service times, contact details, directions and more.">
+  <link rel="canonical" href="https://churchesnearme.co.za/churches/afm-gqeberha/">
+  <meta property="og:title" content="AFM Gqeberha - Apostolic Faith Mission Church in Gqeberha | ChurchesNearMe">
+  <meta property="og:description" content="Visit AFM Gqeberha, a Apostolic Faith Mission church in Gqeberha, Eastern Cape. Find service times, contact details, directions and more.">
+  <meta property="og:url" content="https://churchesnearme.co.za/churches/afm-gqeberha/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <style>
+    .church-hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.94));
+      color: white;
+      padding: 48px 0 32px;
+    }
+    .church-hero .container {
+      display: grid;
+      gap: 12px;
+    }
+    .church-hero h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .church-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .church-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .church-page {
+      padding: 32px 0 64px;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .detail-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+    }
+    .detail-card h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+    .info-row {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eef2f6;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { font-size: 18px; }
+    .info-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .info-value { font-size: 16px; color: var(--text); font-weight: 500; margin-top: 4px; }
+    .info-value a { color: var(--gold); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .action-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .action-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .action-primary:hover { background: var(--gold-light); }
+    .action-secondary {
+      background: var(--navy);
+      color: white;
+    }
+    .action-outline {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+    .action-outline:hover { background: var(--navy); color: white; }
+    .map-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+    }
+    .map-card iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+    .map-card .map-info {
+      padding: 16px 20px;
+      background: #f8fafc;
+    }
+    .nearby-section {
+      margin-top: 32px;
+    }
+    .nearby-section h2 {
+      color: var(--navy);
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    .nearby-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .nearby-card {
+      background: white;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nearby-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.12);
+    }
+    .nearby-card h3 {
+      margin: 0 0 6px 0;
+      color: var(--navy);
+      font-size: 16px;
+    }
+    .nearby-denom { color: var(--gold); font-size: 13px; font-weight: 600; }
+    .nearby-addr { color: var(--muted); font-size: 13px; margin-top: 6px; }
+    @media (max-width: 900px) {
+      .detail-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .church-hero h1 { font-size: 28px; }
+      .detail-card { padding: 20px; }
+      .action-row { flex-direction: column; }
+      .action-btn { justify-content: center; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "AFM Gqeberha",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Grahamstown Rd, Gqeberha",
+    "addressLocality": "Gqeberha",
+    "addressRegion": "Eastern Cape",
+    "addressCountry": "ZA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.9625,
+    "longitude": 25.6038
+  },
+  "url": "https://churchesnearme.co.za/churches/afm-gqeberha/"
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">⛪ ChurchesNearMe</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/submit.html">Add Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="church-hero">
+    <div class="container">
+      <div class="church-meta">
+        <span class="church-badge">Apostolic Faith Mission</span>
+        
+      </div>
+      <h1>AFM Gqeberha</h1>
+      <div>Grahamstown Rd, Gqeberha, Gqeberha, Eastern Cape</div>
+    </div>
+  </section>
+
+  <main class="church-page">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h2>Church Details</h2>
+          <div class="info-row">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Address</div>
+              <div class="info-value">Grahamstown Rd, Gqeberha, Gqeberha, Eastern Cape</div>
+            </div>
+          </div>
+          
+          
+          
+          <div class="info-row">
+            <div class="info-icon">🌐</div>
+            <div>
+              <div class="info-label">Website</div>
+              <div class="info-value"><a href="https://afm-ags.org" target="_blank" rel="noopener">afm-ags.org</a></div>
+            </div>
+          </div>
+          
+
+          <div class="action-row">
+            <a class="action-btn action-primary" href="https://www.google.com/maps/dir/?api=1&destination=-33.9625,25.6038" target="_blank" rel="noopener">📍 Get Directions</a>
+            
+            <a class="action-btn action-outline" href="https://afm-ags.org" target="_blank" rel="noopener">🌐 Visit Website</a>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=25.5988,-33.9655,25.6088,-33.9595&marker=-33.9625,25.6038&layers=M" allowfullscreen loading="lazy"></iframe>
+          <div class="map-info">
+            <strong>Location</strong>
+            <div>Grahamstown Rd, Gqeberha, Gqeberha, Eastern Cape</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="nearby-section">
+        <h2>Nearby Churches</h2>
+        <div class="nearby-grid">
+          
+            <a href="/churches/central-methodist-gqeberha/" class="nearby-card">
+              <h3>Central Methodist Church Gqeberha</h3>
+              <div class="nearby-denom">Methodist</div>
+              <div class="nearby-addr">📍 Chapel Street, Central, Gqeberha, Gqeberha · 0.2 km</div>
+            </a>
+          
+            <a href="/churches/ng-kerk-newton-park-gqeberha/" class="nearby-card">
+              <h3>NG Kerk Newton Park</h3>
+              <div class="nearby-denom">Dutch Reformed</div>
+              <div class="nearby-addr">📍 Hurd St, Newton Park, Gqeberha · 0.2 km</div>
+            </a>
+          
+            <a href="/churches/methodist-church-gqeberha/" class="nearby-card">
+              <h3>Port Elizabeth Methodist Church</h3>
+              <div class="nearby-denom">Methodist</div>
+              <div class="nearby-addr">📍 Church Square, Port Elizabeth, Gqeberha · 0.4 km</div>
+            </a>
+          
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/submit.html">Add Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    var header = document.querySelector('header');
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && header) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
+</body>
+</html>
