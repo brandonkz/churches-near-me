@@ -183,6 +183,7 @@
         <nav class="nav-menu">
           <a href="/">Home</a>
           <a href="/submit.html">Add Your Church</a>
+          <a href="/claim.html">Claim Your Church</a>
           <a href="/featured.html">Get Featured</a>
         </nav>
       </div>
@@ -287,6 +288,7 @@
         if (church.website) {
           html += '<a href="' + church.website + '" target="_blank" rel="noopener" class="action-btn action-btn-outline">🌐 Visit Website</a>';
         }
+        html += '<a href="/claim.html?slug=' + church.slug + '" class="action-btn action-btn-outline" style="border-color:var(--gold);color:var(--gold);">🔑 Claim This Church</a>';
         html += '</div>';
         
         // Map
