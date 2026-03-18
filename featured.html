@@ -10,7 +10,11 @@
   gtag("config", "G-YCB9V8S30Y");
 </script>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />n  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />n  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />n  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />n  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Featured | ChurchesNearMe South Africa</title>
   <meta name="description" content="Stand out with a featured listing. Get more visibility, traffic, and reach more people looking for a church home.">
@@ -249,7 +253,7 @@
           <li><span class="check">✓</span> <span>Priority support</span></li>
           <li><span class="check">✓</span> <span>Monthly analytics</span></li>
         </ul>
-        <a href="mailto:brandonkz@gmail.com?subject=Featured Listing - ChurchesNearMe" class="btn-cta">Get Featured</a>
+        <a href="#" onclick="startPayment('featured')" class="btn-cta">Get Featured — R199/mo</a>
       </div>
 
       <div class="pricing-card">
@@ -265,7 +269,7 @@
           <li><span class="check">✓</span> <span>Social media sharing</span></li>
           <li><span class="check">✓</span> <span>Weekly analytics</span></li>
         </ul>
-        <a href="mailto:brandonkz@gmail.com?subject=Premium Listing - ChurchesNearMe" class="btn-cta">Go Premium</a>
+        <a href="#" onclick="startPayment('premium')" class="btn-cta">Go Premium — R499/mo</a>
       </div>
     </div>
 
@@ -334,6 +338,49 @@
         const isOpen = header.classList.toggle('nav-open');
         navToggle.setAttribute('aria-expanded', isOpen);
       });
+    }
+
+    function startPayment(tier) {
+      const plans = {
+        featured: { amount: '199.00', item: 'ChurchesNearMe Featured Listing', frequency: '3' },
+        premium:  { amount: '499.00', item: 'ChurchesNearMe Premium Listing', frequency: '3' }
+      };
+      const plan = plans[tier];
+      if (!plan) return;
+
+      const params = new URLSearchParams({
+        merchant_id: '10803069',
+        merchant_key: 'heptrxgjismzp',
+        return_url: 'https://churchesnearme.co.za/featured.html?success=1',
+        cancel_url: 'https://churchesnearme.co.za/featured.html?cancelled=1',
+        notify_url: 'https://fuddzrlnbrseofguuikp.supabase.co/functions/v1/payfast-itn',
+        m_payment_id: 'cnm_' + tier + '_' + Date.now(),
+        amount: '0.00',
+        recurring_amount: plan.amount,
+        item_name: plan.item,
+        subscription_type: '1',
+        frequency: plan.frequency,
+        cycles: '0',
+        custom_str1: tier,
+        custom_str2: 'churchesnearme'
+      });
+
+      window.location.href = 'https://www.payfast.co.za/eng/process?' + params.toString();
+    }
+
+    // Show success/cancel message
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success')) {
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background:#22c55e;color:white;text-align:center;padding:16px;font-weight:600;position:fixed;top:0;left:0;right:0;z-index:9999;';
+      banner.textContent = '✅ Payment successful! We\'ll upgrade your listing within 24 hours. Check your email for confirmation.';
+      document.body.prepend(banner);
+    }
+    if (urlParams.get('cancelled')) {
+      const banner = document.createElement('div');
+      banner.style.cssText = 'background:#ef4444;color:white;text-align:center;padding:16px;font-weight:600;position:fixed;top:0;left:0;right:0;z-index:9999;';
+      banner.textContent = 'Payment cancelled. No charge was made. Questions? Email brandonkz@gmail.com';
+      document.body.prepend(banner);
     }
   </script>
 </body>
