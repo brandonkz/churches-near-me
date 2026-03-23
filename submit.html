@@ -18,6 +18,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Your Church | ChurchesNearMe South Africa</title>
   <meta name="description" content="Submit your church to ChurchesNearMe. Free listing for all South African churches. Get discovered by people looking for a church home.">
+  <link rel="canonical" href="https://churchesnearme.co.za/submit.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Add Your Church | ChurchesNearMe South Africa">
+  <meta property="og:description" content="Submit your church to ChurchesNearMe. Free listing for all South African churches.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://churchesnearme.co.za/submit.html">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Add Your Church | ChurchesNearMe South Africa">
+  <meta name="twitter:description" content="Submit your church to ChurchesNearMe. Free listing for all South African churches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
   <style>
@@ -126,26 +140,28 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header>
     <div class="container">
       <div class="header-content">
-        <div class="logo">⛪ ChurchesNearMe</div>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <a class="logo" href="/">⛪ ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
           <a href="/">Home</a>
           <a href="/submit.html">Add Your Church</a>
           <a href="/claim.html">Claim Your Church</a>
           <a href="/featured.html">Get Featured</a>
+          <a href="/blog/index.html">Blog</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <main class="container container--narrow">
+  <main class="container container--narrow" id="main">
     <h1>Add Your Church</h1>
     <p class="intro">List your church for free on ChurchesNearMe. Help people in your community find your church home.</p>
 
@@ -256,7 +272,9 @@
       <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
       <p style="margin-top: 8px;">
         <a href="/submit.html">Add Your Church</a> | 
-        <a href="/featured.html">Get Featured (R199/mo)</a>
+        <a href="/claim.html">Claim Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a> | 
+        <a href="/blog/index.html">Blog</a>
       </p>
     </div>
   </footer>

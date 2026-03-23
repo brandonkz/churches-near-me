@@ -18,6 +18,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Church Details | ChurchesNearMe</title>
   <meta name="description" content="Find church details, service times, contact info, and directions.">
+  <link rel="canonical" href="https://churchesnearme.co.za/church.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Church Details | ChurchesNearMe">
+  <meta property="og:description" content="Find church details, service times, contact info, and directions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://churchesnearme.co.za/church.html">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Church Details | ChurchesNearMe">
+  <meta name="twitter:description" content="Find church details, service times, contact info, and directions.">
   <script>
     (function() {
       var params = new URLSearchParams(window.location.search);
@@ -31,6 +43,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
+  <script type="application/ld+json" id="churchSchema">{}</script>
   <style>
     .church-detail {
       max-width: 800px;
@@ -178,34 +191,36 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header>
     <div class="container">
       <div class="header-content">
-        <div class="logo">⛪ ChurchesNearMe</div>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <a class="logo" href="/">⛪ ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
           <span></span><span></span><span></span>
         </button>
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
           <a href="/">Home</a>
           <a href="/submit.html">Add Your Church</a>
           <a href="/claim.html">Claim Your Church</a>
           <a href="/featured.html">Get Featured</a>
+          <a href="/blog/index.html">Blog</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <div class="church-detail">
+  <main class="church-detail" id="main">
     <a href="/" class="back-link">← Back to directory</a>
     <div id="churchContent">
       <div class="loading-detail">Loading church details...</div>
     </div>
-  </div>
+  </main>
 
   <footer>
     <div class="container">
       <p>© 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
-      <p><a href="/submit.html">Add Your Church</a> | <a href="/featured.html">Get Featured (R199/mo)</a></p>
+      <p><a href="/submit.html">Add Your Church</a> | <a href="/claim.html">Claim Your Church</a> | <a href="/featured.html">Get Featured (R199/mo)</a> | <a href="/blog/index.html">Blog</a></p>
     </div>
   </footer>
 
@@ -247,8 +262,21 @@
         
         // Update page title and meta
         document.title = church.name + ' - ' + church.city + ' | ChurchesNearMe';
+        var descriptionText = church.name + ' in ' + church.city + ', ' + church.province + '. ' + (church.denomination || '') + ' church. Find service times, contact details, and directions.';
         var metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.content = church.name + ' in ' + church.city + ', ' + church.province + '. ' + (church.denomination || '') + ' church. Find service times, contact details, and directions.';
+        if (metaDesc) metaDesc.content = descriptionText;
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.href = 'https://churchesnearme.co.za/churches/' + church.slug + '/';
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        var ogUrl = document.querySelector('meta[property="og:url"]');
+        var twTitle = document.querySelector('meta[name="twitter:title"]');
+        var twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (ogTitle) ogTitle.content = document.title;
+        if (ogDesc) ogDesc.content = descriptionText;
+        if (ogUrl) ogUrl.content = 'https://churchesnearme.co.za/churches/' + church.slug + '/';
+        if (twTitle) twTitle.content = document.title;
+        if (twDesc) twDesc.content = descriptionText;
 
         var html = '<div class="detail-card">';
         html += '<h1>' + church.name + '</h1>';
@@ -272,7 +300,7 @@
         
         // Website
         if (church.website) {
-          html += '<div class="info-row"><div class="info-icon">🌐</div><div class="info-content"><div class="info-label">Website</div><div class="info-value"><a href="' + church.website + '" target="_blank" rel="noopener">' + church.website.replace('https://', '').replace('http://', '').replace(/\/$/, '') + '</a></div></div></div>';
+          html += '<div class="info-row"><div class="info-icon">🌐</div><div class="info-content"><div class="info-label">Website</div><div class="info-value"><a href="' + church.website + '" target="_blank" rel="noopener noreferrer">' + church.website.replace('https://', '').replace('http://', '').replace(/\/$/, '') + '</a></div></div></div>';
         }
         
         // Service times
@@ -285,20 +313,20 @@
         // Action buttons
         html += '<div class="actions-row">';
         if (church.lat && church.lng) {
-          html += '<a href="https://www.google.com/maps/dir/?api=1&destination=' + church.lat + ',' + church.lng + '" target="_blank" class="action-btn action-btn-primary">📍 Get Directions</a>';
+          html += '<a href="https://www.google.com/maps/dir/?api=1&destination=' + church.lat + ',' + church.lng + '" target="_blank" rel="noopener noreferrer" class="action-btn action-btn-primary">📍 Get Directions</a>';
         }
         if (church.phone) {
           html += '<a href="tel:' + church.phone + '" class="action-btn action-btn-secondary">📞 Call</a>';
         }
         if (church.website) {
-          html += '<a href="' + church.website + '" target="_blank" rel="noopener" class="action-btn action-btn-outline">🌐 Visit Website</a>';
+          html += '<a href="' + church.website + '" target="_blank" rel="noopener noreferrer" class="action-btn action-btn-outline">🌐 Visit Website</a>';
         }
         html += '<a href="/claim.html?slug=' + church.slug + '" class="action-btn action-btn-outline" style="border-color:var(--gold);color:var(--gold);">🔑 Claim This Church</a>';
         html += '</div>';
         
         // Map
         if (church.lat && church.lng) {
-          html += '<div class="map-container"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=' + (church.lng - 0.005) + ',' + (church.lat - 0.003) + ',' + (church.lng + 0.005) + ',' + (church.lat + 0.003) + '&marker=' + church.lat + ',' + church.lng + '&layers=M" allowfullscreen></iframe></div>';
+          html += '<div class="map-container"><iframe title="Map showing ' + church.name + '" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=' + (church.lng - 0.005) + ',' + (church.lat - 0.003) + ',' + (church.lng + 0.005) + ',' + (church.lat + 0.003) + '&marker=' + church.lat + ',' + church.lng + '&layers=M" allowfullscreen></iframe></div>';
         }
         
         html += '</div>';
@@ -331,6 +359,31 @@
         }
 
         document.getElementById('churchContent').innerHTML = html;
+
+        var schema = {
+          "@context": "https://schema.org",
+          "@type": "Church",
+          "name": church.name,
+          "url": "https://churchesnearme.co.za/churches/" + church.slug + "/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": church.address,
+            "addressLocality": church.city,
+            "addressRegion": church.province,
+            "addressCountry": "ZA"
+          }
+        };
+        if (church.phone) schema.telephone = church.phone;
+        if (church.website) schema.sameAs = [church.website];
+        if (church.lat && church.lng) {
+          schema.geo = {
+            "@type": "GeoCoordinates",
+            "latitude": Number(church.lat),
+            "longitude": Number(church.lng)
+          };
+        }
+        var schemaEl = document.getElementById('churchSchema');
+        if (schemaEl) schemaEl.textContent = JSON.stringify(schema);
 
       } catch(e) {
         document.getElementById('churchContent').innerHTML = '<div class="error-detail"><h2>Something went wrong</h2><p>' + e.message + '</p><a href="/" class="action-btn action-btn-primary">Back to Directory</a></div>';

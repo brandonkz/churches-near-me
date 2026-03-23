@@ -59,6 +59,13 @@ header {
   font-size: 24px;
   font-weight: 700;
   color: var(--gold);
+  text-decoration: none;
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .nav-menu {
@@ -107,6 +114,23 @@ header.nav-open .nav-toggle span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -40px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
 .church-card-link {
   text-decoration: none;
   color: inherit;
@@ -143,6 +167,13 @@ header.nav-open .nav-toggle span:nth-child(3) {
   background: var(--gold-light);
 }
 
+.clear-filters {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 label {
   display: block;
   font-weight: 600;
@@ -163,6 +194,18 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--gold);
   border-color: transparent;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 footer {

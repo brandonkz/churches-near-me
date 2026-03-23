@@ -18,10 +18,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Churches Near Me South Africa | Find Local Churches by City & Denomination</title>
   <meta name="description" content="Find churches near you in South Africa. Search by city, denomination, and service times. Free listings for all churches. Verified information.">
+  <link rel="canonical" href="https://churchesnearme.co.za/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Churches Near Me South Africa">
+  <meta property="og:description" content="Find churches near you in South Africa. Search by city, denomination, and service times.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://churchesnearme.co.za/">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Churches Near Me South Africa">
+  <meta name="twitter:description" content="Find churches near you in South Africa. Search by city, denomination, and service times.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ChurchesNearMe.co.za",
+    "url": "https://churchesnearme.co.za/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://churchesnearme.co.za/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ChurchesNearMe.co.za",
+    "url": "https://churchesnearme.co.za/"
+  }
+  </script>
   <style>
     .hero {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
@@ -321,20 +354,22 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header>
     <div class="container">
       <div class="header-content">
-        <div class="logo">⛪ ChurchesNearMe</div>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <a class="logo" href="/">⛪ ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
           <a href="/">Home</a>
           <a href="/submit.html">Add Your Church</a>
           <a href="/claim.html">Claim Your Church</a>
           <a href="/featured.html">Get Featured</a>
+          <a href="/blog/index.html">Blog</a>
         </nav>
       </div>
     </div>
@@ -345,21 +380,22 @@
       <h1>Find Your Church Home</h1>
       <p>Discover churches across South Africa by city, denomination, and service times</p>
       <div class="search-bar">
+        <label class="sr-only" for="searchInput">Search churches</label>
         <input type="text" id="searchInput" placeholder="Search churches, cities, denominations...">
-        <button class="btn-primary" onclick="search()">Search</button>
+        <button class="btn-primary" type="button" onclick="search()">Search</button>
       </div>
     </div>
   </section>
 
-  <main class="container">
+  <main class="container" id="main">
       <div class="filters">
         <div class="filters-header">
           <h3>Filter Churches</h3>
-          <a href="#" id="clearFiltersLink" class="clear-filters">Clear all</a>
+          <button type="button" id="clearFiltersLink" class="clear-filters">Clear all</button>
         </div>
         <div class="filter-grid">
           <div class="filter-group">
-            <label>City</label>
+            <label for="cityFilter">City</label>
             <select id="cityFilter" onchange="applyFilters()">
             <option value="">All Cities</option>
             <option value="Cape Town">Cape Town</option>
@@ -372,7 +408,7 @@
         </div>
 
         <div class="filter-group">
-          <label>Denomination</label>
+          <label for="denominationFilter">Denomination</label>
           <select id="denominationFilter" onchange="applyFilters()">
             <option value="">All Denominations</option>
             <option value="Anglican">Anglican</option>
@@ -386,7 +422,7 @@
         </div>
 
         <div class="filter-group">
-          <label>Province</label>
+          <label for="provinceFilter">Province</label>
           <select id="provinceFilter" onchange="applyFilters()">
             <option value="">All Provinces</option>
             <option value="Western Cape">Western Cape</option>
@@ -426,7 +462,9 @@
       <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
       <p style="margin-top: 8px;">
         <a href="/submit.html">Add Your Church</a> | 
-        <a href="/featured.html">Get Featured (R199/mo)</a>
+        <a href="/claim.html">Claim Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a> | 
+        <a href="/blog/index.html">Blog</a>
       </p>
     </div>
   </footer>
@@ -758,8 +796,7 @@
       debouncedSearch();
     });
 
-    document.getElementById('clearFiltersLink').addEventListener('click', event => {
-      event.preventDefault();
+    document.getElementById('clearFiltersLink').addEventListener('click', () => {
       clearFilters();
     });
 

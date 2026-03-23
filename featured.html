@@ -18,6 +18,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Featured | ChurchesNearMe South Africa</title>
   <meta name="description" content="Stand out with a featured listing. Get more visibility, traffic, and reach more people looking for a church home.">
+  <link rel="canonical" href="https://churchesnearme.co.za/featured.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Get Featured | ChurchesNearMe South Africa">
+  <meta property="og:description" content="Stand out with a featured listing and reach more people looking for a church home.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://churchesnearme.co.za/featured.html">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Get Featured | ChurchesNearMe South Africa">
+  <meta name="twitter:description" content="Stand out with a featured listing and reach more people looking for a church home.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
   <style>
@@ -202,26 +216,28 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header>
     <div class="container">
       <div class="header-content">
-        <div class="logo">⛪ ChurchesNearMe</div>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <a class="logo" href="/">⛪ ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="nav-menu">
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
           <a href="/">Home</a>
           <a href="/submit.html">Add Your Church</a>
           <a href="/claim.html">Claim Your Church</a>
           <a href="/featured.html">Get Featured</a>
+          <a href="/blog/index.html">Blog</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <main class="container container--medium">
+  <main class="container container--medium" id="main">
     <h1>Get More Visitors</h1>
     <p class="intro">Stand out with a featured listing and reach more people searching for a church home in your area.</p>
 
@@ -253,7 +269,7 @@
           <li><span class="check">✓</span> <span>Priority support</span></li>
           <li><span class="check">✓</span> <span>Monthly analytics</span></li>
         </ul>
-        <a href="#" onclick="startPayment('featured')" class="btn-cta">Get Featured — R199/mo</a>
+        <button type="button" onclick="startPayment('featured')" class="btn-cta">Get Featured — R199/mo</button>
       </div>
 
       <div class="pricing-card">
@@ -269,7 +285,7 @@
           <li><span class="check">✓</span> <span>Social media sharing</span></li>
           <li><span class="check">✓</span> <span>Weekly analytics</span></li>
         </ul>
-        <a href="#" onclick="startPayment('premium')" class="btn-cta">Go Premium — R499/mo</a>
+        <button type="button" onclick="startPayment('premium')" class="btn-cta">Go Premium — R499/mo</button>
       </div>
     </div>
 
@@ -325,7 +341,9 @@
       <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
       <p style="margin-top: 8px;">
         <a href="/submit.html">Add Your Church</a> | 
-        <a href="/featured.html">Get Featured (R199/mo)</a>
+        <a href="/claim.html">Claim Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a> | 
+        <a href="/blog/index.html">Blog</a>
       </p>
     </div>
   </footer>
