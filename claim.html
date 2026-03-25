@@ -432,11 +432,9 @@
           service_times: document.getElementById('claimServiceTimes').value,
           submitter_name: document.getElementById('claimName').value,
           submitter_email: document.getElementById('claimEmail').value,
-          status: 'pending'
+          status: 'pending',
+          website: 'PAID_CLAIM_R299'
         };
-
-        // Store claim as pending payment
-        claim.status = 'paid_pending_activation';
         var result = await db.from('church_submissions').insert([claim]);
 
         if (result.error) throw result.error;
