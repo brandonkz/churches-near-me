@@ -192,28 +192,39 @@
     <!-- Church preview (populated by JS if slug provided) -->
     <div id="churchPreview" style="display:none;"></div>
 
-    <div class="free-badge">✅ 100% FREE</div>
+    <div style="background:linear-gradient(135deg,#1e3a5f,#0f2440);border-radius:16px;padding:32px;color:white;margin-bottom:32px;text-align:center;">
+      <div style="font-size:48px;font-weight:800;margin-bottom:4px;">R500<span style="font-size:20px;opacity:0.7">/month</span></div>
+      <p style="opacity:0.8;margin:0 0 20px;font-size:1rem;">Manage your church listing and reach new members</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+        <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">✏️ Full edit access</span>
+        <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">📸 Add photos</span>
+        <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">🕐 Service times</span>
+        <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">👥 Team & history</span>
+        <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">📅 Events listing</span>
+        <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">📈 Higher in search</span>
+      </div>
+    </div>
 
     <div class="benefits-grid">
       <div class="benefit-card">
         <div class="emoji">✏️</div>
-        <h3>Update Your Info</h3>
-        <p>Keep address, phone, and website current</p>
+        <h3>Full Edit Access</h3>
+        <p>Update address, phone, website, about us, team info</p>
       </div>
       <div class="benefit-card">
         <div class="emoji">🕐</div>
-        <h3>Add Service Times</h3>
-        <p>Help visitors know when to come</p>
+        <h3>Service Times & Events</h3>
+        <p>Help visitors know when to come and what's happening</p>
       </div>
       <div class="benefit-card">
         <div class="emoji">📈</div>
-        <h3>Appear in Search</h3>
-        <p>Rank higher when people search nearby</p>
+        <h3>Priority in Search</h3>
+        <p>Claimed churches rank higher when people search nearby</p>
       </div>
       <div class="benefit-card">
         <div class="emoji">👥</div>
         <h3>Reach New Members</h3>
-        <p>People are searching for churches like yours</p>
+        <p>Thousands search for churches in SA every month</p>
       </div>
     </div>
 
@@ -272,19 +283,23 @@
           <textarea id="claimNotes" placeholder="e.g., We recently moved to a new address, our website URL changed, etc."></textarea>
         </div>
 
-        <button type="submit" class="submit-btn" id="submitBtn">🙏 Submit Claim — It's Free</button>
+        <button type="submit" class="submit-btn" id="submitBtn">🙏 Claim Your Church — R500/month</button>
       </form>
     </div>
 
     <div class="success-msg" id="successMsg">
       <h3>🎉 Claim Submitted!</h3>
-      <p>We'll review your claim within 24 hours and email you at the address provided. In the meantime, your listing is already live and helping people find your church.</p>
+      <p style="margin-bottom:16px">To activate your listing, please make payment of <strong>R500/month</strong> to:</p>
+      <div style="background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;padding:20px;text-align:left;margin-bottom:16px;">
+        <p style="margin:0 0 8px;font-weight:600;color:#1e3a5f;">AlphaX Asset Capital (Pty) Ltd — Absa</p>
+        <p style="margin:0;color:#475569;font-size:0.9rem;">Account: <strong>4121303961</strong><br>Branch: <strong>632005</strong><br>Type: <strong>Current account</strong><br>Reference: <strong>Your church name</strong></p>
+      </div>
+      <p style="color:#64748b;font-size:0.9rem;margin:0">Once payment is confirmed, we'll activate your listing within 24 hours and send you full edit access. For questions, email <a href="mailto:info@churchesnearme.co.za" style="color:var(--gold)">info@churchesnearme.co.za</a></p>
     </div>
 
     <div class="upgrade-cta">
-      <h3>⭐ Want to Stand Out?</h3>
-      <p>Featured churches appear at the top of search results and get 5x more visibility.</p>
-      <a href="/featured.html">See Featured Plans →</a>
+      <h3>💡 Why R500/month?</h3>
+      <p>Your listing reaches thousands of South Africans searching for a church every month. Claimed churches get full edit access, priority placement in search, and a verified badge. That's less than R17/day to grow your congregation.</p>
     </div>
   </div>
   </main>
@@ -384,7 +399,8 @@
           status: 'pending'
         };
 
-        // Store in church_submissions with a note that it's a claim
+        // Store claim as pending payment
+        claim.status = 'paid_pending_activation';
         var result = await db.from('church_submissions').insert([claim]);
 
         if (result.error) throw result.error;
@@ -398,6 +414,8 @@
           });
         }
 
+        // Redirect to payment
+        // For now: show bank details + reference. Replace with Yoco/PayFast later.
         document.getElementById('claimForm').style.display = 'none';
         document.getElementById('successMsg').style.display = 'block';
         window.scrollTo({ top: document.getElementById('successMsg').offsetTop - 100, behavior: 'smooth' });
@@ -405,7 +423,7 @@
       } catch (err) {
         alert('Something went wrong: ' + err.message + '\n\nPlease try again or email us at info@churchesnearme.co.za');
         btn.disabled = false;
-        btn.textContent = '🙏 Submit Claim — It\'s Free';
+        btn.textContent = '🙏 Claim Your Church — R500/month';
       }
     }
 
