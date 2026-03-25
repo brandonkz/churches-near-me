@@ -46,6 +46,9 @@
   .card .value{font-size:28px;font-weight:800}
   .section{margin:28px 0}
   .section h2{font-size:18px;margin:0 0 12px}
+  .todo-item{display:block;padding:8px 12px;margin:4px 0;background:rgba(255,255,255,0.04);border-radius:8px;cursor:pointer;font-size:13px;color:rgba(255,255,255,0.8);transition:all 0.2s}
+  .todo-item:hover{background:rgba(255,255,255,0.08)}
+  .todo-item input{margin-right:10px;accent-color:#22c55e}
   .kanban{
     display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px
   }
@@ -150,6 +153,102 @@
   </section>
 
   <section class="section">
+    <h2>🎯 To-Do List</h2>
+    <div class="card">
+      <div id="todoList">
+        <div class="todo-category">
+          <h3 style="color:#22c55e;margin:0 0 12px">🔥 Priority — Content</h3>
+          <label class="todo-item"><input type="checkbox" data-key="todo_1"> Scale blog to 2-3 posts per day (currently 1/day via cron)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_2"> Add more city guides (Sandton, Centurion, Midrand, Soweto, Benoni, Boksburg, Krugersdorp, Roodepoort)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_3"> Denomination deep-dives (AFM, NG Kerk, Methodist, Catholic, Baptist, ZCC)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_4"> "What to expect at a [denomination] service" series</label>
+        </div>
+        <div class="todo-category" style="margin-top:20px">
+          <h3 style="color:#3b82f6;margin:0 0 12px">🏛️ Priority — Church Pages</h3>
+          <label class="todo-item"><input type="checkbox" data-key="todo_5"> Add "About the Team" section to each church (pastor name, leadership, history)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_6"> Add church history / "About Us" to each listing (founding year, denomination background, notable events)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_7"> Add service times + languages to all 298 listings</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_8"> Add photos to church pages (street view, interior if available)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_9"> Add "ministries" section (youth, women, men, children, music)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_10"> Verify contact details are current for all churches</label>
+        </div>
+        <div class="todo-category" style="margin-top:20px">
+          <h3 style="color:#f59e0b;margin:0 0 12px">📅 Priority — Events Page</h3>
+          <label class="todo-item"><input type="checkbox" data-key="todo_11"> Build events page (/events.html)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_12"> Supabase events table (church_id, title, date, time, description, location, category)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_13"> Churches can submit events via form (free) or boost for visibility (paid)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_14"> Event categories: Sunday service, Bible study, youth night, community outreach, concerts, holiday services</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_15"> Calendar view + list view toggle</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_16"> Auto-populate Easter, Christmas, Good Friday services from all churches</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_17"> "Events near me" with location filter</label>
+        </div>
+        <div class="todo-category" style="margin-top:20px">
+          <h3 style="color:#ec4899;margin:0 0 12px">💰 Priority — Monetization</h3>
+          <label class="todo-item"><input type="checkbox" data-key="todo_18"> Get first paid church activation</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_19"> Research funeral plan affiliate programs (Avbob, Old Mutual, 1Life, Hollard)</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_20"> Add Google AdSense to blog pages</label>
+          <label class="todo-item"><input type="checkbox" data-key="todo_21"> Build funeral plan comparison page</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>📅 Events Page Brainstorm</h2>
+    <div class="card">
+      <p style="color:rgba(255,255,255,0.6);margin:0 0 16px">A church events page could be a major traffic driver and monetization channel.</p>
+      <div class="grid-2" style="gap:16px">
+        <div>
+          <h3 style="color:#22c55e;margin:0 0 8px">Free for churches</h3>
+          <ul style="color:rgba(255,255,255,0.7);font-size:13px">
+            <li>Submit events via simple form</li>
+            <li>Appears in main events feed</li>
+            <li>Listed on their church page</li>
+            <li>Basic event info (title, date, time, location)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color:#f59e0b;margin:0 0 8px">Paid boost (R99-R299)</h3>
+          <ul style="color:rgba(255,255,255,0.7);font-size:13px">
+            <li>Featured at top of events page</li>
+            <li>Highlighted with banner/badge</li>
+            <li>Shared on our social media</li>
+            <li>Email notification to subscribers in that area</li>
+            <li>Extended description + images</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <h3 style="color:#3b82f6;margin:0 0 8px">Event types to support</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="pill">Sunday Services</span>
+          <span class="pill">Bible Study</span>
+          <span class="pill">Youth Night</span>
+          <span class="pill">Women's Ministry</span>
+          <span class="pill">Men's Breakfast</span>
+          <span class="pill">Community Outreach</span>
+          <span class="pill">Worship Night</span>
+          <span class="pill">Easter Services</span>
+          <span class="pill">Christmas Services</span>
+          <span class="pill">Baptism</span>
+          <span class="pill">Marriage Prep</span>
+          <span class="pill">Funeral Service</span>
+          <span class="pill">Church Bazaar</span>
+          <span class="pill">Charity Drive</span>
+          <span class="pill">Concert / Music</span>
+          <span class="pill">Kids Ministry</span>
+          <span class="pill">New Members Class</span>
+          <span class="pill">Prayer Meeting</span>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <h3 style="color:#ec4899;margin:0 0 8px">SEO goldmine</h3>
+        <p style="color:rgba(255,255,255,0.6);font-size:13px;margin:0">"Easter services near me 2026", "Christmas church services Cape Town", "church events Johannesburg this weekend" — these are high-intent seasonal searches that nobody in SA is ranking for with a dedicated page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <h2>Monetization Tracker</h2>
     <div class="card">
       <table>
@@ -234,6 +333,19 @@
       }
       document.getElementById('app').style.display = 'block';
     }, 2000);
+  });
+
+  // Todo checkboxes — persist to localStorage
+  document.querySelectorAll('.todo-item input[type=checkbox]').forEach(cb => {
+    const key = 'cnm_' + cb.dataset.key;
+    cb.checked = localStorage.getItem(key) === 'true';
+    cb.parentElement.style.textDecoration = cb.checked ? 'line-through' : 'none';
+    cb.parentElement.style.opacity = cb.checked ? '0.5' : '1';
+    cb.addEventListener('change', () => {
+      localStorage.setItem(key, cb.checked);
+      cb.parentElement.style.textDecoration = cb.checked ? 'line-through' : 'none';
+      cb.parentElement.style.opacity = cb.checked ? '0.5' : '1';
+    });
   });
 
   // Last updated timestamp
