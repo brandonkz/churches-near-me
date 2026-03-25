@@ -46,6 +46,9 @@
   .card .value{font-size:28px;font-weight:800}
   .section{margin:28px 0}
   .section h2{font-size:18px;margin:0 0 12px}
+  .item-delete{float:right;cursor:pointer;color:rgba(255,255,255,0.3);font-size:16px;margin-left:8px;line-height:1}
+  .item-delete:hover{color:#ef4444}
+  .item{position:relative}
   .todo-item{display:block;padding:8px 12px;margin:4px 0;background:rgba(255,255,255,0.04);border-radius:8px;cursor:pointer;font-size:13px;color:rgba(255,255,255,0.8);transition:all 0.2s}
   .todo-item:hover{background:rgba(255,255,255,0.08)}
   .todo-item input{margin-right:10px;accent-color:#22c55e}
@@ -124,6 +127,7 @@
     <div class="kanban" id="kanban">
       <div class="column" data-col="ideas">
         <h3>Ideas</h3>
+        <div style="display:flex;gap:6px;margin-bottom:8px"><input type="text" id="newIdeaInput" placeholder="Add idea..." style="flex:1;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:#fff;font-size:12px" /><button onclick="addIdea()" style="padding:6px 12px;border-radius:6px;border:none;background:#22c55e;color:#000;font-weight:700;font-size:12px;cursor:pointer">+</button></div>
         <div class="item" draggable="true">Funeral plan comparison tool (Avbob, Old Mutual, 1Life, Hollard — R200-500/policy commission)</div>
         <div class="item" draggable="true">Prayer request wall / community board</div>
         <div class="item" draggable="true">WhatsApp group directory per church</div>
@@ -388,18 +392,75 @@
     }
   });
 
-  // Simple drag & drop for kanban
-  const items = document.querySelectorAll('.item');
-  const columns = document.querySelectorAll('.column');
-  items.forEach(item=>{
-    item.addEventListener('dragstart', ()=>item.classList.add('dragging'));
-    item.addEventListener('dragend', ()=>item.classList.remove('dragging'));
+  // Add new idea to kanban
+  function addIdea() {
+    const input = document.getElementById('newIdeaInput');
+    const text = input.value.trim();
+    if (!text) return;
+    const col = document.querySelector('.column[data-col="ideas"]');
+    const item = document.createElement('div');
+    item.className = 'item';
+    item.draggable = true;
+    item.innerHTML = text + '<span class="item-delete" onclick="this.parentElement.remove();saveKanban()">×</span>';
+    item.addEventListener('dragstart', () => item.classList.add('dragging'));
+    item.addEventListener('dragend', () => { item.classList.remove('dragging'); saveKanban(); });
+    col.appendChild(item);
+    input.value = '';
+    saveKanban();
+  }
+  document.getElementById('newIdeaInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); addIdea(); }
   });
-  columns.forEach(col=>{
-    col.addEventListener('dragover', (e)=>{
+
+  // Save/load kanban state to localStorage
+  function saveKanban() {
+    const state = {};
+    document.querySelectorAll('.column').forEach(col => {
+      const key = col.dataset.col;
+      state[key] = [];
+      col.querySelectorAll('.item').forEach(item => {
+        state[key].push(item.textContent.replace('×', '').trim());
+      });
+    });
+    localStorage.setItem('cnm_kanban', JSON.stringify(state));
+  }
+
+  function loadKanban() {
+    const saved = localStorage.getItem('cnm_kanban');
+    if (!saved) return;
+    const state = JSON.parse(saved);
+    document.querySelectorAll('.column').forEach(col => {
+      const key = col.dataset.col;
+      if (!state[key]) return;
+      // Remove existing items (keep h3 and input)
+      col.querySelectorAll('.item').forEach(item => item.remove());
+      // Recreate items
+      state[key].forEach(text => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.draggable = true;
+        item.innerHTML = text + '<span class="item-delete" onclick="this.parentElement.remove();saveKanban()">×</span>';
+        item.addEventListener('dragstart', () => item.classList.add('dragging'));
+        item.addEventListener('dragend', () => { item.classList.remove('dragging'); saveKanban(); });
+        col.appendChild(item);
+      });
+    });
+  }
+  loadKanban();
+
+  // Simple drag & drop for kanban
+  const columns = document.querySelectorAll('.column');
+  // Attach drag events to initial items too
+  document.querySelectorAll('.item').forEach(item => {
+    item.innerHTML = item.textContent.trim() + '<span class="item-delete" onclick="this.parentElement.remove();saveKanban()">×</span>';
+    item.addEventListener('dragstart', () => item.classList.add('dragging'));
+    item.addEventListener('dragend', () => { item.classList.remove('dragging'); saveKanban(); });
+  });
+  columns.forEach(col => {
+    col.addEventListener('dragover', (e) => {
       e.preventDefault();
       const dragging = document.querySelector('.item.dragging');
-      if(dragging) col.appendChild(dragging);
+      if (dragging) col.appendChild(dragging);
     });
   });
 </script>
