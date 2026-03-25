@@ -2,82 +2,412 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Churches Near Me Blog | ChurchesNearMe.co.za</title>
-  <meta name="description" content="Guides and resources to help you find churches in South Africa, explore denominations, and connect with local communities." />
+  <title>Church Guides & Resources | ChurchesNearMe.co.za Blog</title>
+  <meta name="description" content="Church guides and resources for South Africa. Explore city church directories, denomination guides, and practical tips for visiting local churches." />
   <link rel="canonical" href="https://churchesnearme.co.za/blog/index.html" />
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#1a2744">
-  <meta property="og:title" content="Churches Near Me Blog | ChurchesNearMe.co.za">
-  <meta property="og:description" content="Guides and resources to help you find churches in South Africa, explore denominations, and connect with local communities.">
+  <meta property="og:title" content="Church Guides & Resources | ChurchesNearMe.co.za Blog">
+  <meta property="og:description" content="Church guides and resources for South Africa. Explore city church directories, denomination guides, and practical tips for visiting local churches.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://churchesnearme.co.za/blog/index.html">
   <meta property="og:site_name" content="ChurchesNearMe.co.za">
   <meta property="og:locale" content="en_ZA">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Churches Near Me Blog | ChurchesNearMe.co.za">
-  <meta name="twitter:description" content="Guides and resources to help you find churches in South Africa, explore denominations, and connect with local communities.">
+  <meta name="twitter:title" content="Church Guides & Resources | ChurchesNearMe.co.za Blog">
+  <meta name="twitter:description" content="Church guides and resources for South Africa. Explore city church directories, denomination guides, and practical tips for visiting local churches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Church Guides & Resources",
+    "url": "https://churchesnearme.co.za/blog/index.html",
+    "description": "Church guides and resources for South Africa.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ChurchesNearMe.co.za",
+      "url": "https://churchesnearme.co.za/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://churchesnearme.co.za/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://churchesnearme.co.za/blog/index.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "url": "https://churchesnearme.co.za/blog/churches-near-me-polokwane.html"},
+      {"@type": "ListItem", "position": 2, "url": "https://churchesnearme.co.za/blog/churches-near-me-pietermaritzburg.html"},
+      {"@type": "ListItem", "position": 3, "url": "https://churchesnearme.co.za/blog/churches-near-me-gqeberha.html"},
+      {"@type": "ListItem", "position": 4, "url": "https://churchesnearme.co.za/blog/churches-near-me-east-london.html"},
+      {"@type": "ListItem", "position": 5, "url": "https://churchesnearme.co.za/blog/churches-near-me-bloemfontein.html"},
+      {"@type": "ListItem", "position": 6, "url": "https://churchesnearme.co.za/blog/churches-near-me-pretoria.html"},
+      {"@type": "ListItem", "position": 7, "url": "https://churchesnearme.co.za/blog/churches-near-me-durban.html"},
+      {"@type": "ListItem", "position": 8, "url": "https://churchesnearme.co.za/blog/churches-near-me-cape-town.html"},
+      {"@type": "ListItem", "position": 9, "url": "https://churchesnearme.co.za/blog/best-churches-johannesburg.html"},
+      {"@type": "ListItem", "position": 10, "url": "https://churchesnearme.co.za/blog/church-directory-south-africa.html"}
+    ]
+  }
+  </script>
   <style>
-    .blog-index { max-width: 900px; margin: 0 auto; padding: 48px 20px 80px; }
-    .blog-index h1 { margin-bottom: 12px; }
-    .blog-index p { color: #475569; }
-    .post-list { margin-top: 24px; display: grid; gap: 16px; }
-    .post-card { background: #ffffff; border-radius: 16px; padding: 18px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
-    .post-card h2 { margin: 0 0 8px; }
-    .post-card a { color: #1d4ed8; font-weight: 700; text-decoration: none; }
-    .post-card p { margin: 0; }
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: white;
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.95;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 24px 0 16px;
+    }
+
+    .breadcrumb a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .breadcrumb span {
+      margin: 0 8px;
+      color: var(--muted);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+
+    .post-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 22px 22px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .post-icon {
+      font-size: 24px;
+    }
+
+    .post-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+
+    .badge.featured {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .post-card h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .post-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .read-more {
+      margin-top: auto;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .read-more:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-menu a.active {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <main class="blog-index" id="main">
-    <a href="/">← Back to homepage</a>
-    <h1>Churches Near Me Blog</h1>
-    <p>Practical guides and city-specific resources for finding churches across South Africa.</p>
-
-    <div class="post-list">
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-polokwane.html">Churches Near Me in Polokwane: Find Your Church Home in Limpopo</a></h2>
-        <p>A suburb-by-suburb guide to Polokwane churches — denominations from NG Kerk to AFM, student options near UL, family-friendly picks, parking, coffee after service, and honest tips for finding a church home in Limpopo's capital.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-pietermaritzburg.html">Churches Near Me in Pietermaritzburg: Find Your Church Home in Msunduzi</a></h2>
-        <p>A suburb-by-suburb guide to PMB churches — denominations, UKZN student options, family-friendly picks, parking, coffee after service, and honest tips for finding a church home in the KZN capital.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-gqeberha.html">Churches Near Me in Gqeberha (Port Elizabeth): A Local Guide to PE Churches</a></h2>
-        <p>A suburb-by-suburb guide to Gqeberha churches — denominations, student options near NMU, family-friendly picks, parking, coffee after service, and what to expect on your first visit.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-east-london.html">Churches Near Me in East London: Find Your Church Home in Buffalo City</a></h2>
-        <p>A practical guide to East London churches — denominations, student-friendly options, family churches, parking, coffee, and what to expect when you visit.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-bloemfontein.html">Churches Near Me in Bloemfontein: Find Your Church Home in Mangaung</a></h2>
-        <p>A practical guide to Bloemfontein churches — denominations, student-friendly options, family churches, parking, coffee, and what to expect when you visit.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-pretoria.html">Churches Near Me in Pretoria: Find Your Church Home in Tshwane</a></h2>
-        <p>A suburb-by-suburb guide to Pretoria churches — from Hatfield student hubs to family-friendly Centurion, with practical tips on parking, kids' programmes, and midweek groups.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-durban.html">Churches Near Me in Durban: Find Your Church Home in eThekwini</a></h2>
-        <p>A suburb-by-suburb guide to Durban churches — denominations, parking, kids' programmes, and what to expect.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/churches-near-me-cape-town.html">Churches Near Me in Cape Town: A Local Guide</a></h2>
-        <p>Explore Cape Town churches by suburb, denomination, and practical next steps.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/best-churches-johannesburg.html">Best Churches in Johannesburg by Denomination</a></h2>
-        <p>A denomination-based guide to churches across Johannesburg’s major suburbs.</p>
-      </article>
-      <article class="post-card">
-        <h2><a href="/blog/church-directory-south-africa.html">Why South Africa Needs a Free Church Directory</a></h2>
-        <p>How a free directory helps people connect with local churches nationwide.</p>
-      </article>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a class="logo" href="/">⛪ ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/claim.html">Add Your Church</a>
+          <a href="/claim.html">Claim Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+          <a href="/blog/index.html" class="active">Blog</a>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Church Guides &amp; Resources</h1>
+      <p>Discover city-by-city guides, denomination overviews, and practical tips for finding a church home in South Africa.</p>
+    </div>
+  </section>
+
+  <main class="container" id="main">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      <span>Blog</span>
+    </div>
+
+    <section class="blog-grid" aria-label="Church Guides and Resources">
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Polokwane: Find Your Church Home in Limpopo</h2>
+        <p>Looking for churches near me in Polokwane? This local guide covers denominations, suburbs, parking, kids' programmes, and honest tips for finding a church home in Limpopo's capital.</p>
+        <a class="read-more" href="/blog/churches-near-me-polokwane.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Pietermaritzburg: Find Your Church Home in Msunduzi</h2>
+        <p>Looking for churches near me in Pietermaritzburg? A local guide to PMB churches by suburb and denomination — Scottsville, Hayfields, Hilton, Montrose, and more.</p>
+        <a class="read-more" href="/blog/churches-near-me-pietermaritzburg.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Gqeberha: A Local Guide to PE Churches</h2>
+        <p>Looking for churches near me in Gqeberha? A local guide to PE churches by suburb, denomination, and practical tips — parking, kids' programmes, coffee, and what to expect on your first visit.</p>
+        <a class="read-more" href="/blog/churches-near-me-gqeberha.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in East London: Find Your Church Home in Buffalo City</h2>
+        <p>Looking for churches near me in East London? This local guide covers denominations, suburbs, parking, kids' programmes, and practical tips for finding a church home in Buffalo City.</p>
+        <a class="read-more" href="/blog/churches-near-me-east-london.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Bloemfontein: Find Your Church Home in Mangaung</h2>
+        <p>Looking for churches near me in Bloemfontein? This local guide covers denominations, suburbs, parking, kids' programmes, and practical tips for finding a church home in Mangaung.</p>
+        <a class="read-more" href="/blog/churches-near-me-bloemfontein.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Pretoria: Find Your Church Home in Tshwane</h2>
+        <p>Looking for churches near me in Pretoria? This local guide covers suburbs from Centurion to Montana, denominations from NG Kerk to charismatic, and practical tips for finding a church in Tshwane.</p>
+        <a class="read-more" href="/blog/churches-near-me-pretoria.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Durban: Find Your Church Home in eThekwini</h2>
+        <p>Looking for churches near me in Durban? This local guide covers every suburb from Umhlanga to Amanzimtoti — denominations, service times, parking, and what to expect.</p>
+        <a class="read-more" href="/blog/churches-near-me-durban.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">🏙️</span>
+          <div class="post-badges">
+            <span class="badge">City Guide</span>
+            <span class="badge featured">Featured</span>
+          </div>
+        </div>
+        <h2>Churches Near Me in Cape Town: A Local Guide</h2>
+        <p>Looking for churches near me in Cape Town? Use this local guide to explore denominations, suburbs, and practical tips for finding a church home.</p>
+        <a class="read-more" href="/blog/churches-near-me-cape-town.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">⛪</span>
+          <div class="post-badges">
+            <span class="badge">Denomination</span>
+            <span class="badge featured">Featured</span>
+          </div>
+        </div>
+        <h2>Best Churches in Johannesburg by Denomination</h2>
+        <p>Looking for the best churches in Johannesburg? Explore top Johannesburg churches by denomination, with links and practical tips for visiting.</p>
+        <a class="read-more" href="/blog/best-churches-johannesburg.html">Read more →</a>
+      </article>
+
+      <article class="post-card">
+        <div class="post-header">
+          <span class="post-icon" aria-hidden="true">📖</span>
+          <div class="post-badges">
+            <span class="badge">Resource</span>
+          </div>
+        </div>
+        <h2>Why South Africa Needs a Free Church Directory</h2>
+        <p>A free South African church directory helps people find local churches, connect across denominations, and strengthen communities.</p>
+        <a class="read-more" href="/blog/church-directory-south-africa.html">Read more →</a>
+      </article>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/claim.html">Add Your Church</a> | 
+        <a href="/claim.html">Claim Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a> | 
+        <a href="/blog/index.html">Blog</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector('header');
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && header) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
 </body>
 </html>
