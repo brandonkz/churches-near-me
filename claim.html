@@ -246,7 +246,27 @@
           <select id="churchSelect" required>
             <option value="">Loading churches...</option>
           </select>
-          <div class="hint">Don't see your church? <a href="/submit.html">Add it here first</a></div>
+          <div class="hint" id="addOwnHint">Don't see your church? <a href="#" onclick="showManualEntry();return false;">Add it manually below</a></div>
+          <div id="manualChurch" style="display:none;margin-top:12px;padding:16px;background:#f8fafc;border:2px solid #e2e8f0;border-radius:10px;">
+            <div class="form-group" style="margin-bottom:12px;">
+              <label>Church Name</label>
+              <input type="text" id="manualName" placeholder="e.g., Grace Community Church">
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:12px;">
+                <label>City</label>
+                <input type="text" id="manualCity" placeholder="e.g., Cape Town">
+              </div>
+              <div class="form-group" style="margin-bottom:12px;">
+                <label>Denomination</label>
+                <input type="text" id="manualDenom" placeholder="e.g., Baptist, NG Kerk, AFM">
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Address</label>
+              <input type="text" id="manualAddress" placeholder="e.g., 12 Main Road, Gardens">
+            </div>
+          </div>
         </div>
 
         <div class="form-row">
@@ -397,14 +417,15 @@
       btn.textContent = 'Submitting...';
 
       try {
-        var churchId = document.getElementById('churchSelect').value;
-        var opt = document.getElementById('churchSelect').options[document.getElementById('churchSelect').selectedIndex];
+        var isManual = document.getElementById('manualChurch').style.display !== 'none';
+        var churchId = isManual ? null : document.getElementById('churchSelect').value;
+        var opt = isManual ? null : document.getElementById('churchSelect').options[document.getElementById('churchSelect').selectedIndex];
 
         var claim = {
-          name: opt.dataset.name || 'Unknown',
-          denomination: opt.dataset.denom || '',
-          address: '',
-          city: opt.dataset.city || '',
+          name: isManual ? document.getElementById('manualName').value : (opt.dataset.name || 'Unknown'),
+          denomination: isManual ? document.getElementById('manualDenom').value : (opt.dataset.denom || ''),
+          address: isManual ? document.getElementById('manualAddress').value : '',
+          city: isManual ? document.getElementById('manualCity').value : (opt.dataset.city || ''),
           province: '',
           phone: document.getElementById('claimPhone').value,
           email: document.getElementById('claimEmail').value,
@@ -440,6 +461,22 @@
         btn.disabled = false;
         btn.textContent = '🙏 Claim Your Church — R299/month (Early Bird)';
       }
+    }
+
+    // Show manual church entry
+    function showManualEntry() {
+      document.getElementById('manualChurch').style.display = 'block';
+      document.getElementById('churchSelect').required = false;
+      document.getElementById('manualName').required = true;
+      document.getElementById('manualCity').required = true;
+      document.getElementById('addOwnHint').innerHTML = '✅ Enter your church details below. <a href="#" onclick="hideManualEntry();return false;">Back to dropdown</a>';
+    }
+    function hideManualEntry() {
+      document.getElementById('manualChurch').style.display = 'none';
+      document.getElementById('churchSelect').required = true;
+      document.getElementById('manualName').required = false;
+      document.getElementById('manualCity').required = false;
+      document.getElementById('addOwnHint').innerHTML = 'Don\'t see your church? <a href="#" onclick="showManualEntry();return false;">Add it manually below</a>';
     }
 
     // Handle payment return URLs
