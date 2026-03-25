@@ -192,8 +192,16 @@
     <!-- Church preview (populated by JS if slug provided) -->
     <div id="churchPreview" style="display:none;"></div>
 
-    <div style="background:linear-gradient(135deg,#1e3a5f,#0f2440);border-radius:16px;padding:32px;color:white;margin-bottom:32px;text-align:center;">
-      <div style="font-size:48px;font-weight:800;margin-bottom:4px;">R500<span style="font-size:20px;opacity:0.7">/month</span></div>
+    <div style="background:linear-gradient(135deg,#1e3a5f,#0f2440);border-radius:16px;padding:32px;color:white;margin-bottom:32px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:16px;right:-30px;background:#ef4444;color:white;font-weight:800;font-size:13px;padding:6px 40px;transform:rotate(35deg);letter-spacing:1px;">EARLY BIRD</div>
+      <div style="background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);border-radius:10px;padding:10px 20px;display:inline-block;margin-bottom:16px;">
+        <span style="font-size:14px;font-weight:700;color:#fca5a5;">🔥 First 500 churches only — <span id="spotsLeft">500</span> spots left</span>
+      </div>
+      <div style="margin-bottom:4px;">
+        <span style="font-size:24px;color:rgba(255,255,255,0.4);text-decoration:line-through;font-weight:600;">R500</span>
+      </div>
+      <div style="font-size:54px;font-weight:800;margin-bottom:4px;">R299<span style="font-size:20px;opacity:0.7">/month</span></div>
+      <p style="opacity:0.7;margin:0 0 6px;font-size:0.9rem;">Locked in forever — price goes to R500/mo after 500 churches</p>
       <p style="opacity:0.8;margin:0 0 20px;font-size:1rem;">Manage your church listing and reach new members</p>
       <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
         <span style="background:rgba(255,255,255,0.15);padding:6px 14px;border-radius:20px;font-size:0.85rem;">✏️ Full edit access</span>
@@ -283,13 +291,13 @@
           <textarea id="claimNotes" placeholder="e.g., We recently moved to a new address, our website URL changed, etc."></textarea>
         </div>
 
-        <button type="submit" class="submit-btn" id="submitBtn">🙏 Claim Your Church — R500/month</button>
+        <button type="submit" class="submit-btn" id="submitBtn">🙏 Claim Your Church — R299/month (Early Bird)</button>
       </form>
     </div>
 
     <div class="success-msg" id="successMsg">
       <h3>🎉 Claim Submitted!</h3>
-      <p style="margin-bottom:16px">To activate your listing, please make payment of <strong>R500/month</strong> to:</p>
+      <p style="margin-bottom:16px">To activate your listing at the early bird rate of <strong>R299/month</strong>, please make payment to:</p>
       <div style="background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;padding:20px;text-align:left;margin-bottom:16px;">
         <p style="margin:0 0 8px;font-weight:600;color:#1e3a5f;">AlphaX Asset Capital (Pty) Ltd — Absa</p>
         <p style="margin:0;color:#475569;font-size:0.9rem;">Account: <strong>4121303961</strong><br>Branch: <strong>632005</strong><br>Type: <strong>Current account</strong><br>Reference: <strong>Your church name</strong></p>
@@ -298,8 +306,8 @@
     </div>
 
     <div class="upgrade-cta">
-      <h3>💡 Why R500/month?</h3>
-      <p>Your listing reaches thousands of South Africans searching for a church every month. Claimed churches get full edit access, priority placement in search, and a verified badge. That's less than R17/day to grow your congregation.</p>
+      <h3>💡 Why is this worth it?</h3>
+      <p>Thousands of South Africans search for a church every month. Claimed churches get full edit access, priority placement, and a verified badge. At R299/month that's less than R10/day to grow your congregation. <strong>This early bird rate is locked in forever</strong> — once 500 spots are taken, the price goes to R500/month.</p>
     </div>
   </div>
   </main>
@@ -423,7 +431,7 @@
       } catch (err) {
         alert('Something went wrong: ' + err.message + '\n\nPlease try again or email us at info@churchesnearme.co.za');
         btn.disabled = false;
-        btn.textContent = '🙏 Claim Your Church — R500/month';
+        btn.textContent = '🙏 Claim Your Church — R299/month (Early Bird)';
       }
     }
 
