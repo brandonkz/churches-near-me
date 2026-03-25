@@ -298,10 +298,18 @@
     <div class="success-msg" id="successMsg">
       <h3>🎉 Claim Submitted!</h3>
       <p style="margin-bottom:16px">Complete your payment of <strong>R299/month</strong> to activate your listing:</p>
-      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px;">
-        <a id="payBtn" href="#" onclick="redirectToPayment()" style="display:block;background:var(--gold);color:var(--navy);padding:16px;border-radius:12px;text-align:center;font-weight:700;font-size:1.1rem;text-decoration:none;cursor:pointer;">💳 Pay R299 by Card or EFT</a>
-      </div>
-      <p style="color:#64748b;font-size:0.85rem;margin:0">Secure payment via Yoco. Once confirmed, we'll activate your listing within 24 hours and send you full edit access. For questions, email <a href="mailto:info@churchesnearme.co.za" style="color:var(--gold)">info@churchesnearme.co.za</a></p>
+      <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" style="margin-bottom:16px;">
+        <input type="hidden" name="cmd" value="_paynow">
+        <input type="hidden" name="receiver" value="10803069">
+        <input type="hidden" name="return_url" value="https://churchesnearme.co.za/claim.html?payment=success">
+        <input type="hidden" name="cancel_url" value="https://churchesnearme.co.za/claim.html?payment=cancelled">
+        <input type="hidden" name="notify_url" value="https://churchesnearme.co.za/claim.html?payment=notify">
+        <input type="hidden" name="amount" value="299">
+        <input type="hidden" name="item_name" value="ChurchesNearMe - Early Bird Church Listing">
+        <input type="hidden" name="item_description" value="Monthly church listing management - R299/mo early bird rate">
+        <button type="submit" style="width:100%;padding:16px;background:var(--gold);color:var(--navy);border:none;border-radius:12px;font-size:1.1rem;font-weight:700;cursor:pointer;font-family:inherit;">💳 Pay R299 — Card, EFT or SnapScan</button>
+      </form>
+      <p style="color:#64748b;font-size:0.85rem;margin:0">Secure payment via PayFast. Once confirmed, we'll activate your listing within 24 hours and send you full edit access. For questions, email <a href="mailto:info@churchesnearme.co.za" style="color:var(--gold)">info@churchesnearme.co.za</a></p>
     </div>
 
     <div class="upgrade-cta">
@@ -434,7 +442,18 @@
       }
     }
 
-    // Payment redirect
+    // Handle payment return URLs
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var payment = params.get('payment');
+      if (payment === 'success') {
+        document.querySelector('.claim-container').innerHTML = '<div style="background:#f0fdf4;border:2px solid #22c55e;border-radius:16px;padding:40px;text-align:center;margin:40px 0;"><h2 style="color:#16a34a;margin:0 0 12px;">🎉 Payment Successful!</h2><p style="color:#475569;margin:0 0 8px;font-size:1.1rem;">Thank you! Your early bird listing is being activated.</p><p style="color:#64748b;margin:0;">We\'ll email you within 24 hours with full edit access to your church page. If you have any questions, email <a href="mailto:info@churchesnearme.co.za" style="color:#16a34a;font-weight:600;">info@churchesnearme.co.za</a></p></div>';
+      } else if (payment === 'cancelled') {
+        document.querySelector('.claim-container').innerHTML = '<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:16px;padding:40px;text-align:center;margin:40px 0;"><h2 style="color:#ef4444;margin:0 0 12px;">Payment Cancelled</h2><p style="color:#475569;margin:0 0 16px;">No worries — no charge was made.</p><a href="/claim.html" style="display:inline-block;background:var(--gold);color:var(--navy);padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:600;">Try Again →</a></div>';
+      }
+    })();
+
+    // Payment redirect (legacy fallback)
     function redirectToPayment() {
       // TODO: Replace with actual Yoco/PayFast payment link
       // Option 1: Yoco Payment Link (create at dashboard.yoco.com/payment-links)
