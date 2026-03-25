@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Polokwane | Find a Church Near You</title>
+  <meta name="description" content="Find Polokwane churches near me. Browse denominations, see locations on a map, and connect with local congregations in Polokwane.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/polokwane.html">
+  <meta property="og:title" content="Churches in Polokwane | Find a Church Near You">
+  <meta property="og:description" content="Find Polokwane churches near me. Browse denominations, see locations on a map, and connect with local congregations in Polokwane.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/polokwane.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Polokwane</h1>
+    <p>Find Polokwane churches near me. Browse denominations, see locations on a map, and connect with local congregations in Polokwane.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Assemblies of God">Assemblies of God</option><option value="Baptist">Baptist</option><option value="Catholic">Catholic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option><option value="His People">His People</option><option value="Shofar">Shofar</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Polokwane"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Polokwane">
+        <h3><a href="/churches/afm-polokwane/">AFM Polokwane</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Grobler St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/afm-polokwane/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Polokwane">
+        <h3><a href="/churches/assemblies-of-god-polokwane/">Assemblies of God Polokwane</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Marshall St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-polokwane/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Polokwane">
+        <h3><a href="/churches/every-nation-polokwane/">Every Nation Polokwane</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Schoeman St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-polokwane/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Polokwane">
+        <h3><a href="/churches/his-people-polokwane/">His People Polokwane</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Hans van Rensburg St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/his-people-polokwane/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Polokwane">
+        <h3><a href="/churches/holy-trinity-catholic-polokwane/">Holy Trinity Catholic Church Polokwane</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Joubert St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/holy-trinity-catholic-polokwane/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Polokwane">
+        <h3><a href="/churches/ng-kerk-polokwane/">NG Kerk Polokwane</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Landdros Mare St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-polokwane/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Polokwane">
+        <h3><a href="/churches/polokwane-baptist-church/">Polokwane Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Dahl St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/polokwane-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Polokwane">
+        <h3><a href="/churches/shofar-polokwane/">Shofar Polokwane</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Rabe St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/shofar-polokwane/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/polokwane/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Polokwane",
+      "url": "https://churchesnearme.co.za/churches/afm-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grobler St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.906,
+        "longitude": 29.4702
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Polokwane",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Marshall St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9085,
+        "longitude": 29.473
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Polokwane",
+      "url": "https://churchesnearme.co.za/churches/every-nation-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schoeman St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.903,
+        "longitude": 29.4675
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Polokwane",
+      "url": "https://churchesnearme.co.za/churches/his-people-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hans van Rensburg St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.907,
+        "longitude": 29.472
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Trinity Catholic Church Polokwane",
+      "url": "https://churchesnearme.co.za/churches/holy-trinity-catholic-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Joubert St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.904,
+        "longitude": 29.4695
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Polokwane",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Landdros Mare St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9045,
+        "longitude": 29.4688
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Polokwane Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/polokwane-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dahl St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9025,
+        "longitude": 29.467
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Polokwane",
+      "url": "https://churchesnearme.co.za/churches/shofar-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rabe St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9015,
+        "longitude": 29.466
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Polokwane","slug":"afm-polokwane","denomination":"Apostolic Faith Mission","lat":-23.906,"lng":29.4702},{"name":"Assemblies of God Polokwane","slug":"assemblies-of-god-polokwane","denomination":"Assemblies of God","lat":-23.9085,"lng":29.473},{"name":"Every Nation Polokwane","slug":"every-nation-polokwane","denomination":"Every Nation","lat":-23.903,"lng":29.4675},{"name":"His People Polokwane","slug":"his-people-polokwane","denomination":"His People","lat":-23.907,"lng":29.472},{"name":"Holy Trinity Catholic Church Polokwane","slug":"holy-trinity-catholic-polokwane","denomination":"Catholic","lat":-23.904,"lng":29.4695},{"name":"NG Kerk Polokwane","slug":"ng-kerk-polokwane","denomination":"Dutch Reformed","lat":-23.9045,"lng":29.4688},{"name":"Polokwane Baptist Church","slug":"polokwane-baptist-church","denomination":"Baptist","lat":-23.9025,"lng":29.467},{"name":"Shofar Polokwane","slug":"shofar-polokwane","denomination":"Shofar","lat":-23.9015,"lng":29.466}];
+    const map = L.map('city-map').setView([-23.904, 29.4689], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

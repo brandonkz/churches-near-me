@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anglican Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Anglican churches near me across South Africa. Browse locations, cities, and contact details for Anglican congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/anglican.html">
+  <meta property="og:title" content="Anglican Churches in South Africa">
+  <meta property="og:description" content="Explore Anglican churches near me across South Africa. Browse locations, cities, and contact details for Anglican congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/anglican.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Anglican Churches in South Africa</h1>
+    <p>Explore Anglican churches near me across South Africa. Browse locations, cities, and contact details for Anglican congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Bloemfontein">Bloemfontein</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="East London">East London</option><option value="George">George</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Kimberley">Kimberley</option><option value="Mbombela">Mbombela</option><option value="Pietermaritzburg">Pietermaritzburg</option><option value="Potchefstroom">Potchefstroom</option><option value="Pretoria">Pretoria</option><option value="Richards Bay">Richards Bay</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Anglican churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/all-saints-anglican-somerset-west/">All Saints Anglican Church Somerset West</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Lourens Street, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/all-saints-anglican-somerset-west/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Pietermaritzburg">
+        <h3><a href="/churches/cathedral-holy-nativity-pietermaritzburg/">Cathedral of the Holy Nativity</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Church Street, Pietermaritzburg, Pietermaritzburg</div>
+        <div class="church-links">
+          <a href="/churches/cathedral-holy-nativity-pietermaritzburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Mbombela">
+        <h3><a href="/churches/christ-church-anglican-nelspruit-mbombela/">Christ Church Anglican Nelspruit</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Nel St, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-anglican-nelspruit-mbombela/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/christ-church-hillcrest-durban/">Christ Church Hillcrest</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Old Main Road, Hillcrest, Durban</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-hillcrest-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/christ-church-kenilworth-cape-town/">Christ Church Kenilworth</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Summerley Road, Kenilworth, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-kenilworth-cape-town/" class="church-link">View details</a>
+          <a href="https://www.cck.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/christ-church-midrand-johannesburg/">Christ Church Midrand</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Midrand, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-midrand-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Pretoria">
+        <h3><a href="/churches/st-albans-cathedral-pretoria/">St Alban&#39;s Cathedral Pretoria</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Burnett Street, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/st-albans-cathedral-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Gqeberha">
+        <h3><a href="/churches/st-albans-anglican-gqeberha/">St Albans Anglican Church Port Elizabeth</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Park Dr, Port Elizabeth, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/st-albans-anglican-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Richards Bay">
+        <h3><a href="/churches/st-anthonys-anglican-richards-bay/">St Anthony&#39;s Anglican Church Richards Bay</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Tronox St, Richards Bay, Richards Bay</div>
+        <div class="church-links">
+          <a href="/churches/st-anthonys-anglican-richards-bay/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Kimberley">
+        <h3><a href="/churches/st-cyprians-anglican-kimberley/">St Cyprian&#39;s Anglican Cathedral Kimberley</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Egerton Rd, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/st-cyprians-anglican-kimberley/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Pretoria">
+        <h3><a href="/churches/st-francis-anglican-irene-pretoria/">St Francis Anglican Church Irene</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Irene Farm Rd, Irene, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/st-francis-anglican-irene-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Bloemfontein">
+        <h3><a href="/churches/st-georges-anglican-bloemfontein/">St George&#39;s Anglican Cathedral Bloemfontein</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">President Brand St, Bloemfontein, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/st-georges-anglican-bloemfontein/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-georges-cathedral-cape-town/">St George&#39;s Cathedral</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">5 Wale Street, Cape Town City Centre, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-georges-cathedral-cape-town/" class="church-link">View details</a>
+          <a href="https://sgcathedral.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-james-anglican-sea-point-cape-town/">St James Anglican Church Sea Point</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Main Rd, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-james-anglican-sea-point-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-johns-anglican-milnerton-cape-town/">St John&#39;s Anglican Church Milnerton</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">5th Ave, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-anglican-milnerton-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Potchefstroom">
+        <h3><a href="/churches/st-johns-anglican-potchefstroom/">St John&#39;s Anglican Church Potchefstroom</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Kock St, Potchefstroom, Potchefstroom</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-anglican-potchefstroom/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/st-johns-anglican-sandton-johannesburg/">St John&#39;s Anglican Church Sandton</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Gwen Lane, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-anglican-sandton-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/st-marys-anglican-ballito-durban/">St Mary&#39;s Anglican Church Ballito</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Compensation Beach Rd, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-anglican-ballito-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/st-marys-cathedral-johannesburg/">St Mary&#39;s Cathedral Johannesburg</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">41 De Villiers Street, Johannesburg CBD, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-cathedral-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="East London">
+        <h3><a href="/churches/st-michael-george-cathedral-east-london/">St Michael and St George Cathedral</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Hill Street, East London, East London</div>
+        <div class="church-links">
+          <a href="/churches/st-michael-george-cathedral-east-london/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/st-michaels-anglican-bryanston-johannesburg/">St Michael&#39;s Anglican Bryanston</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Grosvenor Road, Bryanston, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-michaels-anglican-bryanston-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/st-michaels-anglican-amanzimtoti-durban/">St Michael&#39;s Anglican Church Amanzimtoti</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Toti Main Rd, Amanzimtoti, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-michaels-anglican-amanzimtoti-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/st-pauls-anglican-durban/">St Paul&#39;s Anglican Church Durban</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Pine Street, Durban Central, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-pauls-anglican-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-pauls-anglican-rondebosch-cape-town/">St Paul&#39;s Anglican Church Rondebosch</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Main Road, Rondebosch, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-pauls-anglican-rondebosch-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="East London">
+        <h3><a href="/churches/st-peters-anglican-east-london/">St Peter&#39;s Anglican Church East London</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Oxford St, East London, East London</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-anglican-east-london/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-peters-anglican-fish-hoek-cape-town/">St Peter&#39;s Anglican Church Fish Hoek</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Kommetjie Rd, Fish Hoek, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-anglican-fish-hoek-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="George">
+        <h3><a href="/churches/st-peters-anglican-george/">St Peter&#39;s Anglican Church George</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Cathedral St, George, George</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-anglican-george/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-peters-anglican-hout-bay-cape-town/">St Peter&#39;s Anglican Church Hout Bay</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Andrews Rd, Hout Bay, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-anglican-hout-bay-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-johns-wynberg-cape-town/">Wynberg St John&#39;s Anglican</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Church Street, Wynberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-wynberg-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "All Saints Anglican Church Somerset West",
+      "url": "https://churchesnearme.co.za/churches/all-saints-anglican-somerset-west/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lourens Street, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.081,
+        "longitude": 18.849
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cathedral of the Holy Nativity",
+      "url": "https://churchesnearme.co.za/churches/cathedral-holy-nativity-pietermaritzburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Street, Pietermaritzburg",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.599,
+        "longitude": 30.379
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Anglican Nelspruit",
+      "url": "https://churchesnearme.co.za/churches/christ-church-anglican-nelspruit-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nel St, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4742,
+        "longitude": 30.9685
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Hillcrest",
+      "url": "https://churchesnearme.co.za/churches/christ-church-hillcrest-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Road, Hillcrest",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.778,
+        "longitude": 30.753
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Kenilworth",
+      "url": "https://churchesnearme.co.za/churches/christ-church-kenilworth-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerley Road, Kenilworth",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9967,
+        "longitude": 18.4932
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Midrand",
+      "url": "https://churchesnearme.co.za/churches/christ-church-midrand-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Midrand",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.989,
+        "longitude": 28.124
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Alban's Cathedral Pretoria",
+      "url": "https://churchesnearme.co.za/churches/st-albans-cathedral-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Burnett Street, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.75,
+        "longitude": 28.234
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Albans Anglican Church Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/st-albans-anglican-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Park Dr, Port Elizabeth",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9618,
+        "longitude": 25.5952
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Anthony's Anglican Church Richards Bay",
+      "url": "https://churchesnearme.co.za/churches/st-anthonys-anglican-richards-bay/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tronox St, Richards Bay",
+        "addressLocality": "Richards Bay",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7808,
+        "longitude": 32.057
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Cyprian's Anglican Cathedral Kimberley",
+      "url": "https://churchesnearme.co.za/churches/st-cyprians-anglican-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Egerton Rd, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7298,
+        "longitude": 24.7702
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Francis Anglican Church Irene",
+      "url": "https://churchesnearme.co.za/churches/st-francis-anglican-irene-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Irene Farm Rd, Irene",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8905,
+        "longitude": 28.2105
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St George's Anglican Cathedral Bloemfontein",
+      "url": "https://churchesnearme.co.za/churches/st-georges-anglican-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "President Brand St, Bloemfontein",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.086,
+        "longitude": 26.1575
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St George's Cathedral",
+      "url": "https://churchesnearme.co.za/churches/st-georges-cathedral-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 Wale Street, Cape Town City Centre",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9258,
+        "longitude": 18.4187
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St James Anglican Church Sea Point",
+      "url": "https://churchesnearme.co.za/churches/st-james-anglican-sea-point-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9223,
+        "longitude": 18.3895
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St John's Anglican Church Milnerton",
+      "url": "https://churchesnearme.co.za/churches/st-johns-anglican-milnerton-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5th Ave, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8658,
+        "longitude": 18.4875
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St John's Anglican Church Potchefstroom",
+      "url": "https://churchesnearme.co.za/churches/st-johns-anglican-potchefstroom/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kock St, Potchefstroom",
+        "addressLocality": "Potchefstroom",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.7115,
+        "longitude": 27.0945
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St John's Anglican Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/st-johns-anglican-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gwen Lane, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.104,
+        "longitude": 28.06
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Anglican Church Ballito",
+      "url": "https://churchesnearme.co.za/churches/st-marys-anglican-ballito-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Compensation Beach Rd, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.5383,
+        "longitude": 31.2145
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Cathedral Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/st-marys-cathedral-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "41 De Villiers Street, Johannesburg CBD",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2,
+        "longitude": 28.043
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Michael and St George Cathedral",
+      "url": "https://churchesnearme.co.za/churches/st-michael-george-cathedral-east-london/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hill Street, East London",
+        "addressLocality": "East London",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.017,
+        "longitude": 27.901
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Michael's Anglican Bryanston",
+      "url": "https://churchesnearme.co.za/churches/st-michaels-anglican-bryanston-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grosvenor Road, Bryanston",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.064,
+        "longitude": 28.022
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Michael's Anglican Church Amanzimtoti",
+      "url": "https://churchesnearme.co.za/churches/st-michaels-anglican-amanzimtoti-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Toti Main Rd, Amanzimtoti",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.053,
+        "longitude": 30.8795
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Paul's Anglican Church Durban",
+      "url": "https://churchesnearme.co.za/churches/st-pauls-anglican-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pine Street, Durban Central",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.854,
+        "longitude": 31.019
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Paul's Anglican Church Rondebosch",
+      "url": "https://churchesnearme.co.za/churches/st-pauls-anglican-rondebosch-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Rondebosch",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.961,
+        "longitude": 18.471
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Anglican Church East London",
+      "url": "https://churchesnearme.co.za/churches/st-peters-anglican-east-london/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Oxford St, East London",
+        "addressLocality": "East London",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.9798,
+        "longitude": 27.8655
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Anglican Church Fish Hoek",
+      "url": "https://churchesnearme.co.za/churches/st-peters-anglican-fish-hoek-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kommetjie Rd, Fish Hoek",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.139,
+        "longitude": 18.4302
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Anglican Church George",
+      "url": "https://churchesnearme.co.za/churches/st-peters-anglican-george/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cathedral St, George",
+        "addressLocality": "George",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9595,
+        "longitude": 22.4582
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Anglican Church Hout Bay",
+      "url": "https://churchesnearme.co.za/churches/st-peters-anglican-hout-bay-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Andrews Rd, Hout Bay",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.048,
+        "longitude": 18.3608
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Wynberg St John's Anglican",
+      "url": "https://churchesnearme.co.za/churches/st-johns-wynberg-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Street, Wynberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0028,
+        "longitude": 18.463
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"All Saints Anglican Church Somerset West","slug":"all-saints-anglican-somerset-west","city":"Cape Town","lat":-34.081,"lng":18.849},{"name":"Cathedral of the Holy Nativity","slug":"cathedral-holy-nativity-pietermaritzburg","city":"Pietermaritzburg","lat":-29.599,"lng":30.379},{"name":"Christ Church Anglican Nelspruit","slug":"christ-church-anglican-nelspruit-mbombela","city":"Mbombela","lat":-25.4742,"lng":30.9685},{"name":"Christ Church Hillcrest","slug":"christ-church-hillcrest-durban","city":"Durban","lat":-29.778,"lng":30.753},{"name":"Christ Church Kenilworth","slug":"christ-church-kenilworth-cape-town","city":"Cape Town","lat":-33.9967,"lng":18.4932},{"name":"Christ Church Midrand","slug":"christ-church-midrand-johannesburg","city":"Johannesburg","lat":-25.989,"lng":28.124},{"name":"St Alban's Cathedral Pretoria","slug":"st-albans-cathedral-pretoria","city":"Pretoria","lat":-25.75,"lng":28.234},{"name":"St Albans Anglican Church Port Elizabeth","slug":"st-albans-anglican-gqeberha","city":"Gqeberha","lat":-33.9618,"lng":25.5952},{"name":"St Anthony's Anglican Church Richards Bay","slug":"st-anthonys-anglican-richards-bay","city":"Richards Bay","lat":-28.7808,"lng":32.057},{"name":"St Cyprian's Anglican Cathedral Kimberley","slug":"st-cyprians-anglican-kimberley","city":"Kimberley","lat":-28.7298,"lng":24.7702},{"name":"St Francis Anglican Church Irene","slug":"st-francis-anglican-irene-pretoria","city":"Pretoria","lat":-25.8905,"lng":28.2105},{"name":"St George's Anglican Cathedral Bloemfontein","slug":"st-georges-anglican-bloemfontein","city":"Bloemfontein","lat":-29.086,"lng":26.1575},{"name":"St George's Cathedral","slug":"st-georges-cathedral-cape-town","city":"Cape Town","lat":-33.9258,"lng":18.4187},{"name":"St James Anglican Church Sea Point","slug":"st-james-anglican-sea-point-cape-town","city":"Cape Town","lat":-33.9223,"lng":18.3895},{"name":"St John's Anglican Church Milnerton","slug":"st-johns-anglican-milnerton-cape-town","city":"Cape Town","lat":-33.8658,"lng":18.4875},{"name":"St John's Anglican Church Potchefstroom","slug":"st-johns-anglican-potchefstroom","city":"Potchefstroom","lat":-26.7115,"lng":27.0945},{"name":"St John's Anglican Church Sandton","slug":"st-johns-anglican-sandton-johannesburg","city":"Johannesburg","lat":-26.104,"lng":28.06},{"name":"St Mary's Anglican Church Ballito","slug":"st-marys-anglican-ballito-durban","city":"Durban","lat":-29.5383,"lng":31.2145},{"name":"St Mary's Cathedral Johannesburg","slug":"st-marys-cathedral-johannesburg","city":"Johannesburg","lat":-26.2,"lng":28.043},{"name":"St Michael and St George Cathedral","slug":"st-michael-george-cathedral-east-london","city":"East London","lat":-33.017,"lng":27.901},{"name":"St Michael's Anglican Bryanston","slug":"st-michaels-anglican-bryanston-johannesburg","city":"Johannesburg","lat":-26.064,"lng":28.022},{"name":"St Michael's Anglican Church Amanzimtoti","slug":"st-michaels-anglican-amanzimtoti-durban","city":"Durban","lat":-30.053,"lng":30.8795},{"name":"St Paul's Anglican Church Durban","slug":"st-pauls-anglican-durban","city":"Durban","lat":-29.854,"lng":31.019},{"name":"St Paul's Anglican Church Rondebosch","slug":"st-pauls-anglican-rondebosch-cape-town","city":"Cape Town","lat":-33.961,"lng":18.471},{"name":"St Peter's Anglican Church East London","slug":"st-peters-anglican-east-london","city":"East London","lat":-32.9798,"lng":27.8655},{"name":"St Peter's Anglican Church Fish Hoek","slug":"st-peters-anglican-fish-hoek-cape-town","city":"Cape Town","lat":-34.139,"lng":18.4302},{"name":"St Peter's Anglican Church George","slug":"st-peters-anglican-george","city":"George","lat":-33.9595,"lng":22.4582},{"name":"St Peter's Anglican Church Hout Bay","slug":"st-peters-anglican-hout-bay-cape-town","city":"Cape Town","lat":-34.048,"lng":18.3608},{"name":"Wynberg St John's Anglican","slug":"st-johns-wynberg-cape-town","city":"Cape Town","lat":-34.0028,"lng":18.463}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

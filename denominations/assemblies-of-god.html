@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assemblies of God Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Assemblies of God churches near me across South Africa. Browse locations, cities, and contact details for Assemblies of God congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/assemblies-of-god.html">
+  <meta property="og:title" content="Assemblies of God Churches in South Africa">
+  <meta property="og:description" content="Explore Assemblies of God churches near me across South Africa. Browse locations, cities, and contact details for Assemblies of God congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/assemblies-of-god.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Assemblies of God Churches in South Africa</h1>
+    <p>Explore Assemblies of God churches near me across South Africa. Browse locations, cities, and contact details for Assemblies of God congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Durban">Durban</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Pietermaritzburg">Pietermaritzburg</option><option value="Polokwane">Polokwane</option><option value="Pretoria">Pretoria</option><option value="Somerset West">Somerset West</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Assemblies of God churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Assemblies of God" data-city="Durban">
+        <h3><a href="/churches/assemblies-of-god-durban-north/">Assemblies of God Durban North</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Papwa Sewgolum Dr, Durban North, Durban</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-durban-north/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Pretoria">
+        <h3><a href="/churches/assemblies-of-god-hatfield-pretoria/">Assemblies of God Hatfield</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Burnett St, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-hatfield-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Polokwane">
+        <h3><a href="/churches/assemblies-of-god-polokwane/">Assemblies of God Polokwane</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Marshall St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-polokwane/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Gqeberha">
+        <h3><a href="/churches/assemblies-of-god-gqeberha/">Assemblies of God Port Elizabeth</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Mangold St, Port Elizabeth, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Johannesburg">
+        <h3><a href="/churches/assemblies-of-god-soweto-johannesburg/">Assemblies of God Soweto</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Dobsonville, Soweto, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-soweto-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Pietermaritzburg">
+        <h3><a href="/churches/cornerstone-aog-pietermaritzburg/">Cornerstone Church Pietermaritzburg</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">89 Alan Paton Road, Scottsville, Pietermaritzburg</div>
+        <div class="church-links">
+          <a href="/churches/cornerstone-aog-pietermaritzburg/" class="church-link">View details</a>
+          <a href="https://www.cornerstoneaog.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Somerset West">
+        <h3><a href="/churches/life-church-somerset-west/">Life Church Somerset West</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Cnr Firgrove and Lobelia Street, Somerset West</div>
+        <div class="church-links">
+          <a href="/churches/life-church-somerset-west/" class="church-link">View details</a>
+          <a href="https://www.lifechurch.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Johannesburg">
+        <h3><a href="/churches/new-life-church-sandton-johannesburg/">New Life Church Sandton</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Bowling Ave, Gallo Manor, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/new-life-church-sandton-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Durban North",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-durban-north/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Papwa Sewgolum Dr, Durban North",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.7908,
+        "longitude": 31.0432
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Hatfield",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-hatfield-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Burnett St, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7565,
+        "longitude": 28.2355
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Polokwane",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Marshall St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9085,
+        "longitude": 29.473
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mangold St, Port Elizabeth",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.959,
+        "longitude": 25.605
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Soweto",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-soweto-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dobsonville, Soweto",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2498,
+        "longitude": 27.8743
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cornerstone Church Pietermaritzburg",
+      "url": "https://churchesnearme.co.za/churches/cornerstone-aog-pietermaritzburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "89 Alan Paton Road, Scottsville",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Life Church Somerset West",
+      "url": "https://churchesnearme.co.za/churches/life-church-somerset-west/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Firgrove and Lobelia Street",
+        "addressLocality": "Somerset West",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "New Life Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/new-life-church-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bowling Ave, Gallo Manor, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.075,
+        "longitude": 28.1005
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Assemblies of God Durban North","slug":"assemblies-of-god-durban-north","city":"Durban","lat":-29.7908,"lng":31.0432},{"name":"Assemblies of God Hatfield","slug":"assemblies-of-god-hatfield-pretoria","city":"Pretoria","lat":-25.7565,"lng":28.2355},{"name":"Assemblies of God Polokwane","slug":"assemblies-of-god-polokwane","city":"Polokwane","lat":-23.9085,"lng":29.473},{"name":"Assemblies of God Port Elizabeth","slug":"assemblies-of-god-gqeberha","city":"Gqeberha","lat":-33.959,"lng":25.605},{"name":"Assemblies of God Soweto","slug":"assemblies-of-god-soweto-johannesburg","city":"Johannesburg","lat":-26.2498,"lng":27.8743},{"name":"Cornerstone Church Pietermaritzburg","slug":"cornerstone-aog-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"Life Church Somerset West","slug":"life-church-somerset-west","city":"Somerset West","lat":0,"lng":0},{"name":"New Life Church Sandton","slug":"new-life-church-sandton-johannesburg","city":"Johannesburg","lat":-26.075,"lng":28.1005}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Durban | Find a Church Near You</title>
+  <meta name="description" content="Find Durban churches near me. Browse denominations, see locations on a map, and connect with local congregations in Durban.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/durban.html">
+  <meta property="og:title" content="Churches in Durban | Find a Church Near You">
+  <meta property="og:description" content="Find Durban churches near me. Browse denominations, see locations on a map, and connect with local congregations in Durban.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/durban.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Durban</h1>
+    <p>Find Durban churches near me. Browse denominations, see locations on a map, and connect with local congregations in Durban.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Anglican">Anglican</option><option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Assemblies of God">Assemblies of God</option><option value="Baptist">Baptist</option><option value="Catholic">Catholic</option><option value="Charismatic">Charismatic</option><option value="Christian Revival Church">Christian Revival Church</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option><option value="Hillsong">Hillsong</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="Methodist">Methodist</option><option value="Non-Denominational">Non-Denominational</option><option value="Pentecostal">Pentecostal</option><option value="Presbyterian">Presbyterian</option><option value="Rhema">Rhema</option><option value="Seventh-day Adventist">Seventh-day Adventist</option><option value="Shofar">Shofar</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Durban"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-amanzimtoti-durban/">AFM Amanzimtoti</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Beach Rd, Amanzimtoti, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-amanzimtoti-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-ballito-durban/">AFM Ballito</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Ballito Dr, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-ballito-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-chatsworth-durban/">AFM Chatsworth</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Higginson Hwy, Chatsworth, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-chatsworth-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-pinetown-durban/">AFM Pinetown</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Kings Rd, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-pinetown-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Durban">
+        <h3><a href="/churches/assemblies-of-god-durban-north/">Assemblies of God Durban North</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Papwa Sewgolum Dr, Durban North, Durban</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-durban-north/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/ballito-baptist-durban/">Ballito Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Link Rd, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/ballito-baptist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Durban">
+        <h3><a href="/churches/ballito-presbyterian-church-durban/">Ballito Presbyterian Church</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">Compensation Beach Road, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/ballito-presbyterian-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/christ-church-hillcrest-durban/">Christ Church Hillcrest</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Old Main Road, Hillcrest, Durban</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-hillcrest-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Durban">
+        <h3><a href="/churches/christian-family-church-durban/">Christian Family Church Durban</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Sarnia Road, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/christian-family-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Durban">
+        <h3><a href="/churches/crc-durban/">CRC Durban</a></h3>
+        <div class="church-denom">Christian Revival Church</div>
+        <div class="church-address">Brickfield Rd, Overport, Durban</div>
+        <div class="church-links">
+          <a href="/churches/crc-durban/" class="church-link">View details</a>
+          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Durban">
+        <h3><a href="/churches/durban-central-methodist-durban/">Durban Central Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Smith Street, Durban Central, Durban</div>
+        <div class="church-links">
+          <a href="/churches/durban-central-methodist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Seventh-day Adventist" data-city="Durban">
+        <h3><a href="/churches/durban-central-sda/">Durban Central SDA Church</a></h3>
+        <div class="church-denom">Seventh-day Adventist</div>
+        <div class="church-address">Berea, Durban</div>
+        <div class="church-links">
+          <a href="/churches/durban-central-sda/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
+        <h3><a href="/churches/durban-christian-centre-durban/">Durban Christian Centre</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Hope Road, Mobeni Heights, Durban</div>
+        <div class="church-links">
+          <a href="/churches/durban-christian-centre-durban/" class="church-link">View details</a>
+          <a href="https://www.durbanchristiancentre.com/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/emmanuel-cathedral-durban/">Emmanuel Cathedral Durban</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cathedral Road, Durban Central, Durban</div>
+        <div class="church-links">
+          <a href="/churches/emmanuel-cathedral-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Durban">
+        <h3><a href="/churches/every-nation-morningside-durban/">Every Nation Durban</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Florida Rd, Morningside, Durban</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-morningside-durban/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Durban">
+        <h3><a href="/churches/every-nation-umhlanga-durban/">Every Nation Durban North</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Gateway Area, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-umhlanga-durban/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
+        <h3><a href="/churches/grace-family-church-durban/">Grace Family Church Durban</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/grace-family-church-durban/" class="church-link">View details</a>
+          <a href="https://www.grace.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Durban">
+        <h3><a href="/churches/hillcrest-bible-church-durban/">Hillcrest Bible Church</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">Old Main Road, Hillcrest, Durban</div>
+        <div class="church-links">
+          <a href="/churches/hillcrest-bible-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Hillsong" data-city="Durban">
+        <h3><a href="/churches/hillsong-durban/">Hillsong Church Durban</a></h3>
+        <div class="church-denom">Hillsong</div>
+        <div class="church-address">Umhlanga Ridge, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/hillsong-durban/" class="church-link">View details</a>
+          <a href="https://hillsong.com/durban/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Durban">
+        <h3><a href="/churches/his-people-durban/">His People Durban</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Musgrave Rd, Musgrave, Durban, Durban</div>
+        <div class="church-links">
+          <a href="/churches/his-people-durban/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
+        <h3><a href="/churches/new-covenant-fellowship-durban/">New Covenant Fellowship</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Durban, Durban</div>
+        <div class="church-links">
+          <a href="/churches/new-covenant-fellowship-durban/" class="church-link">View details</a>
+          <a href="https://ncf.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Durban">
+        <h3><a href="/churches/ng-kerk-amanzimtoti-durban/">NG Kerk Amanzimtoti</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">4th Ave, Amanzimtoti, Durban</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-amanzimtoti-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Durban">
+        <h3><a href="/churches/ng-kerk-durban-noord/">NG Kerk Durban-Noord</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Umgeni Road, Durban North, Durban</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-durban-noord/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Durban">
+        <h3><a href="/churches/ng-kerk-pinetown-durban/">NG Kerk Pinetown</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Temple Rd, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-pinetown-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/our-lady-of-lourdes-westville-durban/">Our Lady of Lourdes Catholic Church Westville</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Lourdes Dr, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/our-lady-of-lourdes-westville-durban/" class="church-link">View details</a>
+          <a href="https://lourdes.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/pinetown-baptist-church-durban/">Pinetown Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Old Main Road, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/pinetown-baptist-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/pinetown-baptist-durban/">Pinetown Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Old Main Rd, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/pinetown-baptist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Rhema" data-city="Durban">
+        <h3><a href="/churches/rhema-durban/">Rhema Church Durban</a></h3>
+        <div class="church-denom">Rhema</div>
+        <div class="church-address">Berea Rd, Berea, Durban</div>
+        <div class="church-links">
+          <a href="/churches/rhema-durban/" class="church-link">View details</a>
+          <a href="https://www.rhema.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Durban">
+        <h3><a href="/churches/shofar-durban/">Shofar Durban</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Stamfordhill Rd, Durban, Durban</div>
+        <div class="church-links">
+          <a href="/churches/shofar-durban/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/durban/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Durban">
+        <h3><a href="/churches/shofar-umhlanga-durban/">Shofar Umhlanga</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Umhlanga Rocks Dr, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/shofar-umhlanga-durban/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/umhlanga/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Durban">
+        <h3><a href="/churches/st-andrews-presbyterian-durban/">St Andrew&#39;s Presbyterian Church Durban</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">Musgrave Road, Berea, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-andrews-presbyterian-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/st-dominics-catholic-umhlanga-durban/">St Dominic&#39;s Catholic Church Umhlanga</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Lagoon Dr, Umhlanga Rocks, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-dominics-catholic-umhlanga-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/st-francis-xavier-chatsworth-durban/">St Francis Xavier Catholic Church Chatsworth</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Chatsworth Centre Rd, Chatsworth, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-francis-xavier-chatsworth-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Durban">
+        <h3><a href="/churches/st-martins-lutheran-durban/">St Martin&#39;s Lutheran Church Durban</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">Musgrave Road, Berea, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-martins-lutheran-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/st-marys-anglican-ballito-durban/">St Mary&#39;s Anglican Church Ballito</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Compensation Beach Rd, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-anglican-ballito-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/st-michaels-anglican-amanzimtoti-durban/">St Michael&#39;s Anglican Church Amanzimtoti</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Toti Main Rd, Amanzimtoti, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-michaels-anglican-amanzimtoti-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Durban">
+        <h3><a href="/churches/st-pauls-anglican-durban/">St Paul&#39;s Anglican Church Durban</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Pine Street, Durban Central, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-pauls-anglican-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Durban">
+        <h3><a href="/churches/st-peters-lutheran-westville-durban/">St Peter&#39;s Lutheran Church Westville</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">Jan Hofmeyr Rd, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-lutheran-westville-durban/" class="church-link">View details</a>
+          <a href="https://felsisa.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/umhlanga-baptist-church-durban/">Umhlanga Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Herrwood Drive, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/umhlanga-baptist-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/westville-baptist-durban/">Westville Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Westville Rd, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-baptist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/westville-baptist-church-durban/">Westville Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Jan Hofmeyr Road, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-baptist-church-durban/" class="church-link">View details</a>
+          <a href="https://www.homeground.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Durban">
+        <h3><a href="/churches/westville-methodist-durban/">Westville Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Westville Rd, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-methodist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Durban">
+        <h3><a href="/churches/westville-methodist-church-durban/">Westville Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Jan Hofmeyr Road, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-methodist-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Amanzimtoti",
+      "url": "https://churchesnearme.co.za/churches/afm-amanzimtoti-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beach Rd, Amanzimtoti",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.0542,
+        "longitude": 30.878
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Ballito",
+      "url": "https://churchesnearme.co.za/churches/afm-ballito-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ballito Dr, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.54,
+        "longitude": 31.2162
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Chatsworth",
+      "url": "https://churchesnearme.co.za/churches/afm-chatsworth-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Higginson Hwy, Chatsworth",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.9049,
+        "longitude": 30.9249
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Pinetown",
+      "url": "https://churchesnearme.co.za/churches/afm-pinetown-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kings Rd, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8265,
+        "longitude": 30.8558
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Durban North",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-durban-north/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Papwa Sewgolum Dr, Durban North",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.7908,
+        "longitude": 31.0432
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Ballito Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/ballito-baptist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Link Rd, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.5368,
+        "longitude": 31.213
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Ballito Presbyterian Church",
+      "url": "https://churchesnearme.co.za/churches/ballito-presbyterian-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Compensation Beach Road, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.536,
+        "longitude": 31.209
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Hillcrest",
+      "url": "https://churchesnearme.co.za/churches/christ-church-hillcrest-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Road, Hillcrest",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.778,
+        "longitude": 30.753
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christian Family Church Durban",
+      "url": "https://churchesnearme.co.za/churches/christian-family-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sarnia Road, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.828,
+        "longitude": 30.852
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "CRC Durban",
+      "url": "https://churchesnearme.co.za/churches/crc-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Brickfield Rd, Overport",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.853,
+        "longitude": 31.0002
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Durban Central Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/durban-central-methodist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Smith Street, Durban Central",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.857,
+        "longitude": 31.023
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Durban Central SDA Church",
+      "url": "https://churchesnearme.co.za/churches/durban-central-sda/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berea",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.84,
+        "longitude": 31.006
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Durban Christian Centre",
+      "url": "https://churchesnearme.co.za/churches/durban-christian-centre-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hope Road, Mobeni Heights",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.923,
+        "longitude": 30.958
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Emmanuel Cathedral Durban",
+      "url": "https://churchesnearme.co.za/churches/emmanuel-cathedral-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cathedral Road, Durban Central",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.856,
+        "longitude": 31.02
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Durban",
+      "url": "https://churchesnearme.co.za/churches/every-nation-morningside-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Florida Rd, Morningside",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8478,
+        "longitude": 31.0021
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Durban North",
+      "url": "https://churchesnearme.co.za/churches/every-nation-umhlanga-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gateway Area, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.731,
+        "longitude": 31.086
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Grace Family Church Durban",
+      "url": "https://churchesnearme.co.za/churches/grace-family-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.723,
+        "longitude": 31.068
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hillcrest Bible Church",
+      "url": "https://churchesnearme.co.za/churches/hillcrest-bible-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Road, Hillcrest",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.776,
+        "longitude": 30.751
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hillsong Church Durban",
+      "url": "https://churchesnearme.co.za/churches/hillsong-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Umhlanga Ridge, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.728,
+        "longitude": 31.082
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Durban",
+      "url": "https://churchesnearme.co.za/churches/his-people-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musgrave Rd, Musgrave, Durban",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.857,
+        "longitude": 31.0085
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "New Covenant Fellowship",
+      "url": "https://churchesnearme.co.za/churches/new-covenant-fellowship-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Durban",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.806,
+        "longitude": 31.012
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Amanzimtoti",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-amanzimtoti-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4th Ave, Amanzimtoti",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.0558,
+        "longitude": 30.8765
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Durban-Noord",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-durban-noord/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Umgeni Road, Durban North",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.808,
+        "longitude": 31.012
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Pinetown",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-pinetown-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Temple Rd, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.823,
+        "longitude": 30.859
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Our Lady of Lourdes Catholic Church Westville",
+      "url": "https://churchesnearme.co.za/churches/our-lady-of-lourdes-westville-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lourdes Dr, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.831,
+        "longitude": 30.9275
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pinetown Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/pinetown-baptist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Road, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.817,
+        "longitude": 30.861
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pinetown Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/pinetown-baptist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Rd, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8249,
+        "longitude": 30.8576
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rhema Church Durban",
+      "url": "https://churchesnearme.co.za/churches/rhema-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berea Rd, Berea",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.849,
+        "longitude": 31.006
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Durban",
+      "url": "https://churchesnearme.co.za/churches/shofar-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stamfordhill Rd, Durban",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.835,
+        "longitude": 31.015
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Umhlanga",
+      "url": "https://churchesnearme.co.za/churches/shofar-umhlanga-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Umhlanga Rocks Dr, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.7295,
+        "longitude": 31.089
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Andrew's Presbyterian Church Durban",
+      "url": "https://churchesnearme.co.za/churches/st-andrews-presbyterian-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musgrave Road, Berea",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.84,
+        "longitude": 31.004
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Dominic's Catholic Church Umhlanga",
+      "url": "https://churchesnearme.co.za/churches/st-dominics-catholic-umhlanga-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lagoon Dr, Umhlanga Rocks",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.7275,
+        "longitude": 31.0878
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Francis Xavier Catholic Church Chatsworth",
+      "url": "https://churchesnearme.co.za/churches/st-francis-xavier-chatsworth-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chatsworth Centre Rd, Chatsworth",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.907,
+        "longitude": 30.9235
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Martin's Lutheran Church Durban",
+      "url": "https://churchesnearme.co.za/churches/st-martins-lutheran-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musgrave Road, Berea",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.838,
+        "longitude": 31.003
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Anglican Church Ballito",
+      "url": "https://churchesnearme.co.za/churches/st-marys-anglican-ballito-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Compensation Beach Rd, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.5383,
+        "longitude": 31.2145
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Michael's Anglican Church Amanzimtoti",
+      "url": "https://churchesnearme.co.za/churches/st-michaels-anglican-amanzimtoti-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Toti Main Rd, Amanzimtoti",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.053,
+        "longitude": 30.8795
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Paul's Anglican Church Durban",
+      "url": "https://churchesnearme.co.za/churches/st-pauls-anglican-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pine Street, Durban Central",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.854,
+        "longitude": 31.019
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Lutheran Church Westville",
+      "url": "https://churchesnearme.co.za/churches/st-peters-lutheran-westville-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jan Hofmeyr Rd, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.828,
+        "longitude": 30.9305
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Umhlanga Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/umhlanga-baptist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Herrwood Drive, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.733,
+        "longitude": 31.055
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-baptist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westville Rd, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8265,
+        "longitude": 30.932
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-baptist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jan Hofmeyr Road, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.833,
+        "longitude": 30.926
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-methodist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westville Rd, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8296,
+        "longitude": 30.9291
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-methodist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jan Hofmeyr Road, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.836,
+        "longitude": 30.928
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Amanzimtoti","slug":"afm-amanzimtoti-durban","denomination":"Apostolic Faith Mission","lat":-30.0542,"lng":30.878},{"name":"AFM Ballito","slug":"afm-ballito-durban","denomination":"Apostolic Faith Mission","lat":-29.54,"lng":31.2162},{"name":"AFM Chatsworth","slug":"afm-chatsworth-durban","denomination":"Apostolic Faith Mission","lat":-29.9049,"lng":30.9249},{"name":"AFM Pinetown","slug":"afm-pinetown-durban","denomination":"Apostolic Faith Mission","lat":-29.8265,"lng":30.8558},{"name":"Assemblies of God Durban North","slug":"assemblies-of-god-durban-north","denomination":"Assemblies of God","lat":-29.7908,"lng":31.0432},{"name":"Ballito Baptist Church","slug":"ballito-baptist-durban","denomination":"Baptist","lat":-29.5368,"lng":31.213},{"name":"Ballito Presbyterian Church","slug":"ballito-presbyterian-church-durban","denomination":"Presbyterian","lat":-29.536,"lng":31.209},{"name":"Christ Church Hillcrest","slug":"christ-church-hillcrest-durban","denomination":"Anglican","lat":-29.778,"lng":30.753},{"name":"Christian Family Church Durban","slug":"christian-family-church-durban","denomination":"Charismatic","lat":-29.828,"lng":30.852},{"name":"CRC Durban","slug":"crc-durban","denomination":"Christian Revival Church","lat":-29.853,"lng":31.0002},{"name":"Durban Central Methodist Church","slug":"durban-central-methodist-durban","denomination":"Methodist","lat":-29.857,"lng":31.023},{"name":"Durban Central SDA Church","slug":"durban-central-sda","denomination":"Seventh-day Adventist","lat":-29.84,"lng":31.006},{"name":"Durban Christian Centre","slug":"durban-christian-centre-durban","denomination":"Pentecostal","lat":-29.923,"lng":30.958},{"name":"Emmanuel Cathedral Durban","slug":"emmanuel-cathedral-durban","denomination":"Catholic","lat":-29.856,"lng":31.02},{"name":"Every Nation Durban","slug":"every-nation-morningside-durban","denomination":"Every Nation","lat":-29.8478,"lng":31.0021},{"name":"Every Nation Durban North","slug":"every-nation-umhlanga-durban","denomination":"Every Nation","lat":-29.731,"lng":31.086},{"name":"Grace Family Church Durban","slug":"grace-family-church-durban","denomination":"Pentecostal","lat":-29.723,"lng":31.068},{"name":"Hillcrest Bible Church","slug":"hillcrest-bible-church-durban","denomination":"Non-Denominational","lat":-29.776,"lng":30.751},{"name":"Hillsong Church Durban","slug":"hillsong-durban","denomination":"Hillsong","lat":-29.728,"lng":31.082},{"name":"His People Durban","slug":"his-people-durban","denomination":"His People","lat":-29.857,"lng":31.0085},{"name":"New Covenant Fellowship","slug":"new-covenant-fellowship-durban","denomination":"Pentecostal","lat":-29.806,"lng":31.012},{"name":"NG Kerk Amanzimtoti","slug":"ng-kerk-amanzimtoti-durban","denomination":"Dutch Reformed","lat":-30.0558,"lng":30.8765},{"name":"NG Kerk Durban-Noord","slug":"ng-kerk-durban-noord","denomination":"Dutch Reformed","lat":-29.808,"lng":31.012},{"name":"NG Kerk Pinetown","slug":"ng-kerk-pinetown-durban","denomination":"Dutch Reformed","lat":-29.823,"lng":30.859},{"name":"Our Lady of Lourdes Catholic Church Westville","slug":"our-lady-of-lourdes-westville-durban","denomination":"Catholic","lat":-29.831,"lng":30.9275},{"name":"Pinetown Baptist Church","slug":"pinetown-baptist-church-durban","denomination":"Baptist","lat":-29.817,"lng":30.861},{"name":"Pinetown Baptist Church","slug":"pinetown-baptist-durban","denomination":"Baptist","lat":-29.8249,"lng":30.8576},{"name":"Rhema Church Durban","slug":"rhema-durban","denomination":"Rhema","lat":-29.849,"lng":31.006},{"name":"Shofar Durban","slug":"shofar-durban","denomination":"Shofar","lat":-29.835,"lng":31.015},{"name":"Shofar Umhlanga","slug":"shofar-umhlanga-durban","denomination":"Shofar","lat":-29.7295,"lng":31.089},{"name":"St Andrew's Presbyterian Church Durban","slug":"st-andrews-presbyterian-durban","denomination":"Presbyterian","lat":-29.84,"lng":31.004},{"name":"St Dominic's Catholic Church Umhlanga","slug":"st-dominics-catholic-umhlanga-durban","denomination":"Catholic","lat":-29.7275,"lng":31.0878},{"name":"St Francis Xavier Catholic Church Chatsworth","slug":"st-francis-xavier-chatsworth-durban","denomination":"Catholic","lat":-29.907,"lng":30.9235},{"name":"St Martin's Lutheran Church Durban","slug":"st-martins-lutheran-durban","denomination":"Lutheran","lat":-29.838,"lng":31.003},{"name":"St Mary's Anglican Church Ballito","slug":"st-marys-anglican-ballito-durban","denomination":"Anglican","lat":-29.5383,"lng":31.2145},{"name":"St Michael's Anglican Church Amanzimtoti","slug":"st-michaels-anglican-amanzimtoti-durban","denomination":"Anglican","lat":-30.053,"lng":30.8795},{"name":"St Paul's Anglican Church Durban","slug":"st-pauls-anglican-durban","denomination":"Anglican","lat":-29.854,"lng":31.019},{"name":"St Peter's Lutheran Church Westville","slug":"st-peters-lutheran-westville-durban","denomination":"Lutheran","lat":-29.828,"lng":30.9305},{"name":"Umhlanga Baptist Church","slug":"umhlanga-baptist-church-durban","denomination":"Baptist","lat":-29.733,"lng":31.055},{"name":"Westville Baptist Church","slug":"westville-baptist-durban","denomination":"Baptist","lat":-29.8265,"lng":30.932},{"name":"Westville Baptist Church","slug":"westville-baptist-church-durban","denomination":"Baptist","lat":-29.833,"lng":30.926},{"name":"Westville Methodist Church","slug":"westville-methodist-durban","denomination":"Methodist","lat":-29.8296,"lng":30.9291},{"name":"Westville Methodist Church","slug":"westville-methodist-church-durban","denomination":"Methodist","lat":-29.836,"lng":30.928}];
+    const map = L.map('city-map').setView([-29.8587, 31.0218], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

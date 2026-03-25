@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apostolic Faith Mission Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Apostolic Faith Mission churches near me across South Africa. Browse locations, cities, and contact details for Apostolic Faith Mission congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/apostolic-faith-mission.html">
+  <meta property="og:title" content="Apostolic Faith Mission Churches in South Africa">
+  <meta property="og:description" content="Explore Apostolic Faith Mission churches near me across South Africa. Browse locations, cities, and contact details for Apostolic Faith Mission congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/apostolic-faith-mission.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Apostolic Faith Mission Churches in South Africa</h1>
+    <p>Explore Apostolic Faith Mission churches near me across South Africa. Browse locations, cities, and contact details for Apostolic Faith Mission congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Bloemfontein">Bloemfontein</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="East London">East London</option><option value="George">George</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Kimberley">Kimberley</option><option value="Mbombela">Mbombela</option><option value="Paarl">Paarl</option><option value="Polokwane">Polokwane</option><option value="Potchefstroom">Potchefstroom</option><option value="Pretoria">Pretoria</option><option value="Richards Bay">Richards Bay</option><option value="Rustenburg">Rustenburg</option><option value="Worcester">Worcester</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Apostolic Faith Mission churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-amanzimtoti-durban/">AFM Amanzimtoti</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Beach Rd, Amanzimtoti, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-amanzimtoti-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-ballito-durban/">AFM Ballito</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Ballito Dr, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-ballito-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-benoni-johannesburg/">AFM Benoni</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Prince George Ave, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-benoni-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Bloemfontein">
+        <h3><a href="/churches/afm-bloemfontein/">AFM Bloemfontein</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Church St, Bloemfontein, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/afm-bloemfontein/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Bloemfontein">
+        <h3><a href="/churches/afm-bloemfontein-north/">AFM Bloemfontein North</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Dan Pienaar Dr, Dan Pienaar, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/afm-bloemfontein-north/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-brackenfell-cape-town/">AFM Brackenfell</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Serbet Rd, Brackenfell, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-brackenfell-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-centurion-pretoria/">AFM Centurion</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">John Vorster Dr, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-chatsworth-durban/">AFM Chatsworth</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Higginson Hwy, Chatsworth, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-chatsworth-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="East London">
+        <h3><a href="/churches/afm-east-london/">AFM East London</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Bonza Bay Rd, East London, East London</div>
+        <div class="church-links">
+          <a href="/churches/afm-east-london/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-edenvale-johannesburg/">AFM Edenvale</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Van Riebeeck Ave, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-edenvale-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-fourways-johannesburg/">AFM Fourways</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Witkoppen Rd, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-fourways-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="George">
+        <h3><a href="/churches/afm-george/">AFM George</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Market St, George, George</div>
+        <div class="church-links">
+          <a href="/churches/afm-george/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Gqeberha">
+        <h3><a href="/churches/afm-gqeberha/">AFM Gqeberha</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Grahamstown Rd, Gqeberha, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/afm-gqeberha/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-irene-pretoria/">AFM Irene</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Nellmapius Dr, Irene, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-irene-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-kempton-park-johannesburg/">AFM Kempton Park</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Van Riebeeck Ave, Kempton Park, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-kempton-park-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Kimberley">
+        <h3><a href="/churches/afm-kimberley/">AFM Kimberley</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Memorial Rd, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/afm-kimberley/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-kraaifontein-cape-town/">AFM Kraaifontein</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Protea Rd, Kraaifontein, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-kraaifontein-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-kuils-river-cape-town/">AFM Kuils River</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Van Riebeeck Rd, Kuils River, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-kuils-river-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-lyttelton-pretoria/">AFM Lyttelton</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Centurion Ave, Lyttelton, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-lyttelton-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-menlyn-pretoria/">AFM Menlyn</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Menlyn Park area, Menlyn, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-menlyn-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-montana-pretoria/">AFM Montana</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Montana Park area, Montana, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-montana-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Mbombela">
+        <h3><a href="/churches/afm-nelspruit-mbombela/">AFM Nelspruit</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Brown St, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/afm-nelspruit-mbombela/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Paarl">
+        <h3><a href="/churches/afm-paarl/">AFM Paarl</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Lady Grey St, Paarl, Paarl</div>
+        <div class="church-links">
+          <a href="/churches/afm-paarl/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-parklands-cape-town/">AFM Parklands</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Parklands Main Rd, Parklands, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-parklands-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Durban">
+        <h3><a href="/churches/afm-pinetown-durban/">AFM Pinetown</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Kings Rd, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/afm-pinetown-durban/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Polokwane">
+        <h3><a href="/churches/afm-polokwane/">AFM Polokwane</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Grobler St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/afm-polokwane/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Potchefstroom">
+        <h3><a href="/churches/afm-potchefstroom/">AFM Potchefstroom</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Joubert St, Potchefstroom, Potchefstroom</div>
+        <div class="church-links">
+          <a href="/churches/afm-potchefstroom/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-randburg-johannesburg/">AFM Randburg</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Bram Fischer Dr, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-randburg-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Richards Bay">
+        <h3><a href="/churches/afm-richards-bay/">AFM Richards Bay</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Lira St, Richards Bay, Richards Bay</div>
+        <div class="church-links">
+          <a href="/churches/afm-richards-bay/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-roodepoort-johannesburg/">AFM Roodepoort</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Hendrik Potgieter Rd, Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-roodepoort-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Rustenburg">
+        <h3><a href="/churches/afm-rustenburg/">AFM Rustenburg</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Fatima Bhayat St, Rustenburg, Rustenburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-rustenburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-sea-point-cape-town/">AFM Sea Point</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Beach Rd, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-sea-point-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-soweto-johannesburg/">AFM Soweto</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Moroka, Soweto, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-soweto-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-strand-cape-town/">AFM Strand</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Somerset Rd, Strand, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-strand-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Worcester">
+        <h3><a href="/churches/afm-worcester/">AFM Worcester</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Church St, Worcester, Worcester</div>
+        <div class="church-links">
+          <a href="/churches/afm-worcester/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Amanzimtoti",
+      "url": "https://churchesnearme.co.za/churches/afm-amanzimtoti-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beach Rd, Amanzimtoti",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.0542,
+        "longitude": 30.878
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Ballito",
+      "url": "https://churchesnearme.co.za/churches/afm-ballito-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ballito Dr, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.54,
+        "longitude": 31.2162
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Benoni",
+      "url": "https://churchesnearme.co.za/churches/afm-benoni-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Prince George Ave, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.189,
+        "longitude": 28.3245
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Bloemfontein",
+      "url": "https://churchesnearme.co.za/churches/afm-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church St, Bloemfontein",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.0852,
+        "longitude": 26.1596
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Bloemfontein North",
+      "url": "https://churchesnearme.co.za/churches/afm-bloemfontein-north/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dan Pienaar Dr, Dan Pienaar",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.075,
+        "longitude": 26.1705
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Brackenfell",
+      "url": "https://churchesnearme.co.za/churches/afm-brackenfell-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Serbet Rd, Brackenfell",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.872,
+        "longitude": 18.69
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Centurion",
+      "url": "https://churchesnearme.co.za/churches/afm-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "John Vorster Dr, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.862,
+        "longitude": 28.1897
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Chatsworth",
+      "url": "https://churchesnearme.co.za/churches/afm-chatsworth-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Higginson Hwy, Chatsworth",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.9049,
+        "longitude": 30.9249
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM East London",
+      "url": "https://churchesnearme.co.za/churches/afm-east-london/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bonza Bay Rd, East London",
+        "addressLocality": "East London",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.9835,
+        "longitude": 27.87
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Edenvale",
+      "url": "https://churchesnearme.co.za/churches/afm-edenvale-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Ave, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1395,
+        "longitude": 28.1568
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Fourways",
+      "url": "https://churchesnearme.co.za/churches/afm-fourways-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Witkoppen Rd, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.9952,
+        "longitude": 28.0127
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM George",
+      "url": "https://churchesnearme.co.za/churches/afm-george/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Market St, George",
+        "addressLocality": "George",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9622,
+        "longitude": 22.4612
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Gqeberha",
+      "url": "https://churchesnearme.co.za/churches/afm-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grahamstown Rd, Gqeberha",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9625,
+        "longitude": 25.6038
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Irene",
+      "url": "https://churchesnearme.co.za/churches/afm-irene-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nellmapius Dr, Irene",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8935,
+        "longitude": 28.2138
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kempton Park",
+      "url": "https://churchesnearme.co.za/churches/afm-kempton-park-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Ave, Kempton Park",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.098,
+        "longitude": 28.2295
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kimberley",
+      "url": "https://churchesnearme.co.za/churches/afm-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Memorial Rd, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.733,
+        "longitude": 24.7735
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kraaifontein",
+      "url": "https://churchesnearme.co.za/churches/afm-kraaifontein-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Protea Rd, Kraaifontein",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8508,
+        "longitude": 18.7195
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kuils River",
+      "url": "https://churchesnearme.co.za/churches/afm-kuils-river-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Rd, Kuils River",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9299,
+        "longitude": 18.6849
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Lyttelton",
+      "url": "https://churchesnearme.co.za/churches/afm-lyttelton-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centurion Ave, Lyttelton",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8388,
+        "longitude": 28.2122
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Menlyn",
+      "url": "https://churchesnearme.co.za/churches/afm-menlyn-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Menlyn Park area, Menlyn",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7815,
+        "longitude": 28.2808
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Montana",
+      "url": "https://churchesnearme.co.za/churches/afm-montana-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Montana Park area, Montana",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.692,
+        "longitude": 28.2063
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Nelspruit",
+      "url": "https://churchesnearme.co.za/churches/afm-nelspruit-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Brown St, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4768,
+        "longitude": 30.971
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Paarl",
+      "url": "https://churchesnearme.co.za/churches/afm-paarl/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lady Grey St, Paarl",
+        "addressLocality": "Paarl",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.735,
+        "longitude": 18.9615
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Parklands",
+      "url": "https://churchesnearme.co.za/churches/afm-parklands-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Parklands Main Rd, Parklands",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8195,
+        "longitude": 18.5001
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Pinetown",
+      "url": "https://churchesnearme.co.za/churches/afm-pinetown-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kings Rd, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8265,
+        "longitude": 30.8558
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Polokwane",
+      "url": "https://churchesnearme.co.za/churches/afm-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grobler St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.906,
+        "longitude": 29.4702
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Potchefstroom",
+      "url": "https://churchesnearme.co.za/churches/afm-potchefstroom/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Joubert St, Potchefstroom",
+        "addressLocality": "Potchefstroom",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.7162,
+        "longitude": 27.0995
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Randburg",
+      "url": "https://churchesnearme.co.za/churches/afm-randburg-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bram Fischer Dr, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.0945,
+        "longitude": 28.001
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Richards Bay",
+      "url": "https://churchesnearme.co.za/churches/afm-richards-bay/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lira St, Richards Bay",
+        "addressLocality": "Richards Bay",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.785,
+        "longitude": 32.0618
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Roodepoort",
+      "url": "https://churchesnearme.co.za/churches/afm-roodepoort-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hendrik Potgieter Rd, Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.163,
+        "longitude": 27.8742
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Rustenburg",
+      "url": "https://churchesnearme.co.za/churches/afm-rustenburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fatima Bhayat St, Rustenburg",
+        "addressLocality": "Rustenburg",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.6688,
+        "longitude": 27.244
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Sea Point",
+      "url": "https://churchesnearme.co.za/churches/afm-sea-point-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beach Rd, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.921,
+        "longitude": 18.391
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Soweto",
+      "url": "https://churchesnearme.co.za/churches/afm-soweto-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Moroka, Soweto",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2705,
+        "longitude": 27.862
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Strand",
+      "url": "https://churchesnearme.co.za/churches/afm-strand-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Somerset Rd, Strand",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1145,
+        "longitude": 18.832
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Worcester",
+      "url": "https://churchesnearme.co.za/churches/afm-worcester/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church St, Worcester",
+        "addressLocality": "Worcester",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.6472,
+        "longitude": 19.4492
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Amanzimtoti","slug":"afm-amanzimtoti-durban","city":"Durban","lat":-30.0542,"lng":30.878},{"name":"AFM Ballito","slug":"afm-ballito-durban","city":"Durban","lat":-29.54,"lng":31.2162},{"name":"AFM Benoni","slug":"afm-benoni-johannesburg","city":"Johannesburg","lat":-26.189,"lng":28.3245},{"name":"AFM Bloemfontein","slug":"afm-bloemfontein","city":"Bloemfontein","lat":-29.0852,"lng":26.1596},{"name":"AFM Bloemfontein North","slug":"afm-bloemfontein-north","city":"Bloemfontein","lat":-29.075,"lng":26.1705},{"name":"AFM Brackenfell","slug":"afm-brackenfell-cape-town","city":"Cape Town","lat":-33.872,"lng":18.69},{"name":"AFM Centurion","slug":"afm-centurion-pretoria","city":"Pretoria","lat":-25.862,"lng":28.1897},{"name":"AFM Chatsworth","slug":"afm-chatsworth-durban","city":"Durban","lat":-29.9049,"lng":30.9249},{"name":"AFM East London","slug":"afm-east-london","city":"East London","lat":-32.9835,"lng":27.87},{"name":"AFM Edenvale","slug":"afm-edenvale-johannesburg","city":"Johannesburg","lat":-26.1395,"lng":28.1568},{"name":"AFM Fourways","slug":"afm-fourways-johannesburg","city":"Johannesburg","lat":-25.9952,"lng":28.0127},{"name":"AFM George","slug":"afm-george","city":"George","lat":-33.9622,"lng":22.4612},{"name":"AFM Gqeberha","slug":"afm-gqeberha","city":"Gqeberha","lat":-33.9625,"lng":25.6038},{"name":"AFM Irene","slug":"afm-irene-pretoria","city":"Pretoria","lat":-25.8935,"lng":28.2138},{"name":"AFM Kempton Park","slug":"afm-kempton-park-johannesburg","city":"Johannesburg","lat":-26.098,"lng":28.2295},{"name":"AFM Kimberley","slug":"afm-kimberley","city":"Kimberley","lat":-28.733,"lng":24.7735},{"name":"AFM Kraaifontein","slug":"afm-kraaifontein-cape-town","city":"Cape Town","lat":-33.8508,"lng":18.7195},{"name":"AFM Kuils River","slug":"afm-kuils-river-cape-town","city":"Cape Town","lat":-33.9299,"lng":18.6849},{"name":"AFM Lyttelton","slug":"afm-lyttelton-pretoria","city":"Pretoria","lat":-25.8388,"lng":28.2122},{"name":"AFM Menlyn","slug":"afm-menlyn-pretoria","city":"Pretoria","lat":-25.7815,"lng":28.2808},{"name":"AFM Montana","slug":"afm-montana-pretoria","city":"Pretoria","lat":-25.692,"lng":28.2063},{"name":"AFM Nelspruit","slug":"afm-nelspruit-mbombela","city":"Mbombela","lat":-25.4768,"lng":30.971},{"name":"AFM Paarl","slug":"afm-paarl","city":"Paarl","lat":-33.735,"lng":18.9615},{"name":"AFM Parklands","slug":"afm-parklands-cape-town","city":"Cape Town","lat":-33.8195,"lng":18.5001},{"name":"AFM Pinetown","slug":"afm-pinetown-durban","city":"Durban","lat":-29.8265,"lng":30.8558},{"name":"AFM Polokwane","slug":"afm-polokwane","city":"Polokwane","lat":-23.906,"lng":29.4702},{"name":"AFM Potchefstroom","slug":"afm-potchefstroom","city":"Potchefstroom","lat":-26.7162,"lng":27.0995},{"name":"AFM Randburg","slug":"afm-randburg-johannesburg","city":"Johannesburg","lat":-26.0945,"lng":28.001},{"name":"AFM Richards Bay","slug":"afm-richards-bay","city":"Richards Bay","lat":-28.785,"lng":32.0618},{"name":"AFM Roodepoort","slug":"afm-roodepoort-johannesburg","city":"Johannesburg","lat":-26.163,"lng":27.8742},{"name":"AFM Rustenburg","slug":"afm-rustenburg","city":"Rustenburg","lat":-25.6688,"lng":27.244},{"name":"AFM Sea Point","slug":"afm-sea-point-cape-town","city":"Cape Town","lat":-33.921,"lng":18.391},{"name":"AFM Soweto","slug":"afm-soweto-johannesburg","city":"Johannesburg","lat":-26.2705,"lng":27.862},{"name":"AFM Strand","slug":"afm-strand-cape-town","city":"Cape Town","lat":-34.1145,"lng":18.832},{"name":"AFM Worcester","slug":"afm-worcester","city":"Worcester","lat":-33.6472,"lng":19.4492}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

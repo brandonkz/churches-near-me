@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Pretoria | Find a Church Near You</title>
+  <meta name="description" content="Find Pretoria churches near me. Browse denominations, see locations on a map, and connect with local congregations in Pretoria.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/pretoria.html">
+  <meta property="og:title" content="Churches in Pretoria | Find a Church Near You">
+  <meta property="og:description" content="Find Pretoria churches near me. Browse denominations, see locations on a map, and connect with local congregations in Pretoria.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/pretoria.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Pretoria</h1>
+    <p>Find Pretoria churches near me. Browse denominations, see locations on a map, and connect with local congregations in Pretoria.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Anglican">Anglican</option><option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Assemblies of God">Assemblies of God</option><option value="Baptist">Baptist</option><option value="Catholic">Catholic</option><option value="Charismatic">Charismatic</option><option value="Christian Revival Church">Christian Revival Church</option><option value="Doxa Deo">Doxa Deo</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option><option value="Hillsong">Hillsong</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="Methodist">Methodist</option><option value="Non-Denominational">Non-Denominational</option><option value="Presbyterian">Presbyterian</option><option value="Rhema">Rhema</option><option value="Seventh-day Adventist">Seventh-day Adventist</option><option value="Shofar">Shofar</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Pretoria"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-centurion-pretoria/">AFM Centurion</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">John Vorster Dr, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-irene-pretoria/">AFM Irene</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Nellmapius Dr, Irene, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-irene-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-lyttelton-pretoria/">AFM Lyttelton</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Centurion Ave, Lyttelton, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-lyttelton-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-menlyn-pretoria/">AFM Menlyn</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Menlyn Park area, Menlyn, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-menlyn-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Pretoria">
+        <h3><a href="/churches/afm-montana-pretoria/">AFM Montana</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Montana Park area, Montana, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/afm-montana-pretoria/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Pretoria">
+        <h3><a href="/churches/assemblies-of-god-hatfield-pretoria/">Assemblies of God Hatfield</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Burnett St, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-hatfield-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Pretoria">
+        <h3><a href="/churches/3ci-church-pretoria/">Capital City Church International (3Ci)</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Pretoria East, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/3ci-church-pretoria/" class="church-link">View details</a>
+          <a href="https://3ci.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Pretoria">
+        <h3><a href="/churches/sacred-heart-cathedral-pretoria/">Cathedral of the Sacred Heart Pretoria</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cnr Beatrix &amp; Pretorius Streets, Arcadia, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/sacred-heart-cathedral-pretoria/" class="church-link">View details</a>
+          <a href="https://www.cshpretoria.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Pretoria">
+        <h3><a href="/churches/central-baptist-church-pretoria/">Central Baptist Church Pretoria</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Francis Baard Street, Pretoria Central, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/central-baptist-church-pretoria/" class="church-link">View details</a>
+          <a href="https://www.central.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Pretoria">
+        <h3><a href="/churches/crc-menlyn-pretoria/">CRC Menlyn</a></h3>
+        <div class="church-denom">Christian Revival Church</div>
+        <div class="church-address">Solomon Mahlangu Dr, Menlyn, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/crc-menlyn-pretoria/" class="church-link">View details</a>
+          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Doxa Deo" data-city="Pretoria">
+        <h3><a href="/churches/doxa-deo-centurion-pretoria/">Doxa Deo Centurion</a></h3>
+        <div class="church-denom">Doxa Deo</div>
+        <div class="church-address">Amkor Rd, Lyttelton, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/doxa-deo-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://doxadeo.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Pretoria">
+        <h3><a href="/churches/doxa-deo-hatfield-pretoria/">Doxa Deo Hatfield</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">315 Lynnwood Road, Menlo Park, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/doxa-deo-hatfield-pretoria/" class="church-link">View details</a>
+          <a href="https://www.doxadeo.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Doxa Deo" data-city="Pretoria">
+        <h3><a href="/churches/doxa-deo-menlyn-pretoria/">Doxa Deo Menlyn</a></h3>
+        <div class="church-denom">Doxa Deo</div>
+        <div class="church-address">Atterbury Rd, Menlyn, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/doxa-deo-menlyn-pretoria/" class="church-link">View details</a>
+          <a href="https://doxadeo.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Pretoria">
+        <h3><a href="/churches/evangelical-lutheran-pretoria/">Evangelical Lutheran Church Pretoria</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">Visagie Street, Pretoria Central, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/evangelical-lutheran-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Pretoria">
+        <h3><a href="/churches/every-nation-hatfield-pretoria/">Every Nation Pretoria</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Hatfield Plaza, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-hatfield-pretoria/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Pretoria">
+        <h3><a href="/churches/grace-fellowship-pretoria/">Grace Fellowship Pretoria</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Pretoria, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/grace-fellowship-pretoria/" class="church-link">View details</a>
+          <a href="https://gracefellowship.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Pretoria">
+        <h3><a href="/churches/hatfield-christian-church-pretoria/">Hatfield Christian Church</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">1100 Arcadia Street, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/hatfield-christian-church-pretoria/" class="church-link">View details</a>
+          <a href="https://www.hatfield.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Hillsong" data-city="Pretoria">
+        <h3><a href="/churches/hillsong-pretoria/">Hillsong Church Pretoria</a></h3>
+        <div class="church-denom">Hillsong</div>
+        <div class="church-address">Lynnwood Rd, Menlyn, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/hillsong-pretoria/" class="church-link">View details</a>
+          <a href="https://hillsong.com/pretoria/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Pretoria">
+        <h3><a href="/churches/his-people-centurion-pretoria/">His People Centurion</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Nellmapius Dr, Irene, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/his-people-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Pretoria">
+        <h3><a href="/churches/holy-mass-catholic-centurion-pretoria/">Holy Mass Catholic Church Centurion</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Jean Ave, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/holy-mass-catholic-centurion-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Pretoria">
+        <h3><a href="/churches/lynnwood-presbyterian-pretoria/">Lynnwood Ridge Presbyterian Church</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">Lynnwood Road, Lynnwood, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/lynnwood-presbyterian-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Pretoria">
+        <h3><a href="/churches/lyttelton-methodist-pretoria/">Lyttelton Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Van Ryneveld Ave, Lyttelton, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/lyttelton-methodist-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/moreleta-park-ng-kerk-pretoria/">Moreleta Park NG Kerk</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Garsfontein Rd, Moreleta Park, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/moreleta-park-ng-kerk-pretoria/" class="church-link">View details</a>
+          <a href="https://moreletapark.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Pretoria">
+        <h3><a href="/churches/moreleta-community-church-pretoria/">Moreletapark Community Church</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">De Villebois Mareuil Drive, Moreleta Park, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/moreleta-community-church-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-arcadia-pretoria/">NG Kerk Arcadia</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Eastwood Street, Arcadia, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-arcadia-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-centurion-pretoria/">NG Kerk Centurion</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Centurion Lake Rd, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-centurion-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-hatfield-pretoria/">NG Kerk Hatfield</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Park St, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-hatfield-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-irene-pretoria/">NG Kerk Irene</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Van Ryneveld Ave, Irene, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-irene-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-lyttelton-pretoria/">NG Kerk Lyttelton</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Lyttelton Rd, Lyttelton, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-lyttelton-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-montana-pretoria/">NG Kerk Montana</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Montana Dr, Montana, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-montana-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Pretoria">
+        <h3><a href="/churches/ng-kerk-pretoria-oos/">NG Kerk Pretoria-Oos</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Eastwood Street, Pretoria East, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-pretoria-oos/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Pretoria">
+        <h3><a href="/churches/pretoria-central-methodist/">Pretoria Central Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Church Street, Pretoria Central, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/pretoria-central-methodist/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Seventh-day Adventist" data-city="Pretoria">
+        <h3><a href="/churches/pretoria-central-sda/">Pretoria Central SDA Church</a></h3>
+        <div class="church-denom">Seventh-day Adventist</div>
+        <div class="church-address">Schoeman Street, Pretoria Central, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/pretoria-central-sda/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Rhema" data-city="Pretoria">
+        <h3><a href="/churches/rhema-pretoria/">Rhema Church Pretoria</a></h3>
+        <div class="church-denom">Rhema</div>
+        <div class="church-address">Lynnwood Rd, Pretoria East, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/rhema-pretoria/" class="church-link">View details</a>
+          <a href="https://www.rhema.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Pretoria">
+        <h3><a href="/churches/shofar-centurion-pretoria/">Shofar Centurion</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Centurion Mall area, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/shofar-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/centurion/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Pretoria">
+        <h3><a href="/churches/shofar-montana-pretoria/">Shofar Montana</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Montana Crossing, Montana, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/shofar-montana-pretoria/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/montana/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Pretoria">
+        <h3><a href="/churches/st-albans-cathedral-pretoria/">St Alban&#39;s Cathedral Pretoria</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Burnett Street, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/st-albans-cathedral-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Pretoria">
+        <h3><a href="/churches/st-francis-anglican-irene-pretoria/">St Francis Anglican Church Irene</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Irene Farm Rd, Irene, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/st-francis-anglican-irene-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Pretoria">
+        <h3><a href="/churches/waterkloof-baptist-church-pretoria/">Waterkloof Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">294 Cygnus Street, Waterkloof Ridge, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/waterkloof-baptist-church-pretoria/" class="church-link">View details</a>
+          <a href="https://wbc.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Centurion",
+      "url": "https://churchesnearme.co.za/churches/afm-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "John Vorster Dr, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.862,
+        "longitude": 28.1897
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Irene",
+      "url": "https://churchesnearme.co.za/churches/afm-irene-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nellmapius Dr, Irene",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8935,
+        "longitude": 28.2138
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Lyttelton",
+      "url": "https://churchesnearme.co.za/churches/afm-lyttelton-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centurion Ave, Lyttelton",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8388,
+        "longitude": 28.2122
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Menlyn",
+      "url": "https://churchesnearme.co.za/churches/afm-menlyn-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Menlyn Park area, Menlyn",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7815,
+        "longitude": 28.2808
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Montana",
+      "url": "https://churchesnearme.co.za/churches/afm-montana-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Montana Park area, Montana",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.692,
+        "longitude": 28.2063
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Hatfield",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-hatfield-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Burnett St, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7565,
+        "longitude": 28.2355
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Capital City Church International (3Ci)",
+      "url": "https://churchesnearme.co.za/churches/3ci-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pretoria East",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.787,
+        "longitude": 28.309
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cathedral of the Sacred Heart Pretoria",
+      "url": "https://churchesnearme.co.za/churches/sacred-heart-cathedral-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Beatrix & Pretorius Streets, Arcadia",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.747,
+        "longitude": 28.205
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Central Baptist Church Pretoria",
+      "url": "https://churchesnearme.co.za/churches/central-baptist-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Francis Baard Street, Pretoria Central",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.746,
+        "longitude": 28.188
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "CRC Menlyn",
+      "url": "https://churchesnearme.co.za/churches/crc-menlyn-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Solomon Mahlangu Dr, Menlyn",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7842,
+        "longitude": 28.284
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Doxa Deo Centurion",
+      "url": "https://churchesnearme.co.za/churches/doxa-deo-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Amkor Rd, Lyttelton, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8604,
+        "longitude": 28.1881
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Doxa Deo Hatfield",
+      "url": "https://churchesnearme.co.za/churches/doxa-deo-hatfield-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "315 Lynnwood Road, Menlo Park",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.762,
+        "longitude": 28.245
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Doxa Deo Menlyn",
+      "url": "https://churchesnearme.co.za/churches/doxa-deo-menlyn-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Atterbury Rd, Menlyn",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7828,
+        "longitude": 28.2823
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Evangelical Lutheran Church Pretoria",
+      "url": "https://churchesnearme.co.za/churches/evangelical-lutheran-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Visagie Street, Pretoria Central",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.743,
+        "longitude": 28.187
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Pretoria",
+      "url": "https://churchesnearme.co.za/churches/every-nation-hatfield-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hatfield Plaza, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7537,
+        "longitude": 28.2317
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Grace Fellowship Pretoria",
+      "url": "https://churchesnearme.co.za/churches/grace-fellowship-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pretoria",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.766,
+        "longitude": 28.228
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hatfield Christian Church",
+      "url": "https://churchesnearme.co.za/churches/hatfield-christian-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1100 Arcadia Street, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.751,
+        "longitude": 28.229
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hillsong Church Pretoria",
+      "url": "https://churchesnearme.co.za/churches/hillsong-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lynnwood Rd, Menlyn",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.78,
+        "longitude": 28.287
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Centurion",
+      "url": "https://churchesnearme.co.za/churches/his-people-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nellmapius Dr, Irene, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8635,
+        "longitude": 28.191
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Mass Catholic Church Centurion",
+      "url": "https://churchesnearme.co.za/churches/holy-mass-catholic-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jean Ave, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.857,
+        "longitude": 28.185
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Lynnwood Ridge Presbyterian Church",
+      "url": "https://churchesnearme.co.za/churches/lynnwood-presbyterian-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lynnwood Road, Lynnwood",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.768,
+        "longitude": 28.272
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Lyttelton Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/lyttelton-methodist-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Ryneveld Ave, Lyttelton",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.842,
+        "longitude": 28.2155
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Moreleta Park NG Kerk",
+      "url": "https://churchesnearme.co.za/churches/moreleta-park-ng-kerk-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Garsfontein Rd, Moreleta Park",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8231,
+        "longitude": 28.3028
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Moreletapark Community Church",
+      "url": "https://churchesnearme.co.za/churches/moreleta-community-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "De Villebois Mareuil Drive, Moreleta Park",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.819,
+        "longitude": 28.307
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Arcadia",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-arcadia-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Eastwood Street, Arcadia",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.752,
+        "longitude": 28.218
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Centurion",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centurion Lake Rd, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8585,
+        "longitude": 28.1863
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Hatfield",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-hatfield-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Park St, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.752,
+        "longitude": 28.23
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Irene",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-irene-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Ryneveld Ave, Irene",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8919,
+        "longitude": 28.2121
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Lyttelton",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-lyttelton-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lyttelton Rd, Lyttelton",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8404,
+        "longitude": 28.2139
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Montana",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-montana-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Montana Dr, Montana",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.6904,
+        "longitude": 28.2047
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Pretoria-Oos",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-pretoria-oos/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Eastwood Street, Pretoria East",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.759,
+        "longitude": 28.253
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pretoria Central Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/pretoria-central-methodist/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Street, Pretoria Central",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.744,
+        "longitude": 28.188
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pretoria Central SDA Church",
+      "url": "https://churchesnearme.co.za/churches/pretoria-central-sda/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schoeman Street, Pretoria Central",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.748,
+        "longitude": 28.19
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rhema Church Pretoria",
+      "url": "https://churchesnearme.co.za/churches/rhema-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lynnwood Rd, Pretoria East",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7764,
+        "longitude": 28.2956
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Centurion",
+      "url": "https://churchesnearme.co.za/churches/shofar-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centurion Mall area, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8598,
+        "longitude": 28.1875
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Montana",
+      "url": "https://churchesnearme.co.za/churches/shofar-montana-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Montana Crossing, Montana",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.6888,
+        "longitude": 28.203
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Alban's Cathedral Pretoria",
+      "url": "https://churchesnearme.co.za/churches/st-albans-cathedral-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Burnett Street, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.75,
+        "longitude": 28.234
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Francis Anglican Church Irene",
+      "url": "https://churchesnearme.co.za/churches/st-francis-anglican-irene-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Irene Farm Rd, Irene",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8905,
+        "longitude": 28.2105
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Waterkloof Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/waterkloof-baptist-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "294 Cygnus Street, Waterkloof Ridge",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.77,
+        "longitude": 28.234
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Centurion","slug":"afm-centurion-pretoria","denomination":"Apostolic Faith Mission","lat":-25.862,"lng":28.1897},{"name":"AFM Irene","slug":"afm-irene-pretoria","denomination":"Apostolic Faith Mission","lat":-25.8935,"lng":28.2138},{"name":"AFM Lyttelton","slug":"afm-lyttelton-pretoria","denomination":"Apostolic Faith Mission","lat":-25.8388,"lng":28.2122},{"name":"AFM Menlyn","slug":"afm-menlyn-pretoria","denomination":"Apostolic Faith Mission","lat":-25.7815,"lng":28.2808},{"name":"AFM Montana","slug":"afm-montana-pretoria","denomination":"Apostolic Faith Mission","lat":-25.692,"lng":28.2063},{"name":"Assemblies of God Hatfield","slug":"assemblies-of-god-hatfield-pretoria","denomination":"Assemblies of God","lat":-25.7565,"lng":28.2355},{"name":"Capital City Church International (3Ci)","slug":"3ci-church-pretoria","denomination":"Charismatic","lat":-25.787,"lng":28.309},{"name":"Cathedral of the Sacred Heart Pretoria","slug":"sacred-heart-cathedral-pretoria","denomination":"Catholic","lat":-25.747,"lng":28.205},{"name":"Central Baptist Church Pretoria","slug":"central-baptist-church-pretoria","denomination":"Baptist","lat":-25.746,"lng":28.188},{"name":"CRC Menlyn","slug":"crc-menlyn-pretoria","denomination":"Christian Revival Church","lat":-25.7842,"lng":28.284},{"name":"Doxa Deo Centurion","slug":"doxa-deo-centurion-pretoria","denomination":"Doxa Deo","lat":-25.8604,"lng":28.1881},{"name":"Doxa Deo Hatfield","slug":"doxa-deo-hatfield-pretoria","denomination":"Charismatic","lat":-25.762,"lng":28.245},{"name":"Doxa Deo Menlyn","slug":"doxa-deo-menlyn-pretoria","denomination":"Doxa Deo","lat":-25.7828,"lng":28.2823},{"name":"Evangelical Lutheran Church Pretoria","slug":"evangelical-lutheran-pretoria","denomination":"Lutheran","lat":-25.743,"lng":28.187},{"name":"Every Nation Pretoria","slug":"every-nation-hatfield-pretoria","denomination":"Every Nation","lat":-25.7537,"lng":28.2317},{"name":"Grace Fellowship Pretoria","slug":"grace-fellowship-pretoria","denomination":"Baptist","lat":-25.766,"lng":28.228},{"name":"Hatfield Christian Church","slug":"hatfield-christian-church-pretoria","denomination":"Charismatic","lat":-25.751,"lng":28.229},{"name":"Hillsong Church Pretoria","slug":"hillsong-pretoria","denomination":"Hillsong","lat":-25.78,"lng":28.287},{"name":"His People Centurion","slug":"his-people-centurion-pretoria","denomination":"His People","lat":-25.8635,"lng":28.191},{"name":"Holy Mass Catholic Church Centurion","slug":"holy-mass-catholic-centurion-pretoria","denomination":"Catholic","lat":-25.857,"lng":28.185},{"name":"Lynnwood Ridge Presbyterian Church","slug":"lynnwood-presbyterian-pretoria","denomination":"Presbyterian","lat":-25.768,"lng":28.272},{"name":"Lyttelton Methodist Church","slug":"lyttelton-methodist-pretoria","denomination":"Methodist","lat":-25.842,"lng":28.2155},{"name":"Moreleta Park NG Kerk","slug":"moreleta-park-ng-kerk-pretoria","denomination":"Dutch Reformed","lat":-25.8231,"lng":28.3028},{"name":"Moreletapark Community Church","slug":"moreleta-community-church-pretoria","denomination":"Non-Denominational","lat":-25.819,"lng":28.307},{"name":"NG Kerk Arcadia","slug":"ng-kerk-arcadia-pretoria","denomination":"Dutch Reformed","lat":-25.752,"lng":28.218},{"name":"NG Kerk Centurion","slug":"ng-kerk-centurion-pretoria","denomination":"Dutch Reformed","lat":-25.8585,"lng":28.1863},{"name":"NG Kerk Hatfield","slug":"ng-kerk-hatfield-pretoria","denomination":"Dutch Reformed","lat":-25.752,"lng":28.23},{"name":"NG Kerk Irene","slug":"ng-kerk-irene-pretoria","denomination":"Dutch Reformed","lat":-25.8919,"lng":28.2121},{"name":"NG Kerk Lyttelton","slug":"ng-kerk-lyttelton-pretoria","denomination":"Dutch Reformed","lat":-25.8404,"lng":28.2139},{"name":"NG Kerk Montana","slug":"ng-kerk-montana-pretoria","denomination":"Dutch Reformed","lat":-25.6904,"lng":28.2047},{"name":"NG Kerk Pretoria-Oos","slug":"ng-kerk-pretoria-oos","denomination":"Dutch Reformed","lat":-25.759,"lng":28.253},{"name":"Pretoria Central Methodist Church","slug":"pretoria-central-methodist","denomination":"Methodist","lat":-25.744,"lng":28.188},{"name":"Pretoria Central SDA Church","slug":"pretoria-central-sda","denomination":"Seventh-day Adventist","lat":-25.748,"lng":28.19},{"name":"Rhema Church Pretoria","slug":"rhema-pretoria","denomination":"Rhema","lat":-25.7764,"lng":28.2956},{"name":"Shofar Centurion","slug":"shofar-centurion-pretoria","denomination":"Shofar","lat":-25.8598,"lng":28.1875},{"name":"Shofar Montana","slug":"shofar-montana-pretoria","denomination":"Shofar","lat":-25.6888,"lng":28.203},{"name":"St Alban's Cathedral Pretoria","slug":"st-albans-cathedral-pretoria","denomination":"Anglican","lat":-25.75,"lng":28.234},{"name":"St Francis Anglican Church Irene","slug":"st-francis-anglican-irene-pretoria","denomination":"Anglican","lat":-25.8905,"lng":28.2105},{"name":"Waterkloof Baptist Church","slug":"waterkloof-baptist-church-pretoria","denomination":"Baptist","lat":-25.77,"lng":28.234}];
+    const map = L.map('city-map').setView([-25.7479, 28.2293], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

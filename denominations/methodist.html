@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodist Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Methodist churches near me across South Africa. Browse locations, cities, and contact details for Methodist congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/methodist.html">
+  <meta property="og:title" content="Methodist Churches in South Africa">
+  <meta property="og:description" content="Explore Methodist churches near me across South Africa. Browse locations, cities, and contact details for Methodist congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/methodist.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Methodist Churches in South Africa</h1>
+    <p>Explore Methodist churches near me across South Africa. Browse locations, cities, and contact details for Methodist congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Pretoria">Pretoria</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Methodist churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/alberton-methodist-johannesburg/">Alberton Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Voortrekker Road, Alberton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/alberton-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/bryanston-methodist-johannesburg/">Bryanston Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">115-117 Grosvenor Road, Bryanston, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/bryanston-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Gqeberha">
+        <h3><a href="/churches/central-methodist-gqeberha/">Central Methodist Church Gqeberha</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Chapel Street, Central, Gqeberha, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/central-methodist-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/central-methodist-mission-cape-town/">Central Methodist Mission</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Cnr Longmarket &amp; Burg Streets, Greenmarket Square, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/central-methodist-mission-cape-town/" class="church-link">View details</a>
+          <a href="https://cmm.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/claremont-methodist-cape-town/">Claremont Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Imam Haron Road, Claremont, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/claremont-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/constantia-methodist-cape-town/">Constantia Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Constantia Main Road, Constantia, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/constantia-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Durban">
+        <h3><a href="/churches/durban-central-methodist-durban/">Durban Central Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Smith Street, Durban Central, Durban</div>
+        <div class="church-links">
+          <a href="/churches/durban-central-methodist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/edenvale-methodist-johannesburg/">Edenvale Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">9th Ave, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/edenvale-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/goodwood-methodist-cape-town/">Goodwood Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">3rd Ave, Goodwood, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/goodwood-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Pretoria">
+        <h3><a href="/churches/lyttelton-methodist-pretoria/">Lyttelton Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Van Ryneveld Ave, Lyttelton, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/lyttelton-methodist-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/milnerton-methodist-church-cape-town/">Milnerton Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Milnerton Rd, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/milnerton-methodist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/pinelands-methodist-cape-town/">Pinelands Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Avondrust Ave, Pinelands, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/pinelands-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Gqeberha">
+        <h3><a href="/churches/methodist-church-gqeberha/">Port Elizabeth Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Church Square, Port Elizabeth, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/methodist-church-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Pretoria">
+        <h3><a href="/churches/pretoria-central-methodist/">Pretoria Central Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Church Street, Pretoria Central, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/pretoria-central-methodist/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/randburg-methodist-johannesburg/">Randburg Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Kent Avenue, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/randburg-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/rosebank-methodist-johannesburg/">Rosebank Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Bath Avenue, Rosebank, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/rosebank-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/sea-point-methodist-cape-town/">Sea Point Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Main Road, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/sea-point-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/somerset-west-methodist-cape-town/">Somerset West Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Main Road, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/somerset-west-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/table-view-methodist-cape-town/">Table View Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Blaauwberg Road, Table View, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/table-view-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Durban">
+        <h3><a href="/churches/westville-methodist-durban/">Westville Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Westville Rd, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-methodist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Durban">
+        <h3><a href="/churches/westville-methodist-church-durban/">Westville Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Jan Hofmeyr Road, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-methodist-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Alberton Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/alberton-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Voortrekker Road, Alberton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.269,
+        "longitude": 28.122
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Bryanston Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/bryanston-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "115-117 Grosvenor Road, Bryanston",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.064,
+        "longitude": 28.021
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Central Methodist Church Gqeberha",
+      "url": "https://churchesnearme.co.za/churches/central-methodist-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chapel Street, Central, Gqeberha",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.961,
+        "longitude": 25.605
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Central Methodist Mission",
+      "url": "https://churchesnearme.co.za/churches/central-methodist-mission-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Longmarket & Burg Streets, Greenmarket Square",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9237,
+        "longitude": 18.4193
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Claremont Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/claremont-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Imam Haron Road, Claremont",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.981,
+        "longitude": 18.461
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Constantia Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/constantia-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Constantia Main Road, Constantia",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.024,
+        "longitude": 18.431
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Durban Central Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/durban-central-methodist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Smith Street, Durban Central",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.857,
+        "longitude": 31.023
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Edenvale Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/edenvale-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9th Ave, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1382,
+        "longitude": 28.1583
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Goodwood Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/goodwood-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3rd Ave, Goodwood",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.907,
+        "longitude": 18.547
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Lyttelton Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/lyttelton-methodist-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Ryneveld Ave, Lyttelton",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.842,
+        "longitude": 28.2155
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Milnerton Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/milnerton-methodist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Milnerton Rd, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8636,
+        "longitude": 18.4896
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pinelands Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/pinelands-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avondrust Ave, Pinelands",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9498,
+        "longitude": 18.5008
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Port Elizabeth Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/methodist-church-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Square, Port Elizabeth",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9602,
+        "longitude": 25.6008
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pretoria Central Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/pretoria-central-methodist/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Street, Pretoria Central",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.744,
+        "longitude": 28.188
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Randburg Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/randburg-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kent Avenue, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.092,
+        "longitude": 28.004
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rosebank Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/rosebank-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bath Avenue, Rosebank",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.146,
+        "longitude": 28.044
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Sea Point Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/sea-point-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.916,
+        "longitude": 18.387
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Somerset West Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/somerset-west-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.082,
+        "longitude": 18.85
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Table View Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/table-view-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Blaauwberg Road, Table View",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.815,
+        "longitude": 18.506
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-methodist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westville Rd, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8296,
+        "longitude": 30.9291
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-methodist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jan Hofmeyr Road, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.836,
+        "longitude": 30.928
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Alberton Methodist Church","slug":"alberton-methodist-johannesburg","city":"Johannesburg","lat":-26.269,"lng":28.122},{"name":"Bryanston Methodist Church","slug":"bryanston-methodist-johannesburg","city":"Johannesburg","lat":-26.064,"lng":28.021},{"name":"Central Methodist Church Gqeberha","slug":"central-methodist-gqeberha","city":"Gqeberha","lat":-33.961,"lng":25.605},{"name":"Central Methodist Mission","slug":"central-methodist-mission-cape-town","city":"Cape Town","lat":-33.9237,"lng":18.4193},{"name":"Claremont Methodist Church","slug":"claremont-methodist-cape-town","city":"Cape Town","lat":-33.981,"lng":18.461},{"name":"Constantia Methodist Church","slug":"constantia-methodist-cape-town","city":"Cape Town","lat":-34.024,"lng":18.431},{"name":"Durban Central Methodist Church","slug":"durban-central-methodist-durban","city":"Durban","lat":-29.857,"lng":31.023},{"name":"Edenvale Methodist Church","slug":"edenvale-methodist-johannesburg","city":"Johannesburg","lat":-26.1382,"lng":28.1583},{"name":"Goodwood Methodist Church","slug":"goodwood-methodist-cape-town","city":"Cape Town","lat":-33.907,"lng":18.547},{"name":"Lyttelton Methodist Church","slug":"lyttelton-methodist-pretoria","city":"Pretoria","lat":-25.842,"lng":28.2155},{"name":"Milnerton Methodist Church","slug":"milnerton-methodist-church-cape-town","city":"Cape Town","lat":-33.8636,"lng":18.4896},{"name":"Pinelands Methodist Church","slug":"pinelands-methodist-cape-town","city":"Cape Town","lat":-33.9498,"lng":18.5008},{"name":"Port Elizabeth Methodist Church","slug":"methodist-church-gqeberha","city":"Gqeberha","lat":-33.9602,"lng":25.6008},{"name":"Pretoria Central Methodist Church","slug":"pretoria-central-methodist","city":"Pretoria","lat":-25.744,"lng":28.188},{"name":"Randburg Methodist Church","slug":"randburg-methodist-johannesburg","city":"Johannesburg","lat":-26.092,"lng":28.004},{"name":"Rosebank Methodist Church","slug":"rosebank-methodist-johannesburg","city":"Johannesburg","lat":-26.146,"lng":28.044},{"name":"Sea Point Methodist Church","slug":"sea-point-methodist-cape-town","city":"Cape Town","lat":-33.916,"lng":18.387},{"name":"Somerset West Methodist Church","slug":"somerset-west-methodist-cape-town","city":"Cape Town","lat":-34.082,"lng":18.85},{"name":"Table View Methodist Church","slug":"table-view-methodist-cape-town","city":"Cape Town","lat":-33.815,"lng":18.506},{"name":"Westville Methodist Church","slug":"westville-methodist-durban","city":"Durban","lat":-29.8296,"lng":30.9291},{"name":"Westville Methodist Church","slug":"westville-methodist-church-durban","city":"Durban","lat":-29.836,"lng":30.928}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

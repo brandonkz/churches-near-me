@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>His People Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore His People churches near me across South Africa. Browse locations, cities, and contact details for His People congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/his-people.html">
+  <meta property="og:title" content="His People Churches in South Africa">
+  <meta property="og:description" content="Explore His People churches near me across South Africa. Browse locations, cities, and contact details for His People congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/his-people.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>His People Churches in South Africa</h1>
+    <p>Explore His People churches near me across South Africa. Browse locations, cities, and contact details for His People congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Bloemfontein">Bloemfontein</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="East London">East London</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Mbombela">Mbombela</option><option value="Polokwane">Polokwane</option><option value="Potchefstroom">Potchefstroom</option><option value="Pretoria">Pretoria</option><option value="Rustenburg">Rustenburg</option><option value="Stellenbosch">Stellenbosch</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of His People churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="His People" data-city="Bloemfontein">
+        <h3><a href="/churches/his-people-bloemfontein/">His People Bloemfontein</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Harry Smith St, Bloemfontein, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/his-people-bloemfontein/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Pretoria">
+        <h3><a href="/churches/his-people-centurion-pretoria/">His People Centurion</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Nellmapius Dr, Irene, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/his-people-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Durban">
+        <h3><a href="/churches/his-people-durban/">His People Durban</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Musgrave Rd, Musgrave, Durban, Durban</div>
+        <div class="church-links">
+          <a href="/churches/his-people-durban/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Cape Town">
+        <h3><a href="/churches/his-people-durbanville-cape-town/">His People Durbanville</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Tygervalley Rd, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/his-people-durbanville-cape-town/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="East London">
+        <h3><a href="/churches/his-people-east-london/">His People East London</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Hemingways Mall Rd, East London, East London</div>
+        <div class="church-links">
+          <a href="/churches/his-people-east-london/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Mbombela">
+        <h3><a href="/churches/his-people-nelspruit-mbombela/">His People Nelspruit</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Madiba Dr, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/his-people-nelspruit-mbombela/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Polokwane">
+        <h3><a href="/churches/his-people-polokwane/">His People Polokwane</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Hans van Rensburg St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/his-people-polokwane/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Gqeberha">
+        <h3><a href="/churches/his-people-gqeberha/">His People Port Elizabeth</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Zbyszko Dr, Summerstrand, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/his-people-gqeberha/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Potchefstroom">
+        <h3><a href="/churches/his-people-potchefstroom/">His People Potchefstroom</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Mooirivier Mall area, Potchefstroom, Potchefstroom</div>
+        <div class="church-links">
+          <a href="/churches/his-people-potchefstroom/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Rustenburg">
+        <h3><a href="/churches/his-people-rustenburg/">His People Rustenburg</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Clive Rose St, Rustenburg, Rustenburg</div>
+        <div class="church-links">
+          <a href="/churches/his-people-rustenburg/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Johannesburg">
+        <h3><a href="/churches/his-people-sandton-johannesburg/">His People Sandton</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Sandton Dr, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/his-people-sandton-johannesburg/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Stellenbosch">
+        <h3><a href="/churches/his-people-stellenbosch/">His People Stellenbosch</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Alexander St, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/his-people-stellenbosch/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Bloemfontein",
+      "url": "https://churchesnearme.co.za/churches/his-people-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Harry Smith St, Bloemfontein",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.088,
+        "longitude": 26.162
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Centurion",
+      "url": "https://churchesnearme.co.za/churches/his-people-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nellmapius Dr, Irene, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8635,
+        "longitude": 28.191
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Durban",
+      "url": "https://churchesnearme.co.za/churches/his-people-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musgrave Rd, Musgrave, Durban",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.857,
+        "longitude": 31.0085
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Durbanville",
+      "url": "https://churchesnearme.co.za/churches/his-people-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tygervalley Rd, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8315,
+        "longitude": 18.6602
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People East London",
+      "url": "https://churchesnearme.co.za/churches/his-people-east-london/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hemingways Mall Rd, East London",
+        "addressLocality": "East London",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.9875,
+        "longitude": 27.872
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Nelspruit",
+      "url": "https://churchesnearme.co.za/churches/his-people-nelspruit-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Madiba Dr, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4725,
+        "longitude": 30.9663
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Polokwane",
+      "url": "https://churchesnearme.co.za/churches/his-people-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hans van Rensburg St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.907,
+        "longitude": 29.472
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/his-people-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zbyszko Dr, Summerstrand",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.984,
+        "longitude": 25.6668
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Potchefstroom",
+      "url": "https://churchesnearme.co.za/churches/his-people-potchefstroom/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mooirivier Mall area, Potchefstroom",
+        "addressLocality": "Potchefstroom",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.7178,
+        "longitude": 27.101
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Rustenburg",
+      "url": "https://churchesnearme.co.za/churches/his-people-rustenburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Clive Rose St, Rustenburg",
+        "addressLocality": "Rustenburg",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.664,
+        "longitude": 27.239
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Sandton",
+      "url": "https://churchesnearme.co.za/churches/his-people-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandton Dr, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.105,
+        "longitude": 28.056
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/his-people-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alexander St, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9352,
+        "longitude": 18.8632
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"His People Bloemfontein","slug":"his-people-bloemfontein","city":"Bloemfontein","lat":-29.088,"lng":26.162},{"name":"His People Centurion","slug":"his-people-centurion-pretoria","city":"Pretoria","lat":-25.8635,"lng":28.191},{"name":"His People Durban","slug":"his-people-durban","city":"Durban","lat":-29.857,"lng":31.0085},{"name":"His People Durbanville","slug":"his-people-durbanville-cape-town","city":"Cape Town","lat":-33.8315,"lng":18.6602},{"name":"His People East London","slug":"his-people-east-london","city":"East London","lat":-32.9875,"lng":27.872},{"name":"His People Nelspruit","slug":"his-people-nelspruit-mbombela","city":"Mbombela","lat":-25.4725,"lng":30.9663},{"name":"His People Polokwane","slug":"his-people-polokwane","city":"Polokwane","lat":-23.907,"lng":29.472},{"name":"His People Port Elizabeth","slug":"his-people-gqeberha","city":"Gqeberha","lat":-33.984,"lng":25.6668},{"name":"His People Potchefstroom","slug":"his-people-potchefstroom","city":"Potchefstroom","lat":-26.7178,"lng":27.101},{"name":"His People Rustenburg","slug":"his-people-rustenburg","city":"Rustenburg","lat":-25.664,"lng":27.239},{"name":"His People Sandton","slug":"his-people-sandton-johannesburg","city":"Johannesburg","lat":-26.105,"lng":28.056},{"name":"His People Stellenbosch","slug":"his-people-stellenbosch","city":"Stellenbosch","lat":-33.9352,"lng":18.8632}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

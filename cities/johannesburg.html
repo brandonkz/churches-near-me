@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Johannesburg | Find a Church Near You</title>
+  <meta name="description" content="Find Johannesburg churches near me. Browse denominations, see locations on a map, and connect with local congregations in Johannesburg.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/johannesburg.html">
+  <meta property="og:title" content="Churches in Johannesburg | Find a Church Near You">
+  <meta property="og:description" content="Find Johannesburg churches near me. Browse denominations, see locations on a map, and connect with local congregations in Johannesburg.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/johannesburg.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Johannesburg</h1>
+    <p>Find Johannesburg churches near me. Browse denominations, see locations on a map, and connect with local congregations in Johannesburg.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Anglican">Anglican</option><option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Assemblies of God">Assemblies of God</option><option value="Baptist">Baptist</option><option value="Catholic">Catholic</option><option value="Charismatic">Charismatic</option><option value="Christian Revival Church">Christian Revival Church</option><option value="Doxa Deo">Doxa Deo</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option><option value="Hillsong">Hillsong</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="Methodist">Methodist</option><option value="Non-Denominational">Non-Denominational</option><option value="Nondenominational">Nondenominational</option><option value="Pentecostal">Pentecostal</option><option value="Presbyterian">Presbyterian</option><option value="Seventh-day Adventist">Seventh-day Adventist</option><option value="Shofar">Shofar</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Johannesburg"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-benoni-johannesburg/">AFM Benoni</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Prince George Ave, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-benoni-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-edenvale-johannesburg/">AFM Edenvale</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Van Riebeeck Ave, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-edenvale-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-fourways-johannesburg/">AFM Fourways</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Witkoppen Rd, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-fourways-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-kempton-park-johannesburg/">AFM Kempton Park</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Van Riebeeck Ave, Kempton Park, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-kempton-park-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-randburg-johannesburg/">AFM Randburg</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Bram Fischer Dr, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-randburg-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-roodepoort-johannesburg/">AFM Roodepoort</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Hendrik Potgieter Rd, Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-roodepoort-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Johannesburg">
+        <h3><a href="/churches/afm-soweto-johannesburg/">AFM Soweto</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Moroka, Soweto, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/afm-soweto-johannesburg/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/alberton-methodist-johannesburg/">Alberton Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Voortrekker Road, Alberton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/alberton-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Johannesburg">
+        <h3><a href="/churches/assemblies-of-god-soweto-johannesburg/">Assemblies of God Soweto</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Dobsonville, Soweto, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/assemblies-of-god-soweto-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/benoni-baptist-johannesburg/">Benoni Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Tom Jones St, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/benoni-baptist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Johannesburg">
+        <h3><a href="/churches/benoni-lutheran-church-johannesburg/">Benoni Lutheran Church</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/benoni-lutheran-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/bryanston-methodist-johannesburg/">Bryanston Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">115-117 Grosvenor Road, Bryanston, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/bryanston-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/cathedral-christ-the-king-johannesburg/">Cathedral of Christ the King</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Saratoga Avenue, Berea, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/cathedral-christ-the-king-johannesburg/" class="church-link">View details</a>
+          <a href="https://catholicjhb.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/christ-church-midrand-johannesburg/">Christ Church Midrand</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Midrand, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-midrand-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Johannesburg">
+        <h3><a href="/churches/crc-johannesburg/">Christian Revival Church Johannesburg</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Johannesburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/crc-johannesburg/" class="church-link">View details</a>
+          <a href="https://crcchurch.com/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/immaculate-conception-rosebank-johannesburg/">Church of the Immaculate Conception</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">16 Keyes Avenue, Rosebank, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/immaculate-conception-rosebank-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Johannesburg">
+        <h3><a href="/churches/cornerstone-church-johannesburg/">Cornerstone Church Johannesburg</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">Johannesburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/cornerstone-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://www.cornerstonechurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Johannesburg">
+        <h3><a href="/churches/crc-johannesburg-north/">CRC Johannesburg North</a></h3>
+        <div class="church-denom">Christian Revival Church</div>
+        <div class="church-address">Louis Botha Ave, Orange Grove, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/crc-johannesburg-north/" class="church-link">View details</a>
+          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Johannesburg">
+        <h3><a href="/churches/crc-randburg-johannesburg/">CRC Randburg</a></h3>
+        <div class="church-denom">Christian Revival Church</div>
+        <div class="church-address">Bram Fischer Dr, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/crc-randburg-johannesburg/" class="church-link">View details</a>
+          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Doxa Deo" data-city="Johannesburg">
+        <h3><a href="/churches/doxa-deo-fourways-johannesburg/">Doxa Deo Fourways</a></h3>
+        <div class="church-denom">Doxa Deo</div>
+        <div class="church-address">Cedar Rd, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/doxa-deo-fourways-johannesburg/" class="church-link">View details</a>
+          <a href="https://doxadeo.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/edenvale-baptist-church-johannesburg/">Edenvale Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Van Riebeeck Avenue, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/edenvale-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/edenvale-methodist-johannesburg/">Edenvale Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">9th Ave, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/edenvale-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Johannesburg">
+        <h3><a href="/churches/every-nation-johannesburg/">Every Nation Johannesburg</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Oxford Rd, Rosebank, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-johannesburg/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Johannesburg">
+        <h3><a href="/churches/every-nation-roodepoort-johannesburg/">Every Nation Roodepoort</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Florida Park, Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-roodepoort-johannesburg/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/fourways-baptist-church-johannesburg/">Fourways Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Uranium Street, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/fourways-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Nondenominational" data-city="Johannesburg">
+        <h3><a href="/churches/fourways-community-church-johannesburg/">Fourways Community Church</a></h3>
+        <div class="church-denom">Nondenominational</div>
+        <div class="church-address">2 Capricorn Rd, Lone Hill, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/fourways-community-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
+        <h3><a href="/churches/grace-bible-church-johannesburg/">Grace Bible Church Soweto</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Joburg Theatre, 163 Civic Boulevard, Braamfontein, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/grace-bible-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://www.gracebiblechurch.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/heritage-baptist-church-johannesburg/">Heritage Baptist Church Johannesburg</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Johannesburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/heritage-baptist-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://www.heritagebaptist.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Hillsong" data-city="Johannesburg">
+        <h3><a href="/churches/hillsong-sandton-johannesburg/">Hillsong Church Johannesburg</a></h3>
+        <div class="church-denom">Hillsong</div>
+        <div class="church-address">Rivonia Rd, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/hillsong-sandton-johannesburg/" class="church-link">View details</a>
+          <a href="https://hillsong.com/johannesburg/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Johannesburg">
+        <h3><a href="/churches/his-people-sandton-johannesburg/">His People Sandton</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Sandton Dr, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/his-people-sandton-johannesburg/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/honeyridge-baptist-church-johannesburg/">Honeyridge Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Cnr Beyers Naude Drive &amp; Eastwood Avenue, Randpark Ridge, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/honeyridge-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Assemblies of God" data-city="Johannesburg">
+        <h3><a href="/churches/new-life-church-sandton-johannesburg/">New Life Church Sandton</a></h3>
+        <div class="church-denom">Assemblies of God</div>
+        <div class="church-address">Bowling Ave, Gallo Manor, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/new-life-church-sandton-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-benoni-johannesburg/">NG Kerk Benoni</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Church St, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-benoni-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-edenvale-johannesburg/">NG Kerk Edenvale</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Oxford Rd, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-edenvale-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-fourways-johannesburg/">NG Kerk Fourways</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Cnr Fourways Blvd &amp; Cedar Rd, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-fourways-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-kempton-park-johannesburg/">NG Kerk Kempton Park</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">CR Swart Dr, Kempton Park, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-kempton-park-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-randburg-johannesburg/">NG Kerk Randburg</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Bram Fischer Drive, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-randburg-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-roodepoort-johannesburg/">NG Kerk Roodepoort</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Ontdekkers Rd, Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-roodepoort-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Johannesburg">
+        <h3><a href="/churches/ng-kerk-sandton-johannesburg/">NG Kerk Sandton</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Stella Street, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-sandton-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/northcliff-baptist-church-johannesburg/">Northcliff Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Northcliff, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/northcliff-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/randburg-methodist-johannesburg/">Randburg Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Kent Avenue, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/randburg-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
+        <h3><a href="/churches/rhema-bible-church-johannesburg/">Rhema Bible Church</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Cnr Rabie &amp; Hans Schoeman Streets, Randpark Ridge, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/rhema-bible-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://www.rhema.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
+        <h3><a href="/churches/rivers-church-sandton-johannesburg/">Rivers Church Sandton</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/rivers-church-sandton-johannesburg/" class="church-link">View details</a>
+          <a href="https://rivers.church/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/roodepoort-baptist-church-johannesburg/">Roodepoort Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/roodepoort-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Johannesburg">
+        <h3><a href="/churches/rosebank-methodist-johannesburg/">Rosebank Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Bath Avenue, Rosebank, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/rosebank-methodist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Johannesburg">
+        <h3><a href="/churches/rosebank-union-church-johannesburg/">Rosebank Union Church</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">40 St Andrews Road, Hurlingham, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/rosebank-union-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://ruc.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Seventh-day Adventist" data-city="Johannesburg">
+        <h3><a href="/churches/sandton-sda-johannesburg/">Sandton Seventh-day Adventist Church</a></h3>
+        <div class="church-denom">Seventh-day Adventist</div>
+        <div class="church-address">2 Malindi Road, Sunninghill, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/sandton-sda-johannesburg/" class="church-link">View details</a>
+          <a href="https://www.sandtonchurch.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Johannesburg">
+        <h3><a href="/churches/shofar-sandton-johannesburg/">Shofar Christian Church Sandton</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">South Rd, Morningside, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/shofar-sandton-johannesburg/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/sandton/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Johannesburg">
+        <h3><a href="/churches/shofar-randburg-johannesburg/">Shofar Randburg</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Witkoppen Rd, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/shofar-randburg-johannesburg/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/randburg/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Johannesburg">
+        <h3><a href="/churches/st-columbas-presbyterian-parkview-johannesburg/">St Columba&#39;s Presbyterian Parkview</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">Tyrone Avenue, Parkview, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-columbas-presbyterian-parkview-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/st-dunstan-catholic-benoni-johannesburg/">St Dunstan Catholic Church Benoni</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Fourth St, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-dunstan-catholic-benoni-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/st-francis-xavier-soweto-johannesburg/">St Francis Xavier Catholic Church Soweto</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Vilakazi St, Orlando West, Soweto, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-francis-xavier-soweto-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/st-johns-anglican-sandton-johannesburg/">St John&#39;s Anglican Church Sandton</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Gwen Lane, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-anglican-sandton-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/st-marys-cathedral-johannesburg/">St Mary&#39;s Cathedral Johannesburg</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">41 De Villiers Street, Johannesburg CBD, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-cathedral-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Johannesburg">
+        <h3><a href="/churches/st-michaels-anglican-bryanston-johannesburg/">St Michael&#39;s Anglican Bryanston</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Grosvenor Road, Bryanston, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-michaels-anglican-bryanston-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/st-theresa-catholic-kempton-park-johannesburg/">St Theresa Catholic Church Kempton Park</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Commissioner St, Kempton Park, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-theresa-catholic-kempton-park-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
+        <h3><a href="/churches/the-life-church-johannesburg/">The Life Church Johannesburg</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Northern Suburbs, Johannesburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/the-life-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://thelifechurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Benoni",
+      "url": "https://churchesnearme.co.za/churches/afm-benoni-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Prince George Ave, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.189,
+        "longitude": 28.3245
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Edenvale",
+      "url": "https://churchesnearme.co.za/churches/afm-edenvale-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Ave, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1395,
+        "longitude": 28.1568
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Fourways",
+      "url": "https://churchesnearme.co.za/churches/afm-fourways-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Witkoppen Rd, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.9952,
+        "longitude": 28.0127
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kempton Park",
+      "url": "https://churchesnearme.co.za/churches/afm-kempton-park-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Ave, Kempton Park",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.098,
+        "longitude": 28.2295
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Randburg",
+      "url": "https://churchesnearme.co.za/churches/afm-randburg-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bram Fischer Dr, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.0945,
+        "longitude": 28.001
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Roodepoort",
+      "url": "https://churchesnearme.co.za/churches/afm-roodepoort-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hendrik Potgieter Rd, Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.163,
+        "longitude": 27.8742
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Soweto",
+      "url": "https://churchesnearme.co.za/churches/afm-soweto-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Moroka, Soweto",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2705,
+        "longitude": 27.862
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Alberton Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/alberton-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Voortrekker Road, Alberton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.269,
+        "longitude": 28.122
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Assemblies of God Soweto",
+      "url": "https://churchesnearme.co.za/churches/assemblies-of-god-soweto-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dobsonville, Soweto",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2498,
+        "longitude": 27.8743
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Benoni Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/benoni-baptist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tom Jones St, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1865,
+        "longitude": 28.3215
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Benoni Lutheran Church",
+      "url": "https://churchesnearme.co.za/churches/benoni-lutheran-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.187,
+        "longitude": 28.321
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Bryanston Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/bryanston-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "115-117 Grosvenor Road, Bryanston",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.064,
+        "longitude": 28.021
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cathedral of Christ the King",
+      "url": "https://churchesnearme.co.za/churches/cathedral-christ-the-king-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Saratoga Avenue, Berea",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.187,
+        "longitude": 28.055
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Midrand",
+      "url": "https://churchesnearme.co.za/churches/christ-church-midrand-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Midrand",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.989,
+        "longitude": 28.124
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christian Revival Church Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/crc-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Johannesburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.15,
+        "longitude": 28.04
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Church of the Immaculate Conception",
+      "url": "https://churchesnearme.co.za/churches/immaculate-conception-rosebank-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16 Keyes Avenue, Rosebank",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.143,
+        "longitude": 28.037
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cornerstone Church Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/cornerstone-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Johannesburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.107,
+        "longitude": 28.056
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "CRC Johannesburg North",
+      "url": "https://churchesnearme.co.za/churches/crc-johannesburg-north/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Louis Botha Ave, Orange Grove",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.162,
+        "longitude": 28.077
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "CRC Randburg",
+      "url": "https://churchesnearme.co.za/churches/crc-randburg-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bram Fischer Dr, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.087,
+        "longitude": 27.9975
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Doxa Deo Fourways",
+      "url": "https://churchesnearme.co.za/churches/doxa-deo-fourways-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cedar Rd, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.0109,
+        "longitude": 28.0082
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Edenvale Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/edenvale-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Avenue, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.142,
+        "longitude": 28.157
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Edenvale Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/edenvale-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9th Ave, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1382,
+        "longitude": 28.1583
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/every-nation-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Oxford Rd, Rosebank",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1489,
+        "longitude": 28.043
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Roodepoort",
+      "url": "https://churchesnearme.co.za/churches/every-nation-roodepoort-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Florida Park, Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1615,
+        "longitude": 27.8765
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Fourways Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/fourways-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Uranium Street, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.019,
+        "longitude": 28.012
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Fourways Community Church",
+      "url": "https://churchesnearme.co.za/churches/fourways-community-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Capricorn Rd, Lone Hill, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.9976,
+        "longitude": 28.0108
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Grace Bible Church Soweto",
+      "url": "https://churchesnearme.co.za/churches/grace-bible-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Joburg Theatre, 163 Civic Boulevard, Braamfontein",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.196,
+        "longitude": 28.039
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Heritage Baptist Church Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/heritage-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Johannesburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.16,
+        "longitude": 28.04
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hillsong Church Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/hillsong-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rivonia Rd, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.056,
+        "longitude": 28.0614
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Sandton",
+      "url": "https://churchesnearme.co.za/churches/his-people-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandton Dr, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.105,
+        "longitude": 28.056
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Honeyridge Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/honeyridge-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Beyers Naude Drive & Eastwood Avenue, Randpark Ridge",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.093,
+        "longitude": 27.969
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "New Life Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/new-life-church-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bowling Ave, Gallo Manor, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.075,
+        "longitude": 28.1005
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Benoni",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-benoni-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church St, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1877,
+        "longitude": 28.323
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Edenvale",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-edenvale-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Oxford Rd, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1368,
+        "longitude": 28.1598
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Fourways",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-fourways-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Fourways Blvd & Cedar Rd, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.999,
+        "longitude": 28.0145
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Kempton Park",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-kempton-park-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "CR Swart Dr, Kempton Park",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.095,
+        "longitude": 28.226
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Randburg",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-randburg-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bram Fischer Drive, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.095,
+        "longitude": 28.002
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Roodepoort",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-roodepoort-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ontdekkers Rd, Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.165,
+        "longitude": 27.872
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Sandton",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stella Street, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.107,
+        "longitude": 28.059
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Northcliff Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/northcliff-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Northcliff",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.135,
+        "longitude": 27.966
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Randburg Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/randburg-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kent Avenue, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.092,
+        "longitude": 28.004
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rhema Bible Church",
+      "url": "https://churchesnearme.co.za/churches/rhema-bible-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Rabie & Hans Schoeman Streets, Randpark Ridge",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.102,
+        "longitude": 27.971
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rivers Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/rivers-church-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.107,
+        "longitude": 28.052
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Roodepoort Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/roodepoort-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.162,
+        "longitude": 27.872
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rosebank Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/rosebank-methodist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bath Avenue, Rosebank",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.146,
+        "longitude": 28.044
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rosebank Union Church",
+      "url": "https://churchesnearme.co.za/churches/rosebank-union-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40 St Andrews Road, Hurlingham",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.135,
+        "longitude": 28.046
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Sandton Seventh-day Adventist Church",
+      "url": "https://churchesnearme.co.za/churches/sandton-sda-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Malindi Road, Sunninghill",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.034,
+        "longitude": 28.068
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Christian Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/shofar-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "South Rd, Morningside, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1067,
+        "longitude": 28.0567
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Randburg",
+      "url": "https://churchesnearme.co.za/churches/shofar-randburg-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Witkoppen Rd, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.088,
+        "longitude": 27.9965
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Columba's Presbyterian Parkview",
+      "url": "https://churchesnearme.co.za/churches/st-columbas-presbyterian-parkview-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tyrone Avenue, Parkview",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.165,
+        "longitude": 28.027
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Dunstan Catholic Church Benoni",
+      "url": "https://churchesnearme.co.za/churches/st-dunstan-catholic-benoni-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fourth St, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1855,
+        "longitude": 28.32
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Francis Xavier Catholic Church Soweto",
+      "url": "https://churchesnearme.co.za/churches/st-francis-xavier-soweto-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vilakazi St, Orlando West, Soweto",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2674,
+        "longitude": 27.8588
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St John's Anglican Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/st-johns-anglican-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gwen Lane, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.104,
+        "longitude": 28.06
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Cathedral Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/st-marys-cathedral-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "41 De Villiers Street, Johannesburg CBD",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2,
+        "longitude": 28.043
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Michael's Anglican Bryanston",
+      "url": "https://churchesnearme.co.za/churches/st-michaels-anglican-bryanston-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Grosvenor Road, Bryanston",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.064,
+        "longitude": 28.022
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Theresa Catholic Church Kempton Park",
+      "url": "https://churchesnearme.co.za/churches/st-theresa-catholic-kempton-park-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Commissioner St, Kempton Park",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.0967,
+        "longitude": 28.228
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "The Life Church Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/the-life-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Northern Suburbs, Johannesburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.074,
+        "longitude": 28.01
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Benoni","slug":"afm-benoni-johannesburg","denomination":"Apostolic Faith Mission","lat":-26.189,"lng":28.3245},{"name":"AFM Edenvale","slug":"afm-edenvale-johannesburg","denomination":"Apostolic Faith Mission","lat":-26.1395,"lng":28.1568},{"name":"AFM Fourways","slug":"afm-fourways-johannesburg","denomination":"Apostolic Faith Mission","lat":-25.9952,"lng":28.0127},{"name":"AFM Kempton Park","slug":"afm-kempton-park-johannesburg","denomination":"Apostolic Faith Mission","lat":-26.098,"lng":28.2295},{"name":"AFM Randburg","slug":"afm-randburg-johannesburg","denomination":"Apostolic Faith Mission","lat":-26.0945,"lng":28.001},{"name":"AFM Roodepoort","slug":"afm-roodepoort-johannesburg","denomination":"Apostolic Faith Mission","lat":-26.163,"lng":27.8742},{"name":"AFM Soweto","slug":"afm-soweto-johannesburg","denomination":"Apostolic Faith Mission","lat":-26.2705,"lng":27.862},{"name":"Alberton Methodist Church","slug":"alberton-methodist-johannesburg","denomination":"Methodist","lat":-26.269,"lng":28.122},{"name":"Assemblies of God Soweto","slug":"assemblies-of-god-soweto-johannesburg","denomination":"Assemblies of God","lat":-26.2498,"lng":27.8743},{"name":"Benoni Baptist Church","slug":"benoni-baptist-johannesburg","denomination":"Baptist","lat":-26.1865,"lng":28.3215},{"name":"Benoni Lutheran Church","slug":"benoni-lutheran-church-johannesburg","denomination":"Lutheran","lat":-26.187,"lng":28.321},{"name":"Bryanston Methodist Church","slug":"bryanston-methodist-johannesburg","denomination":"Methodist","lat":-26.064,"lng":28.021},{"name":"Cathedral of Christ the King","slug":"cathedral-christ-the-king-johannesburg","denomination":"Catholic","lat":-26.187,"lng":28.055},{"name":"Christ Church Midrand","slug":"christ-church-midrand-johannesburg","denomination":"Anglican","lat":-25.989,"lng":28.124},{"name":"Christian Revival Church Johannesburg","slug":"crc-johannesburg","denomination":"Charismatic","lat":-26.15,"lng":28.04},{"name":"Church of the Immaculate Conception","slug":"immaculate-conception-rosebank-johannesburg","denomination":"Catholic","lat":-26.143,"lng":28.037},{"name":"Cornerstone Church Johannesburg","slug":"cornerstone-church-johannesburg","denomination":"Non-Denominational","lat":-26.107,"lng":28.056},{"name":"CRC Johannesburg North","slug":"crc-johannesburg-north","denomination":"Christian Revival Church","lat":-26.162,"lng":28.077},{"name":"CRC Randburg","slug":"crc-randburg-johannesburg","denomination":"Christian Revival Church","lat":-26.087,"lng":27.9975},{"name":"Doxa Deo Fourways","slug":"doxa-deo-fourways-johannesburg","denomination":"Doxa Deo","lat":-26.0109,"lng":28.0082},{"name":"Edenvale Baptist Church","slug":"edenvale-baptist-church-johannesburg","denomination":"Baptist","lat":-26.142,"lng":28.157},{"name":"Edenvale Methodist Church","slug":"edenvale-methodist-johannesburg","denomination":"Methodist","lat":-26.1382,"lng":28.1583},{"name":"Every Nation Johannesburg","slug":"every-nation-johannesburg","denomination":"Every Nation","lat":-26.1489,"lng":28.043},{"name":"Every Nation Roodepoort","slug":"every-nation-roodepoort-johannesburg","denomination":"Every Nation","lat":-26.1615,"lng":27.8765},{"name":"Fourways Baptist Church","slug":"fourways-baptist-church-johannesburg","denomination":"Baptist","lat":-26.019,"lng":28.012},{"name":"Fourways Community Church","slug":"fourways-community-church-johannesburg","denomination":"Nondenominational","lat":-25.9976,"lng":28.0108},{"name":"Grace Bible Church Soweto","slug":"grace-bible-church-johannesburg","denomination":"Pentecostal","lat":-26.196,"lng":28.039},{"name":"Heritage Baptist Church Johannesburg","slug":"heritage-baptist-church-johannesburg","denomination":"Baptist","lat":-26.16,"lng":28.04},{"name":"Hillsong Church Johannesburg","slug":"hillsong-sandton-johannesburg","denomination":"Hillsong","lat":-26.056,"lng":28.0614},{"name":"His People Sandton","slug":"his-people-sandton-johannesburg","denomination":"His People","lat":-26.105,"lng":28.056},{"name":"Honeyridge Baptist Church","slug":"honeyridge-baptist-church-johannesburg","denomination":"Baptist","lat":-26.093,"lng":27.969},{"name":"New Life Church Sandton","slug":"new-life-church-sandton-johannesburg","denomination":"Assemblies of God","lat":-26.075,"lng":28.1005},{"name":"NG Kerk Benoni","slug":"ng-kerk-benoni-johannesburg","denomination":"Dutch Reformed","lat":-26.1877,"lng":28.323},{"name":"NG Kerk Edenvale","slug":"ng-kerk-edenvale-johannesburg","denomination":"Dutch Reformed","lat":-26.1368,"lng":28.1598},{"name":"NG Kerk Fourways","slug":"ng-kerk-fourways-johannesburg","denomination":"Dutch Reformed","lat":-25.999,"lng":28.0145},{"name":"NG Kerk Kempton Park","slug":"ng-kerk-kempton-park-johannesburg","denomination":"Dutch Reformed","lat":-26.095,"lng":28.226},{"name":"NG Kerk Randburg","slug":"ng-kerk-randburg-johannesburg","denomination":"Dutch Reformed","lat":-26.095,"lng":28.002},{"name":"NG Kerk Roodepoort","slug":"ng-kerk-roodepoort-johannesburg","denomination":"Dutch Reformed","lat":-26.165,"lng":27.872},{"name":"NG Kerk Sandton","slug":"ng-kerk-sandton-johannesburg","denomination":"Dutch Reformed","lat":-26.107,"lng":28.059},{"name":"Northcliff Baptist Church","slug":"northcliff-baptist-church-johannesburg","denomination":"Baptist","lat":-26.135,"lng":27.966},{"name":"Randburg Methodist Church","slug":"randburg-methodist-johannesburg","denomination":"Methodist","lat":-26.092,"lng":28.004},{"name":"Rhema Bible Church","slug":"rhema-bible-church-johannesburg","denomination":"Pentecostal","lat":-26.102,"lng":27.971},{"name":"Rivers Church Sandton","slug":"rivers-church-sandton-johannesburg","denomination":"Pentecostal","lat":-26.107,"lng":28.052},{"name":"Roodepoort Baptist Church","slug":"roodepoort-baptist-church-johannesburg","denomination":"Baptist","lat":-26.162,"lng":27.872},{"name":"Rosebank Methodist Church","slug":"rosebank-methodist-johannesburg","denomination":"Methodist","lat":-26.146,"lng":28.044},{"name":"Rosebank Union Church","slug":"rosebank-union-church-johannesburg","denomination":"Non-Denominational","lat":-26.135,"lng":28.046},{"name":"Sandton Seventh-day Adventist Church","slug":"sandton-sda-johannesburg","denomination":"Seventh-day Adventist","lat":-26.034,"lng":28.068},{"name":"Shofar Christian Church Sandton","slug":"shofar-sandton-johannesburg","denomination":"Shofar","lat":-26.1067,"lng":28.0567},{"name":"Shofar Randburg","slug":"shofar-randburg-johannesburg","denomination":"Shofar","lat":-26.088,"lng":27.9965},{"name":"St Columba's Presbyterian Parkview","slug":"st-columbas-presbyterian-parkview-johannesburg","denomination":"Presbyterian","lat":-26.165,"lng":28.027},{"name":"St Dunstan Catholic Church Benoni","slug":"st-dunstan-catholic-benoni-johannesburg","denomination":"Catholic","lat":-26.1855,"lng":28.32},{"name":"St Francis Xavier Catholic Church Soweto","slug":"st-francis-xavier-soweto-johannesburg","denomination":"Catholic","lat":-26.2674,"lng":27.8588},{"name":"St John's Anglican Church Sandton","slug":"st-johns-anglican-sandton-johannesburg","denomination":"Anglican","lat":-26.104,"lng":28.06},{"name":"St Mary's Cathedral Johannesburg","slug":"st-marys-cathedral-johannesburg","denomination":"Anglican","lat":-26.2,"lng":28.043},{"name":"St Michael's Anglican Bryanston","slug":"st-michaels-anglican-bryanston-johannesburg","denomination":"Anglican","lat":-26.064,"lng":28.022},{"name":"St Theresa Catholic Church Kempton Park","slug":"st-theresa-catholic-kempton-park-johannesburg","denomination":"Catholic","lat":-26.0967,"lng":28.228},{"name":"The Life Church Johannesburg","slug":"the-life-church-johannesburg","denomination":"Pentecostal","lat":-26.074,"lng":28.01}];
+    const map = L.map('city-map').setView([-26.2041, 28.0473], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

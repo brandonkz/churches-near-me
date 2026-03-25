@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Stellenbosch | Find a Church Near You</title>
+  <meta name="description" content="Find Stellenbosch churches near me. Browse denominations, see locations on a map, and connect with local congregations in Stellenbosch.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/stellenbosch.html">
+  <meta property="og:title" content="Churches in Stellenbosch | Find a Church Near You">
+  <meta property="og:description" content="Find Stellenbosch churches near me. Browse denominations, see locations on a map, and connect with local congregations in Stellenbosch.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/stellenbosch.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Stellenbosch</h1>
+    <p>Find Stellenbosch churches near me. Browse denominations, see locations on a map, and connect with local congregations in Stellenbosch.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Baptist">Baptist</option><option value="Charismatic">Charismatic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="His People">His People</option><option value="Shofar">Shofar</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Stellenbosch"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Charismatic" data-city="Stellenbosch">
+        <h3><a href="/churches/every-nation-stellenbosch/">Every Nation Stellenbosch</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">18 Jannasch Road, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-stellenbosch/" class="church-link">View details</a>
+          <a href="https://enstb.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Stellenbosch">
+        <h3><a href="/churches/his-people-stellenbosch/">His People Stellenbosch</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Alexander St, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/his-people-stellenbosch/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Stellenbosch">
+        <h3><a href="/churches/ng-kerk-stellenbosch/">NG Kerk Stellenbosch</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Bird St, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-stellenbosch/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Stellenbosch">
+        <h3><a href="/churches/ng-moederkerk-stellenbosch/">NG Moederkerk Stellenbosch</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Dorp Street, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/ng-moederkerk-stellenbosch/" class="church-link">View details</a>
+          <a href="https://moederkerk.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Stellenbosch">
+        <h3><a href="/churches/shofar-christian-church-stellenbosch/">Shofar Christian Church Stellenbosch</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Paul Roos Gymnasium, Koch Road, Krigeville, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/shofar-christian-church-stellenbosch/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Stellenbosch">
+        <h3><a href="/churches/shofar-stellenbosch/">Shofar Stellenbosch</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Merriman Ave, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/shofar-stellenbosch/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/stellenbosch/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Stellenbosch">
+        <h3><a href="/churches/stellenbosch-baptist-church/">Stellenbosch Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Merriman Avenue, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/stellenbosch-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/every-nation-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Jannasch Road, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.94,
+        "longitude": 18.86
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/his-people-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alexander St, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9352,
+        "longitude": 18.8632
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bird St, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9321,
+        "longitude": 18.8602
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Moederkerk Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/ng-moederkerk-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dorp Street, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9343,
+        "longitude": 18.8615
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Christian Church Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/shofar-christian-church-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Paul Roos Gymnasium, Koch Road, Krigeville, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9346,
+        "longitude": 18.8578
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/shofar-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Merriman Ave, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9338,
+        "longitude": 18.8618
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Stellenbosch Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/stellenbosch-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Merriman Avenue, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.933,
+        "longitude": 18.867
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","denomination":"Charismatic","lat":-33.94,"lng":18.86},{"name":"His People Stellenbosch","slug":"his-people-stellenbosch","denomination":"His People","lat":-33.9352,"lng":18.8632},{"name":"NG Kerk Stellenbosch","slug":"ng-kerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9321,"lng":18.8602},{"name":"NG Moederkerk Stellenbosch","slug":"ng-moederkerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9343,"lng":18.8615},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","denomination":"Charismatic","lat":-33.9346,"lng":18.8578},{"name":"Shofar Stellenbosch","slug":"shofar-stellenbosch","denomination":"Shofar","lat":-33.9338,"lng":18.8618},{"name":"Stellenbosch Baptist Church","slug":"stellenbosch-baptist-church","denomination":"Baptist","lat":-33.933,"lng":18.867}];
+    const map = L.map('city-map').setView([-33.934, 18.86], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

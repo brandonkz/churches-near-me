@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Kimberley | Find a Church Near You</title>
+  <meta name="description" content="Find Kimberley churches near me. Browse denominations, see locations on a map, and connect with local congregations in Kimberley.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/kimberley.html">
+  <meta property="og:title" content="Churches in Kimberley | Find a Church Near You">
+  <meta property="og:description" content="Find Kimberley churches near me. Browse denominations, see locations on a map, and connect with local congregations in Kimberley.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/kimberley.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Kimberley</h1>
+    <p>Find Kimberley churches near me. Browse denominations, see locations on a map, and connect with local congregations in Kimberley.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Anglican">Anglican</option><option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Baptist">Baptist</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Kimberley"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Kimberley">
+        <h3><a href="/churches/afm-kimberley/">AFM Kimberley</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Memorial Rd, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/afm-kimberley/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Kimberley">
+        <h3><a href="/churches/every-nation-kimberley/">Every Nation Kimberley</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Du Toitspan Rd, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-kimberley/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Kimberley">
+        <h3><a href="/churches/kimberley-baptist-church/">Kimberley Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Jones St, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/kimberley-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Kimberley">
+        <h3><a href="/churches/ng-kerk-kimberley/">NG Kerk Kimberley</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Chapel St, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-kimberley/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Kimberley">
+        <h3><a href="/churches/st-cyprians-anglican-kimberley/">St Cyprian&#39;s Anglican Cathedral Kimberley</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Egerton Rd, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/st-cyprians-anglican-kimberley/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kimberley",
+      "url": "https://churchesnearme.co.za/churches/afm-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Memorial Rd, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.733,
+        "longitude": 24.7735
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Kimberley",
+      "url": "https://churchesnearme.co.za/churches/every-nation-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Du Toitspan Rd, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7345,
+        "longitude": 24.775
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Kimberley Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/kimberley-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jones St, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.728,
+        "longitude": 24.7685
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Kimberley",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chapel St, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7314,
+        "longitude": 24.7718
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Cyprian's Anglican Cathedral Kimberley",
+      "url": "https://churchesnearme.co.za/churches/st-cyprians-anglican-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Egerton Rd, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7298,
+        "longitude": 24.7702
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Kimberley","slug":"afm-kimberley","denomination":"Apostolic Faith Mission","lat":-28.733,"lng":24.7735},{"name":"Every Nation Kimberley","slug":"every-nation-kimberley","denomination":"Every Nation","lat":-28.7345,"lng":24.775},{"name":"Kimberley Baptist Church","slug":"kimberley-baptist-church","denomination":"Baptist","lat":-28.728,"lng":24.7685},{"name":"NG Kerk Kimberley","slug":"ng-kerk-kimberley","denomination":"Dutch Reformed","lat":-28.7314,"lng":24.7718},{"name":"St Cyprian's Anglican Cathedral Kimberley","slug":"st-cyprians-anglican-kimberley","denomination":"Anglican","lat":-28.7298,"lng":24.7702}];
+    const map = L.map('city-map').setView([-28.7282, 24.7499], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

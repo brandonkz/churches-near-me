@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Churches in Cape Town | Find a Church Near You</title>
+  <meta name="description" content="Find Cape Town churches near me. Browse denominations, see locations on a map, and connect with local congregations in Cape Town.">
+  <link rel="canonical" href="https://churchesnearme.co.za/cities/cape-town.html">
+  <meta property="og:title" content="Churches in Cape Town | Find a Church Near You">
+  <meta property="og:description" content="Find Cape Town churches near me. Browse denominations, see locations on a map, and connect with local congregations in Cape Town.">
+  <meta property="og:url" content="https://churchesnearme.co.za/cities/cape-town.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .city-hero h1 { margin-bottom: 12px; }
+    .city-hero p { max-width: 720px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-denom { font-weight: 600; color: #0f172a; margin-bottom: 6px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="city-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Churches in Cape Town</h1>
+    <p>Find Cape Town churches near me. Browse denominations, see locations on a map, and connect with local congregations in Cape Town.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="denomination-filter">Filter by denomination</label>
+  <select id="denomination-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Anglican">Anglican</option><option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Baptist">Baptist</option><option value="Catholic">Catholic</option><option value="Charismatic">Charismatic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="Methodist">Methodist</option><option value="Non-Denominational">Non-Denominational</option><option value="Pentecostal">Pentecostal</option><option value="Presbyterian">Presbyterian</option><option value="Seventh-day Adventist">Seventh-day Adventist</option><option value="Shofar">Shofar</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="city-map" aria-label="Map of churches in Cape Town"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-brackenfell-cape-town/">AFM Brackenfell</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Serbet Rd, Brackenfell, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-brackenfell-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-kraaifontein-cape-town/">AFM Kraaifontein</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Protea Rd, Kraaifontein, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-kraaifontein-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-kuils-river-cape-town/">AFM Kuils River</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Van Riebeeck Rd, Kuils River, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-kuils-river-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-parklands-cape-town/">AFM Parklands</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Parklands Main Rd, Parklands, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-parklands-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-sea-point-cape-town/">AFM Sea Point</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Beach Rd, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-sea-point-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Apostolic Faith Mission" data-city="Cape Town">
+        <h3><a href="/churches/afm-strand-cape-town/">AFM Strand</a></h3>
+        <div class="church-denom">Apostolic Faith Mission</div>
+        <div class="church-address">Somerset Rd, Strand, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/afm-strand-cape-town/" class="church-link">View details</a>
+          <a href="https://afm-ags.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/all-saints-anglican-somerset-west/">All Saints Anglican Church Somerset West</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Lourens Street, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/all-saints-anglican-somerset-west/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/bellville-baptist-church-cape-town/">Bellville Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">De La Haye Avenue, Bellville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/bellville-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/bergvliet-baptist-church-cape-town/">Bergvliet Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Ladies Mile Road, Bergvliet, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/bergvliet-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/brackenfell-baptist-church-cape-town/">Brackenfell Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Brackenfell Blvd, Brackenfell, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/brackenfell-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Seventh-day Adventist" data-city="Cape Town">
+        <h3><a href="/churches/cape-conference-sda-cape-town/">Cape Conference of Seventh-day Adventists</a></h3>
+        <div class="church-denom">Seventh-day Adventist</div>
+        <div class="church-address">Cnr Main Road &amp; Glengariff Road, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/cape-conference-sda-cape-town/" class="church-link">View details</a>
+          <a href="https://cc.adventist.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/central-methodist-mission-cape-town/">Central Methodist Mission</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Cnr Longmarket &amp; Burg Streets, Greenmarket Square, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/central-methodist-mission-cape-town/" class="church-link">View details</a>
+          <a href="https://cmm.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/christ-church-kenilworth-cape-town/">Christ Church Kenilworth</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Summerley Road, Kenilworth, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/christ-church-kenilworth-cape-town/" class="church-link">View details</a>
+          <a href="https://www.cck.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/claremont-baptist-church-cape-town/">Claremont Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Cnr Cook &amp; St Michaels Street, Claremont, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/claremont-baptist-church-cape-town/" class="church-link">View details</a>
+          <a href="https://baptistchurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/claremont-methodist-cape-town/">Claremont Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Imam Haron Road, Claremont, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/claremont-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Cape Town">
+        <h3><a href="/churches/common-ground-cape-town/">Common Ground Church Cape Town</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">Cape Town, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/common-ground-cape-town/" class="church-link">View details</a>
+          <a href="https://www.commonground.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Cape Town">
+        <h3><a href="/churches/common-ground-rondebosch-cape-town/">Common Ground Church Rondebosch</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">Main Road, Rondebosch, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/common-ground-rondebosch-cape-town/" class="church-link">View details</a>
+          <a href="https://commongroundbosch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/constantia-methodist-cape-town/">Constantia Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Constantia Main Road, Constantia, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/constantia-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/durbanville-dutch-reformed-cape-town/">Durbanville Dutch Reformed Church</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Church Street, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/durbanville-dutch-reformed-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Cape Town">
+        <h3><a href="/churches/evangelical-lutheran-strand-street-cape-town/">Evangelical Lutheran Church Strand Street</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">98 Strand Street, Cape Town City Centre, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/evangelical-lutheran-strand-street-cape-town/" class="church-link">View details</a>
+          <a href="https://www.lutherancape.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
+        <h3><a href="/churches/every-nation-cape-town/">Every Nation Church Cape Town</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Salt River, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-cape-town/" class="church-link">View details</a>
+          <a href="https://everynationcpt.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Cape Town">
+        <h3><a href="/churches/every-nation-durbanville-cape-town/">Every Nation Durbanville</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Wellington Rd, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-durbanville-cape-town/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Cape Town">
+        <h3><a href="/churches/every-nation-somerset-west-cape-town/">Every Nation Somerset West</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Old Paarl Rd, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-somerset-west-cape-town/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/fish-hoek-baptist-cape-town/">Fish Hoek Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Recreation Rd, Fish Hoek, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/fish-hoek-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/goodwood-methodist-cape-town/">Goodwood Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">3rd Ave, Goodwood, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/goodwood-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/groote-kerk-cape-town/">Groote Kerk</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">43 Adderley Street, Cape Town City Centre, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/groote-kerk-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Cape Town">
+        <h3><a href="/churches/hillsong-cape-town/">Hillsong Cape Town</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">Century City Conference Centre, 1 Kinetic Way, Century City, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/hillsong-cape-town/" class="church-link">View details</a>
+          <a href="https://hillsong.com/southafrica/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="His People" data-city="Cape Town">
+        <h3><a href="/churches/his-people-durbanville-cape-town/">His People Durbanville</a></h3>
+        <div class="church-denom">His People</div>
+        <div class="church-address">Tygervalley Rd, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/his-people-durbanville-cape-town/" class="church-link">View details</a>
+          <a href="https://hispeople.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/holy-cross-catholic-zonnebloem-cape-town/">Holy Cross Catholic Church Zonnebloem</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">14 Searle Street, Zonnebloem, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/holy-cross-catholic-zonnebloem-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/hout-bay-baptist-cape-town/">Hout Bay Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Main Rd, Hout Bay, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/hout-bay-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
+        <h3><a href="/churches/jubilee-community-church-cape-town/">Jubilee Community Church</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">21 Nelson Road, Observatory, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/jubilee-community-church-cape-town/" class="church-link">View details</a>
+          <a href="https://jubilee.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
+        <h3><a href="/churches/kingdom-vineyard-church-cape-town/">Kingdom Vineyard Church</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Claremont, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/kingdom-vineyard-church-cape-town/" class="church-link">View details</a>
+          <a href="https://www.vineyardchurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
+        <h3><a href="/churches/mercy-vineyard-church-cape-town/">Mercy Vineyard Church</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">10 Lily Road, Kirstenhof, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/mercy-vineyard-church-cape-town/" class="church-link">View details</a>
+          <a href="https://www.mercyvineyard.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/milnerton-baptist-church-cape-town/">Milnerton Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Pienaar Road, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/milnerton-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/milnerton-methodist-church-cape-town/">Milnerton Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Milnerton Rd, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/milnerton-methodist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/mowbray-baptist-church-cape-town/">Mowbray Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">45 Main Road, Mowbray, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/mowbray-baptist-church-cape-town/" class="church-link">View details</a>
+          <a href="https://www.mowbraybaptist.za.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/muizenberg-baptist-cape-town/">Muizenberg Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Main Rd, Muizenberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/muizenberg-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
+        <h3><a href="/churches/new-life-vineyard-cape-town/">New Life Vineyard Church</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/new-life-vineyard-cape-town/" class="church-link">View details</a>
+          <a href="https://www.newlifevineyard.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-brackenfell-cape-town/">NG Kerk Brackenfell</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Ou Paarl Rd, Brackenfell, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-brackenfell-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-durbanville-cape-town/">NG Kerk Durbanville</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Kerk St, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-durbanville-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-fish-hoek-cape-town/">NG Kerk Fish Hoek</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Central Cir, Fish Hoek, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-fish-hoek-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-goodwood-cape-town/">NG Kerk Goodwood</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Voortrekker Rd, Goodwood, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-goodwood-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-hout-bay-cape-town/">NG Kerk Hout Bay</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Victoria Rd, Hout Bay, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-hout-bay-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-kraaifontein-cape-town/">NG Kerk Kraaifontein</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Kuils River Rd, Kraaifontein, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-kraaifontein-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-kuils-river-cape-town/">NG Kerk Kuils River</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Voortrekker Rd, Kuils River, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-kuils-river-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-milnerton-cape-town/">NG Kerk Milnerton</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Milnerton Main Rd, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-milnerton-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-muizenberg-cape-town/">NG Kerk Muizenberg</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Atlantic Rd, Muizenberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-muizenberg-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-pinelands-cape-town/">NG Kerk Pinelands</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Howard Dr, Pinelands, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-pinelands-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-somerset-west-cape-town/">NG Kerk Somerset West</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Lourens St, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-somerset-west-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-strand-cape-town/">NG Kerk Strand</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Main Rd, Strand, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-strand-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Cape Town">
+        <h3><a href="/churches/ng-kerk-tableview-cape-town/">NG Kerk Tableview</a></h3>
+        <div class="church-denom">Dutch Reformed</div>
+        <div class="church-address">Berkley Rd, Tableview, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-tableview-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/pinelands-methodist-cape-town/">Pinelands Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Avondrust Ave, Pinelands, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/pinelands-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Cape Town">
+        <h3><a href="/churches/rondebosch-united-church-cape-town/">Rondebosch United Church</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">Belmont Road, Rondebosch, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/rondebosch-united-church-cape-town/" class="church-link">View details</a>
+          <a href="https://www.rondeboschunited.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/sea-point-methodist-cape-town/">Sea Point Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Main Road, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/sea-point-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Cape Town">
+        <h3><a href="/churches/shofar-durbanville-cape-town/">Shofar Christian Church Durbanville</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Wellington Rd, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/shofar-durbanville-cape-town/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/durbanville/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Cape Town">
+        <h3><a href="/churches/shofar-somerset-west-cape-town/">Shofar Somerset West</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Helderberg Rd, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/shofar-somerset-west-cape-town/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/somerset-west/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/somerset-west-baptist-cape-town/">Somerset West Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Main Rd, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/somerset-west-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/somerset-west-methodist-cape-town/">Somerset West Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Main Road, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/somerset-west-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-georges-cathedral-cape-town/">St George&#39;s Cathedral</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">5 Wale Street, Cape Town City Centre, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-georges-cathedral-cape-town/" class="church-link">View details</a>
+          <a href="https://sgcathedral.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-james-anglican-sea-point-cape-town/">St James Anglican Church Sea Point</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Main Rd, Sea Point, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-james-anglican-sea-point-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-james-catholic-muizenberg-cape-town/">St James Catholic Church Muizenberg</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">St James Rd, Muizenberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-james-catholic-muizenberg-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Cape Town">
+        <h3><a href="/churches/st-james-church-kenilworth-cape-town/">St James Church Kenilworth</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">114 Third Avenue, Kenilworth, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-james-church-kenilworth-cape-town/" class="church-link">View details</a>
+          <a href="https://www.stjames.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-johns-anglican-milnerton-cape-town/">St John&#39;s Anglican Church Milnerton</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">5th Ave, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-anglican-milnerton-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-josephs-catholic-goodwood-cape-town/">St Joseph&#39;s Catholic Church Goodwood</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Goodwood Rd, Goodwood, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-josephs-catholic-goodwood-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-marys-cathedral-cape-town/">St Mary&#39;s Cathedral Cape Town</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cnr Hope Street &amp; Roeland Street, Cape Town, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-cathedral-cape-town/" class="church-link">View details</a>
+          <a href="https://stmaryscathedral.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-pauls-anglican-rondebosch-cape-town/">St Paul&#39;s Anglican Church Rondebosch</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Main Road, Rondebosch, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-pauls-anglican-rondebosch-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-peters-anglican-fish-hoek-cape-town/">St Peter&#39;s Anglican Church Fish Hoek</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Kommetjie Rd, Fish Hoek, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-anglican-fish-hoek-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-peters-anglican-hout-bay-cape-town/">St Peter&#39;s Anglican Church Hout Bay</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Andrews Rd, Hout Bay, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-anglican-hout-bay-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-peters-catholic-woodstock-cape-town/">St Peter&#39;s Catholic Church Woodstock</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Albert Road, Woodstock, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-catholic-woodstock-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/strand-baptist-cape-town/">Strand Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Strand Ave, Strand, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/strand-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Methodist" data-city="Cape Town">
+        <h3><a href="/churches/table-view-methodist-cape-town/">Table View Methodist Church</a></h3>
+        <div class="church-denom">Methodist</div>
+        <div class="church-address">Blaauwberg Road, Table View, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/table-view-methodist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/tableview-baptist-church-cape-town/">Tableview Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Sandown Rd, Tableview, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/tableview-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Anglican" data-city="Cape Town">
+        <h3><a href="/churches/st-johns-wynberg-cape-town/">Wynberg St John&#39;s Anglican</a></h3>
+        <div class="church-denom">Anglican</div>
+        <div class="church-address">Church Street, Wynberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-johns-wynberg-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Brackenfell",
+      "url": "https://churchesnearme.co.za/churches/afm-brackenfell-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Serbet Rd, Brackenfell",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.872,
+        "longitude": 18.69
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kraaifontein",
+      "url": "https://churchesnearme.co.za/churches/afm-kraaifontein-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Protea Rd, Kraaifontein",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8508,
+        "longitude": 18.7195
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Kuils River",
+      "url": "https://churchesnearme.co.za/churches/afm-kuils-river-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Rd, Kuils River",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9299,
+        "longitude": 18.6849
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Parklands",
+      "url": "https://churchesnearme.co.za/churches/afm-parklands-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Parklands Main Rd, Parklands",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8195,
+        "longitude": 18.5001
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Sea Point",
+      "url": "https://churchesnearme.co.za/churches/afm-sea-point-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Beach Rd, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.921,
+        "longitude": 18.391
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "AFM Strand",
+      "url": "https://churchesnearme.co.za/churches/afm-strand-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Somerset Rd, Strand",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1145,
+        "longitude": 18.832
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "All Saints Anglican Church Somerset West",
+      "url": "https://churchesnearme.co.za/churches/all-saints-anglican-somerset-west/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lourens Street, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.081,
+        "longitude": 18.849
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Bellville Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/bellville-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "De La Haye Avenue, Bellville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.901,
+        "longitude": 18.628
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Bergvliet Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/bergvliet-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ladies Mile Road, Bergvliet",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.053,
+        "longitude": 18.454
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Brackenfell Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/brackenfell-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Brackenfell Blvd, Brackenfell",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8682,
+        "longitude": 18.6854
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cape Conference of Seventh-day Adventists",
+      "url": "https://churchesnearme.co.za/churches/cape-conference-sda-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Main Road & Glengariff Road, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.917,
+        "longitude": 18.392
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Central Methodist Mission",
+      "url": "https://churchesnearme.co.za/churches/central-methodist-mission-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Longmarket & Burg Streets, Greenmarket Square",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9237,
+        "longitude": 18.4193
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Christ Church Kenilworth",
+      "url": "https://churchesnearme.co.za/churches/christ-church-kenilworth-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Summerley Road, Kenilworth",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9967,
+        "longitude": 18.4932
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Claremont Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/claremont-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Cook & St Michaels Street, Claremont",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.98,
+        "longitude": 18.468
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Claremont Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/claremont-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Imam Haron Road, Claremont",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.981,
+        "longitude": 18.461
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Common Ground Church Cape Town",
+      "url": "https://churchesnearme.co.za/churches/common-ground-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cape Town",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9258,
+        "longitude": 18.4232
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Common Ground Church Rondebosch",
+      "url": "https://churchesnearme.co.za/churches/common-ground-rondebosch-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Rondebosch",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9643,
+        "longitude": 18.4735
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Constantia Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/constantia-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Constantia Main Road, Constantia",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.024,
+        "longitude": 18.431
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Durbanville Dutch Reformed Church",
+      "url": "https://churchesnearme.co.za/churches/durbanville-dutch-reformed-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Street, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.832,
+        "longitude": 18.646
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Evangelical Lutheran Church Strand Street",
+      "url": "https://churchesnearme.co.za/churches/evangelical-lutheran-strand-street-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "98 Strand Street, Cape Town City Centre",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.921,
+        "longitude": 18.423
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Church Cape Town",
+      "url": "https://churchesnearme.co.za/churches/every-nation-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Salt River",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.927,
+        "longitude": 18.464
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Durbanville",
+      "url": "https://churchesnearme.co.za/churches/every-nation-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wellington Rd, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8328,
+        "longitude": 18.6573
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Somerset West",
+      "url": "https://churchesnearme.co.za/churches/every-nation-somerset-west-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Paarl Rd, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0838,
+        "longitude": 18.8445
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Fish Hoek Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/fish-hoek-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Recreation Rd, Fish Hoek",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1381,
+        "longitude": 18.4294
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Goodwood Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/goodwood-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3rd Ave, Goodwood",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.907,
+        "longitude": 18.547
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Groote Kerk",
+      "url": "https://churchesnearme.co.za/churches/groote-kerk-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "43 Adderley Street, Cape Town City Centre",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9245,
+        "longitude": 18.424
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hillsong Cape Town",
+      "url": "https://churchesnearme.co.za/churches/hillsong-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Century City Conference Centre, 1 Kinetic Way, Century City",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8892,
+        "longitude": 18.5131
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "His People Durbanville",
+      "url": "https://churchesnearme.co.za/churches/his-people-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tygervalley Rd, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8315,
+        "longitude": 18.6602
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Cross Catholic Church Zonnebloem",
+      "url": "https://churchesnearme.co.za/churches/holy-cross-catholic-zonnebloem-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14 Searle Street, Zonnebloem",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.934,
+        "longitude": 18.428
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hout Bay Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/hout-bay-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Hout Bay",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0468,
+        "longitude": 18.362
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Jubilee Community Church",
+      "url": "https://churchesnearme.co.za/churches/jubilee-community-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "21 Nelson Road, Observatory",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9375,
+        "longitude": 18.472
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Kingdom Vineyard Church",
+      "url": "https://churchesnearme.co.za/churches/kingdom-vineyard-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Claremont",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.984,
+        "longitude": 18.464
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Mercy Vineyard Church",
+      "url": "https://churchesnearme.co.za/churches/mercy-vineyard-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Lily Road, Kirstenhof",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.06,
+        "longitude": 18.4525
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Milnerton Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/milnerton-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pienaar Road, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.864,
+        "longitude": 18.512
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Milnerton Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/milnerton-methodist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Milnerton Rd, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8636,
+        "longitude": 18.4896
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Mowbray Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/mowbray-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "45 Main Road, Mowbray",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.948,
+        "longitude": 18.4735
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Muizenberg Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/muizenberg-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Muizenberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.107,
+        "longitude": 18.472
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "New Life Vineyard Church",
+      "url": "https://churchesnearme.co.za/churches/new-life-vineyard-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.832,
+        "longitude": 18.648
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Brackenfell",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-brackenfell-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ou Paarl Rd, Brackenfell",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8705,
+        "longitude": 18.6879
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Durbanville",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kerk St, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8303,
+        "longitude": 18.6591
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Fish Hoek",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-fish-hoek-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Central Cir, Fish Hoek",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1372,
+        "longitude": 18.4283
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Goodwood",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-goodwood-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Voortrekker Rd, Goodwood",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9089,
+        "longitude": 18.5486
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Hout Bay",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-hout-bay-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Victoria Rd, Hout Bay",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0455,
+        "longitude": 18.3635
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Kraaifontein",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-kraaifontein-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kuils River Rd, Kraaifontein",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8495,
+        "longitude": 18.7215
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Kuils River",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-kuils-river-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Voortrekker Rd, Kuils River",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9285,
+        "longitude": 18.687
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Milnerton",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-milnerton-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Milnerton Main Rd, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8648,
+        "longitude": 18.4882
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Muizenberg",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-muizenberg-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Atlantic Rd, Muizenberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1084,
+        "longitude": 18.4706
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Pinelands",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-pinelands-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Howard Dr, Pinelands",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9484,
+        "longitude": 18.5023
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Somerset West",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-somerset-west-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lourens St, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.085,
+        "longitude": 18.8432
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Strand",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-strand-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Strand",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1159,
+        "longitude": 18.8301
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Tableview",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-tableview-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Berkley Rd, Tableview",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8267,
+        "longitude": 18.4947
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pinelands Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/pinelands-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avondrust Ave, Pinelands",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9498,
+        "longitude": 18.5008
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rondebosch United Church",
+      "url": "https://churchesnearme.co.za/churches/rondebosch-united-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Belmont Road, Rondebosch",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.962,
+        "longitude": 18.4736
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Sea Point Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/sea-point-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.916,
+        "longitude": 18.387
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Christian Church Durbanville",
+      "url": "https://churchesnearme.co.za/churches/shofar-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wellington Rd, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.832,
+        "longitude": 18.6558
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Somerset West",
+      "url": "https://churchesnearme.co.za/churches/shofar-somerset-west-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Helderberg Rd, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0857,
+        "longitude": 18.846
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Somerset West Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/somerset-west-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0865,
+        "longitude": 18.8415
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Somerset West Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/somerset-west-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.082,
+        "longitude": 18.85
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St George's Cathedral",
+      "url": "https://churchesnearme.co.za/churches/st-georges-cathedral-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 Wale Street, Cape Town City Centre",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9258,
+        "longitude": 18.4187
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St James Anglican Church Sea Point",
+      "url": "https://churchesnearme.co.za/churches/st-james-anglican-sea-point-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Sea Point",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9223,
+        "longitude": 18.3895
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St James Catholic Church Muizenberg",
+      "url": "https://churchesnearme.co.za/churches/st-james-catholic-muizenberg-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "St James Rd, Muizenberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.109,
+        "longitude": 18.4695
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St James Church Kenilworth",
+      "url": "https://churchesnearme.co.za/churches/st-james-church-kenilworth-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "114 Third Avenue, Kenilworth",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.996,
+        "longitude": 18.4922
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St John's Anglican Church Milnerton",
+      "url": "https://churchesnearme.co.za/churches/st-johns-anglican-milnerton-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5th Ave, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8658,
+        "longitude": 18.4875
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Joseph's Catholic Church Goodwood",
+      "url": "https://churchesnearme.co.za/churches/st-josephs-catholic-goodwood-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Goodwood Rd, Goodwood",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9105,
+        "longitude": 18.5501
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Cathedral Cape Town",
+      "url": "https://churchesnearme.co.za/churches/st-marys-cathedral-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Hope Street & Roeland Street, Cape Town",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.931,
+        "longitude": 18.42
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Paul's Anglican Church Rondebosch",
+      "url": "https://churchesnearme.co.za/churches/st-pauls-anglican-rondebosch-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road, Rondebosch",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.961,
+        "longitude": 18.471
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Anglican Church Fish Hoek",
+      "url": "https://churchesnearme.co.za/churches/st-peters-anglican-fish-hoek-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kommetjie Rd, Fish Hoek",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.139,
+        "longitude": 18.4302
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Anglican Church Hout Bay",
+      "url": "https://churchesnearme.co.za/churches/st-peters-anglican-hout-bay-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Andrews Rd, Hout Bay",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.048,
+        "longitude": 18.3608
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Catholic Church Woodstock",
+      "url": "https://churchesnearme.co.za/churches/st-peters-catholic-woodstock-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Albert Road, Woodstock",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.927,
+        "longitude": 18.447
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Strand Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/strand-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strand Ave, Strand",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.117,
+        "longitude": 18.8285
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Table View Methodist Church",
+      "url": "https://churchesnearme.co.za/churches/table-view-methodist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Blaauwberg Road, Table View",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.815,
+        "longitude": 18.506
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Tableview Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/tableview-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandown Rd, Tableview",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8252,
+        "longitude": 18.4962
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Wynberg St John's Anglican",
+      "url": "https://churchesnearme.co.za/churches/st-johns-wynberg-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church Street, Wynberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0028,
+        "longitude": 18.463
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"AFM Brackenfell","slug":"afm-brackenfell-cape-town","denomination":"Apostolic Faith Mission","lat":-33.872,"lng":18.69},{"name":"AFM Kraaifontein","slug":"afm-kraaifontein-cape-town","denomination":"Apostolic Faith Mission","lat":-33.8508,"lng":18.7195},{"name":"AFM Kuils River","slug":"afm-kuils-river-cape-town","denomination":"Apostolic Faith Mission","lat":-33.9299,"lng":18.6849},{"name":"AFM Parklands","slug":"afm-parklands-cape-town","denomination":"Apostolic Faith Mission","lat":-33.8195,"lng":18.5001},{"name":"AFM Sea Point","slug":"afm-sea-point-cape-town","denomination":"Apostolic Faith Mission","lat":-33.921,"lng":18.391},{"name":"AFM Strand","slug":"afm-strand-cape-town","denomination":"Apostolic Faith Mission","lat":-34.1145,"lng":18.832},{"name":"All Saints Anglican Church Somerset West","slug":"all-saints-anglican-somerset-west","denomination":"Anglican","lat":-34.081,"lng":18.849},{"name":"Bellville Baptist Church","slug":"bellville-baptist-church-cape-town","denomination":"Baptist","lat":-33.901,"lng":18.628},{"name":"Bergvliet Baptist Church","slug":"bergvliet-baptist-church-cape-town","denomination":"Baptist","lat":-34.053,"lng":18.454},{"name":"Brackenfell Baptist Church","slug":"brackenfell-baptist-church-cape-town","denomination":"Baptist","lat":-33.8682,"lng":18.6854},{"name":"Cape Conference of Seventh-day Adventists","slug":"cape-conference-sda-cape-town","denomination":"Seventh-day Adventist","lat":-33.917,"lng":18.392},{"name":"Central Methodist Mission","slug":"central-methodist-mission-cape-town","denomination":"Methodist","lat":-33.9237,"lng":18.4193},{"name":"Christ Church Kenilworth","slug":"christ-church-kenilworth-cape-town","denomination":"Anglican","lat":-33.9967,"lng":18.4932},{"name":"Claremont Baptist Church","slug":"claremont-baptist-church-cape-town","denomination":"Baptist","lat":-33.98,"lng":18.468},{"name":"Claremont Methodist Church","slug":"claremont-methodist-cape-town","denomination":"Methodist","lat":-33.981,"lng":18.461},{"name":"Common Ground Church Cape Town","slug":"common-ground-cape-town","denomination":"Non-Denominational","lat":-33.9258,"lng":18.4232},{"name":"Common Ground Church Rondebosch","slug":"common-ground-rondebosch-cape-town","denomination":"Non-Denominational","lat":-33.9643,"lng":18.4735},{"name":"Constantia Methodist Church","slug":"constantia-methodist-cape-town","denomination":"Methodist","lat":-34.024,"lng":18.431},{"name":"Durbanville Dutch Reformed Church","slug":"durbanville-dutch-reformed-cape-town","denomination":"Dutch Reformed","lat":-33.832,"lng":18.646},{"name":"Evangelical Lutheran Church Strand Street","slug":"evangelical-lutheran-strand-street-cape-town","denomination":"Lutheran","lat":-33.921,"lng":18.423},{"name":"Every Nation Church Cape Town","slug":"every-nation-cape-town","denomination":"Charismatic","lat":-33.927,"lng":18.464},{"name":"Every Nation Durbanville","slug":"every-nation-durbanville-cape-town","denomination":"Every Nation","lat":-33.8328,"lng":18.6573},{"name":"Every Nation Somerset West","slug":"every-nation-somerset-west-cape-town","denomination":"Every Nation","lat":-34.0838,"lng":18.8445},{"name":"Fish Hoek Baptist Church","slug":"fish-hoek-baptist-cape-town","denomination":"Baptist","lat":-34.1381,"lng":18.4294},{"name":"Goodwood Methodist Church","slug":"goodwood-methodist-cape-town","denomination":"Methodist","lat":-33.907,"lng":18.547},{"name":"Groote Kerk","slug":"groote-kerk-cape-town","denomination":"Dutch Reformed","lat":-33.9245,"lng":18.424},{"name":"Hillsong Cape Town","slug":"hillsong-cape-town","denomination":"Pentecostal","lat":-33.8892,"lng":18.5131},{"name":"His People Durbanville","slug":"his-people-durbanville-cape-town","denomination":"His People","lat":-33.8315,"lng":18.6602},{"name":"Holy Cross Catholic Church Zonnebloem","slug":"holy-cross-catholic-zonnebloem-cape-town","denomination":"Catholic","lat":-33.934,"lng":18.428},{"name":"Hout Bay Baptist Church","slug":"hout-bay-baptist-cape-town","denomination":"Baptist","lat":-34.0468,"lng":18.362},{"name":"Jubilee Community Church","slug":"jubilee-community-church-cape-town","denomination":"Charismatic","lat":-33.9375,"lng":18.472},{"name":"Kingdom Vineyard Church","slug":"kingdom-vineyard-church-cape-town","denomination":"Charismatic","lat":-33.984,"lng":18.464},{"name":"Mercy Vineyard Church","slug":"mercy-vineyard-church-cape-town","denomination":"Charismatic","lat":-34.06,"lng":18.4525},{"name":"Milnerton Baptist Church","slug":"milnerton-baptist-church-cape-town","denomination":"Baptist","lat":-33.864,"lng":18.512},{"name":"Milnerton Methodist Church","slug":"milnerton-methodist-church-cape-town","denomination":"Methodist","lat":-33.8636,"lng":18.4896},{"name":"Mowbray Baptist Church","slug":"mowbray-baptist-church-cape-town","denomination":"Baptist","lat":-33.948,"lng":18.4735},{"name":"Muizenberg Baptist Church","slug":"muizenberg-baptist-cape-town","denomination":"Baptist","lat":-34.107,"lng":18.472},{"name":"New Life Vineyard Church","slug":"new-life-vineyard-cape-town","denomination":"Charismatic","lat":-33.832,"lng":18.648},{"name":"NG Kerk Brackenfell","slug":"ng-kerk-brackenfell-cape-town","denomination":"Dutch Reformed","lat":-33.8705,"lng":18.6879},{"name":"NG Kerk Durbanville","slug":"ng-kerk-durbanville-cape-town","denomination":"Dutch Reformed","lat":-33.8303,"lng":18.6591},{"name":"NG Kerk Fish Hoek","slug":"ng-kerk-fish-hoek-cape-town","denomination":"Dutch Reformed","lat":-34.1372,"lng":18.4283},{"name":"NG Kerk Goodwood","slug":"ng-kerk-goodwood-cape-town","denomination":"Dutch Reformed","lat":-33.9089,"lng":18.5486},{"name":"NG Kerk Hout Bay","slug":"ng-kerk-hout-bay-cape-town","denomination":"Dutch Reformed","lat":-34.0455,"lng":18.3635},{"name":"NG Kerk Kraaifontein","slug":"ng-kerk-kraaifontein-cape-town","denomination":"Dutch Reformed","lat":-33.8495,"lng":18.7215},{"name":"NG Kerk Kuils River","slug":"ng-kerk-kuils-river-cape-town","denomination":"Dutch Reformed","lat":-33.9285,"lng":18.687},{"name":"NG Kerk Milnerton","slug":"ng-kerk-milnerton-cape-town","denomination":"Dutch Reformed","lat":-33.8648,"lng":18.4882},{"name":"NG Kerk Muizenberg","slug":"ng-kerk-muizenberg-cape-town","denomination":"Dutch Reformed","lat":-34.1084,"lng":18.4706},{"name":"NG Kerk Pinelands","slug":"ng-kerk-pinelands-cape-town","denomination":"Dutch Reformed","lat":-33.9484,"lng":18.5023},{"name":"NG Kerk Somerset West","slug":"ng-kerk-somerset-west-cape-town","denomination":"Dutch Reformed","lat":-34.085,"lng":18.8432},{"name":"NG Kerk Strand","slug":"ng-kerk-strand-cape-town","denomination":"Dutch Reformed","lat":-34.1159,"lng":18.8301},{"name":"NG Kerk Tableview","slug":"ng-kerk-tableview-cape-town","denomination":"Dutch Reformed","lat":-33.8267,"lng":18.4947},{"name":"Pinelands Methodist Church","slug":"pinelands-methodist-cape-town","denomination":"Methodist","lat":-33.9498,"lng":18.5008},{"name":"Rondebosch United Church","slug":"rondebosch-united-church-cape-town","denomination":"Presbyterian","lat":-33.962,"lng":18.4736},{"name":"Sea Point Methodist Church","slug":"sea-point-methodist-cape-town","denomination":"Methodist","lat":-33.916,"lng":18.387},{"name":"Shofar Christian Church Durbanville","slug":"shofar-durbanville-cape-town","denomination":"Shofar","lat":-33.832,"lng":18.6558},{"name":"Shofar Somerset West","slug":"shofar-somerset-west-cape-town","denomination":"Shofar","lat":-34.0857,"lng":18.846},{"name":"Somerset West Baptist Church","slug":"somerset-west-baptist-cape-town","denomination":"Baptist","lat":-34.0865,"lng":18.8415},{"name":"Somerset West Methodist Church","slug":"somerset-west-methodist-cape-town","denomination":"Methodist","lat":-34.082,"lng":18.85},{"name":"St George's Cathedral","slug":"st-georges-cathedral-cape-town","denomination":"Anglican","lat":-33.9258,"lng":18.4187},{"name":"St James Anglican Church Sea Point","slug":"st-james-anglican-sea-point-cape-town","denomination":"Anglican","lat":-33.9223,"lng":18.3895},{"name":"St James Catholic Church Muizenberg","slug":"st-james-catholic-muizenberg-cape-town","denomination":"Catholic","lat":-34.109,"lng":18.4695},{"name":"St James Church Kenilworth","slug":"st-james-church-kenilworth-cape-town","denomination":"Non-Denominational","lat":-33.996,"lng":18.4922},{"name":"St John's Anglican Church Milnerton","slug":"st-johns-anglican-milnerton-cape-town","denomination":"Anglican","lat":-33.8658,"lng":18.4875},{"name":"St Joseph's Catholic Church Goodwood","slug":"st-josephs-catholic-goodwood-cape-town","denomination":"Catholic","lat":-33.9105,"lng":18.5501},{"name":"St Mary's Cathedral Cape Town","slug":"st-marys-cathedral-cape-town","denomination":"Catholic","lat":-33.931,"lng":18.42},{"name":"St Paul's Anglican Church Rondebosch","slug":"st-pauls-anglican-rondebosch-cape-town","denomination":"Anglican","lat":-33.961,"lng":18.471},{"name":"St Peter's Anglican Church Fish Hoek","slug":"st-peters-anglican-fish-hoek-cape-town","denomination":"Anglican","lat":-34.139,"lng":18.4302},{"name":"St Peter's Anglican Church Hout Bay","slug":"st-peters-anglican-hout-bay-cape-town","denomination":"Anglican","lat":-34.048,"lng":18.3608},{"name":"St Peter's Catholic Church Woodstock","slug":"st-peters-catholic-woodstock-cape-town","denomination":"Catholic","lat":-33.927,"lng":18.447},{"name":"Strand Baptist Church","slug":"strand-baptist-cape-town","denomination":"Baptist","lat":-34.117,"lng":18.8285},{"name":"Table View Methodist Church","slug":"table-view-methodist-cape-town","denomination":"Methodist","lat":-33.815,"lng":18.506},{"name":"Tableview Baptist Church","slug":"tableview-baptist-church-cape-town","denomination":"Baptist","lat":-33.8252,"lng":18.4962},{"name":"Wynberg St John's Anglican","slug":"st-johns-wynberg-cape-town","denomination":"Anglican","lat":-34.0028,"lng":18.463}];
+    const map = L.map('city-map').setView([-33.9249, 18.4241], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.denomination) + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const denomFilter = document.getElementById('denomination-filter');
+    if (denomFilter) {
+      denomFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const denom = card.dataset.denomination || '';
+          const show = value === 'all' || denom === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baptist Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Baptist churches near me across South Africa. Browse locations, cities, and contact details for Baptist congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/baptist.html">
+  <meta property="og:title" content="Baptist Churches in South Africa">
+  <meta property="og:description" content="Explore Baptist churches near me across South Africa. Browse locations, cities, and contact details for Baptist congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/baptist.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Baptist Churches in South Africa</h1>
+    <p>Explore Baptist churches near me across South Africa. Browse locations, cities, and contact details for Baptist congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="George">George</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Kimberley">Kimberley</option><option value="Mbombela">Mbombela</option><option value="Paarl">Paarl</option><option value="Polokwane">Polokwane</option><option value="Potchefstroom">Potchefstroom</option><option value="Pretoria">Pretoria</option><option value="Rustenburg">Rustenburg</option><option value="Stellenbosch">Stellenbosch</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Baptist churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/ballito-baptist-durban/">Ballito Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Link Rd, Ballito, Durban</div>
+        <div class="church-links">
+          <a href="/churches/ballito-baptist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/bellville-baptist-church-cape-town/">Bellville Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">De La Haye Avenue, Bellville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/bellville-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/benoni-baptist-johannesburg/">Benoni Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Tom Jones St, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/benoni-baptist-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/bergvliet-baptist-church-cape-town/">Bergvliet Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Ladies Mile Road, Bergvliet, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/bergvliet-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/brackenfell-baptist-church-cape-town/">Brackenfell Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Brackenfell Blvd, Brackenfell, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/brackenfell-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Pretoria">
+        <h3><a href="/churches/central-baptist-church-pretoria/">Central Baptist Church Pretoria</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Francis Baard Street, Pretoria Central, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/central-baptist-church-pretoria/" class="church-link">View details</a>
+          <a href="https://www.central.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/claremont-baptist-church-cape-town/">Claremont Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Cnr Cook &amp; St Michaels Street, Claremont, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/claremont-baptist-church-cape-town/" class="church-link">View details</a>
+          <a href="https://baptistchurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/edenvale-baptist-church-johannesburg/">Edenvale Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Van Riebeeck Avenue, Edenvale, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/edenvale-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/fish-hoek-baptist-cape-town/">Fish Hoek Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Recreation Rd, Fish Hoek, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/fish-hoek-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/fourways-baptist-church-johannesburg/">Fourways Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Uranium Street, Fourways, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/fourways-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="George">
+        <h3><a href="/churches/george-baptist-church/">George Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Hibernia St, George, George</div>
+        <div class="church-links">
+          <a href="/churches/george-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Pretoria">
+        <h3><a href="/churches/grace-fellowship-pretoria/">Grace Fellowship Pretoria</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Pretoria, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/grace-fellowship-pretoria/" class="church-link">View details</a>
+          <a href="https://gracefellowship.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/heritage-baptist-church-johannesburg/">Heritage Baptist Church Johannesburg</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Johannesburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/heritage-baptist-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://www.heritagebaptist.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/honeyridge-baptist-church-johannesburg/">Honeyridge Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Cnr Beyers Naude Drive &amp; Eastwood Avenue, Randpark Ridge, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/honeyridge-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/hout-bay-baptist-cape-town/">Hout Bay Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Main Rd, Hout Bay, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/hout-bay-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Kimberley">
+        <h3><a href="/churches/kimberley-baptist-church/">Kimberley Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Jones St, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/kimberley-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/milnerton-baptist-church-cape-town/">Milnerton Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Pienaar Road, Milnerton, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/milnerton-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/mowbray-baptist-church-cape-town/">Mowbray Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">45 Main Road, Mowbray, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/mowbray-baptist-church-cape-town/" class="church-link">View details</a>
+          <a href="https://www.mowbraybaptist.za.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/muizenberg-baptist-cape-town/">Muizenberg Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Main Rd, Muizenberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/muizenberg-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Mbombela">
+        <h3><a href="/churches/nelspruit-baptist-mbombela/">Nelspruit Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">General Dan Pienaar Dr, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/nelspruit-baptist-mbombela/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Gqeberha">
+        <h3><a href="/churches/newton-park-baptist-gqeberha/">Newton Park Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">5th Ave, Newton Park, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/newton-park-baptist-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/northcliff-baptist-church-johannesburg/">Northcliff Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Northcliff, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/northcliff-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Paarl">
+        <h3><a href="/churches/paarl-baptist-church/">Paarl Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Suid-Agter-Paarl Rd, Paarl, Paarl</div>
+        <div class="church-links">
+          <a href="/churches/paarl-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/pinetown-baptist-church-durban/">Pinetown Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Old Main Road, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/pinetown-baptist-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/pinetown-baptist-durban/">Pinetown Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Old Main Rd, Pinetown, Durban</div>
+        <div class="church-links">
+          <a href="/churches/pinetown-baptist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Polokwane">
+        <h3><a href="/churches/polokwane-baptist-church/">Polokwane Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Dahl St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/polokwane-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Potchefstroom">
+        <h3><a href="/churches/potchefstroom-baptist-church/">Potchefstroom Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Walter Sisulu Ave, Potchefstroom, Potchefstroom</div>
+        <div class="church-links">
+          <a href="/churches/potchefstroom-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Johannesburg">
+        <h3><a href="/churches/roodepoort-baptist-church-johannesburg/">Roodepoort Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/roodepoort-baptist-church-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Rustenburg">
+        <h3><a href="/churches/rustenburg-baptist-church/">Rustenburg Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Heystek St, Rustenburg, Rustenburg</div>
+        <div class="church-links">
+          <a href="/churches/rustenburg-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/somerset-west-baptist-cape-town/">Somerset West Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Main Rd, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/somerset-west-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Stellenbosch">
+        <h3><a href="/churches/stellenbosch-baptist-church/">Stellenbosch Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Merriman Avenue, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/stellenbosch-baptist-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/strand-baptist-cape-town/">Strand Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Strand Ave, Strand, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/strand-baptist-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Cape Town">
+        <h3><a href="/churches/tableview-baptist-church-cape-town/">Tableview Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Sandown Rd, Tableview, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/tableview-baptist-church-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/umhlanga-baptist-church-durban/">Umhlanga Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Herrwood Drive, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/umhlanga-baptist-church-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Pretoria">
+        <h3><a href="/churches/waterkloof-baptist-church-pretoria/">Waterkloof Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">294 Cygnus Street, Waterkloof Ridge, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/waterkloof-baptist-church-pretoria/" class="church-link">View details</a>
+          <a href="https://wbc.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/westville-baptist-durban/">Westville Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Westville Rd, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-baptist-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Durban">
+        <h3><a href="/churches/westville-baptist-church-durban/">Westville Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Jan Hofmeyr Road, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/westville-baptist-church-durban/" class="church-link">View details</a>
+          <a href="https://www.homeground.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Ballito Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/ballito-baptist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Link Rd, Ballito",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.5368,
+        "longitude": 31.213
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Bellville Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/bellville-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "De La Haye Avenue, Bellville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.901,
+        "longitude": 18.628
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Benoni Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/benoni-baptist-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tom Jones St, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1865,
+        "longitude": 28.3215
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Bergvliet Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/bergvliet-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ladies Mile Road, Bergvliet",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.053,
+        "longitude": 18.454
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Brackenfell Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/brackenfell-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Brackenfell Blvd, Brackenfell",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8682,
+        "longitude": 18.6854
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Central Baptist Church Pretoria",
+      "url": "https://churchesnearme.co.za/churches/central-baptist-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Francis Baard Street, Pretoria Central",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.746,
+        "longitude": 28.188
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Claremont Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/claremont-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Cook & St Michaels Street, Claremont",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.98,
+        "longitude": 18.468
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Edenvale Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/edenvale-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Van Riebeeck Avenue, Edenvale",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.142,
+        "longitude": 28.157
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Fish Hoek Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/fish-hoek-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Recreation Rd, Fish Hoek",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.1381,
+        "longitude": 18.4294
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Fourways Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/fourways-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Uranium Street, Fourways",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.019,
+        "longitude": 28.012
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "George Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/george-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hibernia St, George",
+        "addressLocality": "George",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9635,
+        "longitude": 22.4627
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Grace Fellowship Pretoria",
+      "url": "https://churchesnearme.co.za/churches/grace-fellowship-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pretoria",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.766,
+        "longitude": 28.228
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Heritage Baptist Church Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/heritage-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Johannesburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.16,
+        "longitude": 28.04
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Honeyridge Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/honeyridge-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Beyers Naude Drive & Eastwood Avenue, Randpark Ridge",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.093,
+        "longitude": 27.969
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Hout Bay Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/hout-bay-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Hout Bay",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0468,
+        "longitude": 18.362
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Kimberley Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/kimberley-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jones St, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.728,
+        "longitude": 24.7685
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Milnerton Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/milnerton-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pienaar Road, Milnerton",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.864,
+        "longitude": 18.512
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Mowbray Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/mowbray-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "45 Main Road, Mowbray",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.948,
+        "longitude": 18.4735
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Muizenberg Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/muizenberg-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Muizenberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.107,
+        "longitude": 18.472
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Nelspruit Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/nelspruit-baptist-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "General Dan Pienaar Dr, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4765,
+        "longitude": 30.9715
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Newton Park Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/newton-park-baptist-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5th Ave, Newton Park",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9625,
+        "longitude": 25.596
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Northcliff Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/northcliff-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Northcliff",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.135,
+        "longitude": 27.966
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Paarl Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/paarl-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Suid-Agter-Paarl Rd, Paarl",
+        "addressLocality": "Paarl",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.732,
+        "longitude": 18.9585
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pinetown Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/pinetown-baptist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Road, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.817,
+        "longitude": 30.861
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Pinetown Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/pinetown-baptist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Main Rd, Pinetown",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8249,
+        "longitude": 30.8576
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Polokwane Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/polokwane-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dahl St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9025,
+        "longitude": 29.467
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Potchefstroom Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/potchefstroom-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Walter Sisulu Ave, Potchefstroom",
+        "addressLocality": "Potchefstroom",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.713,
+        "longitude": 27.0963
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Roodepoort Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/roodepoort-baptist-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.162,
+        "longitude": 27.872
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rustenburg Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/rustenburg-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Heystek St, Rustenburg",
+        "addressLocality": "Rustenburg",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.671,
+        "longitude": 27.2458
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Somerset West Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/somerset-west-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Rd, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0865,
+        "longitude": 18.8415
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Stellenbosch Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/stellenbosch-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Merriman Avenue, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.933,
+        "longitude": 18.867
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Strand Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/strand-baptist-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Strand Ave, Strand",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.117,
+        "longitude": 18.8285
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Tableview Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/tableview-baptist-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sandown Rd, Tableview",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8252,
+        "longitude": 18.4962
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Umhlanga Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/umhlanga-baptist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Herrwood Drive, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.733,
+        "longitude": 31.055
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Waterkloof Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/waterkloof-baptist-church-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "294 Cygnus Street, Waterkloof Ridge",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.77,
+        "longitude": 28.234
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-baptist-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Westville Rd, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8265,
+        "longitude": 30.932
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Westville Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/westville-baptist-church-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jan Hofmeyr Road, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.833,
+        "longitude": 30.926
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Ballito Baptist Church","slug":"ballito-baptist-durban","city":"Durban","lat":-29.5368,"lng":31.213},{"name":"Bellville Baptist Church","slug":"bellville-baptist-church-cape-town","city":"Cape Town","lat":-33.901,"lng":18.628},{"name":"Benoni Baptist Church","slug":"benoni-baptist-johannesburg","city":"Johannesburg","lat":-26.1865,"lng":28.3215},{"name":"Bergvliet Baptist Church","slug":"bergvliet-baptist-church-cape-town","city":"Cape Town","lat":-34.053,"lng":18.454},{"name":"Brackenfell Baptist Church","slug":"brackenfell-baptist-church-cape-town","city":"Cape Town","lat":-33.8682,"lng":18.6854},{"name":"Central Baptist Church Pretoria","slug":"central-baptist-church-pretoria","city":"Pretoria","lat":-25.746,"lng":28.188},{"name":"Claremont Baptist Church","slug":"claremont-baptist-church-cape-town","city":"Cape Town","lat":-33.98,"lng":18.468},{"name":"Edenvale Baptist Church","slug":"edenvale-baptist-church-johannesburg","city":"Johannesburg","lat":-26.142,"lng":28.157},{"name":"Fish Hoek Baptist Church","slug":"fish-hoek-baptist-cape-town","city":"Cape Town","lat":-34.1381,"lng":18.4294},{"name":"Fourways Baptist Church","slug":"fourways-baptist-church-johannesburg","city":"Johannesburg","lat":-26.019,"lng":28.012},{"name":"George Baptist Church","slug":"george-baptist-church","city":"George","lat":-33.9635,"lng":22.4627},{"name":"Grace Fellowship Pretoria","slug":"grace-fellowship-pretoria","city":"Pretoria","lat":-25.766,"lng":28.228},{"name":"Heritage Baptist Church Johannesburg","slug":"heritage-baptist-church-johannesburg","city":"Johannesburg","lat":-26.16,"lng":28.04},{"name":"Honeyridge Baptist Church","slug":"honeyridge-baptist-church-johannesburg","city":"Johannesburg","lat":-26.093,"lng":27.969},{"name":"Hout Bay Baptist Church","slug":"hout-bay-baptist-cape-town","city":"Cape Town","lat":-34.0468,"lng":18.362},{"name":"Kimberley Baptist Church","slug":"kimberley-baptist-church","city":"Kimberley","lat":-28.728,"lng":24.7685},{"name":"Milnerton Baptist Church","slug":"milnerton-baptist-church-cape-town","city":"Cape Town","lat":-33.864,"lng":18.512},{"name":"Mowbray Baptist Church","slug":"mowbray-baptist-church-cape-town","city":"Cape Town","lat":-33.948,"lng":18.4735},{"name":"Muizenberg Baptist Church","slug":"muizenberg-baptist-cape-town","city":"Cape Town","lat":-34.107,"lng":18.472},{"name":"Nelspruit Baptist Church","slug":"nelspruit-baptist-mbombela","city":"Mbombela","lat":-25.4765,"lng":30.9715},{"name":"Newton Park Baptist Church","slug":"newton-park-baptist-gqeberha","city":"Gqeberha","lat":-33.9625,"lng":25.596},{"name":"Northcliff Baptist Church","slug":"northcliff-baptist-church-johannesburg","city":"Johannesburg","lat":-26.135,"lng":27.966},{"name":"Paarl Baptist Church","slug":"paarl-baptist-church","city":"Paarl","lat":-33.732,"lng":18.9585},{"name":"Pinetown Baptist Church","slug":"pinetown-baptist-church-durban","city":"Durban","lat":-29.817,"lng":30.861},{"name":"Pinetown Baptist Church","slug":"pinetown-baptist-durban","city":"Durban","lat":-29.8249,"lng":30.8576},{"name":"Polokwane Baptist Church","slug":"polokwane-baptist-church","city":"Polokwane","lat":-23.9025,"lng":29.467},{"name":"Potchefstroom Baptist Church","slug":"potchefstroom-baptist-church","city":"Potchefstroom","lat":-26.713,"lng":27.0963},{"name":"Roodepoort Baptist Church","slug":"roodepoort-baptist-church-johannesburg","city":"Johannesburg","lat":-26.162,"lng":27.872},{"name":"Rustenburg Baptist Church","slug":"rustenburg-baptist-church","city":"Rustenburg","lat":-25.671,"lng":27.2458},{"name":"Somerset West Baptist Church","slug":"somerset-west-baptist-cape-town","city":"Cape Town","lat":-34.0865,"lng":18.8415},{"name":"Stellenbosch Baptist Church","slug":"stellenbosch-baptist-church","city":"Stellenbosch","lat":-33.933,"lng":18.867},{"name":"Strand Baptist Church","slug":"strand-baptist-cape-town","city":"Cape Town","lat":-34.117,"lng":18.8285},{"name":"Tableview Baptist Church","slug":"tableview-baptist-church-cape-town","city":"Cape Town","lat":-33.8252,"lng":18.4962},{"name":"Umhlanga Baptist Church","slug":"umhlanga-baptist-church-durban","city":"Durban","lat":-29.733,"lng":31.055},{"name":"Waterkloof Baptist Church","slug":"waterkloof-baptist-church-pretoria","city":"Pretoria","lat":-25.77,"lng":28.234},{"name":"Westville Baptist Church","slug":"westville-baptist-durban","city":"Durban","lat":-29.8265,"lng":30.932},{"name":"Westville Baptist Church","slug":"westville-baptist-church-durban","city":"Durban","lat":-29.833,"lng":30.926}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

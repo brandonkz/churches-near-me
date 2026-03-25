@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shofar Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Shofar churches near me across South Africa. Browse locations, cities, and contact details for Shofar congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/shofar.html">
+  <meta property="og:title" content="Shofar Churches in South Africa">
+  <meta property="og:description" content="Explore Shofar churches near me across South Africa. Browse locations, cities, and contact details for Shofar congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/shofar.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Shofar Churches in South Africa</h1>
+    <p>Explore Shofar churches near me across South Africa. Browse locations, cities, and contact details for Shofar congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Bloemfontein">Bloemfontein</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="George">George</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Mbombela">Mbombela</option><option value="Polokwane">Polokwane</option><option value="Pretoria">Pretoria</option><option value="Stellenbosch">Stellenbosch</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Shofar churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Shofar" data-city="Bloemfontein">
+        <h3><a href="/churches/shofar-bloemfontein/">Shofar Bloemfontein</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Curie Ave, Langenhoven Park, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/shofar-bloemfontein/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/bloemfontein/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Pretoria">
+        <h3><a href="/churches/shofar-centurion-pretoria/">Shofar Centurion</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Centurion Mall area, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/shofar-centurion-pretoria/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/centurion/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Cape Town">
+        <h3><a href="/churches/shofar-durbanville-cape-town/">Shofar Christian Church Durbanville</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Wellington Rd, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/shofar-durbanville-cape-town/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/durbanville/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Johannesburg">
+        <h3><a href="/churches/shofar-sandton-johannesburg/">Shofar Christian Church Sandton</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">South Rd, Morningside, Sandton, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/shofar-sandton-johannesburg/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/sandton/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Durban">
+        <h3><a href="/churches/shofar-durban/">Shofar Durban</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Stamfordhill Rd, Durban, Durban</div>
+        <div class="church-links">
+          <a href="/churches/shofar-durban/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/durban/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="George">
+        <h3><a href="/churches/shofar-george/">Shofar George</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Courtenay St, George, George</div>
+        <div class="church-links">
+          <a href="/churches/shofar-george/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/george/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Pretoria">
+        <h3><a href="/churches/shofar-montana-pretoria/">Shofar Montana</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Montana Crossing, Montana, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/shofar-montana-pretoria/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/montana/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Mbombela">
+        <h3><a href="/churches/shofar-nelspruit-mbombela/">Shofar Nelspruit</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Samora Machel Dr, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/shofar-nelspruit-mbombela/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/nelspruit/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Polokwane">
+        <h3><a href="/churches/shofar-polokwane/">Shofar Polokwane</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Rabe St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/shofar-polokwane/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/polokwane/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Gqeberha">
+        <h3><a href="/churches/shofar-gqeberha/">Shofar Port Elizabeth</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Cotswold Dr, Greenacres, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/shofar-gqeberha/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/port-elizabeth/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Johannesburg">
+        <h3><a href="/churches/shofar-randburg-johannesburg/">Shofar Randburg</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Witkoppen Rd, Randburg, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/shofar-randburg-johannesburg/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/randburg/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Cape Town">
+        <h3><a href="/churches/shofar-somerset-west-cape-town/">Shofar Somerset West</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Helderberg Rd, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/shofar-somerset-west-cape-town/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/somerset-west/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Stellenbosch">
+        <h3><a href="/churches/shofar-stellenbosch/">Shofar Stellenbosch</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Merriman Ave, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/shofar-stellenbosch/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/stellenbosch/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Shofar" data-city="Durban">
+        <h3><a href="/churches/shofar-umhlanga-durban/">Shofar Umhlanga</a></h3>
+        <div class="church-denom">Shofar</div>
+        <div class="church-address">Umhlanga Rocks Dr, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/shofar-umhlanga-durban/" class="church-link">View details</a>
+          <a href="https://shofaronline.org/church/umhlanga/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Bloemfontein",
+      "url": "https://churchesnearme.co.za/churches/shofar-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Curie Ave, Langenhoven Park",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.1105,
+        "longitude": 26.126
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Centurion",
+      "url": "https://churchesnearme.co.za/churches/shofar-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centurion Mall area, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.8598,
+        "longitude": 28.1875
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Christian Church Durbanville",
+      "url": "https://churchesnearme.co.za/churches/shofar-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wellington Rd, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.832,
+        "longitude": 18.6558
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Christian Church Sandton",
+      "url": "https://churchesnearme.co.za/churches/shofar-sandton-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "South Rd, Morningside, Sandton",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1067,
+        "longitude": 28.0567
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Durban",
+      "url": "https://churchesnearme.co.za/churches/shofar-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stamfordhill Rd, Durban",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.835,
+        "longitude": 31.015
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar George",
+      "url": "https://churchesnearme.co.za/churches/shofar-george/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Courtenay St, George",
+        "addressLocality": "George",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.958,
+        "longitude": 22.4568
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Montana",
+      "url": "https://churchesnearme.co.za/churches/shofar-montana-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Montana Crossing, Montana",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.6888,
+        "longitude": 28.203
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Nelspruit",
+      "url": "https://churchesnearme.co.za/churches/shofar-nelspruit-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Samora Machel Dr, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.478,
+        "longitude": 30.9725
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Polokwane",
+      "url": "https://churchesnearme.co.za/churches/shofar-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rabe St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.9015,
+        "longitude": 29.466
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/shofar-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cotswold Dr, Greenacres",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.967,
+        "longitude": 25.587
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Randburg",
+      "url": "https://churchesnearme.co.za/churches/shofar-randburg-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Witkoppen Rd, Randburg",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.088,
+        "longitude": 27.9965
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Somerset West",
+      "url": "https://churchesnearme.co.za/churches/shofar-somerset-west-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Helderberg Rd, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0857,
+        "longitude": 18.846
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/shofar-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Merriman Ave, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9338,
+        "longitude": 18.8618
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Shofar Umhlanga",
+      "url": "https://churchesnearme.co.za/churches/shofar-umhlanga-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Umhlanga Rocks Dr, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.7295,
+        "longitude": 31.089
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Shofar Bloemfontein","slug":"shofar-bloemfontein","city":"Bloemfontein","lat":-29.1105,"lng":26.126},{"name":"Shofar Centurion","slug":"shofar-centurion-pretoria","city":"Pretoria","lat":-25.8598,"lng":28.1875},{"name":"Shofar Christian Church Durbanville","slug":"shofar-durbanville-cape-town","city":"Cape Town","lat":-33.832,"lng":18.6558},{"name":"Shofar Christian Church Sandton","slug":"shofar-sandton-johannesburg","city":"Johannesburg","lat":-26.1067,"lng":28.0567},{"name":"Shofar Durban","slug":"shofar-durban","city":"Durban","lat":-29.835,"lng":31.015},{"name":"Shofar George","slug":"shofar-george","city":"George","lat":-33.958,"lng":22.4568},{"name":"Shofar Montana","slug":"shofar-montana-pretoria","city":"Pretoria","lat":-25.6888,"lng":28.203},{"name":"Shofar Nelspruit","slug":"shofar-nelspruit-mbombela","city":"Mbombela","lat":-25.478,"lng":30.9725},{"name":"Shofar Polokwane","slug":"shofar-polokwane","city":"Polokwane","lat":-23.9015,"lng":29.466},{"name":"Shofar Port Elizabeth","slug":"shofar-gqeberha","city":"Gqeberha","lat":-33.967,"lng":25.587},{"name":"Shofar Randburg","slug":"shofar-randburg-johannesburg","city":"Johannesburg","lat":-26.088,"lng":27.9965},{"name":"Shofar Somerset West","slug":"shofar-somerset-west-cape-town","city":"Cape Town","lat":-34.0857,"lng":18.846},{"name":"Shofar Stellenbosch","slug":"shofar-stellenbosch","city":"Stellenbosch","lat":-33.9338,"lng":18.8618},{"name":"Shofar Umhlanga","slug":"shofar-umhlanga-durban","city":"Durban","lat":-29.7295,"lng":31.089}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

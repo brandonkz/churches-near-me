@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Every Nation Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Every Nation churches near me across South Africa. Browse locations, cities, and contact details for Every Nation congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/every-nation.html">
+  <meta property="og:title" content="Every Nation Churches in South Africa">
+  <meta property="og:description" content="Explore Every Nation churches near me across South Africa. Browse locations, cities, and contact details for Every Nation congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/every-nation.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Every Nation Churches in South Africa</h1>
+    <p>Explore Every Nation churches near me across South Africa. Browse locations, cities, and contact details for Every Nation congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Bloemfontein">Bloemfontein</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="East London">East London</option><option value="George">George</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Kimberley">Kimberley</option><option value="Mbombela">Mbombela</option><option value="Midrand">Midrand</option><option value="Polokwane">Polokwane</option><option value="Pretoria">Pretoria</option><option value="Richards Bay">Richards Bay</option><option value="Rustenburg">Rustenburg</option><option value="Worcester">Worcester</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Every Nation churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Every Nation" data-city="Bloemfontein">
+        <h3><a href="/churches/every-nation-bloemfontein/">Every Nation Bloemfontein</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Kellner St, Bloemfontein, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-bloemfontein/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Durban">
+        <h3><a href="/churches/every-nation-morningside-durban/">Every Nation Durban</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Florida Rd, Morningside, Durban</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-morningside-durban/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Durban">
+        <h3><a href="/churches/every-nation-umhlanga-durban/">Every Nation Durban North</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Gateway Area, Umhlanga, Durban</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-umhlanga-durban/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Cape Town">
+        <h3><a href="/churches/every-nation-durbanville-cape-town/">Every Nation Durbanville</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Wellington Rd, Durbanville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-durbanville-cape-town/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="East London">
+        <h3><a href="/churches/every-nation-east-london/">Every Nation East London</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Fleet St, East London, East London</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-east-london/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="George">
+        <h3><a href="/churches/every-nation-george/">Every Nation George</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Cradock St, George, George</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-george/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Johannesburg">
+        <h3><a href="/churches/every-nation-johannesburg/">Every Nation Johannesburg</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Oxford Rd, Rosebank, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-johannesburg/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Kimberley">
+        <h3><a href="/churches/every-nation-kimberley/">Every Nation Kimberley</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Du Toitspan Rd, Kimberley, Kimberley</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-kimberley/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Midrand">
+        <h3><a href="/churches/every-nation-midrand/">Every Nation Midrand</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Cnr New Road &amp; 6th Road, Midrand, Midrand</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-midrand/" class="church-link">View details</a>
+          <a href="https://everynationmidrand.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Mbombela">
+        <h3><a href="/churches/every-nation-nelspruit-mbombela/">Every Nation Nelspruit</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Ferreira St, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-nelspruit-mbombela/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Polokwane">
+        <h3><a href="/churches/every-nation-polokwane/">Every Nation Polokwane</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Schoeman St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-polokwane/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Gqeberha">
+        <h3><a href="/churches/every-nation-gqeberha/">Every Nation Port Elizabeth</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Walmer Blvd, Walmer, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-gqeberha/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Pretoria">
+        <h3><a href="/churches/every-nation-hatfield-pretoria/">Every Nation Pretoria</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Hatfield Plaza, Hatfield, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-hatfield-pretoria/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Richards Bay">
+        <h3><a href="/churches/every-nation-richards-bay/">Every Nation Richards Bay</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Magnolia Dr, Richards Bay, Richards Bay</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-richards-bay/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Johannesburg">
+        <h3><a href="/churches/every-nation-roodepoort-johannesburg/">Every Nation Roodepoort</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Florida Park, Roodepoort, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-roodepoort-johannesburg/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Rustenburg">
+        <h3><a href="/churches/every-nation-rustenburg/">Every Nation Rustenburg</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Oliver Tambo Dr, Rustenburg, Rustenburg</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-rustenburg/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Cape Town">
+        <h3><a href="/churches/every-nation-somerset-west-cape-town/">Every Nation Somerset West</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Old Paarl Rd, Somerset West, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-somerset-west-cape-town/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Every Nation" data-city="Worcester">
+        <h3><a href="/churches/every-nation-worcester/">Every Nation Worcester</a></h3>
+        <div class="church-denom">Every Nation</div>
+        <div class="church-address">Stockenstrom St, Worcester, Worcester</div>
+        <div class="church-links">
+          <a href="/churches/every-nation-worcester/" class="church-link">View details</a>
+          <a href="https://everynation.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Bloemfontein",
+      "url": "https://churchesnearme.co.za/churches/every-nation-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kellner St, Bloemfontein",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.0825,
+        "longitude": 26.1563
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Durban",
+      "url": "https://churchesnearme.co.za/churches/every-nation-morningside-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Florida Rd, Morningside",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.8478,
+        "longitude": 31.0021
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Durban North",
+      "url": "https://churchesnearme.co.za/churches/every-nation-umhlanga-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gateway Area, Umhlanga",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.731,
+        "longitude": 31.086
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Durbanville",
+      "url": "https://churchesnearme.co.za/churches/every-nation-durbanville-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wellington Rd, Durbanville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.8328,
+        "longitude": 18.6573
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation East London",
+      "url": "https://churchesnearme.co.za/churches/every-nation-east-london/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fleet St, East London",
+        "addressLocality": "East London",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.9808,
+        "longitude": 27.8668
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation George",
+      "url": "https://churchesnearme.co.za/churches/every-nation-george/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cradock St, George",
+        "addressLocality": "George",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.965,
+        "longitude": 22.464
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Johannesburg",
+      "url": "https://churchesnearme.co.za/churches/every-nation-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Oxford Rd, Rosebank",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1489,
+        "longitude": 28.043
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Kimberley",
+      "url": "https://churchesnearme.co.za/churches/every-nation-kimberley/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Du Toitspan Rd, Kimberley",
+        "addressLocality": "Kimberley",
+        "addressRegion": "Northern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7345,
+        "longitude": 24.775
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Midrand",
+      "url": "https://churchesnearme.co.za/churches/every-nation-midrand/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr New Road & 6th Road, Midrand",
+        "addressLocality": "Midrand",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Nelspruit",
+      "url": "https://churchesnearme.co.za/churches/every-nation-nelspruit-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ferreira St, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4738,
+        "longitude": 30.9678
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Polokwane",
+      "url": "https://churchesnearme.co.za/churches/every-nation-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schoeman St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.903,
+        "longitude": 29.4675
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/every-nation-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Walmer Blvd, Walmer",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9735,
+        "longitude": 25.593
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Pretoria",
+      "url": "https://churchesnearme.co.za/churches/every-nation-hatfield-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hatfield Plaza, Hatfield",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7537,
+        "longitude": 28.2317
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Richards Bay",
+      "url": "https://churchesnearme.co.za/churches/every-nation-richards-bay/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Magnolia Dr, Richards Bay",
+        "addressLocality": "Richards Bay",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.782,
+        "longitude": 32.0585
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Roodepoort",
+      "url": "https://churchesnearme.co.za/churches/every-nation-roodepoort-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Florida Park, Roodepoort",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1615,
+        "longitude": 27.8765
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Rustenburg",
+      "url": "https://churchesnearme.co.za/churches/every-nation-rustenburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Oliver Tambo Dr, Rustenburg",
+        "addressLocality": "Rustenburg",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.6655,
+        "longitude": 27.2405
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Somerset West",
+      "url": "https://churchesnearme.co.za/churches/every-nation-somerset-west-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old Paarl Rd, Somerset West",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.0838,
+        "longitude": 18.8445
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Every Nation Worcester",
+      "url": "https://churchesnearme.co.za/churches/every-nation-worcester/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Stockenstrom St, Worcester",
+        "addressLocality": "Worcester",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.6445,
+        "longitude": 19.4462
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Every Nation Bloemfontein","slug":"every-nation-bloemfontein","city":"Bloemfontein","lat":-29.0825,"lng":26.1563},{"name":"Every Nation Durban","slug":"every-nation-morningside-durban","city":"Durban","lat":-29.8478,"lng":31.0021},{"name":"Every Nation Durban North","slug":"every-nation-umhlanga-durban","city":"Durban","lat":-29.731,"lng":31.086},{"name":"Every Nation Durbanville","slug":"every-nation-durbanville-cape-town","city":"Cape Town","lat":-33.8328,"lng":18.6573},{"name":"Every Nation East London","slug":"every-nation-east-london","city":"East London","lat":-32.9808,"lng":27.8668},{"name":"Every Nation George","slug":"every-nation-george","city":"George","lat":-33.965,"lng":22.464},{"name":"Every Nation Johannesburg","slug":"every-nation-johannesburg","city":"Johannesburg","lat":-26.1489,"lng":28.043},{"name":"Every Nation Kimberley","slug":"every-nation-kimberley","city":"Kimberley","lat":-28.7345,"lng":24.775},{"name":"Every Nation Midrand","slug":"every-nation-midrand","city":"Midrand","lat":0,"lng":0},{"name":"Every Nation Nelspruit","slug":"every-nation-nelspruit-mbombela","city":"Mbombela","lat":-25.4738,"lng":30.9678},{"name":"Every Nation Polokwane","slug":"every-nation-polokwane","city":"Polokwane","lat":-23.903,"lng":29.4675},{"name":"Every Nation Port Elizabeth","slug":"every-nation-gqeberha","city":"Gqeberha","lat":-33.9735,"lng":25.593},{"name":"Every Nation Pretoria","slug":"every-nation-hatfield-pretoria","city":"Pretoria","lat":-25.7537,"lng":28.2317},{"name":"Every Nation Richards Bay","slug":"every-nation-richards-bay","city":"Richards Bay","lat":-28.782,"lng":32.0585},{"name":"Every Nation Roodepoort","slug":"every-nation-roodepoort-johannesburg","city":"Johannesburg","lat":-26.1615,"lng":27.8765},{"name":"Every Nation Rustenburg","slug":"every-nation-rustenburg","city":"Rustenburg","lat":-25.6655,"lng":27.2405},{"name":"Every Nation Somerset West","slug":"every-nation-somerset-west-cape-town","city":"Cape Town","lat":-34.0838,"lng":18.8445},{"name":"Every Nation Worcester","slug":"every-nation-worcester","city":"Worcester","lat":-33.6445,"lng":19.4462}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>

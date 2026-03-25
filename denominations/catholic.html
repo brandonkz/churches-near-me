@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catholic Churches in South Africa | Churches Near Me</title>
+  <meta name="description" content="Explore Catholic churches near me across South Africa. Browse locations, cities, and contact details for Catholic congregations.">
+  <link rel="canonical" href="https://churchesnearme.co.za/denominations/catholic.html">
+  <meta property="og:title" content="Catholic Churches in South Africa">
+  <meta property="og:description" content="Explore Catholic churches near me across South Africa. Browse locations, cities, and contact details for Catholic congregations.">
+  <meta property="og:url" content="https://churchesnearme.co.za/denominations/catholic.html">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
+    .denom-hero h1 { margin-bottom: 12px; }
+    .denom-hero p { max-width: 760px; }
+    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .filter-label { font-weight: 600; }
+    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
+    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
+    .church-card h3 { margin: 0 0 8px; }
+    .church-address { color: #475569; margin-bottom: 12px; }
+    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
+    .map-wrapper { margin: 32px 0; }
+    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
+    .empty-state { color: #64748b; }
+    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="denom-hero">
+    <a href="/" class="back-link">← Back to homepage</a>
+    <h1>Catholic Churches in South Africa</h1>
+    <p>Explore Catholic churches near me across South Africa. Browse locations, cities, and contact details for Catholic congregations.</p>
+
+    <div class="filters">
+      <label class="filter-label" for="city-filter">Filter by city</label>
+  <select id="city-filter" class="filter-select">
+    <option value="all">All</option>
+    <option value="Bloemfontein">Bloemfontein</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Gqeberha">Gqeberha</option><option value="Johannesburg">Johannesburg</option><option value="Mbombela">Mbombela</option><option value="Pietermaritzburg">Pietermaritzburg</option><option value="Polokwane">Polokwane</option><option value="Pretoria">Pretoria</option><option value="Richards Bay">Richards Bay</option>
+  </select>
+    </div>
+
+    <div class="map-wrapper">
+      <div id="denom-map" aria-label="Map of Catholic churches"></div>
+    </div>
+
+    <div class="church-grid">
+    <article class="church-card" data-denomination="Catholic" data-city="Bloemfontein">
+        <h3><a href="/churches/catholic-cathedral-bloemfontein/">Bloemfontein Catholic Cathedral</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cnr Charles &amp; Henry Streets, Bloemfontein, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/catholic-cathedral-bloemfontein/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/cathedral-christ-the-king-johannesburg/">Cathedral of Christ the King</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Saratoga Avenue, Berea, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/cathedral-christ-the-king-johannesburg/" class="church-link">View details</a>
+          <a href="https://catholicjhb.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Gqeberha">
+        <h3><a href="/churches/holy-trinity-catholic-gqeberha/">Cathedral of the Holy Trinity Port Elizabeth</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Russell Rd, Port Elizabeth, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/holy-trinity-catholic-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Pretoria">
+        <h3><a href="/churches/sacred-heart-cathedral-pretoria/">Cathedral of the Sacred Heart Pretoria</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cnr Beatrix &amp; Pretorius Streets, Arcadia, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/sacred-heart-cathedral-pretoria/" class="church-link">View details</a>
+          <a href="https://www.cshpretoria.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/immaculate-conception-rosebank-johannesburg/">Church of the Immaculate Conception</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">16 Keyes Avenue, Rosebank, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/immaculate-conception-rosebank-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/emmanuel-cathedral-durban/">Emmanuel Cathedral Durban</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cathedral Road, Durban Central, Durban</div>
+        <div class="church-links">
+          <a href="/churches/emmanuel-cathedral-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/holy-cross-catholic-zonnebloem-cape-town/">Holy Cross Catholic Church Zonnebloem</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">14 Searle Street, Zonnebloem, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/holy-cross-catholic-zonnebloem-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Richards Bay">
+        <h3><a href="/churches/holy-family-catholic-richards-bay/">Holy Family Catholic Church Richards Bay</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Alton Park, Richards Bay, Richards Bay</div>
+        <div class="church-links">
+          <a href="/churches/holy-family-catholic-richards-bay/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Pretoria">
+        <h3><a href="/churches/holy-mass-catholic-centurion-pretoria/">Holy Mass Catholic Church Centurion</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Jean Ave, Centurion, Pretoria</div>
+        <div class="church-links">
+          <a href="/churches/holy-mass-catholic-centurion-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Polokwane">
+        <h3><a href="/churches/holy-trinity-catholic-polokwane/">Holy Trinity Catholic Church Polokwane</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Joubert St, Polokwane, Polokwane</div>
+        <div class="church-links">
+          <a href="/churches/holy-trinity-catholic-polokwane/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/our-lady-of-lourdes-westville-durban/">Our Lady of Lourdes Catholic Church Westville</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Lourdes Dr, Westville, Durban</div>
+        <div class="church-links">
+          <a href="/churches/our-lady-of-lourdes-westville-durban/" class="church-link">View details</a>
+          <a href="https://lourdes.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Pietermaritzburg">
+        <h3><a href="/churches/st-anthonys-catholic-pietermaritzburg/">St Anthonys Catholic Church Pietermaritzburg</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">451 Jabu Ndlovu Street, Pietermaritzburg</div>
+        <div class="church-links">
+          <a href="/churches/st-anthonys-catholic-pietermaritzburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/st-dominics-catholic-umhlanga-durban/">St Dominic&#39;s Catholic Church Umhlanga</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Lagoon Dr, Umhlanga Rocks, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-dominics-catholic-umhlanga-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/st-dunstan-catholic-benoni-johannesburg/">St Dunstan Catholic Church Benoni</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Fourth St, Benoni, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-dunstan-catholic-benoni-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Durban">
+        <h3><a href="/churches/st-francis-xavier-chatsworth-durban/">St Francis Xavier Catholic Church Chatsworth</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Chatsworth Centre Rd, Chatsworth, Durban</div>
+        <div class="church-links">
+          <a href="/churches/st-francis-xavier-chatsworth-durban/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/st-francis-xavier-soweto-johannesburg/">St Francis Xavier Catholic Church Soweto</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Vilakazi St, Orlando West, Soweto, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-francis-xavier-soweto-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-james-catholic-muizenberg-cape-town/">St James Catholic Church Muizenberg</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">St James Rd, Muizenberg, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-james-catholic-muizenberg-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-josephs-catholic-goodwood-cape-town/">St Joseph&#39;s Catholic Church Goodwood</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Goodwood Rd, Goodwood, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-josephs-catholic-goodwood-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Mbombela">
+        <h3><a href="/churches/st-josephs-catholic-nelspruit-mbombela/">St Joseph&#39;s Catholic Church Nelspruit</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Route 40, Nelspruit, Mbombela</div>
+        <div class="church-links">
+          <a href="/churches/st-josephs-catholic-nelspruit-mbombela/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-marys-cathedral-cape-town/">St Mary&#39;s Cathedral Cape Town</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Cnr Hope Street &amp; Roeland Street, Cape Town, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-cathedral-cape-town/" class="church-link">View details</a>
+          <a href="https://stmaryscathedral.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Gqeberha">
+        <h3><a href="/churches/st-marys-cathedral-gqeberha/">St Mary&#39;s Cathedral Port Elizabeth</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Park Drive, Central, Gqeberha, Gqeberha</div>
+        <div class="church-links">
+          <a href="/churches/st-marys-cathedral-gqeberha/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Bloemfontein">
+        <h3><a href="/churches/st-michael-catholic-bloemfontein/">St Michael and All Angels Catholic Church Bloemfontein</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Donald Murray Ave, Bloemfontein, Bloemfontein</div>
+        <div class="church-links">
+          <a href="/churches/st-michael-catholic-bloemfontein/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Cape Town">
+        <h3><a href="/churches/st-peters-catholic-woodstock-cape-town/">St Peter&#39;s Catholic Church Woodstock</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Albert Road, Woodstock, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-peters-catholic-woodstock-cape-town/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Catholic" data-city="Johannesburg">
+        <h3><a href="/churches/st-theresa-catholic-kempton-park-johannesburg/">St Theresa Catholic Church Kempton Park</a></h3>
+        <div class="church-denom">Catholic</div>
+        <div class="church-address">Commissioner St, Kempton Park, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/st-theresa-catholic-kempton-park-johannesburg/" class="church-link">View details</a>
+          
+        </div>
+      </article>
+  </div>
+  </main>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Bloemfontein Catholic Cathedral",
+      "url": "https://churchesnearme.co.za/churches/catholic-cathedral-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Charles & Henry Streets, Bloemfontein",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.116,
+        "longitude": 26.214
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cathedral of Christ the King",
+      "url": "https://churchesnearme.co.za/churches/cathedral-christ-the-king-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Saratoga Avenue, Berea",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.187,
+        "longitude": 28.055
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cathedral of the Holy Trinity Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/holy-trinity-catholic-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Russell Rd, Port Elizabeth",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9612,
+        "longitude": 25.5998
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cathedral of the Sacred Heart Pretoria",
+      "url": "https://churchesnearme.co.za/churches/sacred-heart-cathedral-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Beatrix & Pretorius Streets, Arcadia",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.747,
+        "longitude": 28.205
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Church of the Immaculate Conception",
+      "url": "https://churchesnearme.co.za/churches/immaculate-conception-rosebank-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16 Keyes Avenue, Rosebank",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.143,
+        "longitude": 28.037
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Emmanuel Cathedral Durban",
+      "url": "https://churchesnearme.co.za/churches/emmanuel-cathedral-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cathedral Road, Durban Central",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.856,
+        "longitude": 31.02
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Cross Catholic Church Zonnebloem",
+      "url": "https://churchesnearme.co.za/churches/holy-cross-catholic-zonnebloem-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14 Searle Street, Zonnebloem",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.934,
+        "longitude": 18.428
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Family Catholic Church Richards Bay",
+      "url": "https://churchesnearme.co.za/churches/holy-family-catholic-richards-bay/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alton Park, Richards Bay",
+        "addressLocality": "Richards Bay",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -28.7862,
+        "longitude": 32.0635
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Mass Catholic Church Centurion",
+      "url": "https://churchesnearme.co.za/churches/holy-mass-catholic-centurion-pretoria/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jean Ave, Centurion",
+        "addressLocality": "Pretoria",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.857,
+        "longitude": 28.185
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Holy Trinity Catholic Church Polokwane",
+      "url": "https://churchesnearme.co.za/churches/holy-trinity-catholic-polokwane/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Joubert St, Polokwane",
+        "addressLocality": "Polokwane",
+        "addressRegion": "Limpopo",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.904,
+        "longitude": 29.4695
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Our Lady of Lourdes Catholic Church Westville",
+      "url": "https://churchesnearme.co.za/churches/our-lady-of-lourdes-westville-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lourdes Dr, Westville",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.831,
+        "longitude": 30.9275
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Anthonys Catholic Church Pietermaritzburg",
+      "url": "https://churchesnearme.co.za/churches/st-anthonys-catholic-pietermaritzburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "451 Jabu Ndlovu Street",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Dominic's Catholic Church Umhlanga",
+      "url": "https://churchesnearme.co.za/churches/st-dominics-catholic-umhlanga-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lagoon Dr, Umhlanga Rocks",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.7275,
+        "longitude": 31.0878
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Dunstan Catholic Church Benoni",
+      "url": "https://churchesnearme.co.za/churches/st-dunstan-catholic-benoni-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Fourth St, Benoni",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.1855,
+        "longitude": 28.32
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Francis Xavier Catholic Church Chatsworth",
+      "url": "https://churchesnearme.co.za/churches/st-francis-xavier-chatsworth-durban/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chatsworth Centre Rd, Chatsworth",
+        "addressLocality": "Durban",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.907,
+        "longitude": 30.9235
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Francis Xavier Catholic Church Soweto",
+      "url": "https://churchesnearme.co.za/churches/st-francis-xavier-soweto-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vilakazi St, Orlando West, Soweto",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2674,
+        "longitude": 27.8588
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St James Catholic Church Muizenberg",
+      "url": "https://churchesnearme.co.za/churches/st-james-catholic-muizenberg-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "St James Rd, Muizenberg",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.109,
+        "longitude": 18.4695
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Joseph's Catholic Church Goodwood",
+      "url": "https://churchesnearme.co.za/churches/st-josephs-catholic-goodwood-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Goodwood Rd, Goodwood",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9105,
+        "longitude": 18.5501
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Joseph's Catholic Church Nelspruit",
+      "url": "https://churchesnearme.co.za/churches/st-josephs-catholic-nelspruit-mbombela/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Route 40, Nelspruit",
+        "addressLocality": "Mbombela",
+        "addressRegion": "Mpumalanga",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4755,
+        "longitude": 30.97
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Cathedral Cape Town",
+      "url": "https://churchesnearme.co.za/churches/st-marys-cathedral-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cnr Hope Street & Roeland Street, Cape Town",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.931,
+        "longitude": 18.42
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Mary's Cathedral Port Elizabeth",
+      "url": "https://churchesnearme.co.za/churches/st-marys-cathedral-gqeberha/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Park Drive, Central, Gqeberha",
+        "addressLocality": "Gqeberha",
+        "addressRegion": "Eastern Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.959,
+        "longitude": 25.596
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Michael and All Angels Catholic Church Bloemfontein",
+      "url": "https://churchesnearme.co.za/churches/st-michael-catholic-bloemfontein/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Donald Murray Ave, Bloemfontein",
+        "addressLocality": "Bloemfontein",
+        "addressRegion": "Free State",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.0868,
+        "longitude": 26.1595
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Peter's Catholic Church Woodstock",
+      "url": "https://churchesnearme.co.za/churches/st-peters-catholic-woodstock-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Albert Road, Woodstock",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.927,
+        "longitude": 18.447
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "St Theresa Catholic Church Kempton Park",
+      "url": "https://churchesnearme.co.za/churches/st-theresa-catholic-kempton-park-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Commissioner St, Kempton Park",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.0967,
+        "longitude": 28.228
+      }
+    }
+  ]
+}
+  </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const churches = [{"name":"Bloemfontein Catholic Cathedral","slug":"catholic-cathedral-bloemfontein","city":"Bloemfontein","lat":-29.116,"lng":26.214},{"name":"Cathedral of Christ the King","slug":"cathedral-christ-the-king-johannesburg","city":"Johannesburg","lat":-26.187,"lng":28.055},{"name":"Cathedral of the Holy Trinity Port Elizabeth","slug":"holy-trinity-catholic-gqeberha","city":"Gqeberha","lat":-33.9612,"lng":25.5998},{"name":"Cathedral of the Sacred Heart Pretoria","slug":"sacred-heart-cathedral-pretoria","city":"Pretoria","lat":-25.747,"lng":28.205},{"name":"Church of the Immaculate Conception","slug":"immaculate-conception-rosebank-johannesburg","city":"Johannesburg","lat":-26.143,"lng":28.037},{"name":"Emmanuel Cathedral Durban","slug":"emmanuel-cathedral-durban","city":"Durban","lat":-29.856,"lng":31.02},{"name":"Holy Cross Catholic Church Zonnebloem","slug":"holy-cross-catholic-zonnebloem-cape-town","city":"Cape Town","lat":-33.934,"lng":18.428},{"name":"Holy Family Catholic Church Richards Bay","slug":"holy-family-catholic-richards-bay","city":"Richards Bay","lat":-28.7862,"lng":32.0635},{"name":"Holy Mass Catholic Church Centurion","slug":"holy-mass-catholic-centurion-pretoria","city":"Pretoria","lat":-25.857,"lng":28.185},{"name":"Holy Trinity Catholic Church Polokwane","slug":"holy-trinity-catholic-polokwane","city":"Polokwane","lat":-23.904,"lng":29.4695},{"name":"Our Lady of Lourdes Catholic Church Westville","slug":"our-lady-of-lourdes-westville-durban","city":"Durban","lat":-29.831,"lng":30.9275},{"name":"St Anthonys Catholic Church Pietermaritzburg","slug":"st-anthonys-catholic-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"St Dominic's Catholic Church Umhlanga","slug":"st-dominics-catholic-umhlanga-durban","city":"Durban","lat":-29.7275,"lng":31.0878},{"name":"St Dunstan Catholic Church Benoni","slug":"st-dunstan-catholic-benoni-johannesburg","city":"Johannesburg","lat":-26.1855,"lng":28.32},{"name":"St Francis Xavier Catholic Church Chatsworth","slug":"st-francis-xavier-chatsworth-durban","city":"Durban","lat":-29.907,"lng":30.9235},{"name":"St Francis Xavier Catholic Church Soweto","slug":"st-francis-xavier-soweto-johannesburg","city":"Johannesburg","lat":-26.2674,"lng":27.8588},{"name":"St James Catholic Church Muizenberg","slug":"st-james-catholic-muizenberg-cape-town","city":"Cape Town","lat":-34.109,"lng":18.4695},{"name":"St Joseph's Catholic Church Goodwood","slug":"st-josephs-catholic-goodwood-cape-town","city":"Cape Town","lat":-33.9105,"lng":18.5501},{"name":"St Joseph's Catholic Church Nelspruit","slug":"st-josephs-catholic-nelspruit-mbombela","city":"Mbombela","lat":-25.4755,"lng":30.97},{"name":"St Mary's Cathedral Cape Town","slug":"st-marys-cathedral-cape-town","city":"Cape Town","lat":-33.931,"lng":18.42},{"name":"St Mary's Cathedral Port Elizabeth","slug":"st-marys-cathedral-gqeberha","city":"Gqeberha","lat":-33.959,"lng":25.596},{"name":"St Michael and All Angels Catholic Church Bloemfontein","slug":"st-michael-catholic-bloemfontein","city":"Bloemfontein","lat":-29.0868,"lng":26.1595},{"name":"St Peter's Catholic Church Woodstock","slug":"st-peters-catholic-woodstock-cape-town","city":"Cape Town","lat":-33.927,"lng":18.447},{"name":"St Theresa Catholic Church Kempton Park","slug":"st-theresa-catholic-kempton-park-johannesburg","city":"Johannesburg","lat":-26.0967,"lng":28.228}];
+    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    churches.forEach(church => {
+      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
+      const marker = L.marker([church.lat, church.lng]).addTo(map);
+      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
+      markers.push(marker);
+    });
+
+    if (markers.length) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.2));
+    }
+
+    const cityFilter = document.getElementById('city-filter');
+    if (cityFilter) {
+      cityFilter.addEventListener('change', event => {
+        const value = event.target.value;
+        const cards = document.querySelectorAll('.church-card');
+        cards.forEach(card => {
+          const city = card.dataset.city || '';
+          const show = value === 'all' || city === value;
+          card.style.display = show ? 'block' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+  </script>
+</body>
+</html>
