@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ChurchesNearMe — War Room</title>
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --panel:#121212;
+    --panel-2:#161616;
+    --text:#ffffff;
+    --muted:#b7b7b7;
+    --accent:#8b5cf6;
+    --good:#22c55e;
+    --warn:#f59e0b;
+    --bad:#ef4444;
+    --border:#242424;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.45;
+  }
+  a{color:#9ecbff;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1200px;margin:0 auto;padding:24px}
+  .header{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+    gap:12px;margin-bottom:18px
+  }
+  .title{font-size:28px;font-weight:800}
+  .meta{color:var(--muted);font-size:13px}
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;margin:18px 0 24px
+  }
+  .card{
+    background:var(--panel);border:1px solid var(--border);
+    border-radius:12px;padding:14px
+  }
+  .card h4{margin:0 0 6px;font-size:13px;color:var(--muted);font-weight:600}
+  .card .value{font-size:28px;font-weight:800}
+  .section{margin:28px 0}
+  .section h2{font-size:18px;margin:0 0 12px}
+  .kanban{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px
+  }
+  .column{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:10px;min-height:180px}
+  .column h3{margin:0 0 8px;font-size:14px;color:var(--muted)}
+  .item{
+    background:var(--panel);border:1px solid var(--border);
+    border-radius:10px;padding:8px;margin:8px 0;font-size:13px
+  }
+  .item[draggable="true"]{cursor:grab}
+  .item.dragging{opacity:0.6}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{border:1px solid var(--border);padding:8px;text-align:left}
+  th{background:#101010;color:var(--muted)}
+  .grid-2{display:grid;grid-template-columns:1.2fr 1fr;gap:12px}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#1d1d1d;border:1px solid var(--border);font-size:12px;color:var(--muted)}
+  .actions{display:flex;flex-wrap:wrap;gap:10px}
+  .btn{
+    background:#1f1f1f;border:1px solid var(--border);color:#fff;
+    padding:8px 12px;border-radius:10px;font-size:13px
+  }
+  .btn:hover{border-color:#3a3a3a}
+  textarea, input{
+    width:100%;background:#0f0f0f;color:#fff;border:1px solid var(--border);
+    border-radius:10px;padding:10px;font-size:13px
+  }
+  .note-log{max-height:220px;overflow:auto;margin-bottom:8px}
+  .note-entry{padding:8px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px}
+  @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app" style="display:none">
+  <div class="header">
+    <div>
+      <div class="title">ChurchesNearMe — War Room 🏛️</div>
+      <div class="meta">Last updated: <span id="lastUpdated"></span></div>
+    </div>
+    <div class="meta"><a href="https://churchesnearme.co.za" target="_blank" rel="noopener">Back to main site →</a></div>
+  </div>
+
+  <section class="stats">
+    <div class="card">
+      <h4>Total Churches Listed</h4>
+      <div class="value">298</div>
+      <div class="meta">(auto from /churches directory)</div>
+    </div>
+    <div class="card">
+      <h4>Blog Posts</h4>
+      <div class="value">11</div>
+      <div class="meta">(auto from /blog/*.html)</div>
+    </div>
+    <div class="card">
+      <h4>Cities Covered</h4>
+      <div class="value">27</div>
+      <div class="meta">(unique city slugs)</div>
+    </div>
+    <div class="card">
+      <h4>Paid Listings</h4>
+      <div class="value">Check Supabase</div>
+      <div class="meta">(TODO: wire Supabase)</div>
+    </div>
+    <div class="card">
+      <h4>Monthly Traffic</h4>
+      <div class="value">Connect GA</div>
+      <div class="meta">(TODO: Google Analytics)</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Ideas Pipeline</h2>
+    <div class="kanban" id="kanban">
+      <div class="column" data-col="ideas">
+        <h3>Ideas</h3>
+        <div class="item" draggable="true">Funeral plan comparison tool (Avbob, Old Mutual, 1Life, Hollard — R200-500/policy commission)</div>
+        <div class="item" draggable="true">Prayer request wall / community board</div>
+        <div class="item" draggable="true">WhatsApp group directory per church</div>
+        <div class="item" draggable="true">Events calendar per church</div>
+        <div class="item" draggable="true">Church rating/review system</div>
+        <div class="item" draggable="true">"Find a church for me" quiz (denomination matcher)</div>
+        <div class="item" draggable="true">Wedding venue bookings (churches as venues)</div>
+        <div class="item" draggable="true">Counselling referral service</div>
+      </div>
+      <div class="column" data-col="scoped">
+        <h3>Scoped</h3>
+        <div class="item" draggable="true">Daily SEO blog posts (automated via cron)</div>
+        <div class="item" draggable="true">Paid church activation flow</div>
+      </div>
+      <div class="column" data-col="building">
+        <h3>Building</h3>
+      </div>
+      <div class="column" data-col="live">
+        <h3>Live</h3>
+        <div class="item" draggable="true">Church directory (298 listings)</div>
+        <div class="item" draggable="true">Blog (11 posts)</div>
+        <div class="item" draggable="true">Church submission form</div>
+        <div class="item" draggable="true">Paid listing activation (Supabase + payment)</div>
+        <div class="item" draggable="true">Daily auto-blog (cron job)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Monetization Tracker</h2>
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Revenue Stream</th>
+            <th>Status</th>
+            <th>Est. Revenue/mo</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Paid Church Listings (R49-R199/mo)</td><td>Live</td><td>R0 (need activations)</td><td><span class="pill">HIGH</span></td></tr>
+          <tr><td>Funeral Plan Affiliates</td><td>Idea</td><td>R2,000-10,000/mo at scale</td><td><span class="pill">HIGH</span></td></tr>
+          <tr><td>Google AdSense</td><td>Not started</td><td>R500-2,000/mo</td><td><span class="pill">MEDIUM</span></td></tr>
+          <tr><td>Church Event Promotion (paid boost)</td><td>Idea</td><td>R500-1,000/mo</td><td><span class="pill">LOW</span></td></tr>
+          <tr><td>Wedding Venue Bookings</td><td>Idea</td><td>R1,000-5,000/mo</td><td><span class="pill">LOW</span></td></tr>
+          <tr><td>Counselling Referrals</td><td>Idea</td><td>R500-2,000/mo</td><td><span class="pill">LOW</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section grid-2">
+    <div class="card">
+      <h2>Content Pipeline</h2>
+      <ul>
+        <li>Blog posts published this week: <strong>TODO (wire cron output)</strong></li>
+        <li>Blog posts scheduled: <strong>TODO (cron schedule)</strong></li>
+        <li>Top performing pages: <strong>Connect GA</strong></li>
+      </ul>
+      <div class="meta">SEO keywords targeting:</div>
+      <div class="grid-3">
+        <div class="pill">churches near me</div>
+        <div class="pill">churches in Cape Town</div>
+        <div class="pill">churches in Johannesburg</div>
+        <div class="pill">church directory South Africa</div>
+        <div class="pill">find a church</div>
+        <div class="pill">nearby churches</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Competitor Watch</h2>
+      <ul>
+        <li>ChurchFinder.co.za</li>
+        <li>SA Church Directory sites</li>
+        <li>Google Maps (real competitor)</li>
+      </ul>
+      <label class="meta">Notes</label>
+      <textarea id="competitorNotes" rows="6" placeholder="Add competitor intel..."></textarea>
+    </div>
+  </section>
+
+  <section class="section grid-2">
+    <div class="card">
+      <h2>Quick Actions</h2>
+      <div class="actions">
+        <a class="btn" href="https://churchesnearme.co.za" target="_blank" rel="noopener">View Site</a>
+        <a class="btn" href="https://github.com/brandonkz/churches-near-me" target="_blank" rel="noopener">GitHub Repo</a>
+        <a class="btn" href="https://npfbrorgnwhrbpfbqiuh.supabase.co" target="_blank" rel="noopener">Supabase Dashboard</a>
+        <a class="btn" href="https://npfbrorgnwhrbpfbqiuh.supabase.co" target="_blank" rel="noopener">Check Paid Submissions</a>
+      </div>
+      <label class="meta" style="display:block;margin-top:12px">Add Blog Post Idea</label>
+      <textarea id="blogIdea" rows="4" placeholder="Type a new idea..."></textarea>
+    </div>
+    <div class="card">
+      <h2>Notes / Meeting Log</h2>
+      <div class="note-log" id="noteLog"></div>
+      <textarea id="noteInput" rows="4" placeholder="Add a note and press Enter... (Shift+Enter for new line)"></textarea>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Simple password gate
+  (function(){
+    const pass = prompt('War Room password:');
+    if(pass !== 'churches2026'){
+      document.body.innerHTML = '<div style="color:#fff;padding:40px;font-family:system-ui">Access denied.</div>';
+      throw new Error('Access denied');
+    }
+    document.getElementById('app').style.display = 'block';
+  })();
+
+  // Last updated timestamp
+  document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+
+  // localStorage helpers
+  const save = (k,v)=>localStorage.setItem(k,v);
+  const load = (k)=>localStorage.getItem(k)||'';
+
+  // Competitor notes
+  const competitorNotes = document.getElementById('competitorNotes');
+  competitorNotes.value = load('cnm_competitor_notes');
+  competitorNotes.addEventListener('input',()=>save('cnm_competitor_notes', competitorNotes.value));
+
+  // Blog idea scratchpad
+  const blogIdea = document.getElementById('blogIdea');
+  blogIdea.value = load('cnm_blog_idea');
+  blogIdea.addEventListener('input',()=>save('cnm_blog_idea', blogIdea.value));
+
+  // Notes / meeting log with timestamps
+  const noteLog = document.getElementById('noteLog');
+  const noteInput = document.getElementById('noteInput');
+  const notesKey = 'cnm_notes_log';
+  const renderNotes = () => {
+    const notes = JSON.parse(load(notesKey) || '[]');
+    noteLog.innerHTML = notes.map(n=>`<div class="note-entry"><strong>${n.time}</strong><br/>${n.text}</div>`).join('');
+  };
+  renderNotes();
+
+  noteInput.addEventListener('keydown', (e)=>{
+    if(e.key === 'Enter' && !e.shiftKey){
+      e.preventDefault();
+      const text = noteInput.value.trim();
+      if(!text) return;
+      const notes = JSON.parse(load(notesKey) || '[]');
+      notes.unshift({time:new Date().toLocaleString(), text:text.replace(/\n/g,'<br/>')});
+      save(notesKey, JSON.stringify(notes));
+      noteInput.value='';
+      renderNotes();
+    }
+  });
+
+  // Simple drag & drop for kanban
+  const items = document.querySelectorAll('.item');
+  const columns = document.querySelectorAll('.column');
+  items.forEach(item=>{
+    item.addEventListener('dragstart', ()=>item.classList.add('dragging'));
+    item.addEventListener('dragend', ()=>item.classList.remove('dragging'));
+  });
+  columns.forEach(col=>{
+    col.addEventListener('dragover', (e)=>{
+      e.preventDefault();
+      const dragging = document.querySelector('.item.dragging');
+      if(dragging) col.appendChild(dragging);
+    });
+  });
+</script>
+</body>
+</html>
