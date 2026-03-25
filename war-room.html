@@ -224,15 +224,17 @@
 </div>
 
 <script>
-  // Simple password gate
-  (function(){
-    const pass = prompt('War Room password:');
-    if(pass !== 'churches2026'){
-      document.body.innerHTML = '<div style="color:#fff;padding:40px;font-family:system-ui">Access denied.</div>';
-      throw new Error('Access denied');
-    }
-    document.getElementById('app').style.display = 'block';
-  })();
+  // Simple password gate — wait for page to fully render first
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      const pass = prompt('War Room password:');
+      if(pass !== 'churches2026'){
+        document.body.innerHTML = '<div style="color:#fff;padding:40px;font-family:system-ui">Access denied.</div>';
+        return;
+      }
+      document.getElementById('app').style.display = 'block';
+    }, 500);
+  });
 
   // Last updated timestamp
   document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
