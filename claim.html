@@ -297,12 +297,11 @@
 
     <div class="success-msg" id="successMsg">
       <h3>🎉 Claim Submitted!</h3>
-      <p style="margin-bottom:16px">To activate your listing at the early bird rate of <strong>R299/month</strong>, please make payment to:</p>
-      <div style="background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;padding:20px;text-align:left;margin-bottom:16px;">
-        <p style="margin:0 0 8px;font-weight:600;color:#1e3a5f;">AlphaX Asset Capital (Pty) Ltd — Absa</p>
-        <p style="margin:0;color:#475569;font-size:0.9rem;">Account: <strong>4121303961</strong><br>Branch: <strong>632005</strong><br>Type: <strong>Current account</strong><br>Reference: <strong>Your church name</strong></p>
+      <p style="margin-bottom:16px">Complete your payment of <strong>R299/month</strong> to activate your listing:</p>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px;">
+        <a id="payBtn" href="#" onclick="redirectToPayment()" style="display:block;background:var(--gold);color:var(--navy);padding:16px;border-radius:12px;text-align:center;font-weight:700;font-size:1.1rem;text-decoration:none;cursor:pointer;">💳 Pay R299 by Card or EFT</a>
       </div>
-      <p style="color:#64748b;font-size:0.9rem;margin:0">Once payment is confirmed, we'll activate your listing within 24 hours and send you full edit access. For questions, email <a href="mailto:info@churchesnearme.co.za" style="color:var(--gold)">info@churchesnearme.co.za</a></p>
+      <p style="color:#64748b;font-size:0.85rem;margin:0">Secure payment via Yoco. Once confirmed, we'll activate your listing within 24 hours and send you full edit access. For questions, email <a href="mailto:info@churchesnearme.co.za" style="color:var(--gold)">info@churchesnearme.co.za</a></p>
     </div>
 
     <div class="upgrade-cta">
@@ -432,6 +431,26 @@
         alert('Something went wrong: ' + err.message + '\n\nPlease try again or email us at info@churchesnearme.co.za');
         btn.disabled = false;
         btn.textContent = '🙏 Claim Your Church — R299/month (Early Bird)';
+      }
+    }
+
+    // Payment redirect
+    function redirectToPayment() {
+      // TODO: Replace with actual Yoco/PayFast payment link
+      // Option 1: Yoco Payment Link (create at dashboard.yoco.com/payment-links)
+      // Option 2: PayFast subscription (payfast.co.za)
+      // For now, open a mailto as fallback
+      var churchName = document.getElementById('churchSelect').options[document.getElementById('churchSelect').selectedIndex].dataset.name || 'Unknown';
+      var email = document.getElementById('claimEmail').value;
+      
+      // Replace this URL with your actual Yoco payment link
+      var paymentUrl = 'https://pay.yoco.com/churchesnearme';
+      
+      // If no payment link set up yet, email fallback
+      if (paymentUrl === 'https://pay.yoco.com/churchesnearme') {
+        window.location.href = 'mailto:info@churchesnearme.co.za?subject=Church Claim Payment - ' + encodeURIComponent(churchName) + '&body=Hi,%0A%0AI submitted a claim for ' + encodeURIComponent(churchName) + '.%0A%0APlease send me payment details for the R299/month early bird plan.%0A%0AEmail: ' + encodeURIComponent(email) + '%0A%0AThanks';
+      } else {
+        window.open(paymentUrl, '_blank');
       }
     }
 
