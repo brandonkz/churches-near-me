@@ -41,7 +41,7 @@
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Pretoria">Pretoria</option>
+    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Pretoria">Pretoria</option><option value="Stellenbosch">Stellenbosch</option>
   </select>
     </div>
 
@@ -73,6 +73,14 @@
         <div class="church-links">
           <a href="/churches/evangelical-lutheran-strand-street-cape-town/" class="church-link">View details</a>
           <a href="https://www.lutherancape.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Stellenbosch">
+        <h3><a href="/churches/friedenskirche-lutheran-stellenbosch/">Friedenskirche Lutheran Church Stellenbosch</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">26 Hofmeyr Street, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/friedenskirche-lutheran-stellenbosch/" class="church-link">View details</a>
+          <a href="https://www.lutheranstellenbosch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="Lutheran" data-city="Durban">
         <h3><a href="/churches/st-martins-lutheran-durban/">St Martin&#39;s Lutheran Church Durban</a></h3>
@@ -151,6 +159,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "Friedenskirche Lutheran Church Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/friedenskirche-lutheran-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26 Hofmeyr Street, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.936,
+        "longitude": 18.861
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "St Martin's Lutheran Church Durban",
       "url": "https://churchesnearme.co.za/churches/st-martins-lutheran-durban/",
       "address": {
@@ -188,7 +213,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Benoni Lutheran Church","slug":"benoni-lutheran-church-johannesburg","city":"Johannesburg","lat":-26.187,"lng":28.321},{"name":"Evangelical Lutheran Church Pretoria","slug":"evangelical-lutheran-pretoria","city":"Pretoria","lat":-25.743,"lng":28.187},{"name":"Evangelical Lutheran Church Strand Street","slug":"evangelical-lutheran-strand-street-cape-town","city":"Cape Town","lat":-33.921,"lng":18.423},{"name":"St Martin's Lutheran Church Durban","slug":"st-martins-lutheran-durban","city":"Durban","lat":-29.838,"lng":31.003},{"name":"St Peter's Lutheran Church Westville","slug":"st-peters-lutheran-westville-durban","city":"Durban","lat":-29.828,"lng":30.9305}];
+    const churches = [{"name":"Benoni Lutheran Church","slug":"benoni-lutheran-church-johannesburg","city":"Johannesburg","lat":-26.187,"lng":28.321},{"name":"Evangelical Lutheran Church Pretoria","slug":"evangelical-lutheran-pretoria","city":"Pretoria","lat":-25.743,"lng":28.187},{"name":"Evangelical Lutheran Church Strand Street","slug":"evangelical-lutheran-strand-street-cape-town","city":"Cape Town","lat":-33.921,"lng":18.423},{"name":"Friedenskirche Lutheran Church Stellenbosch","slug":"friedenskirche-lutheran-stellenbosch","city":"Stellenbosch","lat":-33.936,"lng":18.861},{"name":"St Martin's Lutheran Church Durban","slug":"st-martins-lutheran-durban","city":"Durban","lat":-29.838,"lng":31.003},{"name":"St Peter's Lutheran Church Westville","slug":"st-peters-lutheran-westville-durban","city":"Durban","lat":-29.828,"lng":30.9305}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

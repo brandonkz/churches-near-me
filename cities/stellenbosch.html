@@ -42,7 +42,7 @@
       <label class="filter-label" for="denomination-filter">Filter by denomination</label>
   <select id="denomination-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Baptist">Baptist</option><option value="Charismatic">Charismatic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="His People">His People</option><option value="Shofar">Shofar</option>
+    <option value="Baptist">Baptist</option><option value="Charismatic">Charismatic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="Shofar">Shofar</option>
   </select>
     </div>
 
@@ -58,6 +58,14 @@
         <div class="church-links">
           <a href="/churches/every-nation-stellenbosch/" class="church-link">View details</a>
           <a href="https://enstb.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Stellenbosch">
+        <h3><a href="/churches/friedenskirche-lutheran-stellenbosch/">Friedenskirche Lutheran Church Stellenbosch</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">26 Hofmeyr Street, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/friedenskirche-lutheran-stellenbosch/" class="church-link">View details</a>
+          <a href="https://www.lutheranstellenbosch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="His People" data-city="Stellenbosch">
         <h3><a href="/churches/his-people-stellenbosch/">His People Stellenbosch</a></h3>
@@ -130,6 +138,23 @@
         "@type": "GeoCoordinates",
         "latitude": -33.94,
         "longitude": 18.86
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Friedenskirche Lutheran Church Stellenbosch",
+      "url": "https://churchesnearme.co.za/churches/friedenskirche-lutheran-stellenbosch/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26 Hofmeyr Street, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.936,
+        "longitude": 18.861
       }
     },
     {
@@ -239,7 +264,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","denomination":"Charismatic","lat":-33.94,"lng":18.86},{"name":"His People Stellenbosch","slug":"his-people-stellenbosch","denomination":"His People","lat":-33.9352,"lng":18.8632},{"name":"NG Kerk Stellenbosch","slug":"ng-kerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9321,"lng":18.8602},{"name":"NG Moederkerk Stellenbosch","slug":"ng-moederkerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9343,"lng":18.8615},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","denomination":"Charismatic","lat":-33.9346,"lng":18.8578},{"name":"Shofar Stellenbosch","slug":"shofar-stellenbosch","denomination":"Shofar","lat":-33.9338,"lng":18.8618},{"name":"Stellenbosch Baptist Church","slug":"stellenbosch-baptist-church","denomination":"Baptist","lat":-33.933,"lng":18.867}];
+    const churches = [{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","denomination":"Charismatic","lat":-33.94,"lng":18.86},{"name":"Friedenskirche Lutheran Church Stellenbosch","slug":"friedenskirche-lutheran-stellenbosch","denomination":"Lutheran","lat":-33.936,"lng":18.861},{"name":"His People Stellenbosch","slug":"his-people-stellenbosch","denomination":"His People","lat":-33.9352,"lng":18.8632},{"name":"NG Kerk Stellenbosch","slug":"ng-kerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9321,"lng":18.8602},{"name":"NG Moederkerk Stellenbosch","slug":"ng-moederkerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9343,"lng":18.8615},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","denomination":"Charismatic","lat":-33.9346,"lng":18.8578},{"name":"Shofar Stellenbosch","slug":"shofar-stellenbosch","denomination":"Shofar","lat":-33.9338,"lng":18.8618},{"name":"Stellenbosch Baptist Church","slug":"stellenbosch-baptist-church","denomination":"Baptist","lat":-33.933,"lng":18.867}];
     const map = L.map('city-map').setView([-33.934, 18.86], 11);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

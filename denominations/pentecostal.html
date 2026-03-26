@@ -41,7 +41,7 @@
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option>
+    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Somerset West">Somerset West</option>
   </select>
     </div>
 
@@ -81,6 +81,14 @@
         <div class="church-links">
           <a href="/churches/hillsong-cape-town/" class="church-link">View details</a>
           <a href="https://hillsong.com/southafrica/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Pentecostal" data-city="Somerset West">
+        <h3><a href="/churches/hillsong-church-somerset-west/">Hillsong Church Somerset West</a></h3>
+        <div class="church-denom">Pentecostal</div>
+        <div class="church-address">The Pines Center, Reese Road, Somerset West, Somerset West</div>
+        <div class="church-links">
+          <a href="/churches/hillsong-church-somerset-west/" class="church-link">View details</a>
+          <a href="https://hillsong.com/southafrica/somersetwest/" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
         <h3><a href="/churches/new-covenant-fellowship-durban/">New Covenant Fellowship</a></h3>
@@ -192,6 +200,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "Hillsong Church Somerset West",
+      "url": "https://churchesnearme.co.za/churches/hillsong-church-somerset-west/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Pines Center, Reese Road, Somerset West",
+        "addressLocality": "Somerset West",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.079,
+        "longitude": 18.843
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "New Covenant Fellowship",
       "url": "https://churchesnearme.co.za/churches/new-covenant-fellowship-durban/",
       "address": {
@@ -263,7 +288,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Durban Christian Centre","slug":"durban-christian-centre-durban","city":"Durban","lat":-29.923,"lng":30.958},{"name":"Grace Bible Church Soweto","slug":"grace-bible-church-johannesburg","city":"Johannesburg","lat":-26.196,"lng":28.039},{"name":"Grace Family Church Durban","slug":"grace-family-church-durban","city":"Durban","lat":-29.723,"lng":31.068},{"name":"Hillsong Cape Town","slug":"hillsong-cape-town","city":"Cape Town","lat":-33.8892,"lng":18.5131},{"name":"New Covenant Fellowship","slug":"new-covenant-fellowship-durban","city":"Durban","lat":-29.806,"lng":31.012},{"name":"Rhema Bible Church","slug":"rhema-bible-church-johannesburg","city":"Johannesburg","lat":-26.102,"lng":27.971},{"name":"Rivers Church Sandton","slug":"rivers-church-sandton-johannesburg","city":"Johannesburg","lat":-26.107,"lng":28.052},{"name":"The Life Church Johannesburg","slug":"the-life-church-johannesburg","city":"Johannesburg","lat":-26.074,"lng":28.01}];
+    const churches = [{"name":"Durban Christian Centre","slug":"durban-christian-centre-durban","city":"Durban","lat":-29.923,"lng":30.958},{"name":"Grace Bible Church Soweto","slug":"grace-bible-church-johannesburg","city":"Johannesburg","lat":-26.196,"lng":28.039},{"name":"Grace Family Church Durban","slug":"grace-family-church-durban","city":"Durban","lat":-29.723,"lng":31.068},{"name":"Hillsong Cape Town","slug":"hillsong-cape-town","city":"Cape Town","lat":-33.8892,"lng":18.5131},{"name":"Hillsong Church Somerset West","slug":"hillsong-church-somerset-west","city":"Somerset West","lat":-34.079,"lng":18.843},{"name":"New Covenant Fellowship","slug":"new-covenant-fellowship-durban","city":"Durban","lat":-29.806,"lng":31.012},{"name":"Rhema Bible Church","slug":"rhema-bible-church-johannesburg","city":"Johannesburg","lat":-26.102,"lng":27.971},{"name":"Rivers Church Sandton","slug":"rivers-church-sandton-johannesburg","city":"Johannesburg","lat":-26.107,"lng":28.052},{"name":"The Life Church Johannesburg","slug":"the-life-church-johannesburg","city":"Johannesburg","lat":-26.074,"lng":28.01}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
