@@ -42,7 +42,7 @@
       <label class="filter-label" for="denomination-filter">Filter by denomination</label>
   <select id="denomination-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Baptist">Baptist</option><option value="Charismatic">Charismatic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="Shofar">Shofar</option>
+    <option value="Baptist">Baptist</option><option value="Charismatic">Charismatic</option><option value="Dutch Reformed">Dutch Reformed</option><option value="His People">His People</option><option value="Lutheran">Lutheran</option><option value="NG Kerk">NG Kerk</option><option value="Non-Denominational">Non-Denominational</option><option value="Shofar">Shofar</option>
   </select>
     </div>
 
@@ -83,6 +83,14 @@
           <a href="/churches/ng-kerk-stellenbosch/" class="church-link">View details</a>
           
         </div>
+      </article><article class="church-card" data-denomination="NG Kerk" data-city="Stellenbosch">
+        <h3><a href="/churches/ng-kerk-stellenbosch-wes/">NG Kerk Stellenbosch-Wes</a></h3>
+        <div class="church-denom">NG Kerk</div>
+        <div class="church-address">3 Alexander Street, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-stellenbosch-wes/" class="church-link">View details</a>
+          <a href="https://www.stellenboschwes.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
       </article><article class="church-card" data-denomination="Dutch Reformed" data-city="Stellenbosch">
         <h3><a href="/churches/ng-moederkerk-stellenbosch/">NG Moederkerk Stellenbosch</a></h3>
         <div class="church-denom">Dutch Reformed</div>
@@ -114,6 +122,14 @@
         <div class="church-links">
           <a href="/churches/stellenbosch-baptist-church/" class="church-link">View details</a>
           
+        </div>
+      </article><article class="church-card" data-denomination="Non-Denominational" data-city="Stellenbosch">
+        <h3><a href="/churches/stellenbosch-bible-church/">Stellenbosch Bible Church</a></h3>
+        <div class="church-denom">Non-Denominational</div>
+        <div class="church-address">7 Quantum Street, Techno Park, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/stellenbosch-bible-church/" class="church-link">View details</a>
+          <a href="https://www.stellenboschbiblechurch.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article>
   </div>
@@ -193,6 +209,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "NG Kerk Stellenbosch-Wes",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-stellenbosch-wes/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3 Alexander Street, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "NG Moederkerk Stellenbosch",
       "url": "https://churchesnearme.co.za/churches/ng-moederkerk-stellenbosch/",
       "address": {
@@ -258,13 +291,30 @@
         "latitude": -33.933,
         "longitude": 18.867
       }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Stellenbosch Bible Church",
+      "url": "https://churchesnearme.co.za/churches/stellenbosch-bible-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 Quantum Street, Techno Park, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
     }
   ]
 }
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","denomination":"Charismatic","lat":-33.94,"lng":18.86},{"name":"Friedenskirche Lutheran Church Stellenbosch","slug":"friedenskirche-lutheran-stellenbosch","denomination":"Lutheran","lat":-33.936,"lng":18.861},{"name":"His People Stellenbosch","slug":"his-people-stellenbosch","denomination":"His People","lat":-33.9352,"lng":18.8632},{"name":"NG Kerk Stellenbosch","slug":"ng-kerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9321,"lng":18.8602},{"name":"NG Moederkerk Stellenbosch","slug":"ng-moederkerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9343,"lng":18.8615},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","denomination":"Charismatic","lat":-33.9346,"lng":18.8578},{"name":"Shofar Stellenbosch","slug":"shofar-stellenbosch","denomination":"Shofar","lat":-33.9338,"lng":18.8618},{"name":"Stellenbosch Baptist Church","slug":"stellenbosch-baptist-church","denomination":"Baptist","lat":-33.933,"lng":18.867}];
+    const churches = [{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","denomination":"Charismatic","lat":-33.94,"lng":18.86},{"name":"Friedenskirche Lutheran Church Stellenbosch","slug":"friedenskirche-lutheran-stellenbosch","denomination":"Lutheran","lat":-33.936,"lng":18.861},{"name":"His People Stellenbosch","slug":"his-people-stellenbosch","denomination":"His People","lat":-33.9352,"lng":18.8632},{"name":"NG Kerk Stellenbosch","slug":"ng-kerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9321,"lng":18.8602},{"name":"NG Kerk Stellenbosch-Wes","slug":"ng-kerk-stellenbosch-wes","denomination":"NG Kerk","lat":0,"lng":0},{"name":"NG Moederkerk Stellenbosch","slug":"ng-moederkerk-stellenbosch","denomination":"Dutch Reformed","lat":-33.9343,"lng":18.8615},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","denomination":"Charismatic","lat":-33.9346,"lng":18.8578},{"name":"Shofar Stellenbosch","slug":"shofar-stellenbosch","denomination":"Shofar","lat":-33.9338,"lng":18.8618},{"name":"Stellenbosch Baptist Church","slug":"stellenbosch-baptist-church","denomination":"Baptist","lat":-33.933,"lng":18.867},{"name":"Stellenbosch Bible Church","slug":"stellenbosch-bible-church","denomination":"Non-Denominational","lat":0,"lng":0}];
     const map = L.map('city-map').setView([-33.934, 18.86], 11);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

@@ -41,7 +41,7 @@
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Midrand">Midrand</option>
+    <option value="Midrand">Midrand</option><option value="Stellenbosch">Stellenbosch</option>
   </select>
     </div>
 
@@ -57,6 +57,14 @@
         <div class="church-links">
           <a href="/churches/ng-kerk-midrand/" class="church-link">View details</a>
           <a href="https://ngkerkmidrand.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="NG Kerk" data-city="Stellenbosch">
+        <h3><a href="/churches/ng-kerk-stellenbosch-wes/">NG Kerk Stellenbosch-Wes</a></h3>
+        <div class="church-denom">NG Kerk</div>
+        <div class="church-address">3 Alexander Street, Stellenbosch, Stellenbosch</div>
+        <div class="church-links">
+          <a href="/churches/ng-kerk-stellenbosch-wes/" class="church-link">View details</a>
+          <a href="https://www.stellenboschwes.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article>
   </div>
@@ -82,13 +90,30 @@
         "latitude": 0,
         "longitude": 0
       }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "NG Kerk Stellenbosch-Wes",
+      "url": "https://churchesnearme.co.za/churches/ng-kerk-stellenbosch-wes/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3 Alexander Street, Stellenbosch",
+        "addressLocality": "Stellenbosch",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
     }
   ]
 }
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"NG Kerk Midrand","slug":"ng-kerk-midrand","city":"Midrand","lat":0,"lng":0}];
+    const churches = [{"name":"NG Kerk Midrand","slug":"ng-kerk-midrand","city":"Midrand","lat":0,"lng":0},{"name":"NG Kerk Stellenbosch-Wes","slug":"ng-kerk-stellenbosch-wes","city":"Stellenbosch","lat":0,"lng":0}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
