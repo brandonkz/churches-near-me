@@ -58,12 +58,28 @@
           <a href="/churches/ballito-presbyterian-church-durban/" class="church-link">View details</a>
           
         </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Cape Town">
+        <h3><a href="/churches/bellville-presbyterian-church-cape-town/">Bellville Presbyterian Church</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">Rhos Street, Bellville, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/bellville-presbyterian-church-cape-town/" class="church-link">View details</a>
+          <a href="https://bpc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
       </article><article class="church-card" data-denomination="Presbyterian" data-city="Pretoria">
         <h3><a href="/churches/lynnwood-presbyterian-pretoria/">Lynnwood Ridge Presbyterian Church</a></h3>
         <div class="church-denom">Presbyterian</div>
         <div class="church-address">Lynnwood Road, Lynnwood, Pretoria</div>
         <div class="church-links">
           <a href="/churches/lynnwood-presbyterian-pretoria/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Pietermaritzburg">
+        <h3><a href="/churches/midlands-presbyterian-church-pietermaritzburg/">Midlands Presbyterian Church Pietermaritzburg</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">181 Longmarket Street, Pietermaritzburg, Pietermaritzburg</div>
+        <div class="church-links">
+          <a href="/churches/midlands-presbyterian-church-pietermaritzburg/" class="church-link">View details</a>
           
         </div>
       </article><article class="church-card" data-denomination="Presbyterian" data-city="Cape Town">
@@ -141,6 +157,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "Bellville Presbyterian Church",
+      "url": "https://churchesnearme.co.za/churches/bellville-presbyterian-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rhos Street, Bellville",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "Lynnwood Ridge Presbyterian Church",
       "url": "https://churchesnearme.co.za/churches/lynnwood-presbyterian-pretoria/",
       "address": {
@@ -154,6 +187,23 @@
         "@type": "GeoCoordinates",
         "latitude": -25.768,
         "longitude": 28.272
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Midlands Presbyterian Church Pietermaritzburg",
+      "url": "https://churchesnearme.co.za/churches/midlands-presbyterian-church-pietermaritzburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "181 Longmarket Street, Pietermaritzburg",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
       }
     },
     {
@@ -263,7 +313,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Ballito Presbyterian Church","slug":"ballito-presbyterian-church-durban","city":"Durban","lat":-29.536,"lng":31.209},{"name":"Lynnwood Ridge Presbyterian Church","slug":"lynnwood-presbyterian-pretoria","city":"Pretoria","lat":-25.768,"lng":28.272},{"name":"Rondebosch United Church","slug":"rondebosch-united-church-cape-town","city":"Cape Town","lat":-33.962,"lng":18.4736},{"name":"Somerset West United Church","slug":"somerset-west-united-church","city":"Somerset West","lat":0,"lng":0},{"name":"St Andrew's Presbyterian Church Bloemfontein","slug":"st-andrews-presbyterian-bloemfontein","city":"Bloemfontein","lat":-29.084,"lng":26.1582},{"name":"St Andrew's Presbyterian Church Durban","slug":"st-andrews-presbyterian-durban","city":"Durban","lat":-29.84,"lng":31.004},{"name":"St Columba's Presbyterian Parkview","slug":"st-columbas-presbyterian-parkview-johannesburg","city":"Johannesburg","lat":-26.165,"lng":28.027},{"name":"St Johns Presbyterian Church Pietermaritzburg","slug":"st-johns-presbyterian-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0}];
+    const churches = [{"name":"Ballito Presbyterian Church","slug":"ballito-presbyterian-church-durban","city":"Durban","lat":-29.536,"lng":31.209},{"name":"Bellville Presbyterian Church","slug":"bellville-presbyterian-church-cape-town","city":"Cape Town","lat":0,"lng":0},{"name":"Lynnwood Ridge Presbyterian Church","slug":"lynnwood-presbyterian-pretoria","city":"Pretoria","lat":-25.768,"lng":28.272},{"name":"Midlands Presbyterian Church Pietermaritzburg","slug":"midlands-presbyterian-church-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"Rondebosch United Church","slug":"rondebosch-united-church-cape-town","city":"Cape Town","lat":-33.962,"lng":18.4736},{"name":"Somerset West United Church","slug":"somerset-west-united-church","city":"Somerset West","lat":0,"lng":0},{"name":"St Andrew's Presbyterian Church Bloemfontein","slug":"st-andrews-presbyterian-bloemfontein","city":"Bloemfontein","lat":-29.084,"lng":26.1582},{"name":"St Andrew's Presbyterian Church Durban","slug":"st-andrews-presbyterian-durban","city":"Durban","lat":-29.84,"lng":31.004},{"name":"St Columba's Presbyterian Parkview","slug":"st-columbas-presbyterian-parkview-johannesburg","city":"Johannesburg","lat":-26.165,"lng":28.027},{"name":"St Johns Presbyterian Church Pietermaritzburg","slug":"st-johns-presbyterian-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
