@@ -50,7 +50,15 @@
     </div>
 
     <div class="church-grid">
-    <article class="church-card" data-denomination="Presbyterian" data-city="Durban">
+    <article class="church-card" data-denomination="Presbyterian" data-city="Pietermaritzburg">
+        <h3><a href="/churches/all-saints-presbyterian-church-pietermaritzburg/">All Saints Presbyterian Church Pietermaritzburg</a></h3>
+        <div class="church-denom">Presbyterian</div>
+        <div class="church-address">73 Montgomery Drive, Athlone, Pietermaritzburg, 3201, Pietermaritzburg</div>
+        <div class="church-links">
+          <a href="/churches/all-saints-presbyterian-church-pietermaritzburg/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Presbyterian" data-city="Durban">
         <h3><a href="/churches/ballito-presbyterian-church-durban/">Ballito Presbyterian Church</a></h3>
         <div class="church-denom">Presbyterian</div>
         <div class="church-address">Compensation Beach Road, Ballito, Durban</div>
@@ -138,6 +146,23 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "All Saints Presbyterian Church Pietermaritzburg",
+      "url": "https://churchesnearme.co.za/churches/all-saints-presbyterian-church-pietermaritzburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "73 Montgomery Drive, Athlone, Pietermaritzburg, 3201",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
     {
       "@type": "LocalBusiness",
       "name": "Ballito Presbyterian Church",
@@ -313,7 +338,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Ballito Presbyterian Church","slug":"ballito-presbyterian-church-durban","city":"Durban","lat":-29.536,"lng":31.209},{"name":"Bellville Presbyterian Church","slug":"bellville-presbyterian-church-cape-town","city":"Cape Town","lat":0,"lng":0},{"name":"Lynnwood Ridge Presbyterian Church","slug":"lynnwood-presbyterian-pretoria","city":"Pretoria","lat":-25.768,"lng":28.272},{"name":"Midlands Presbyterian Church Pietermaritzburg","slug":"midlands-presbyterian-church-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"Rondebosch United Church","slug":"rondebosch-united-church-cape-town","city":"Cape Town","lat":-33.962,"lng":18.4736},{"name":"Somerset West United Church","slug":"somerset-west-united-church","city":"Somerset West","lat":0,"lng":0},{"name":"St Andrew's Presbyterian Church Bloemfontein","slug":"st-andrews-presbyterian-bloemfontein","city":"Bloemfontein","lat":-29.084,"lng":26.1582},{"name":"St Andrew's Presbyterian Church Durban","slug":"st-andrews-presbyterian-durban","city":"Durban","lat":-29.84,"lng":31.004},{"name":"St Columba's Presbyterian Parkview","slug":"st-columbas-presbyterian-parkview-johannesburg","city":"Johannesburg","lat":-26.165,"lng":28.027},{"name":"St Johns Presbyterian Church Pietermaritzburg","slug":"st-johns-presbyterian-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0}];
+    const churches = [{"name":"All Saints Presbyterian Church Pietermaritzburg","slug":"all-saints-presbyterian-church-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"Ballito Presbyterian Church","slug":"ballito-presbyterian-church-durban","city":"Durban","lat":-29.536,"lng":31.209},{"name":"Bellville Presbyterian Church","slug":"bellville-presbyterian-church-cape-town","city":"Cape Town","lat":0,"lng":0},{"name":"Lynnwood Ridge Presbyterian Church","slug":"lynnwood-presbyterian-pretoria","city":"Pretoria","lat":-25.768,"lng":28.272},{"name":"Midlands Presbyterian Church Pietermaritzburg","slug":"midlands-presbyterian-church-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"Rondebosch United Church","slug":"rondebosch-united-church-cape-town","city":"Cape Town","lat":-33.962,"lng":18.4736},{"name":"Somerset West United Church","slug":"somerset-west-united-church","city":"Somerset West","lat":0,"lng":0},{"name":"St Andrew's Presbyterian Church Bloemfontein","slug":"st-andrews-presbyterian-bloemfontein","city":"Bloemfontein","lat":-29.084,"lng":26.1582},{"name":"St Andrew's Presbyterian Church Durban","slug":"st-andrews-presbyterian-durban","city":"Durban","lat":-29.84,"lng":31.004},{"name":"St Columba's Presbyterian Parkview","slug":"st-columbas-presbyterian-parkview-johannesburg","city":"Johannesburg","lat":-26.165,"lng":28.027},{"name":"St Johns Presbyterian Church Pietermaritzburg","slug":"st-johns-presbyterian-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

@@ -41,7 +41,7 @@
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Pretoria">Pretoria</option><option value="Stellenbosch">Stellenbosch</option>
+    <option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Pietermaritzburg">Pietermaritzburg</option><option value="Pretoria">Pretoria</option><option value="Stellenbosch">Stellenbosch</option>
   </select>
     </div>
 
@@ -81,6 +81,14 @@
         <div class="church-links">
           <a href="/churches/doxa-deo-hatfield-pretoria/" class="church-link">View details</a>
           <a href="https://www.doxadeo.org/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Pietermaritzburg">
+        <h3><a href="/churches/eagle-christian-centre-pietermaritzburg/">Eagle Christian Centre Pietermaritzburg</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">3 Wiganthorpe Road, Willowton, Pietermaritzburg, 3201, Pietermaritzburg</div>
+        <div class="church-links">
+          <a href="/churches/eagle-christian-centre-pietermaritzburg/" class="church-link">View details</a>
+          <a href="https://www.eaglechristiancentre.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
         <h3><a href="/churches/every-nation-cape-town/">Every Nation Church Cape Town</a></h3>
@@ -129,6 +137,14 @@
         <div class="church-links">
           <a href="/churches/kingdom-vineyard-church-cape-town/" class="church-link">View details</a>
           <a href="https://www.vineyardchurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Charismatic" data-city="Johannesburg">
+        <h3><a href="/churches/liberty-church-randburg/">Liberty Church Randburg</a></h3>
+        <div class="church-denom">Charismatic</div>
+        <div class="church-address">401 West Avenue, Ferndale, Randburg, 2194, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/liberty-church-randburg/" class="church-link">View details</a>
+          <a href="https://www.lty.church" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="Charismatic" data-city="Cape Town">
         <h3><a href="/churches/mercy-vineyard-church-cape-town/">Mercy Vineyard Church</a></h3>
@@ -240,6 +256,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "Eagle Christian Centre Pietermaritzburg",
+      "url": "https://churchesnearme.co.za/churches/eagle-christian-centre-pietermaritzburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3 Wiganthorpe Road, Willowton, Pietermaritzburg, 3201",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "Every Nation Church Cape Town",
       "url": "https://churchesnearme.co.za/churches/every-nation-cape-town/",
       "address": {
@@ -342,6 +375,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "Liberty Church Randburg",
+      "url": "https://churchesnearme.co.za/churches/liberty-church-randburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "401 West Avenue, Ferndale, Randburg, 2194",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "Mercy Vineyard Church",
       "url": "https://churchesnearme.co.za/churches/mercy-vineyard-church-cape-town/",
       "address": {
@@ -413,7 +463,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Capital City Church International (3Ci)","slug":"3ci-church-pretoria","city":"Pretoria","lat":-25.787,"lng":28.309},{"name":"Christian Family Church Durban","slug":"christian-family-church-durban","city":"Durban","lat":-29.828,"lng":30.852},{"name":"Christian Revival Church Johannesburg","slug":"crc-johannesburg","city":"Johannesburg","lat":-26.15,"lng":28.04},{"name":"Doxa Deo Hatfield","slug":"doxa-deo-hatfield-pretoria","city":"Pretoria","lat":-25.762,"lng":28.245},{"name":"Every Nation Church Cape Town","slug":"every-nation-cape-town","city":"Cape Town","lat":-33.927,"lng":18.464},{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","city":"Stellenbosch","lat":-33.94,"lng":18.86},{"name":"Hatfield Christian Church","slug":"hatfield-christian-church-pretoria","city":"Pretoria","lat":-25.751,"lng":28.229},{"name":"Hatfield Christian Church South Centurion","slug":"hatfield-christian-church-south-centurion","city":"Pretoria","lat":0,"lng":0},{"name":"Jubilee Community Church","slug":"jubilee-community-church-cape-town","city":"Cape Town","lat":-33.9375,"lng":18.472},{"name":"Kingdom Vineyard Church","slug":"kingdom-vineyard-church-cape-town","city":"Cape Town","lat":-33.984,"lng":18.464},{"name":"Mercy Vineyard Church","slug":"mercy-vineyard-church-cape-town","city":"Cape Town","lat":-34.06,"lng":18.4525},{"name":"New Life Vineyard Church","slug":"new-life-vineyard-cape-town","city":"Cape Town","lat":-33.832,"lng":18.648},{"name":"Rivers Church Kyalami","slug":"rivers-church-kyalami-midrand","city":"Johannesburg","lat":0,"lng":0},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","city":"Stellenbosch","lat":-33.9346,"lng":18.8578}];
+    const churches = [{"name":"Capital City Church International (3Ci)","slug":"3ci-church-pretoria","city":"Pretoria","lat":-25.787,"lng":28.309},{"name":"Christian Family Church Durban","slug":"christian-family-church-durban","city":"Durban","lat":-29.828,"lng":30.852},{"name":"Christian Revival Church Johannesburg","slug":"crc-johannesburg","city":"Johannesburg","lat":-26.15,"lng":28.04},{"name":"Doxa Deo Hatfield","slug":"doxa-deo-hatfield-pretoria","city":"Pretoria","lat":-25.762,"lng":28.245},{"name":"Eagle Christian Centre Pietermaritzburg","slug":"eagle-christian-centre-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"Every Nation Church Cape Town","slug":"every-nation-cape-town","city":"Cape Town","lat":-33.927,"lng":18.464},{"name":"Every Nation Stellenbosch","slug":"every-nation-stellenbosch","city":"Stellenbosch","lat":-33.94,"lng":18.86},{"name":"Hatfield Christian Church","slug":"hatfield-christian-church-pretoria","city":"Pretoria","lat":-25.751,"lng":28.229},{"name":"Hatfield Christian Church South Centurion","slug":"hatfield-christian-church-south-centurion","city":"Pretoria","lat":0,"lng":0},{"name":"Jubilee Community Church","slug":"jubilee-community-church-cape-town","city":"Cape Town","lat":-33.9375,"lng":18.472},{"name":"Kingdom Vineyard Church","slug":"kingdom-vineyard-church-cape-town","city":"Cape Town","lat":-33.984,"lng":18.464},{"name":"Liberty Church Randburg","slug":"liberty-church-randburg","city":"Johannesburg","lat":0,"lng":0},{"name":"Mercy Vineyard Church","slug":"mercy-vineyard-church-cape-town","city":"Cape Town","lat":-34.06,"lng":18.4525},{"name":"New Life Vineyard Church","slug":"new-life-vineyard-cape-town","city":"Cape Town","lat":-33.832,"lng":18.648},{"name":"Rivers Church Kyalami","slug":"rivers-church-kyalami-midrand","city":"Johannesburg","lat":0,"lng":0},{"name":"Shofar Christian Church Stellenbosch","slug":"shofar-christian-church-stellenbosch","city":"Stellenbosch","lat":-33.9346,"lng":18.8578}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

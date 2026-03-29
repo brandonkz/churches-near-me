@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://churchesnearme.co.za/</loc></url>
-  <url><loc>https://churchesnearme.co.za/blog/best-catholic-churches-south-africa.html</loc></url>
   <url><loc>https://churchesnearme.co.za/submit.html</loc></url>
   <url><loc>https://churchesnearme.co.za/featured.html</loc></url>
   <url><loc>https://churchesnearme.co.za/church.html</loc></url>
@@ -43,6 +42,7 @@
   <url><loc>https://churchesnearme.co.za/churches/afm-worcester/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/alberton-methodist-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/all-saints-anglican-somerset-west/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/all-saints-presbyterian-church-pietermaritzburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/assemblies-of-god-durban-north/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/assemblies-of-god-hatfield-pretoria/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/assemblies-of-god-polokwane/</loc></url>
@@ -50,13 +50,16 @@
   <url><loc>https://churchesnearme.co.za/churches/assemblies-of-god-soweto-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/ballito-baptist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/ballito-presbyterian-church-durban/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/bellevue-baptist-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/bellville-baptist-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/bellville-presbyterian-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/benoni-baptist-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/benoni-lutheran-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/bergvliet-baptist-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/catholic-cathedral-bloemfontein/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/boksburg-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/brackenfell-baptist-church-cape-town/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/brakpan-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/bryanston-methodist-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/cape-conference-sda-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/3ci-church-pretoria/</loc></url>
@@ -101,6 +104,7 @@
   <url><loc>https://churchesnearme.co.za/churches/durban-central-sda/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durban-christian-centre-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durbanville-dutch-reformed-cape-town/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/eagle-christian-centre-pietermaritzburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/edenvale-baptist-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/edenvale-methodist-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/emmanuel-cathedral-durban/</loc></url>
@@ -131,6 +135,7 @@
   <url><loc>https://churchesnearme.co.za/churches/fourways-community-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/friedenskirche-lutheran-stellenbosch/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/george-baptist-church/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/germiston-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/goodwood-methodist-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/grace-bible-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/grace-covenant-church-centurion/</loc></url>
@@ -169,10 +174,13 @@
   <url><loc>https://churchesnearme.co.za/churches/jubilee-community-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/kimberley-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/kingdom-vineyard-church-cape-town/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/liberty-church-randburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/life-church-somerset-west/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/lyndhurst-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/lynnwood-presbyterian-pretoria/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/lyttelton-methodist-pretoria/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/mercy-vineyard-church-cape-town/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/metropolitan-methodist-church-pietermaritzburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/midlands-presbyterian-church-pietermaritzburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/milnerton-baptist-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/milnerton-methodist-church-cape-town/</loc></url>
@@ -240,8 +248,8 @@
   <url><loc>https://churchesnearme.co.za/churches/paarl-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/paarl-dutch-reformed-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/pinelands-methodist-cape-town/</loc></url>
-  <url><loc>https://churchesnearme.co.za/churches/pinetown-baptist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/pinetown-baptist-church-durban/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/pinetown-baptist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/polokwane-baptist-church/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/methodist-church-gqeberha/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/potchefstroom-baptist-church/</loc></url>
@@ -315,6 +323,7 @@
   <url><loc>https://churchesnearme.co.za/churches/st-michael-george-cathedral-east-london/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-michaels-anglican-bryanston-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-michaels-anglican-amanzimtoti-durban/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/st-michaels-anglican-church-boksburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-michaels-anglican-church-umhlanga/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-pauls-anglican-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-pauls-anglican-rondebosch-cape-town/</loc></url>
@@ -338,8 +347,8 @@
   <url><loc>https://churchesnearme.co.za/churches/upper-room-church-sandton/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/waterkloof-baptist-church-pretoria/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/west-view-methodist-church-centurion/</loc></url>
-  <url><loc>https://churchesnearme.co.za/churches/westville-baptist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-baptist-durban/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/westville-baptist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-methodist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-methodist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-johns-wynberg-cape-town/</loc></url>
