@@ -49,6 +49,21 @@ const TARGET_CITIES = [
   'Rustenburg'
 ];
 
+const CITY_BLURBS = {
+  'cape town': 'From Southern Suburbs to the Atlantic Seaboard, Cape Town has a wide mix of traditional and modern congregations. It helps to check service times early, especially if you want family-friendly or student‑focused churches.',
+  'johannesburg': 'Johannesburg churches tend to be spread across the suburbs. Look for options close to your daily routes to make Sunday mornings easier, and check midweek community groups if you want connection beyond services.',
+  'durban': 'Durban has strong community churches across North and South. Many offer morning and evening services, so you can pick a time that fits your weekend rhythm.',
+  'pretoria': 'Pretoria has established denominations as well as newer church plants. If you are new to the city, start with churches in your closest suburb and expand from there.',
+  'stellenbosch': 'Stellenbosch has a big student population, so you will find lively young‑adult ministries alongside traditional congregations.'
+};
+
+const DENOM_BLURBS = {
+  'baptist': 'Baptist churches in South Africa vary from traditional hymn‑based services to modern worship styles. Most are community‑focused and strong on teaching and small groups.',
+  'catholic': 'Catholic churches follow a consistent liturgy, which makes it easy to know what to expect if you are new to a parish.',
+  'ng kerk': 'NG Kerk congregations are common across South Africa and often have strong family ministries and community outreach.',
+  'apostolic faith mission': 'AFM churches are often lively and community‑driven, with a focus on worship, prayer, and practical support.'
+};
+
 function httpsGetJson(url) {
   return new Promise((resolve, reject) => {
     const req = https.request(url, {
@@ -356,6 +371,8 @@ function buildCityPage(city, churches) {
   const cityKey = city.toLowerCase();
   const coords = CITY_COORDS[cityKey] || { lat: -29.0, lng: 24.0 };
   const description = `Find ${city} churches near me. Browse denominations, see locations on a map, and connect with local congregations in ${city}.`;
+  const blurb = CITY_BLURBS[cityKey] || `If you are searching for churches in ${city}, start with the suburbs closest to home and expand from there. Smaller communities can be just as welcoming as the biggest congregations.`;
+  const updated = new Date().toISOString().slice(0, 10);
   const denominations = Array.from(new Set(churches.map(c => c.denomination).filter(Boolean))).sort();
   const schemaJson = buildLocalBusinessSchema(churches);
 
@@ -387,6 +404,8 @@ function buildCityPage(city, churches) {
     .city-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
     .city-hero h1 { margin-bottom: 12px; }
     .city-hero p { max-width: 720px; }
+    .city-blurb { color: #475569; margin-top: 8px; }
+    .updated { font-size: 13px; color: #94a3b8; margin-top: 8px; }
     .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
     .filter-label { font-weight: 600; }
     .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
@@ -408,6 +427,8 @@ function buildCityPage(city, churches) {
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Churches in ${escapeHtml(city)}</h1>
     <p>${escapeHtml(description)}</p>
+    <p class="city-blurb">${escapeHtml(blurb)}</p>
+    <div class="updated">Last updated: ${updated}</div>
 
     <div class="filters">
       ${buildFilterControls(denominations, 'Filter by denomination', 'denomination-filter')}
@@ -472,6 +493,9 @@ ${schemaJson}
 
 function buildDenominationPage(denomination, churches) {
   const description = `Explore ${denomination} churches near me across South Africa. Browse locations, cities, and contact details for ${denomination} congregations.`;
+  const denomKey = denomination.toLowerCase();
+  const denomBlurb = DENOM_BLURBS[denomKey] || `Every ${denomination} church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.`;
+  const updated = new Date().toISOString().slice(0, 10);
   const cityOptions = Array.from(new Set(churches.map(c => c.city).filter(Boolean))).sort();
   const schemaJson = buildLocalBusinessSchema(churches);
 
@@ -503,6 +527,8 @@ function buildDenominationPage(denomination, churches) {
     .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
     .denom-hero h1 { margin-bottom: 12px; }
     .denom-hero p { max-width: 760px; }
+    .denom-blurb { color: #475569; margin-top: 8px; }
+    .updated { font-size: 13px; color: #94a3b8; margin-top: 8px; }
     .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
     .filter-label { font-weight: 600; }
     .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
@@ -523,6 +549,8 @@ function buildDenominationPage(denomination, churches) {
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>${escapeHtml(denomination)} Churches in South Africa</h1>
     <p>${escapeHtml(description)}</p>
+    <p class="denom-blurb">${escapeHtml(denomBlurb)}</p>
+    <div class="updated">Last updated: ${updated}</div>
 
     <div class="filters">
       ${buildFilterControls(cityOptions, 'Filter by city', 'city-filter')}
