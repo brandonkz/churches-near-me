@@ -129,7 +129,7 @@ function buildChurchPage(church, nearby) {
   const cityLabel = city || 'South Africa';
   const slug = church.slug || slugify(`${church.name || ''}-${church.city || ''}`);
   const canonicalUrl = `${SITE_URL}/churches/${slug}/`;
-  const description = `Visit ${church.name || 'this church'}, a ${church.denomination || 'Christian'} church in ${church.city || 'South Africa'}, ${church.province || ''}. Find service times, contact details, directions and more.`.replace(/\s+,/g, ',').replace(/\s{2,}/g, ' ').trim();
+  const description = `Visit ${church.name || 'this church'}, a ${church.denomination || 'Christian'} church in ${church.city || 'South Africa'}, ${church.province || ''}. ${church.address ? `Located at ${church.address}, ${church.city || 'South Africa'}.` : ''} Find service times, contact details, directions and more.`.replace(/\s+,/g, ',').replace(/\s{2,}/g, ' ').trim();
   const safeDescription = escapeHtml(description);
 
   const phone = church.phone ? String(church.phone).trim() : '';
@@ -250,6 +250,24 @@ function buildChurchPage(church, nearby) {
         '@type': 'Answer',
         text: item.a
       }
+    }))
+  };
+
+  const breadcrumbs = [
+    { name: 'Home', item: `${SITE_URL}/` },
+    cityExists ? { name: `${cityLabel} churches`, item: `${SITE_URL}${cityPath}` } : null,
+    denomExists ? { name: `${denomination} churches`, item: `${SITE_URL}${denomPath}` } : null,
+    { name: name, item: canonicalUrl }
+  ].filter(Boolean);
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((crumb, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: crumb.name,
+      item: crumb.item
     }))
   };
 
@@ -458,6 +476,9 @@ ${schemaJson}
   </script>
   <script type="application/ld+json">
 ${JSON.stringify(faqSchema, null, 2)}
+  </script>
+  <script type="application/ld+json">
+${JSON.stringify(breadcrumbSchema, null, 2)}
   </script>
 </head>
 <body>

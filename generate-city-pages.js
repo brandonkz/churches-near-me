@@ -401,6 +401,15 @@ function buildCityPage(city, churches) {
     }))
   };
 
+  const cityBreadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: `${city} churches`, item: `${SITE_URL}/cities/${slugify(city)}.html` }
+    ]
+  };
+
   const mapData = churches
     .filter(hasCoordinates)
     .map(church => ({
@@ -490,6 +499,9 @@ ${schemaJson}
   <script type="application/ld+json">
 ${JSON.stringify(cityFaqSchema, null, 2)}
   </script>
+  <script type="application/ld+json">
+${JSON.stringify(cityBreadcrumbSchema, null, 2)}
+  </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
     const churches = ${JSON.stringify(mapData)};
@@ -569,6 +581,15 @@ function buildDenominationPage(denomination, churches) {
       name: item.q,
       acceptedAnswer: { '@type': 'Answer', text: item.a }
     }))
+  };
+
+  const denomBreadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: `${denomination} churches`, item: `${SITE_URL}/denominations/${slugify(denomination)}.html` }
+    ]
   };
 
   const mapData = churches
@@ -658,6 +679,9 @@ ${schemaJson}
   </script>
   <script type="application/ld+json">
 ${JSON.stringify(denomFaqSchema, null, 2)}
+  </script>
+  <script type="application/ld+json">
+${JSON.stringify(denomBreadcrumbSchema, null, 2)}
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
