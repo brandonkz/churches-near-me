@@ -201,6 +201,58 @@ function buildChurchPage(church, nearby) {
       </section>`
     : '';
 
+  const localBlurb = `<section class="local-blurb">
+      <h2>Churches in ${cityLabel}</h2>
+      <p>If you're looking for a ${denomination} church in ${cityLabel}, this listing is a solid starting point. We keep verified churches in ${province || 'South Africa'} on one page so you can compare location, service times, and contact details without bouncing around.</p>
+      <p>${cityLabel} has a wide mix of denominations and church styles — traditional, modern, family-focused, and youth-led. If this church isn’t the right fit, use the links below to explore nearby options or the broader ${denomination} directory.</p>
+    </section>`;
+
+  const faqItems = [
+    {
+      q: `What time are services at ${name}?`,
+      a: serviceTimes ? `Service times listed: ${serviceTimes.replace(/<br>/g, ', ')}.` : `Service times aren't listed yet. Call the church or visit their website for the latest schedule.`
+    },
+    {
+      q: `Where is ${name} located?`,
+      a: address ? `${name} is located at ${address}.` : `The address isn't listed yet. Use the contact details to confirm the location.`
+    },
+    {
+      q: `How do I contact ${name}?`,
+      a: phone || email || website
+        ? `You can contact ${name} ${phone ? `by phone at ${phone}` : ''}${phone && (email || website) ? ', ' : ''}${email ? `via email at ${email}` : ''}${(phone || email) && website ? ', or visit their website.' : website ? `through their website.` : '.'}`
+        : `Contact details aren't listed yet. If you represent this church, use the Add Your Church form.`
+    },
+    {
+      q: `Is this church verified?`,
+      a: `Yes. This listing is marked as verified in our directory.`
+    }
+  ];
+
+  const faqHtml = `<section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        ${faqItems.map(item => `
+          <div class="faq-item">
+            <h3>${escapeHtml(item.q)}</h3>
+            <p>${escapeHtml(item.a)}</p>
+          </div>
+        `).join('')}
+      </div>
+    </section>`;
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a
+      }
+    }))
+  };
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -380,6 +432,17 @@ function buildChurchPage(church, nearby) {
     .explore-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #64748b; margin-bottom: 6px; }
     .explore-title { font-size: 18px; font-weight: 700; color: #1d4ed8; }
 
+    .local-blurb { margin-top: 28px; background: #f8fafc; border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; }
+    .local-blurb h2 { color: var(--navy); margin-bottom: 10px; font-size: 22px; }
+    .local-blurb p { color: var(--muted); line-height: 1.7; margin: 0 0 10px 0; }
+
+    .faq-section { margin-top: 28px; }
+    .faq-section h2 { color: var(--navy); margin-bottom: 12px; font-size: 22px; }
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: var(--navy); }
+    .faq-item p { margin: 0; color: var(--muted); line-height: 1.6; }
+
     @media (max-width: 900px) {
       .detail-grid { grid-template-columns: 1fr; }
     }
@@ -392,6 +455,9 @@ function buildChurchPage(church, nearby) {
   </style>
   <script type="application/ld+json">
 ${schemaJson}
+  </script>
+  <script type="application/ld+json">
+${JSON.stringify(faqSchema, null, 2)}
   </script>
 </head>
 <body>
@@ -485,8 +551,10 @@ ${schemaJson}
         </div>
       </div>
 
+      ${localBlurb}
       ${nearbyHtml}
       ${exploreHtml}
+      ${faqHtml}
     </div>
   </main>
 
