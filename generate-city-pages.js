@@ -370,11 +370,36 @@ function buildFilterControls(options, labelText, selectId) {
 function buildCityPage(city, churches) {
   const cityKey = city.toLowerCase();
   const coords = CITY_COORDS[cityKey] || { lat: -29.0, lng: 24.0 };
-  const description = `Find ${city} churches near me. Browse denominations, see locations on a map, and connect with local congregations in ${city}.`;
+  const denominations = Array.from(new Set(churches.map(c => c.denomination).filter(Boolean))).sort();
+  const description = `Find ${city} churches near me. Browse ${churches.length} verified churches across ${denominations.length} denominations, view locations on a map, and connect with local congregations in ${city}.`;
   const blurb = CITY_BLURBS[cityKey] || `If you are searching for churches in ${city}, start with the suburbs closest to home and expand from there. Smaller communities can be just as welcoming as the biggest congregations.`;
   const updated = new Date().toISOString().slice(0, 10);
-  const denominations = Array.from(new Set(churches.map(c => c.denomination).filter(Boolean))).sort();
   const schemaJson = buildLocalBusinessSchema(churches);
+
+  const cityFaq = [
+    {
+      q: `How do I find a church in ${city}?`,
+      a: `Start with churches in your suburb or nearby areas, then filter by denomination or service time. Visiting two or three options is usually enough to find a good fit.`
+    },
+    {
+      q: `Are these ${city} churches verified?`,
+      a: `Yes. The churches listed on this page are marked as verified in our directory.`
+    },
+    {
+      q: `Can I add a church in ${city}?`,
+      a: `Yes. Use the Add Your Church page to submit a listing and we will verify it.`
+    }
+  ];
+
+  const cityFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: cityFaq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a }
+    }))
+  };
 
   const mapData = churches
     .filter(hasCoordinates)
@@ -420,6 +445,12 @@ function buildCityPage(city, churches) {
     #city-map { height: 420px; border-radius: 16px; overflow: hidden; }
     .empty-state { color: #64748b; }
     .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+    .faq-section { margin-top: 28px; }
+    .faq-section h2 { color: #0f172a; margin-bottom: 12px; font-size: 22px; }
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; }
+    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: #0f172a; }
+    .faq-item p { margin: 0; color: #475569; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -439,10 +470,25 @@ function buildCityPage(city, churches) {
     </div>
 
     ${buildChurchCards(churches)}
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        ${cityFaq.map(item => `
+          <div class="faq-item">
+            <h3>${escapeHtml(item.q)}</h3>
+            <p>${escapeHtml(item.a)}</p>
+          </div>
+        `).join('')}
+      </div>
+    </section>
   </main>
 
   <script type="application/ld+json">
 ${schemaJson}
+  </script>
+  <script type="application/ld+json">
+${JSON.stringify(cityFaqSchema, null, 2)}
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
@@ -492,12 +538,38 @@ ${schemaJson}
 }
 
 function buildDenominationPage(denomination, churches) {
-  const description = `Explore ${denomination} churches near me across South Africa. Browse locations, cities, and contact details for ${denomination} congregations.`;
+  const topCities = Array.from(new Set(churches.map(c => c.city).filter(Boolean))).slice(0, 4);
+  const description = `Explore ${denomination} churches near me across South Africa. Browse ${churches.length} verified churches, view locations by city, and connect with ${denomination} congregations.`;
   const denomKey = denomination.toLowerCase();
   const denomBlurb = DENOM_BLURBS[denomKey] || `Every ${denomination} church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.`;
   const updated = new Date().toISOString().slice(0, 10);
   const cityOptions = Array.from(new Set(churches.map(c => c.city).filter(Boolean))).sort();
   const schemaJson = buildLocalBusinessSchema(churches);
+
+  const denomFaq = [
+    {
+      q: `What is a ${denomination} church?`,
+      a: `${denomination} churches share a common tradition, but each congregation has its own worship style and community culture.`
+    },
+    {
+      q: `Which cities have ${denomination} churches?`,
+      a: topCities.length ? `You can find ${denomination} churches in cities like ${topCities.join(', ')} and more across South Africa.` : `There are ${denomination} churches across multiple South African cities.`
+    },
+    {
+      q: `Can I add a ${denomination} church listing?`,
+      a: `Yes. Use the Add Your Church page to submit a listing and we will verify it.`
+    }
+  ];
+
+  const denomFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: denomFaq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a }
+    }))
+  };
 
   const mapData = churches
     .filter(hasCoordinates)
@@ -542,6 +614,12 @@ function buildDenominationPage(denomination, churches) {
     #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
     .empty-state { color: #64748b; }
     .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+    .faq-section { margin-top: 28px; }
+    .faq-section h2 { color: #0f172a; margin-bottom: 12px; font-size: 22px; }
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; }
+    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: #0f172a; }
+    .faq-item p { margin: 0; color: #475569; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -561,10 +639,25 @@ function buildDenominationPage(denomination, churches) {
     </div>
 
     ${buildChurchCards(churches)}
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        ${denomFaq.map(item => `
+          <div class="faq-item">
+            <h3>${escapeHtml(item.q)}</h3>
+            <p>${escapeHtml(item.a)}</p>
+          </div>
+        `).join('')}
+      </div>
+    </section>
   </main>
 
   <script type="application/ld+json">
 ${schemaJson}
+  </script>
+  <script type="application/ld+json">
+${JSON.stringify(denomFaqSchema, null, 2)}
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
