@@ -178,6 +178,29 @@ function buildChurchPage(church, nearby) {
       </section>`
     : '';
 
+  const citySlug = city ? slugify(city) : '';
+  const denomSlug = denomination ? slugify(denomination) : '';
+  const cityPath = citySlug ? `/cities/${citySlug}.html` : '';
+  const denomPath = denomSlug ? `/denominations/${denomSlug}.html` : '';
+  const cityExists = citySlug ? fs.existsSync(path.join(__dirname, 'cities', `${citySlug}.html`)) : false;
+  const denomExists = denomSlug ? fs.existsSync(path.join(__dirname, 'denominations', `${denomSlug}.html`)) : false;
+
+  const exploreHtml = (cityExists || denomExists)
+    ? `<section class="explore-section">
+        <h2>Explore More</h2>
+        <div class="explore-grid">
+          ${cityExists ? `<a href="${cityPath}" class="explore-card">
+            <div class="explore-label">More churches in</div>
+            <div class="explore-title">${cityLabel}</div>
+          </a>` : ''}
+          ${denomExists ? `<a href="${denomPath}" class="explore-card">
+            <div class="explore-label">More</div>
+            <div class="explore-title">${denomination} churches</div>
+          </a>` : ''}
+        </div>
+      </section>`
+    : '';
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -348,6 +371,15 @@ function buildChurchPage(church, nearby) {
     }
     .nearby-denom { color: var(--gold); font-size: 13px; font-weight: 600; }
     .nearby-addr { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+    .explore-section { margin-top: 28px; }
+    .explore-section h2 { color: var(--navy); margin-bottom: 14px; font-size: 22px; }
+    .explore-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .explore-card { background: #f8fafc; border-radius: 14px; padding: 18px; border: 1px solid var(--border); text-decoration: none; color: var(--navy); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .explore-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12); }
+    .explore-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #64748b; margin-bottom: 6px; }
+    .explore-title { font-size: 18px; font-weight: 700; color: #1d4ed8; }
+
     @media (max-width: 900px) {
       .detail-grid { grid-template-columns: 1fr; }
     }
@@ -454,6 +486,7 @@ ${schemaJson}
       </div>
 
       ${nearbyHtml}
+      ${exploreHtml}
     </div>
   </main>
 
