@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durban North Methodist Church - Methodist Church in Durban | ChurchesNearMe</title>
+  <meta name="description" content="Visit Durban North Methodist Church, a Methodist church in Durban, KwaZulu-Natal. Located at 3 Swapo Road, Durban North, Durban. Find service times, contact details, directions and more.">
+  <link rel="canonical" href="https://churchesnearme.co.za/churches/durban-north-methodist-church-durban/">
+  <meta property="og:title" content="Durban North Methodist Church - Methodist Church in Durban | ChurchesNearMe">
+  <meta property="og:description" content="Visit Durban North Methodist Church, a Methodist church in Durban, KwaZulu-Natal. Located at 3 Swapo Road, Durban North, Durban. Find service times, contact details, directions and more.">
+  <meta property="og:url" content="https://churchesnearme.co.za/churches/durban-north-methodist-church-durban/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=2">
+  <style>
+    .church-hero {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.94));
+      color: white;
+      padding: 48px 0 32px;
+    }
+    .church-hero .container {
+      display: grid;
+      gap: 12px;
+    }
+    .church-hero h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    .church-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .church-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .church-page {
+      padding: 32px 0 64px;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .detail-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+    }
+    .detail-card h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+    .info-row {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #eef2f6;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { font-size: 18px; }
+    .info-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .info-value { font-size: 16px; color: var(--text); font-weight: 500; margin-top: 4px; }
+    .info-value a { color: var(--gold); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .action-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .action-primary {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .action-primary:hover { background: var(--gold-light); }
+    .action-secondary {
+      background: var(--navy);
+      color: white;
+    }
+    .action-outline {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+    .action-outline:hover { background: var(--navy); color: white; }
+    .map-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+    }
+    .map-card iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+    .map-card .map-info {
+      padding: 16px 20px;
+      background: #f8fafc;
+    }
+    .nearby-section {
+      margin-top: 32px;
+    }
+    .nearby-section h2 {
+      color: var(--navy);
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    .nearby-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .nearby-card {
+      background: white;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nearby-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(15, 23, 42, 0.12);
+    }
+    .nearby-card h3 {
+      margin: 0 0 6px 0;
+      color: var(--navy);
+      font-size: 16px;
+    }
+    .nearby-denom { color: var(--gold); font-size: 13px; font-weight: 600; }
+    .nearby-addr { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+    .explore-section { margin-top: 28px; }
+    .explore-section h2 { color: var(--navy); margin-bottom: 14px; font-size: 22px; }
+    .explore-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .explore-card { background: #f8fafc; border-radius: 14px; padding: 18px; border: 1px solid var(--border); text-decoration: none; color: var(--navy); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .explore-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12); }
+    .explore-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #64748b; margin-bottom: 6px; }
+    .explore-title { font-size: 18px; font-weight: 700; color: #1d4ed8; }
+
+    .local-blurb { margin-top: 28px; background: #f8fafc; border: 1px solid var(--border); border-radius: 16px; padding: 20px 22px; }
+    .local-blurb h2 { color: var(--navy); margin-bottom: 10px; font-size: 22px; }
+    .local-blurb p { color: var(--muted); line-height: 1.7; margin: 0 0 10px 0; }
+
+    .faq-section { margin-top: 28px; }
+    .faq-section h2 { color: var(--navy); margin-bottom: 12px; font-size: 22px; }
+    .faq-list { display: grid; gap: 12px; }
+    .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: var(--navy); }
+    .faq-item p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+    @media (max-width: 900px) {
+      .detail-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .church-hero h1 { font-size: 28px; }
+      .detail-card { padding: 20px; }
+      .action-row { flex-direction: column; }
+      .action-btn { justify-content: center; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "Durban North Methodist Church",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3 Swapo Road, Durban North",
+    "addressLocality": "Durban",
+    "addressRegion": "KwaZulu-Natal",
+    "addressCountry": "ZA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 0,
+    "longitude": 0
+  },
+  "telephone": "031 563 5868",
+  "url": "https://churchesnearme.co.za/churches/durban-north-methodist-church-durban/"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What time are services at Durban North Methodist Church?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Service times aren't listed yet. Call the church or visit their website for the latest schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Durban North Methodist Church located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Durban North Methodist Church is located at 3 Swapo Road, Durban North, Durban, KwaZulu-Natal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I contact Durban North Methodist Church?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact Durban North Methodist Church by phone at 031 563 5868, , or visit their website."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this church verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This listing is marked as verified in our directory."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://churchesnearme.co.za/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Durban churches",
+      "item": "https://churchesnearme.co.za/cities/durban.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Methodist churches",
+      "item": "https://churchesnearme.co.za/denominations/methodist.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Durban North Methodist Church",
+      "item": "https://churchesnearme.co.za/churches/durban-north-methodist-church-durban/"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">⛪ ChurchesNearMe</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/submit.html">Add Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="church-hero">
+    <div class="container">
+      <div class="church-meta">
+        <span class="church-badge">Methodist</span>
+        
+      </div>
+      <h1>Durban North Methodist Church</h1>
+      <div>3 Swapo Road, Durban North, Durban, KwaZulu-Natal</div>
+    </div>
+  </section>
+
+  <main class="church-page">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-card">
+          <h2>Church Details</h2>
+          <div class="info-row">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Address</div>
+              <div class="info-value">3 Swapo Road, Durban North, Durban, KwaZulu-Natal</div>
+            </div>
+          </div>
+          
+          <div class="info-row">
+            <div class="info-icon">📞</div>
+            <div>
+              <div class="info-label">Phone</div>
+              <div class="info-value"><a href="tel:031 563 5868">031 563 5868</a></div>
+            </div>
+          </div>
+          
+          
+          <div class="info-row">
+            <div class="info-icon">🌐</div>
+            <div>
+              <div class="info-label">Website</div>
+              <div class="info-value"><a href="https://durbannorthmethodistchurch.wordpress.com" target="_blank" rel="noopener">durbannorthmethodistchurch.wordpress.com</a></div>
+            </div>
+          </div>
+          
+
+          <div class="action-row">
+            <a class="action-btn action-primary" href="https://www.google.com/maps/dir/?api=1&destination=0,0" target="_blank" rel="noopener">📍 Get Directions</a>
+            <a class="action-btn action-secondary" href="tel:031 563 5868">📞 Call</a>
+            <a class="action-btn action-outline" href="https://durbannorthmethodistchurch.wordpress.com" target="_blank" rel="noopener">🌐 Visit Website</a>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-0.005,-0.003,0.005,0.003&marker=0,0&layers=M" allowfullscreen loading="lazy"></iframe>
+          <div class="map-info">
+            <strong>Location</strong>
+            <div>3 Swapo Road, Durban North, Durban, KwaZulu-Natal</div>
+          </div>
+        </div>
+      </div>
+
+      <section class="local-blurb">
+      <h2>Churches in Durban</h2>
+      <p>If you're looking for a Methodist church in Durban, this listing is a solid starting point. We keep verified churches in KwaZulu-Natal on one page so you can compare location, service times, and contact details without bouncing around.</p>
+      <p>Durban has a wide mix of denominations and church styles — traditional, modern, family-focused, and youth-led. If this church isn’t the right fit, use the links below to explore nearby options or the broader Methodist directory.</p>
+    </section>
+      <section class="nearby-section">
+        <h2>Nearby Churches</h2>
+        <div class="nearby-grid">
+          
+            <a href="/churches/access-church-pietermaritzburg/" class="nearby-card">
+              <h3>Access Church Pietermaritzburg</h3>
+              <div class="nearby-denom">Independent Charismatic</div>
+              <div class="nearby-addr">📍 44 Foxon Road, Hayfields, Pietermaritzburg · 0.0 km</div>
+            </a>
+          
+            <a href="/churches/all-saints-presbyterian-church-pietermaritzburg/" class="nearby-card">
+              <h3>All Saints Presbyterian Church Pietermaritzburg</h3>
+              <div class="nearby-denom">Presbyterian</div>
+              <div class="nearby-addr">📍 73 Montgomery Drive, Athlone, Pietermaritzburg, 3201, Pietermaritzburg · 0.0 km</div>
+            </a>
+          
+            <a href="/churches/all-saints-united-church-pietermaritzburg/" class="nearby-card">
+              <h3>All Saints United Church Pietermaritzburg</h3>
+              <div class="nearby-denom">United (Anglican/Methodist/Presbyterian)</div>
+              <div class="nearby-addr">📍 73 Montgomery Drive, Pietermaritzburg, Pietermaritzburg · 0.0 km</div>
+            </a>
+          
+        </div>
+      </section>
+      <section class="explore-section">
+        <h2>Explore More</h2>
+        <div class="explore-grid">
+          <a href="/cities/durban.html" class="explore-card">
+            <div class="explore-label">More churches in</div>
+            <div class="explore-title">Durban</div>
+          </a>
+          <a href="/denominations/methodist.html" class="explore-card">
+            <div class="explore-label">More</div>
+            <div class="explore-title">Methodist churches</div>
+          </a>
+        </div>
+      </section>
+      <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        
+          <div class="faq-item">
+            <h3>What time are services at Durban North Methodist Church?</h3>
+            <p>Service times aren&#39;t listed yet. Call the church or visit their website for the latest schedule.</p>
+          </div>
+        
+          <div class="faq-item">
+            <h3>Where is Durban North Methodist Church located?</h3>
+            <p>Durban North Methodist Church is located at 3 Swapo Road, Durban North, Durban, KwaZulu-Natal.</p>
+          </div>
+        
+          <div class="faq-item">
+            <h3>How do I contact Durban North Methodist Church?</h3>
+            <p>You can contact Durban North Methodist Church by phone at 031 563 5868, , or visit their website.</p>
+          </div>
+        
+          <div class="faq-item">
+            <h3>Is this church verified?</h3>
+            <p>Yes. This listing is marked as verified in our directory.</p>
+          </div>
+        
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/submit.html">Add Your Church</a> | 
+        <a href="/featured.html">Get Featured (R199/mo)</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    var header = document.querySelector('header');
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && header) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = header.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
+</body>
+</html>
