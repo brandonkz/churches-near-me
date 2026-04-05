@@ -20,6 +20,7 @@ INSERT INTO churches (name, denomination, address, city, province, lat, lng, web
 
 -- Catholic
 ('St Mary''s Cathedral Cape Town', 'Catholic', 'Cnr Hope Street & Roeland Street, Cape Town', 'Cape Town', 'Western Cape', -33.9310, 18.4200, 'https://stmaryscathedral.org.za/', NULL, 'st-marys-cathedral-cape-town', TRUE, FALSE),
+('St Michael''s Catholic Church Rondebosch', 'Catholic', '23 Rouwkoop Road, Rondebosch', 'Cape Town', 'Western Cape', -33.9656177, 18.4703116, NULL, NULL, 'st-michaels-catholic-rondebosch-cape-town', TRUE, FALSE),
 
 -- Dutch Reformed
 ('Groote Kerk', 'Dutch Reformed', '43 Adderley Street, Cape Town City Centre', 'Cape Town', 'Western Cape', -33.9245, 18.4240, NULL, NULL, 'groote-kerk-cape-town', TRUE, FALSE),
@@ -54,6 +55,7 @@ INSERT INTO churches (name, denomination, address, city, province, lat, lng, web
 ('Common Ground Church Rondebosch', 'Non-Denominational', 'Main Road, Rondebosch', 'Cape Town', 'Western Cape', -33.9643, 18.4735, 'https://commongroundbosch.co.za/', NULL, 'common-ground-rondebosch-cape-town', TRUE, FALSE),
 ('Common Ground Church Cape Town', 'Non-Denominational', 'Cape Town', 'Cape Town', 'Western Cape', -33.9258, 18.4232, 'https://www.commonground.co.za/', NULL, 'common-ground-cape-town', TRUE, FALSE),
 ('St James Church Kenilworth', 'Non-Denominational', '114 Third Avenue, Kenilworth', 'Cape Town', 'Western Cape', -33.9960, 18.4922, 'https://www.stjames.org.za/', NULL, 'st-james-church-kenilworth-cape-town', TRUE, FALSE),
+('InCourage Church', 'Non-Denominational', '35 Stuart Road, Rondebosch', 'Cape Town', 'Western Cape', -33.9762612, 18.4903148, NULL, NULL, 'incourage-church-cape-town', TRUE, FALSE),
 
 -- Seventh-day Adventist
 ('Cape Conference of Seventh-day Adventists', 'Seventh-day Adventist', 'Cnr Main Road & Glengariff Road, Sea Point', 'Cape Town', 'Western Cape', -33.9170, 18.3920, 'https://cc.adventist.org/', NULL, 'cape-conference-sda-cape-town', TRUE, FALSE),
@@ -102,6 +104,8 @@ INSERT INTO churches (name, denomination, address, city, province, lat, lng, web
 -- Catholic
 ('Cathedral of Christ the King', 'Catholic', 'Saratoga Avenue, Berea', 'Johannesburg', 'Gauteng', -26.1870, 28.0550, 'https://catholicjhb.org.za/', NULL, 'cathedral-christ-the-king-johannesburg', TRUE, FALSE),
 ('Church of the Immaculate Conception', 'Catholic', '16 Keyes Avenue, Rosebank', 'Johannesburg', 'Gauteng', -26.1430, 28.0370, NULL, '011 788 5226', 'immaculate-conception-rosebank-johannesburg', TRUE, FALSE),
+('St Hubert Catholic Church', 'Catholic', 'Reverend Sam Buti Street, Wynberg', 'Johannesburg', 'Gauteng', -26.1089814, 28.0887015, NULL, NULL, 'st-hubert-catholic-church-johannesburg', TRUE, FALSE),
+('Saint Charles Catholic Church', 'Catholic', '3rd Avenue, Victory Park', 'Johannesburg', 'Gauteng', -26.1423786, 28.0022612, NULL, NULL, 'saint-charles-catholic-church-johannesburg', TRUE, FALSE),
 
 -- Baptist
 ('Heritage Baptist Church Johannesburg', 'Baptist', 'Johannesburg', 'Johannesburg', 'Gauteng', -26.1600, 28.0400, 'https://www.heritagebaptist.co.za/', NULL, 'heritage-baptist-church-johannesburg', TRUE, FALSE),
@@ -142,6 +146,7 @@ INSERT INTO churches (name, denomination, address, city, province, lat, lng, web
 -- Baptist
 ('Westville Baptist Church', 'Baptist', 'Jan Hofmeyr Road, Westville', 'Durban', 'KwaZulu-Natal', -29.8330, 30.9260, 'https://www.homeground.org.za/', NULL, 'westville-baptist-church-durban', TRUE, FALSE),
 ('Pinetown Baptist Church', 'Baptist', 'Old Main Road, Pinetown', 'Durban', 'KwaZulu-Natal', -29.8170, 30.8610, NULL, NULL, 'pinetown-baptist-church-durban', TRUE, FALSE),
+('Durban North Baptist Church', 'Baptist', 'Mackeurtan C. Avenue, Beachwood', 'Durban', 'KwaZulu-Natal', -29.7776364, 31.0451628, NULL, NULL, 'durban-north-baptist-church-durban', TRUE, FALSE),
 
 -- Methodist
 ('Durban Central Methodist Church', 'Methodist', 'Smith Street, Durban Central', 'Durban', 'KwaZulu-Natal', -29.8570, 31.0230, NULL, NULL, 'durban-central-methodist-durban', TRUE, FALSE),
@@ -150,6 +155,7 @@ INSERT INTO churches (name, denomination, address, city, province, lat, lng, web
 -- Anglican
 ('St Paul''s Anglican Church Durban', 'Anglican', 'Pine Street, Durban Central', 'Durban', 'KwaZulu-Natal', -29.8540, 31.0190, NULL, NULL, 'st-pauls-anglican-durban', TRUE, FALSE),
 ('Christ Church Hillcrest', 'Anglican', 'Old Main Road, Hillcrest', 'Durban', 'KwaZulu-Natal', -29.7780, 30.7530, NULL, NULL, 'christ-church-hillcrest-durban', TRUE, FALSE),
+('St Thomas'' Anglican Church Durban', 'Anglican', 'Musgrave Road, Berea', 'Durban', 'KwaZulu-Natal', -29.8465455, 31.0005895, NULL, NULL, 'st-thomas-anglican-durban', TRUE, FALSE),
 
 -- Dutch Reformed
 ('NG Kerk Durban-Noord', 'Dutch Reformed', 'Umgeni Road, Durban North', 'Durban', 'KwaZulu-Natal', -29.8080, 31.0120, NULL, NULL, 'ng-kerk-durban-noord', TRUE, FALSE),
