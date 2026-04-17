@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Churches in Worcester | Find a Church Near You</title>
-  <meta name="description" content="Find Worcester churches near me. Browse 3 verified churches across 3 denominations, view locations on a map, and connect with local congregations in Worcester.">
+  <meta name="description" content="Find Worcester churches near me. Browse 4 verified churches across 4 denominations, view locations on a map, and connect with local congregations in Worcester.">
   <link rel="canonical" href="https://churchesnearme.co.za/cities/worcester.html">
   <meta property="og:title" content="Churches in Worcester | Find a Church Near You">
-  <meta property="og:description" content="Find Worcester churches near me. Browse 3 verified churches across 3 denominations, view locations on a map, and connect with local congregations in Worcester.">
+  <meta property="og:description" content="Find Worcester churches near me. Browse 4 verified churches across 4 denominations, view locations on a map, and connect with local congregations in Worcester.">
   <meta property="og:url" content="https://churchesnearme.co.za/cities/worcester.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/styles.css?v=2">
@@ -44,15 +44,15 @@
   <main class="city-hero">
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Churches in Worcester</h1>
-    <p>Find Worcester churches near me. Browse 3 verified churches across 3 denominations, view locations on a map, and connect with local congregations in Worcester.</p>
+    <p>Find Worcester churches near me. Browse 4 verified churches across 4 denominations, view locations on a map, and connect with local congregations in Worcester.</p>
     <p class="city-blurb">If you are searching for churches in Worcester, start with the suburbs closest to home and expand from there. Smaller communities can be just as welcoming as the biggest congregations.</p>
-    <div class="updated">Last updated: 2026-04-13</div>
+    <div class="updated">Last updated: 2026-04-17</div>
 
     <div class="filters">
       <label class="filter-label" for="denomination-filter">Filter by denomination</label>
   <select id="denomination-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option>
+    <option value="Apostolic Faith Mission">Apostolic Faith Mission</option><option value="Baptist">Baptist</option><option value="Dutch Reformed">Dutch Reformed</option><option value="Every Nation">Every Nation</option>
   </select>
     </div>
 
@@ -83,6 +83,14 @@
         <div class="church-address">High St, Worcester, Worcester</div>
         <div class="church-links">
           <a href="/churches/ng-kerk-worcester/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Baptist" data-city="Worcester">
+        <h3><a href="/churches/worcester-baptist-church/">Worcester Baptist Church</a></h3>
+        <div class="church-denom">Baptist</div>
+        <div class="church-address">Church St, Worcester, Worcester</div>
+        <div class="church-links">
+          <a href="/churches/worcester-baptist-church/" class="church-link">View details</a>
           
         </div>
       </article>
@@ -165,6 +173,23 @@
         "latitude": -33.6458,
         "longitude": 19.4477
       }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Worcester Baptist Church",
+      "url": "https://churchesnearme.co.za/churches/worcester-baptist-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Church St, Worcester",
+        "addressLocality": "Worcester",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.645,
+        "longitude": 19.4415
+      }
     }
   ]
 }
@@ -223,7 +248,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"AFM Worcester","slug":"afm-worcester","denomination":"Apostolic Faith Mission","lat":-33.6472,"lng":19.4492},{"name":"Every Nation Worcester","slug":"every-nation-worcester","denomination":"Every Nation","lat":-33.6445,"lng":19.4462},{"name":"NG Kerk Worcester","slug":"ng-kerk-worcester","denomination":"Dutch Reformed","lat":-33.6458,"lng":19.4477}];
+    const churches = [{"name":"AFM Worcester","slug":"afm-worcester","denomination":"Apostolic Faith Mission","lat":-33.6472,"lng":19.4492},{"name":"Every Nation Worcester","slug":"every-nation-worcester","denomination":"Every Nation","lat":-33.6445,"lng":19.4462},{"name":"NG Kerk Worcester","slug":"ng-kerk-worcester","denomination":"Dutch Reformed","lat":-33.6458,"lng":19.4477},{"name":"Worcester Baptist Church","slug":"worcester-baptist-church","denomination":"Baptist","lat":-33.645,"lng":19.4415}];
     const map = L.map('city-map').setView([-33.645, 19.448], 11);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

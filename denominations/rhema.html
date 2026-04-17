@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rhema Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Rhema churches near me across South Africa. Browse 2 verified churches, view locations by city, and connect with Rhema congregations.">
+  <meta name="description" content="Explore Rhema churches near me across South Africa. Browse 3 verified churches, view locations by city, and connect with Rhema congregations.">
   <link rel="canonical" href="https://churchesnearme.co.za/denominations/rhema.html">
   <meta property="og:title" content="Rhema Churches in South Africa">
-  <meta property="og:description" content="Explore Rhema churches near me across South Africa. Browse 2 verified churches, view locations by city, and connect with Rhema congregations.">
+  <meta property="og:description" content="Explore Rhema churches near me across South Africa. Browse 3 verified churches, view locations by city, and connect with Rhema congregations.">
   <meta property="og:url" content="https://churchesnearme.co.za/denominations/rhema.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/styles.css?v=2">
@@ -43,15 +43,15 @@
   <main class="denom-hero">
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Rhema Churches in South Africa</h1>
-    <p>Explore Rhema churches near me across South Africa. Browse 2 verified churches, view locations by city, and connect with Rhema congregations.</p>
+    <p>Explore Rhema churches near me across South Africa. Browse 3 verified churches, view locations by city, and connect with Rhema congregations.</p>
     <p class="denom-blurb">Every Rhema church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-04-13</div>
+    <div class="updated">Last updated: 2026-04-17</div>
 
     <div class="filters">
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Durban">Durban</option><option value="Pretoria">Pretoria</option>
+    <option value="Durban">Durban</option><option value="Germiston">Germiston</option><option value="Pretoria">Pretoria</option>
   </select>
     </div>
 
@@ -76,6 +76,14 @@
           <a href="/churches/rhema-pretoria/" class="church-link">View details</a>
           <a href="https://www.rhema.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
+      </article><article class="church-card" data-denomination="Rhema" data-city="Germiston">
+        <h3><a href="/churches/rhema-germiston/">Rhema Germiston</a></h3>
+        <div class="church-denom">Rhema</div>
+        <div class="church-address">Elandsfontein Rd, Germiston, Germiston</div>
+        <div class="church-links">
+          <a href="/churches/rhema-germiston/" class="church-link">View details</a>
+          <a href="https://rhema.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
       </article>
   </div>
 
@@ -90,7 +98,7 @@
         
           <div class="faq-item">
             <h3>Which cities have Rhema churches?</h3>
-            <p>You can find Rhema churches in cities like Durban, Pretoria and more across South Africa.</p>
+            <p>You can find Rhema churches in cities like Durban, Pretoria, Germiston and more across South Africa.</p>
           </div>
         
           <div class="faq-item">
@@ -139,6 +147,23 @@
         "latitude": -25.7764,
         "longitude": 28.2956
       }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Rhema Germiston",
+      "url": "https://churchesnearme.co.za/churches/rhema-germiston/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Elandsfontein Rd, Germiston",
+        "addressLocality": "Germiston",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.2225,
+        "longitude": 28.171
+      }
     }
   ]
 }
@@ -161,7 +186,7 @@
       "name": "Which cities have Rhema churches?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can find Rhema churches in cities like Durban, Pretoria and more across South Africa."
+        "text": "You can find Rhema churches in cities like Durban, Pretoria, Germiston and more across South Africa."
       }
     },
     {
@@ -197,7 +222,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Rhema Church Durban","slug":"rhema-durban","city":"Durban","lat":-29.849,"lng":31.006},{"name":"Rhema Church Pretoria","slug":"rhema-pretoria","city":"Pretoria","lat":-25.7764,"lng":28.2956}];
+    const churches = [{"name":"Rhema Church Durban","slug":"rhema-durban","city":"Durban","lat":-29.849,"lng":31.006},{"name":"Rhema Church Pretoria","slug":"rhema-pretoria","city":"Pretoria","lat":-25.7764,"lng":28.2956},{"name":"Rhema Germiston","slug":"rhema-germiston","city":"Germiston","lat":-26.2225,"lng":28.171}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
