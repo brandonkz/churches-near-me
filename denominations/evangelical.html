@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evangelical Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Evangelical churches near me across South Africa. Browse 4 verified churches, view locations by city, and connect with Evangelical congregations.">
+  <meta name="description" content="Explore Evangelical churches near me across South Africa. Browse 5 verified churches, view locations by city, and connect with Evangelical congregations.">
   <link rel="canonical" href="https://churchesnearme.co.za/denominations/evangelical.html">
   <meta property="og:title" content="Evangelical Churches in South Africa">
-  <meta property="og:description" content="Explore Evangelical churches near me across South Africa. Browse 4 verified churches, view locations by city, and connect with Evangelical congregations.">
+  <meta property="og:description" content="Explore Evangelical churches near me across South Africa. Browse 5 verified churches, view locations by city, and connect with Evangelical congregations.">
   <meta property="og:url" content="https://churchesnearme.co.za/denominations/evangelical.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/styles.css?v=2">
@@ -43,15 +43,15 @@
   <main class="denom-hero">
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Evangelical Churches in South Africa</h1>
-    <p>Explore Evangelical churches near me across South Africa. Browse 4 verified churches, view locations by city, and connect with Evangelical congregations.</p>
+    <p>Explore Evangelical churches near me across South Africa. Browse 5 verified churches, view locations by city, and connect with Evangelical congregations.</p>
     <p class="denom-blurb">Every Evangelical church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-04-17</div>
+    <div class="updated">Last updated: 2026-04-18</div>
 
     <div class="filters">
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Cape Town">Cape Town</option><option value="Salt Rock">Salt Rock</option><option value="Sandton">Sandton</option>
+    <option value="Cape Town">Cape Town</option><option value="Daveyton">Daveyton</option><option value="Salt Rock">Salt Rock</option><option value="Sandton">Sandton</option>
   </select>
     </div>
 
@@ -60,7 +60,15 @@
     </div>
 
     <div class="church-grid">
-    <article class="church-card" data-denomination="Evangelical" data-city="Sandton">
+    <article class="church-card" data-denomination="Evangelical" data-city="Daveyton">
+        <h3><a href="/churches/daveyton-evangelical-church/">Daveyton Evangelical Church</a></h3>
+        <div class="church-denom">Evangelical</div>
+        <div class="church-address">Mthembu Rd, Daveyton, Daveyton</div>
+        <div class="church-links">
+          <a href="/churches/daveyton-evangelical-church/" class="church-link">View details</a>
+          
+        </div>
+      </article><article class="church-card" data-denomination="Evangelical" data-city="Sandton">
         <h3><a href="/churches/grace-community-church-fourways/">Grace Community Church Fourways</a></h3>
         <div class="church-denom">Evangelical</div>
         <div class="church-address">Fourways, Sandton, Sandton</div>
@@ -106,7 +114,7 @@
         
           <div class="faq-item">
             <h3>Which cities have Evangelical churches?</h3>
-            <p>You can find Evangelical churches in cities like Sandton, Salt Rock, Cape Town and more across South Africa.</p>
+            <p>You can find Evangelical churches in cities like Daveyton, Sandton, Salt Rock, Cape Town and more across South Africa.</p>
           </div>
         
           <div class="faq-item">
@@ -122,6 +130,23 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Daveyton Evangelical Church",
+      "url": "https://churchesnearme.co.za/churches/daveyton-evangelical-church/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mthembu Rd, Daveyton",
+        "addressLocality": "Daveyton",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.145,
+        "longitude": 28.421
+      }
+    },
     {
       "@type": "LocalBusiness",
       "name": "Grace Community Church Fourways",
@@ -211,7 +236,7 @@
       "name": "Which cities have Evangelical churches?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can find Evangelical churches in cities like Sandton, Salt Rock, Cape Town and more across South Africa."
+        "text": "You can find Evangelical churches in cities like Daveyton, Sandton, Salt Rock, Cape Town and more across South Africa."
       }
     },
     {
@@ -247,7 +272,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Grace Community Church Fourways","slug":"grace-community-church-fourways","city":"Sandton","lat":-26.0166,"lng":28.0122},{"name":"Rosebank Union Church","slug":"rosebank-union-church-sandton","city":"Sandton","lat":0,"lng":0},{"name":"Salt Rock Church","slug":"salt-rock-church-kzn","city":"Salt Rock","lat":-29.5482,"lng":31.2235},{"name":"Tokai Community Church","slug":"tokai-community-church-cape-town","city":"Cape Town","lat":0,"lng":0}];
+    const churches = [{"name":"Daveyton Evangelical Church","slug":"daveyton-evangelical-church","city":"Daveyton","lat":-26.145,"lng":28.421},{"name":"Grace Community Church Fourways","slug":"grace-community-church-fourways","city":"Sandton","lat":-26.0166,"lng":28.0122},{"name":"Rosebank Union Church","slug":"rosebank-union-church-sandton","city":"Sandton","lat":0,"lng":0},{"name":"Salt Rock Church","slug":"salt-rock-church-kzn","city":"Salt Rock","lat":-29.5482,"lng":31.2235},{"name":"Tokai Community Church","slug":"tokai-community-church-cape-town","city":"Cape Town","lat":0,"lng":0}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
