@@ -318,15 +318,23 @@
     <div class="success-msg" id="successMsg">
       <h3>🎉 Claim Submitted!</h3>
       <p style="margin-bottom:16px">Complete your payment of <strong>R299/month</strong> to activate your listing:</p>
-      <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post" style="margin-bottom:16px;">
-        <input type="hidden" name="cmd" value="_paynow">
-        <input type="hidden" name="receiver" value="10803069">
+      <form name="PayFastPayNowForm" action="https://www.payfast.co.za/eng/process" method="post" style="margin-bottom:16px;">
+        <input type="hidden" name="merchant_id" value="10803069">
+        <input type="hidden" name="merchant_key" value="heptrxgjismzp">
         <input type="hidden" name="return_url" value="https://churchesnearme.co.za/claim.html?payment=success">
         <input type="hidden" name="cancel_url" value="https://churchesnearme.co.za/claim.html?payment=cancelled">
-        <input type="hidden" name="notify_url" value="https://churchesnearme.co.za/claim.html?payment=notify">
-        <input type="hidden" name="amount" value="299">
+        <input type="hidden" name="notify_url" value="https://fuddzrlnbrseofguuikp.supabase.co/functions/v1/payfast-itn">
+        <input type="hidden" name="m_payment_id" id="payfastPaymentId" value="cnm_claim_r299">
+        <input type="hidden" name="amount" value="0.00">
+        <input type="hidden" name="recurring_amount" value="299.00">
+        <input type="hidden" name="subscription_type" value="1">
+        <input type="hidden" name="frequency" value="3">
+        <input type="hidden" name="cycles" value="0">
         <input type="hidden" name="item_name" value="ChurchesNearMe - Early Bird Church Listing">
         <input type="hidden" name="item_description" value="Monthly church listing management - R299/mo early bird rate">
+        <input type="hidden" name="custom_str1" value="claim_r299">
+        <input type="hidden" name="custom_str2" value="churchesnearme">
+        <input type="hidden" name="email_address" id="payfastEmail" value="">
         <button type="submit" style="width:100%;padding:16px;background:var(--gold);color:var(--navy);border:none;border-radius:12px;font-size:1.1rem;font-weight:700;cursor:pointer;font-family:inherit;">💳 Pay R299 — Card, EFT or SnapScan</button>
       </form>
       <p style="color:#64748b;font-size:0.85rem;margin:0">Secure payment via PayFast. Once confirmed, we'll activate your listing within 24 hours and send you full edit access. For questions, email <a href="mailto:info@churchesnearme.co.za" style="color:var(--gold)">info@churchesnearme.co.za</a></p>
@@ -448,8 +456,8 @@
           });
         }
 
-        // Redirect to payment
-        // For now: show bank details + reference. Replace with Yoco/PayFast later.
+        document.getElementById('payfastPaymentId').value = 'cnm_claim_r299_' + Date.now();
+        document.getElementById('payfastEmail').value = claim.email;
         document.getElementById('claimForm').style.display = 'none';
         document.getElementById('successMsg').style.display = 'block';
         window.scrollTo({ top: document.getElementById('successMsg').offsetTop - 100, behavior: 'smooth' });
