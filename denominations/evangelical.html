@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evangelical Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Evangelical churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Evangelical congregations.">
+  <meta name="description" content="Explore Evangelical churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Evangelical congregations.">
   <link rel="canonical" href="https://churchesnearme.co.za/denominations/evangelical.html">
   <meta property="og:title" content="Evangelical Churches in South Africa">
-  <meta property="og:description" content="Explore Evangelical churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Evangelical congregations.">
+  <meta property="og:description" content="Explore Evangelical churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Evangelical congregations.">
   <meta property="og:url" content="https://churchesnearme.co.za/denominations/evangelical.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/styles.css?v=2">
@@ -43,9 +43,9 @@
   <main class="denom-hero">
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Evangelical Churches in South Africa</h1>
-    <p>Explore Evangelical churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Evangelical congregations.</p>
+    <p>Explore Evangelical churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Evangelical congregations.</p>
     <p class="denom-blurb">Every Evangelical church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-05-22</div>
+    <div class="updated">Last updated: 2026-05-23</div>
 
     <div class="filters">
       <label class="filter-label" for="city-filter">Filter by city</label>
@@ -107,6 +107,14 @@
         <div class="church-links">
           <a href="/churches/tokai-community-church-cape-town/" class="church-link">View details</a>
           <a href="https://www.tokaicommunitychurch.org" target="_blank" rel="noopener" class="church-link">Website</a>
+        </div>
+      </article><article class="church-card" data-denomination="Evangelical" data-city="Johannesburg">
+        <h3><a href="/churches/woodmead-halls-church-johannesburg/">Woodmead Halls Church</a></h3>
+        <div class="church-denom">Evangelical</div>
+        <div class="church-address">2 Western Service Road, Woodmead, Johannesburg</div>
+        <div class="church-links">
+          <a href="/churches/woodmead-halls-church-johannesburg/" class="church-link">View details</a>
+          <a href="https://woodmeadhalls.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article>
   </div>
@@ -239,6 +247,23 @@
         "latitude": 0,
         "longitude": 0
       }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Woodmead Halls Church",
+      "url": "https://churchesnearme.co.za/churches/woodmead-halls-church-johannesburg/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2 Western Service Road, Woodmead",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.045,
+        "longitude": 28.088
+      }
     }
   ]
 }
@@ -297,7 +322,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Bryanston Bible Church","slug":"bryanston-bible-church-johannesburg","city":"Johannesburg","lat":-26.052,"lng":28.024},{"name":"Daveyton Evangelical Church","slug":"daveyton-evangelical-church","city":"Daveyton","lat":-26.145,"lng":28.421},{"name":"Grace Community Church Fourways","slug":"grace-community-church-fourways","city":"Sandton","lat":-26.0166,"lng":28.0122},{"name":"Rosebank Union Church","slug":"rosebank-union-church-sandton","city":"Sandton","lat":0,"lng":0},{"name":"Salt Rock Church","slug":"salt-rock-church-kzn","city":"Salt Rock","lat":-29.5482,"lng":31.2235},{"name":"Tokai Community Church","slug":"tokai-community-church-cape-town","city":"Cape Town","lat":0,"lng":0}];
+    const churches = [{"name":"Bryanston Bible Church","slug":"bryanston-bible-church-johannesburg","city":"Johannesburg","lat":-26.052,"lng":28.024},{"name":"Daveyton Evangelical Church","slug":"daveyton-evangelical-church","city":"Daveyton","lat":-26.145,"lng":28.421},{"name":"Grace Community Church Fourways","slug":"grace-community-church-fourways","city":"Sandton","lat":-26.0166,"lng":28.0122},{"name":"Rosebank Union Church","slug":"rosebank-union-church-sandton","city":"Sandton","lat":0,"lng":0},{"name":"Salt Rock Church","slug":"salt-rock-church-kzn","city":"Salt Rock","lat":-29.5482,"lng":31.2235},{"name":"Tokai Community Church","slug":"tokai-community-church-cape-town","city":"Cape Town","lat":0,"lng":0},{"name":"Woodmead Halls Church","slug":"woodmead-halls-church-johannesburg","city":"Johannesburg","lat":-26.045,"lng":28.088}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
