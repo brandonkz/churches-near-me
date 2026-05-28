@@ -4,7 +4,6 @@
   <url><loc>https://churchesnearme.co.za/submit.html</loc></url>
   <url><loc>https://churchesnearme.co.za/featured.html</loc></url>
   <url><loc>https://churchesnearme.co.za/church.html</loc></url>
-  <url><loc>https://churchesnearme.co.za/blog/new-presbyterian-methodist-catholic-churches-may-2026.html</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/3c-church-centurion/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/abundant-life-church-alberton/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/access-church-pietermaritzburg/</loc></url>
@@ -97,6 +96,7 @@
   <url><loc>https://churchesnearme.co.za/churches/christ-church-anglican-nelspruit-mbombela/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/christ-church-blairgowrie-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/christ-church-constantia/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/christ-church-constantia-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/christ-church-hillcrest-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/christ-church-kenilworth-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/christ-church-midrand-johannesburg/</loc></url>
@@ -143,8 +143,8 @@
   <url><loc>https://churchesnearme.co.za/churches/durban-christian-centre-mayville/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durban-north-baptist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durban-north-community-church/</loc></url>
-  <url><loc>https://churchesnearme.co.za/churches/durban-north-methodist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durban-north-methodist-church/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/durban-north-methodist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durbanville-dutch-reformed-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/durbanville-methodist-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/eagle-christian-centre-pietermaritzburg/</loc></url>
@@ -274,6 +274,7 @@
   <url><loc>https://churchesnearme.co.za/churches/montclair-methodist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/moreleta-park-ng-kerk-pretoria/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/moreleta-community-church-pretoria/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/morningside-methodist-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/mosaiek-church-randburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/mowbray-baptist-church-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/mowbray-presbyterian-church-cape-town/</loc></url>
@@ -376,8 +377,8 @@
   <url><loc>https://churchesnearme.co.za/churches/queensburgh-baptist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/queensburgh-methodist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/randburg-methodist-johannesburg/</loc></url>
-  <url><loc>https://churchesnearme.co.za/churches/rhema-bible-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/rhema-bible-church-randburg/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/rhema-bible-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/rhema-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/rhema-pretoria/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/rhema-germiston/</loc></url>
@@ -452,17 +453,20 @@
   <url><loc>https://churchesnearme.co.za/churches/st-johns-anglican-church-pinetown/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-johns-anglican-potchefstroom/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-johns-anglican-sandton-johannesburg/</loc></url>
-  <url><loc>https://churchesnearme.co.za/churches/st-johns-church-wynberg-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-johns-church-wynberg/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/st-johns-church-wynberg-cape-town/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/st-johns-parish-pinetown-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-johns-parish-wynberg-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-johns-presbyterian-pietermaritzburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-josephs-catholic-goodwood-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-josephs-catholic-nelspruit-mbombela/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-laurences-anglican-discovery-roodepoort/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-lukes-anglican-orchards-johannesburg/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/st-lukes-anglican-church-orchards-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-margarets-anglican-bedfordview-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-marks-anglican-church-district-six-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-marks-anglican-church-north-riding-johannesburg/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/st-martin-in-the-veld-anglican-church-rosebank-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-martins-anglican-church-bergvliet-cape-town/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-martins-anglican-church-durban-north/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/st-martins-in-the-veld-anglican-rosebank-johannesburg/</loc></url>
@@ -539,8 +543,8 @@
   <url><loc>https://churchesnearme.co.za/churches/westville-baptist-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-baptist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-catholic-church-durban/</loc></url>
-  <url><loc>https://churchesnearme.co.za/churches/westville-methodist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-methodist-church-durban/</loc></url>
+  <url><loc>https://churchesnearme.co.za/churches/westville-methodist-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/westville-presbyterian-church-durban/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/woodmead-halls-church-johannesburg/</loc></url>
   <url><loc>https://churchesnearme.co.za/churches/worcester-baptist-church/</loc></url>
