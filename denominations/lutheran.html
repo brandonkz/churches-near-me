@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lutheran Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Lutheran churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Lutheran congregations.">
+  <meta name="description" content="Explore Lutheran churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Lutheran congregations.">
   <link rel="canonical" href="https://churchesnearme.co.za/denominations/lutheran.html">
   <meta property="og:title" content="Lutheran Churches in South Africa">
-  <meta property="og:description" content="Explore Lutheran churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Lutheran congregations.">
+  <meta property="og:description" content="Explore Lutheran churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Lutheran congregations.">
   <meta property="og:url" content="https://churchesnearme.co.za/denominations/lutheran.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/styles.css?v=2">
@@ -43,9 +43,9 @@
   <main class="denom-hero">
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Lutheran Churches in South Africa</h1>
-    <p>Explore Lutheran churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Lutheran congregations.</p>
+    <p>Explore Lutheran churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Lutheran congregations.</p>
     <p class="denom-blurb">Every Lutheran church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-05-28</div>
+    <div class="updated">Last updated: 2026-05-29</div>
 
     <div class="filters">
       <label class="filter-label" for="city-filter">Filter by city</label>
@@ -99,6 +99,14 @@
         <div class="church-links">
           <a href="/churches/st-martins-lutheran-durban/" class="church-link">View details</a>
 
+        </div>
+      </article><article class="church-card" data-denomination="Lutheran" data-city="Cape Town">
+        <h3><a href="/churches/st-martini-lutheran-church-cape-town/">St Martini Lutheran Church Cape Town</a></h3>
+        <div class="church-denom">Lutheran</div>
+        <div class="church-address">240 Long Street, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/st-martini-lutheran-church-cape-town/" class="church-link">View details</a>
+          <a href="https://www.lutherancape.org.za/cape-town-st-martini/" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="Lutheran" data-city="Durban">
         <h3><a href="/churches/st-peters-lutheran-westville-durban/">St Peter&#39;s Lutheran Church Westville</a></h3>
@@ -225,6 +233,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "St Martini Lutheran Church Cape Town",
+      "url": "https://churchesnearme.co.za/churches/st-martini-lutheran-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "240 Long Street",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9239,
+        "longitude": 18.4149
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "St Peter's Lutheran Church Westville",
       "url": "https://churchesnearme.co.za/churches/st-peters-lutheran-westville-durban/",
       "address": {
@@ -297,7 +322,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Benoni Lutheran Church","slug":"benoni-lutheran-church-johannesburg","city":"Johannesburg","lat":-26.187,"lng":28.321},{"name":"Evangelical Lutheran Church Pretoria","slug":"evangelical-lutheran-pretoria","city":"Pretoria","lat":-25.743,"lng":28.187},{"name":"Evangelical Lutheran Church Strand Street","slug":"evangelical-lutheran-strand-street-cape-town","city":"Cape Town","lat":-33.921,"lng":18.423},{"name":"Friedenskirche Lutheran Church Stellenbosch","slug":"friedenskirche-lutheran-stellenbosch","city":"Stellenbosch","lat":-33.936,"lng":18.861},{"name":"St Martin's Lutheran Church Durban","slug":"st-martins-lutheran-durban","city":"Durban","lat":-29.838,"lng":31.003},{"name":"St Peter's Lutheran Church Westville","slug":"st-peters-lutheran-westville-durban","city":"Durban","lat":-29.828,"lng":30.9305}];
+    const churches = [{"name":"Benoni Lutheran Church","slug":"benoni-lutheran-church-johannesburg","city":"Johannesburg","lat":-26.187,"lng":28.321},{"name":"Evangelical Lutheran Church Pretoria","slug":"evangelical-lutheran-pretoria","city":"Pretoria","lat":-25.743,"lng":28.187},{"name":"Evangelical Lutheran Church Strand Street","slug":"evangelical-lutheran-strand-street-cape-town","city":"Cape Town","lat":-33.921,"lng":18.423},{"name":"Friedenskirche Lutheran Church Stellenbosch","slug":"friedenskirche-lutheran-stellenbosch","city":"Stellenbosch","lat":-33.936,"lng":18.861},{"name":"St Martin's Lutheran Church Durban","slug":"st-martins-lutheran-durban","city":"Durban","lat":-29.838,"lng":31.003},{"name":"St Martini Lutheran Church Cape Town","slug":"st-martini-lutheran-church-cape-town","city":"Cape Town","lat":-33.9239,"lng":18.4149},{"name":"St Peter's Lutheran Church Westville","slug":"st-peters-lutheran-westville-durban","city":"Durban","lat":-29.828,"lng":30.9305}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
