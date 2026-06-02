@@ -92,6 +92,25 @@ function formatServiceTimes(serviceTimes) {
   return escapeHtml(serviceTimes).replace(/\r?\n/g, '<br>');
 }
 
+function buildContactAnswer(name, phone, email, website) {
+  const contactParts = [];
+  if (phone) contactParts.push(`by phone at ${phone}`);
+  if (email) contactParts.push(`via email at ${email}`);
+
+  if (website) {
+    if (contactParts.length === 0) {
+      return `You can contact ${name} through their website.`;
+    }
+    return `You can contact ${name} ${contactParts.join(', ')}, or visit their website.`;
+  }
+
+  if (contactParts.length > 0) {
+    return `You can contact ${name} ${contactParts.join(', ')}.`;
+  }
+
+  return `Contact details aren't listed yet. If you represent this church, use the Add Your Church form.`;
+}
+
 function getDistance(lat1, lon1, lat2, lon2) {
   var R = 6371;
   var dLat = (lat2 - lat1) * Math.PI / 180;
@@ -218,9 +237,7 @@ function buildChurchPage(church, nearby) {
     },
     {
       q: `How do I contact ${name}?`,
-      a: phone || email || website
-        ? `You can contact ${name} ${phone ? `by phone at ${phone}` : ''}${phone && (email || website) ? ', ' : ''}${email ? `via email at ${email}` : ''}${(phone || email) && website ? ', or visit their website.' : website ? `through their website.` : '.'}`
-        : `Contact details aren't listed yet. If you represent this church, use the Add Your Church form.`
+      a: buildContactAnswer(name, phone, email, website)
     },
     {
       q: `Is this church verified?`,
