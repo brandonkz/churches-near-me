@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Church Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Community Church churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Community Church congregations.">
+  <meta name="description" content="Explore Community Church churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Community Church congregations.">
   <link rel="canonical" href="https://churchesnearme.co.za/denominations/community-church.html">
   <meta property="og:title" content="Community Church Churches in South Africa">
-  <meta property="og:description" content="Explore Community Church churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Community Church congregations.">
+  <meta property="og:description" content="Explore Community Church churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Community Church congregations.">
   <meta property="og:url" content="https://churchesnearme.co.za/denominations/community-church.html">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/styles.css?v=2">
@@ -43,15 +43,15 @@
   <main class="denom-hero">
     <a href="/" class="back-link">← Back to homepage</a>
     <h1>Community Church Churches in South Africa</h1>
-    <p>Explore Community Church churches near me across South Africa. Browse 6 verified churches, view locations by city, and connect with Community Church congregations.</p>
+    <p>Explore Community Church churches near me across South Africa. Browse 7 verified churches, view locations by city, and connect with Community Church congregations.</p>
     <p class="denom-blurb">Every Community Church church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-06-09</div>
+    <div class="updated">Last updated: 2026-06-10</div>
 
     <div class="filters">
       <label class="filter-label" for="city-filter">Filter by city</label>
   <select id="city-filter" class="filter-select">
     <option value="all">All</option>
-    <option value="Atlantis">Atlantis</option><option value="Bellville">Bellville</option><option value="Durban">Durban</option><option value="Phoenix">Phoenix</option><option value="Vosloorus">Vosloorus</option>
+    <option value="Atlantis">Atlantis</option><option value="Bellville">Bellville</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Phoenix">Phoenix</option><option value="Vosloorus">Vosloorus</option>
   </select>
     </div>
 
@@ -99,6 +99,14 @@
         <div class="church-links">
           <a href="/churches/phoenix-community-church/" class="church-link">View details</a>
           
+        </div>
+      </article><article class="church-card" data-denomination="Community Church" data-city="Cape Town">
+        <h3><a href="/churches/the-message-church-cape-town/">The Message Church Cape Town</a></h3>
+        <div class="church-denom">Community Church</div>
+        <div class="church-address">18 Main Road, Rosebank, Cape Town</div>
+        <div class="church-links">
+          <a href="/churches/the-message-church-cape-town/" class="church-link">View details</a>
+          <a href="https://themessage.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
         </div>
       </article><article class="church-card" data-denomination="Community Church" data-city="Vosloorus">
         <h3><a href="/churches/vosloorus-community-church/">Vosloorus Community Church</a></h3>
@@ -225,6 +233,23 @@
     },
     {
       "@type": "LocalBusiness",
+      "name": "The Message Church Cape Town",
+      "url": "https://churchesnearme.co.za/churches/the-message-church-cape-town/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "18 Main Road, Rosebank",
+        "addressLocality": "Cape Town",
+        "addressRegion": "Western Cape",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.9537,
+        "longitude": 18.474
+      }
+    },
+    {
+      "@type": "LocalBusiness",
       "name": "Vosloorus Community Church",
       "url": "https://churchesnearme.co.za/churches/vosloorus-community-church/",
       "address": {
@@ -297,7 +322,7 @@
   </script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const churches = [{"name":"Atlantis Community Church","slug":"atlantis-community-church","city":"Atlantis","lat":-33.56,"lng":18.497},{"name":"Bellville Community Church","slug":"bellville-community-church","city":"Bellville","lat":-33.8985,"lng":18.629},{"name":"Durban North Community Church","slug":"durban-north-community-church","city":"Durban","lat":-29.784,"lng":31.037},{"name":"Glenwood Community Church","slug":"glenwood-community-church-durban","city":"Durban","lat":-29.8587,"lng":30.9997},{"name":"Phoenix Community Church","slug":"phoenix-community-church","city":"Phoenix","lat":-29.706,"lng":30.997},{"name":"Vosloorus Community Church","slug":"vosloorus-community-church","city":"Vosloorus","lat":-26.345,"lng":28.213}];
+    const churches = [{"name":"Atlantis Community Church","slug":"atlantis-community-church","city":"Atlantis","lat":-33.56,"lng":18.497},{"name":"Bellville Community Church","slug":"bellville-community-church","city":"Bellville","lat":-33.8985,"lng":18.629},{"name":"Durban North Community Church","slug":"durban-north-community-church","city":"Durban","lat":-29.784,"lng":31.037},{"name":"Glenwood Community Church","slug":"glenwood-community-church-durban","city":"Durban","lat":-29.8587,"lng":30.9997},{"name":"Phoenix Community Church","slug":"phoenix-community-church","city":"Phoenix","lat":-29.706,"lng":30.997},{"name":"The Message Church Cape Town","slug":"the-message-church-cape-town","city":"Cape Town","lat":-33.9537,"lng":18.474},{"name":"Vosloorus Community Church","slug":"vosloorus-community-church","city":"Vosloorus","lat":-26.345,"lng":28.213}];
     const map = L.map('denom-map').setView([-29.0, 24.0], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
