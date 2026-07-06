@@ -167,6 +167,193 @@ header.nav-open .nav-toggle span:nth-child(3) {
   background: var(--gold-light);
 }
 
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero p,
+.lead {
+  font-size: 20px;
+  opacity: 0.95;
+  max-width: 760px;
+  margin: 0 0 24px;
+}
+
+.hero p {
+  margin: 0 auto 32px;
+}
+
+.search-bar {
+  background: white;
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search-bar input,
+.search-bar select {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.filters {
+  background: white;
+  padding: 20px;
+  margin: 24px 0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.filter-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.filter-group select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  background: white;
+}
+
+.results {
+  margin-top: 32px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.church-grid,
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.church-card,
+.post-card,
+.detail-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+}
+
+.church-card h3,
+.post-card h3,
+.post-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.church-denomination {
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.church-address,
+.church-service-times,
+.post-card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.church-contact {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.content-page,
+.content-section {
+  margin-bottom: 36px;
+}
+
+.content-section h2,
+.detail-card h2 {
+  color: var(--navy);
+  margin: 0 0 16px;
+}
+
+.content-page h1,
+.container--medium > h1,
+.container--narrow > h1 {
+  color: var(--navy);
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a,
+.read-more,
+.content-section a,
+.content-page a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover,
+.read-more:hover,
+.content-section a:hover,
+.content-page a:hover {
+  color: var(--gold-light);
+}
+
 .clear-filters {
   background: none;
   border: none;
@@ -248,5 +435,20 @@ footer a:hover {
 
   header.nav-open .nav-menu {
     display: flex;
+  }
+
+  .hero h1,
+  .content-page h1,
+  .container--medium > h1,
+  .container--narrow > h1 {
+    font-size: 32px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar .btn-primary {
+    width: 100%;
   }
 }

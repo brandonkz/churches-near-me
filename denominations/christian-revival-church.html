@@ -1,255 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christian Revival Church Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Christian Revival Church churches near me across South Africa. Browse 5 verified churches, view locations by city, and connect with Christian Revival Church congregations.">
-  <link rel="canonical" href="https://churchesnearme.co.za/denominations/christian-revival-church.html">
-  <meta property="og:title" content="Christian Revival Church Churches in South Africa">
-  <meta property="og:description" content="Explore Christian Revival Church churches near me across South Africa. Browse 5 verified churches, view locations by city, and connect with Christian Revival Church congregations.">
-  <meta property="og:url" content="https://churchesnearme.co.za/denominations/christian-revival-church.html">
+  <title>Christian Revival Church Churches in South Africa: Directory by City</title>
+  <meta name="description" content="Browse 5 Christian Revival Church churches in South Africa. Find listings by city with addresses, contact details and service times.">
+  <link rel="canonical" href="https://www.churchesnearme.co.za/denominations/christian-revival-church.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Christian Revival Church Churches in South Africa: Directory by City">
+  <meta property="og:description" content="Browse 5 Christian Revival Church churches in South Africa. Find listings by city with addresses, contact details and service times.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.churchesnearme.co.za/denominations/christian-revival-church.html">
+  <meta property="og:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Christian Revival Church Churches in South Africa: Directory by City">
+  <meta name="twitter:description" content="Browse 5 Christian Revival Church churches in South Africa. Find listings by city with addresses, contact details and service times.">
+  <meta name="twitter:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <style>
-    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
-    .denom-hero h1 { margin-bottom: 12px; }
-    .denom-hero p { max-width: 760px; }
-    .denom-blurb { color: #475569; margin-top: 8px; }
-    .updated { font-size: 13px; color: #94a3b8; margin-top: 8px; }
-    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
-    .filter-label { font-weight: 600; }
-    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
-    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
-    .church-card h3 { margin: 0 0 8px; }
-    .church-address { color: #475569; margin-bottom: 12px; }
-    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
-    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
-    .map-wrapper { margin: 32px 0; }
-    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
-    .empty-state { color: #64748b; }
-    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
-    .faq-section { margin-top: 28px; }
-    .faq-section h2 { color: #0f172a; margin-bottom: 12px; font-size: 22px; }
-    .faq-list { display: grid; gap: 12px; }
-    .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; }
-    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: #0f172a; }
-    .faq-item p { margin: 0; color: #475569; line-height: 1.6; }
-  </style>
-</head>
-<body>
-  <main class="denom-hero">
-    <a href="/" class="back-link">← Back to homepage</a>
-    <h1>Christian Revival Church Churches in South Africa</h1>
-    <p>Explore Christian Revival Church churches near me across South Africa. Browse 5 verified churches, view locations by city, and connect with Christian Revival Church congregations.</p>
-    <p class="denom-blurb">Every Christian Revival Church church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-06-12</div>
-
-    <div class="filters">
-      <label class="filter-label" for="city-filter">Filter by city</label>
-  <select id="city-filter" class="filter-select">
-    <option value="all">All</option>
-    <option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Pietermaritzburg">Pietermaritzburg</option><option value="Pretoria">Pretoria</option>
-  </select>
-    </div>
-
-    <div class="map-wrapper">
-      <div id="denom-map" aria-label="Map of Christian Revival Church churches"></div>
-    </div>
-
-    <div class="church-grid">
-    <article class="church-card" data-denomination="Christian Revival Church" data-city="Durban">
-        <h3><a href="/churches/crc-durban/">CRC Durban</a></h3>
-        <div class="church-denom">Christian Revival Church</div>
-        <div class="church-address">Brickfield Rd, Overport, Durban</div>
-        <div class="church-links">
-          <a href="/churches/crc-durban/" class="church-link">View details</a>
-          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Johannesburg">
-        <h3><a href="/churches/crc-johannesburg-north/">CRC Johannesburg North</a></h3>
-        <div class="church-denom">Christian Revival Church</div>
-        <div class="church-address">Louis Botha Ave, Orange Grove, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/crc-johannesburg-north/" class="church-link">View details</a>
-          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Pretoria">
-        <h3><a href="/churches/crc-menlyn-pretoria/">CRC Menlyn</a></h3>
-        <div class="church-denom">Christian Revival Church</div>
-        <div class="church-address">Solomon Mahlangu Dr, Menlyn, Pretoria</div>
-        <div class="church-links">
-          <a href="/churches/crc-menlyn-pretoria/" class="church-link">View details</a>
-          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Pietermaritzburg">
-        <h3><a href="/churches/crc-pietermaritzburg/">CRC Pietermaritzburg</a></h3>
-        <div class="church-denom">Christian Revival Church</div>
-        <div class="church-address">444 Greyling Street, Pietermaritzburg</div>
-        <div class="church-links">
-          <a href="/churches/crc-pietermaritzburg/" class="church-link">View details</a>
-          <a href="https://www.crcpmb.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Christian Revival Church" data-city="Johannesburg">
-        <h3><a href="/churches/crc-randburg-johannesburg/">CRC Randburg</a></h3>
-        <div class="church-denom">Christian Revival Church</div>
-        <div class="church-address">Bram Fischer Dr, Randburg, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/crc-randburg-johannesburg/" class="church-link">View details</a>
-          <a href="https://crc.org.za" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article>
-  </div>
-
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        
-          <div class="faq-item">
-            <h3>What is a Christian Revival Church church?</h3>
-            <p>Christian Revival Church churches share a common tradition, but each congregation has its own worship style and community culture.</p>
-          </div>
-        
-          <div class="faq-item">
-            <h3>Which cities have Christian Revival Church churches?</h3>
-            <p>You can find Christian Revival Church churches in cities like Durban, Johannesburg, Pretoria, Pietermaritzburg and more across South Africa.</p>
-          </div>
-        
-          <div class="faq-item">
-            <h3>Can I add a Christian Revival Church church listing?</h3>
-            <p>Yes. Use the Add Your Church page to submit a listing and we will verify it.</p>
-          </div>
-        
-      </div>
-    </section>
-  </main>
-
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "ItemList",
+  "itemListElement": [
     {
-      "@type": "LocalBusiness",
-      "name": "CRC Durban",
-      "url": "https://churchesnearme.co.za/churches/crc-durban/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Brickfield Rd, Overport",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.853,
-        "longitude": 31.0002
-      }
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/crc-durban.html",
+      "name": "CRC Durban"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "CRC Johannesburg North",
-      "url": "https://churchesnearme.co.za/churches/crc-johannesburg-north/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Louis Botha Ave, Orange Grove",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.162,
-        "longitude": 28.077
-      }
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/crc-johannesburg-north.html",
+      "name": "CRC Johannesburg North"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "CRC Menlyn",
-      "url": "https://churchesnearme.co.za/churches/crc-menlyn-pretoria/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Solomon Mahlangu Dr, Menlyn",
-        "addressLocality": "Pretoria",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -25.7842,
-        "longitude": 28.284
-      }
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/pretoria/crc-menlyn-pretoria.html",
+      "name": "CRC Menlyn"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "CRC Pietermaritzburg",
-      "url": "https://churchesnearme.co.za/churches/crc-pietermaritzburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "444 Greyling Street",
-        "addressLocality": "Pietermaritzburg",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 0,
-        "longitude": 0
-      }
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/pietermaritzburg/crc-pietermaritzburg.html",
+      "name": "CRC Pietermaritzburg"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "CRC Randburg",
-      "url": "https://churchesnearme.co.za/churches/crc-randburg-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Bram Fischer Dr, Randburg",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.087,
-        "longitude": 27.9975
-      }
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/crc-randburg-johannesburg.html",
+      "name": "CRC Randburg"
     }
   ]
 }
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a Christian Revival Church church?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Christian Revival Church churches share a common tradition, but each congregation has its own worship style and community culture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which cities have Christian Revival Church churches?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can find Christian Revival Church churches in cities like Durban, Johannesburg, Pretoria, Pietermaritzburg and more across South Africa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I add a Christian Revival Church church listing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Use the Add Your Church page to submit a listing and we will verify it."
-      }
-    }
-  ]
-}
-  </script>
+</script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -259,58 +75,117 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://churchesnearme.co.za/"
+      "item": "https://www.churchesnearme.co.za/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Christian Revival Church churches",
-      "item": "https://churchesnearme.co.za/denominations/christian-revival-church.html"
+      "item": "https://www.churchesnearme.co.za/denominations/christian-revival-church.html"
     }
   ]
 }
-  </script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a class="logo" href="/">ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+          <a href="/" class="active">Home</a>
+          <a href="/claim.html">Add or Claim Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="container--medium" id="main">
+      <h1>Christian Revival Church Churches in South Africa</h1>
+      <p class="lead">Browse 5 Christian Revival Church churches in South Africa. Find listings by city with addresses, contact details and service times.</p>
+      <section class="content-section">
+      <h2>Durban</h2>
+      <div class="church-grid"><a href="/churches/kwazulu-natal/durban/crc-durban.html" class="church-card-link">
+    <article class="church-card" data-denomination="Christian Revival Church" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>CRC Durban</h3>
+      <div class="church-denomination">Christian Revival Church</div>
+      <div class="church-address">Brickfield Rd, Overport, Durban</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Johannesburg</h2>
+      <div class="church-grid"><a href="/churches/gauteng/johannesburg/crc-johannesburg-north.html" class="church-card-link">
+    <article class="church-card" data-denomination="Christian Revival Church" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>CRC Johannesburg North</h3>
+      <div class="church-denomination">Christian Revival Church</div>
+      <div class="church-address">Louis Botha Ave, Orange Grove, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/gauteng/johannesburg/crc-randburg-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Christian Revival Church" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>CRC Randburg</h3>
+      <div class="church-denomination">Christian Revival Church</div>
+      <div class="church-address">Bram Fischer Dr, Randburg, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Pietermaritzburg</h2>
+      <div class="church-grid"><a href="/churches/kwazulu-natal/pietermaritzburg/crc-pietermaritzburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Christian Revival Church" data-city="Pietermaritzburg" data-province="KwaZulu-Natal">
+
+      <h3>CRC Pietermaritzburg</h3>
+      <div class="church-denomination">Christian Revival Church</div>
+      <div class="church-address">444 Greyling Street, Pietermaritzburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Pretoria</h2>
+      <div class="church-grid"><a href="/churches/gauteng/pretoria/crc-menlyn-pretoria.html" class="church-card-link">
+    <article class="church-card" data-denomination="Christian Revival Church" data-city="Pretoria" data-province="Gauteng">
+
+      <h3>CRC Menlyn</h3>
+      <div class="church-denomination">Christian Revival Church</div>
+      <div class="church-address">Solomon Mahlangu Dr, Menlyn, Pretoria</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section>
+    </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/about.html">About</a> |
+        <a href="/contact.html">Contact</a> |
+        <a href="/privacy.html">Privacy</a> |
+        <a href="/claim.html">Add or Claim Your Church</a> |
+        <a href="/featured.html">Get Featured</a> |
+        <a href="/blog/">Blog</a>
+      </p>
+    </div>
+  </footer>
   <script>
-    const churches = [{"name":"CRC Durban","slug":"crc-durban","city":"Durban","lat":-29.853,"lng":31.0002},{"name":"CRC Johannesburg North","slug":"crc-johannesburg-north","city":"Johannesburg","lat":-26.162,"lng":28.077},{"name":"CRC Menlyn","slug":"crc-menlyn-pretoria","city":"Pretoria","lat":-25.7842,"lng":28.284},{"name":"CRC Pietermaritzburg","slug":"crc-pietermaritzburg","city":"Pietermaritzburg","lat":0,"lng":0},{"name":"CRC Randburg","slug":"crc-randburg-johannesburg","city":"Johannesburg","lat":-26.087,"lng":27.9975}];
-    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const markers = [];
-    churches.forEach(church => {
-      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
-      const marker = L.marker([church.lat, church.lng]).addTo(map);
-      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
-      markers.push(marker);
-    });
-
-    if (markers.length) {
-      const group = L.featureGroup(markers);
-      map.fitBounds(group.getBounds().pad(0.2));
-    }
-
-    const cityFilter = document.getElementById('city-filter');
-    if (cityFilter) {
-      cityFilter.addEventListener('change', event => {
-        const value = event.target.value;
-        const cards = document.querySelectorAll('.church-card');
-        cards.forEach(card => {
-          const city = card.dataset.city || '';
-          const show = value === 'all' || city === value;
-          card.style.display = show ? 'block' : 'none';
-        });
+    var headerEl = document.querySelector('header');
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && headerEl) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = headerEl.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
       });
-    }
-
-    function escapeHtml(value) {
-      return String(value || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
     }
   </script>
 </body>

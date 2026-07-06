@@ -1,580 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pentecostal Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Pentecostal churches near me across South Africa. Browse 18 verified churches, view locations by city, and connect with Pentecostal congregations.">
-  <link rel="canonical" href="https://churchesnearme.co.za/denominations/pentecostal.html">
-  <meta property="og:title" content="Pentecostal Churches in South Africa">
-  <meta property="og:description" content="Explore Pentecostal churches near me across South Africa. Browse 18 verified churches, view locations by city, and connect with Pentecostal congregations.">
-  <meta property="og:url" content="https://churchesnearme.co.za/denominations/pentecostal.html">
+  <title>Pentecostal Churches in South Africa: Directory by City</title>
+  <meta name="description" content="Browse 18 Pentecostal churches in South Africa. Find listings by city with addresses, contact details and service times.">
+  <link rel="canonical" href="https://www.churchesnearme.co.za/denominations/pentecostal.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Pentecostal Churches in South Africa: Directory by City">
+  <meta property="og:description" content="Browse 18 Pentecostal churches in South Africa. Find listings by city with addresses, contact details and service times.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.churchesnearme.co.za/denominations/pentecostal.html">
+  <meta property="og:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pentecostal Churches in South Africa: Directory by City">
+  <meta name="twitter:description" content="Browse 18 Pentecostal churches in South Africa. Find listings by city with addresses, contact details and service times.">
+  <meta name="twitter:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <style>
-    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
-    .denom-hero h1 { margin-bottom: 12px; }
-    .denom-hero p { max-width: 760px; }
-    .denom-blurb { color: #475569; margin-top: 8px; }
-    .updated { font-size: 13px; color: #94a3b8; margin-top: 8px; }
-    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
-    .filter-label { font-weight: 600; }
-    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
-    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
-    .church-card h3 { margin: 0 0 8px; }
-    .church-address { color: #475569; margin-bottom: 12px; }
-    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
-    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
-    .map-wrapper { margin: 32px 0; }
-    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
-    .empty-state { color: #64748b; }
-    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
-    .faq-section { margin-top: 28px; }
-    .faq-section h2 { color: #0f172a; margin-bottom: 12px; font-size: 22px; }
-    .faq-list { display: grid; gap: 12px; }
-    .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; }
-    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: #0f172a; }
-    .faq-item p { margin: 0; color: #475569; line-height: 1.6; }
-  </style>
-</head>
-<body>
-  <main class="denom-hero">
-    <a href="/" class="back-link">← Back to homepage</a>
-    <h1>Pentecostal Churches in South Africa</h1>
-    <p>Explore Pentecostal churches near me across South Africa. Browse 18 verified churches, view locations by city, and connect with Pentecostal congregations.</p>
-    <p class="denom-blurb">Every Pentecostal church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-06-12</div>
-
-    <div class="filters">
-      <label class="filter-label" for="city-filter">Filter by city</label>
-  <select id="city-filter" class="filter-select">
-    <option value="all">All</option>
-    <option value="Boksburg">Boksburg</option><option value="Cape Town">Cape Town</option><option value="Durban">Durban</option><option value="Johannesburg">Johannesburg</option><option value="Pinetown">Pinetown</option><option value="Randburg">Randburg</option><option value="Somerset West">Somerset West</option><option value="Stellenbosch">Stellenbosch</option><option value="Tembisa">Tembisa</option>
-  </select>
-    </div>
-
-    <div class="map-wrapper">
-      <div id="denom-map" aria-label="Map of Pentecostal churches"></div>
-    </div>
-
-    <div class="church-grid">
-    <article class="church-card" data-denomination="Pentecostal" data-city="Tembisa">
-        <h3><a href="/churches/christian-revival-church-tembisa/">Christian Revival Church Tembisa</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Umthambeka, Tembisa, Tembisa</div>
-        <div class="church-links">
-          <a href="/churches/christian-revival-church-tembisa/" class="church-link">View details</a>
-          
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
-        <h3><a href="/churches/durban-christian-centre-durban/">Durban Christian Centre</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Hope Road, Mobeni Heights, Durban</div>
-        <div class="church-links">
-          <a href="/churches/durban-christian-centre-durban/" class="church-link">View details</a>
-          <a href="https://www.durbanchristiancentre.com/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
-        <h3><a href="/churches/durban-christian-centre-south/">Durban Christian Centre South</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Amanzimtoti, Durban</div>
-        <div class="church-links">
-          <a href="/churches/durban-christian-centre-south/" class="church-link">View details</a>
-          <a href="https://dcc.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
-        <h3><a href="/churches/grace-bible-church-johannesburg/">Grace Bible Church Soweto</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Joburg Theatre, 163 Civic Boulevard, Braamfontein, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/grace-bible-church-johannesburg/" class="church-link">View details</a>
-          <a href="https://www.gracebiblechurch.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
-        <h3><a href="/churches/grace-family-church-durban/">Grace Family Church Durban</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Umhlanga, Durban</div>
-        <div class="church-links">
-          <a href="/churches/grace-family-church-durban/" class="church-link">View details</a>
-          <a href="https://www.grace.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Pinetown">
-        <h3><a href="/churches/highway-christian-community-pinetown/">Highway Christian Community</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">10 Harvey Road, Pinetown, Pinetown</div>
-        <div class="church-links">
-          <a href="/churches/highway-christian-community-pinetown/" class="church-link">View details</a>
-          <a href="https://highway.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
-        <h3><a href="/churches/highway-christian-community-pinetown-durban/">Highway Christian Community</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">10 Harvey Road, Pinetown, Durban</div>
-        <div class="church-links">
-          <a href="/churches/highway-christian-community-pinetown-durban/" class="church-link">View details</a>
-          <a href="https://highway.org.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Cape Town">
-        <h3><a href="/churches/hillsong-cape-town/">Hillsong Cape Town</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Century City Conference Centre, 1 Kinetic Way, Century City, Cape Town</div>
-        <div class="church-links">
-          <a href="/churches/hillsong-cape-town/" class="church-link">View details</a>
-          <a href="https://hillsong.com/southafrica/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
-        <h3><a href="/churches/hillsong-church-durban/">Hillsong Church Durban</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">45 Vause Rd, Musgrave, Durban, Durban</div>
-        <div class="church-links">
-          <a href="/churches/hillsong-church-durban/" class="church-link">View details</a>
-          <a href="https://hillsong.com/southafrica/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Somerset West">
-        <h3><a href="/churches/hillsong-church-somerset-west/">Hillsong Church Somerset West</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">The Pines Center, Reese Road, Somerset West, Somerset West</div>
-        <div class="church-links">
-          <a href="/churches/hillsong-church-somerset-west/" class="church-link">View details</a>
-          <a href="https://hillsong.com/southafrica/somersetwest/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Stellenbosch">
-        <h3><a href="/churches/hillsong-church-stellenbosch/">Hillsong Church Stellenbosch</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">HB Thom Theatre, 15 Victoria St, Stellenbosch, Stellenbosch</div>
-        <div class="church-links">
-          <a href="/churches/hillsong-church-stellenbosch/" class="church-link">View details</a>
-          <a href="https://hillsong.com/southafrica/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Durban">
-        <h3><a href="/churches/new-covenant-fellowship-durban/">New Covenant Fellowship</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Durban, Durban</div>
-        <div class="church-links">
-          <a href="/churches/new-covenant-fellowship-durban/" class="church-link">View details</a>
-          <a href="https://ncf.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Boksburg">
-        <h3><a href="/churches/new-life-christian-church-boksburg/">New Life Christian Church Boksburg</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">126 Commissioner St, Boksburg, Boksburg</div>
-        <div class="church-links">
-          <a href="/churches/new-life-christian-church-boksburg/" class="church-link">View details</a>
-          
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
-        <h3><a href="/churches/rhema-bible-church-johannesburg/">Rhema Bible Church</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Cnr Rabie &amp; Hans Schoeman Streets, Randpark Ridge, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/rhema-bible-church-johannesburg/" class="church-link">View details</a>
-          <a href="https://www.rhema.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Randburg">
-        <h3><a href="/churches/rhema-bible-church-randburg/">Rhema Bible Church</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Cnr Rabie and Hans Schoeman Sts, Randpark Ridge, Randburg</div>
-        <div class="church-links">
-          <a href="/churches/rhema-bible-church-randburg/" class="church-link">View details</a>
-          <a href="https://www.rhemabiblechurch.com/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
-        <h3><a href="/churches/rivers-church-sandton-johannesburg/">Rivers Church Sandton</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Sandton, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/rivers-church-sandton-johannesburg/" class="church-link">View details</a>
-          <a href="https://rivers.church/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
-        <h3><a href="/churches/the-life-church-johannesburg/">The Life Church Johannesburg</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Northern Suburbs, Johannesburg, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/the-life-church-johannesburg/" class="church-link">View details</a>
-          <a href="https://thelifechurch.co.za/" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article><article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg">
-        <h3><a href="/churches/the-river-church-johannesburg/">The River Church Johannesburg</a></h3>
-        <div class="church-denom">Pentecostal</div>
-        <div class="church-address">Braamfontein, Johannesburg, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/the-river-church-johannesburg/" class="church-link">View details</a>
-          <a href="https://www.theriverchurch.co.za" target="_blank" rel="noopener" class="church-link">Website</a>
-        </div>
-      </article>
-  </div>
-
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        
-          <div class="faq-item">
-            <h3>What is a Pentecostal church?</h3>
-            <p>Pentecostal churches share a common tradition, but each congregation has its own worship style and community culture.</p>
-          </div>
-        
-          <div class="faq-item">
-            <h3>Which cities have Pentecostal churches?</h3>
-            <p>You can find Pentecostal churches in cities like Tembisa, Durban, Johannesburg, Pinetown and more across South Africa.</p>
-          </div>
-        
-          <div class="faq-item">
-            <h3>Can I add a Pentecostal church listing?</h3>
-            <p>Yes. Use the Add Your Church page to submit a listing and we will verify it.</p>
-          </div>
-        
-      </div>
-    </section>
-  </main>
-
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "ItemList",
+  "itemListElement": [
     {
-      "@type": "LocalBusiness",
-      "name": "Christian Revival Church Tembisa",
-      "url": "https://churchesnearme.co.za/churches/christian-revival-church-tembisa/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Umthambeka, Tembisa",
-        "addressLocality": "Tembisa",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -25.9976,
-        "longitude": 28.2283
-      }
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/tembisa/christian-revival-church-tembisa.html",
+      "name": "Christian Revival Church Tembisa"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Durban Christian Centre",
-      "url": "https://churchesnearme.co.za/churches/durban-christian-centre-durban/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hope Road, Mobeni Heights",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.923,
-        "longitude": 30.958
-      }
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/durban-christian-centre-durban.html",
+      "name": "Durban Christian Centre"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Durban Christian Centre South",
-      "url": "https://churchesnearme.co.za/churches/durban-christian-centre-south/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Amanzimtoti",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -30.052,
-        "longitude": 30.884
-      }
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/durban-christian-centre-south.html",
+      "name": "Durban Christian Centre South"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Grace Bible Church Soweto",
-      "url": "https://churchesnearme.co.za/churches/grace-bible-church-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Joburg Theatre, 163 Civic Boulevard, Braamfontein",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.196,
-        "longitude": 28.039
-      }
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/grace-bible-church-johannesburg.html",
+      "name": "Grace Bible Church Soweto"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Grace Family Church Durban",
-      "url": "https://churchesnearme.co.za/churches/grace-family-church-durban/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Umhlanga",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.723,
-        "longitude": 31.068
-      }
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/grace-family-church-durban.html",
+      "name": "Grace Family Church Durban"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Highway Christian Community",
-      "url": "https://churchesnearme.co.za/churches/highway-christian-community-pinetown/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harvey Road, Pinetown",
-        "addressLocality": "Pinetown",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.816,
-        "longitude": 30.861
-      }
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/pinetown/highway-christian-community-pinetown.html",
+      "name": "Highway Christian Community"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Highway Christian Community",
-      "url": "https://churchesnearme.co.za/churches/highway-christian-community-pinetown-durban/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "10 Harvey Road, Pinetown",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.817,
-        "longitude": 30.861
-      }
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/highway-christian-community-pinetown-durban.html",
+      "name": "Highway Christian Community"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Hillsong Cape Town",
-      "url": "https://churchesnearme.co.za/churches/hillsong-cape-town/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Century City Conference Centre, 1 Kinetic Way, Century City",
-        "addressLocality": "Cape Town",
-        "addressRegion": "Western Cape",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -33.8892,
-        "longitude": 18.5131
-      }
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://www.churchesnearme.co.za/churches/western-cape/cape-town/hillsong-cape-town.html",
+      "name": "Hillsong Cape Town"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Hillsong Church Durban",
-      "url": "https://churchesnearme.co.za/churches/hillsong-church-durban/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "45 Vause Rd, Musgrave, Durban",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.8551,
-        "longitude": 30.9958
-      }
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/hillsong-church-durban.html",
+      "name": "Hillsong Church Durban"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Hillsong Church Somerset West",
-      "url": "https://churchesnearme.co.za/churches/hillsong-church-somerset-west/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "The Pines Center, Reese Road, Somerset West",
-        "addressLocality": "Somerset West",
-        "addressRegion": "Western Cape",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -34.079,
-        "longitude": 18.843
-      }
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://www.churchesnearme.co.za/churches/western-cape/somerset-west/hillsong-church-somerset-west.html",
+      "name": "Hillsong Church Somerset West"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Hillsong Church Stellenbosch",
-      "url": "https://churchesnearme.co.za/churches/hillsong-church-stellenbosch/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "HB Thom Theatre, 15 Victoria St, Stellenbosch",
-        "addressLocality": "Stellenbosch",
-        "addressRegion": "Western Cape",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 0,
-        "longitude": 0
-      }
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://www.churchesnearme.co.za/churches/western-cape/stellenbosch/hillsong-church-stellenbosch.html",
+      "name": "Hillsong Church Stellenbosch"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "New Covenant Fellowship",
-      "url": "https://churchesnearme.co.za/churches/new-covenant-fellowship-durban/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Durban",
-        "addressLocality": "Durban",
-        "addressRegion": "KwaZulu-Natal",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -29.806,
-        "longitude": 31.012
-      }
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://www.churchesnearme.co.za/churches/kwazulu-natal/durban/new-covenant-fellowship-durban.html",
+      "name": "New Covenant Fellowship"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "New Life Christian Church Boksburg",
-      "url": "https://churchesnearme.co.za/churches/new-life-christian-church-boksburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "126 Commissioner St, Boksburg",
-        "addressLocality": "Boksburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.2139,
-        "longitude": 28.259
-      }
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/boksburg/new-life-christian-church-boksburg.html",
+      "name": "New Life Christian Church Boksburg"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Rhema Bible Church",
-      "url": "https://churchesnearme.co.za/churches/rhema-bible-church-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Cnr Rabie & Hans Schoeman Streets, Randpark Ridge",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.102,
-        "longitude": 27.971
-      }
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/rhema-bible-church-johannesburg.html",
+      "name": "Rhema Bible Church"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Rhema Bible Church",
-      "url": "https://churchesnearme.co.za/churches/rhema-bible-church-randburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Cnr Rabie and Hans Schoeman Sts, Randpark Ridge",
-        "addressLocality": "Randburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 0,
-        "longitude": 0
-      }
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/randburg/rhema-bible-church-randburg.html",
+      "name": "Rhema Bible Church"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "Rivers Church Sandton",
-      "url": "https://churchesnearme.co.za/churches/rivers-church-sandton-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Sandton",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.107,
-        "longitude": 28.052
-      }
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/rivers-church-sandton-johannesburg.html",
+      "name": "Rivers Church Sandton"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "The Life Church Johannesburg",
-      "url": "https://churchesnearme.co.za/churches/the-life-church-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Northern Suburbs, Johannesburg",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.074,
-        "longitude": 28.01
-      }
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/the-life-church-johannesburg.html",
+      "name": "The Life Church Johannesburg"
     },
     {
-      "@type": "LocalBusiness",
-      "name": "The River Church Johannesburg",
-      "url": "https://churchesnearme.co.za/churches/the-river-church-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Braamfontein, Johannesburg",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.1929,
-        "longitude": 28.0341
-      }
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/the-river-church-johannesburg.html",
+      "name": "The River Church Johannesburg"
     }
   ]
 }
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a Pentecostal church?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pentecostal churches share a common tradition, but each congregation has its own worship style and community culture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which cities have Pentecostal churches?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can find Pentecostal churches in cities like Tembisa, Durban, Johannesburg, Pinetown and more across South Africa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I add a Pentecostal church listing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Use the Add Your Church page to submit a listing and we will verify it."
-      }
-    }
-  ]
-}
-  </script>
+</script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -584,58 +153,249 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://churchesnearme.co.za/"
+      "item": "https://www.churchesnearme.co.za/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Pentecostal churches",
-      "item": "https://churchesnearme.co.za/denominations/pentecostal.html"
+      "item": "https://www.churchesnearme.co.za/denominations/pentecostal.html"
     }
   ]
 }
-  </script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a class="logo" href="/">ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+          <a href="/" class="active">Home</a>
+          <a href="/claim.html">Add or Claim Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="container--medium" id="main">
+      <h1>Pentecostal Churches in South Africa</h1>
+      <p class="lead">Browse 18 Pentecostal churches in South Africa. Find listings by city with addresses, contact details and service times.</p>
+      <section class="content-section">
+      <h2>Boksburg</h2>
+      <div class="church-grid"><a href="/churches/gauteng/boksburg/new-life-christian-church-boksburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Boksburg" data-province="Gauteng">
+
+      <h3>New Life Christian Church Boksburg</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">126 Commissioner St, Boksburg, Boksburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Cape Town</h2>
+      <div class="church-grid"><a href="/churches/western-cape/cape-town/hillsong-cape-town.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Cape Town" data-province="Western Cape">
+
+      <h3>Hillsong Cape Town</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Century City Conference Centre, 1 Kinetic Way, Century City, Cape Town</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Durban</h2>
+      <div class="church-grid"><a href="/churches/kwazulu-natal/durban/durban-christian-centre-durban.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>Durban Christian Centre</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Hope Road, Mobeni Heights, Durban</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/kwazulu-natal/durban/durban-christian-centre-south.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>Durban Christian Centre South</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Amanzimtoti, Durban</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/kwazulu-natal/durban/grace-family-church-durban.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>Grace Family Church Durban</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Umhlanga, Durban</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/kwazulu-natal/durban/highway-christian-community-pinetown-durban.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>Highway Christian Community</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">10 Harvey Road, Pinetown, Durban</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/kwazulu-natal/durban/hillsong-church-durban.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>Hillsong Church Durban</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">45 Vause Rd, Musgrave, Durban, Durban</div>
+      <div class="church-service-times"><strong>Service Times:</strong> Sunday 9:00 AM, 11:00 AM</div>
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/kwazulu-natal/durban/new-covenant-fellowship-durban.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Durban" data-province="KwaZulu-Natal">
+
+      <h3>New Covenant Fellowship</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Durban, Durban</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Johannesburg</h2>
+      <div class="church-grid"><a href="/churches/gauteng/johannesburg/grace-bible-church-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>Grace Bible Church Soweto</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Joburg Theatre, 163 Civic Boulevard, Braamfontein, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/gauteng/johannesburg/rhema-bible-church-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>Rhema Bible Church</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Cnr Rabie &amp; Hans Schoeman Streets, Randpark Ridge, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/gauteng/johannesburg/rivers-church-sandton-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>Rivers Church Sandton</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Sandton, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/gauteng/johannesburg/the-life-church-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>The Life Church Johannesburg</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Northern Suburbs, Johannesburg, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a><a href="/churches/gauteng/johannesburg/the-river-church-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>The River Church Johannesburg</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Braamfontein, Johannesburg, Johannesburg</div>
+      <div class="church-service-times"><strong>Service Times:</strong> Sunday: 10:00 AM, 6:00 PM</div>
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span><span class="church-link-tag">Call</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Pinetown</h2>
+      <div class="church-grid"><a href="/churches/kwazulu-natal/pinetown/highway-christian-community-pinetown.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Pinetown" data-province="KwaZulu-Natal">
+
+      <h3>Highway Christian Community</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">10 Harvey Road, Pinetown, Pinetown</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Randburg</h2>
+      <div class="church-grid"><a href="/churches/gauteng/randburg/rhema-bible-church-randburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Randburg" data-province="Gauteng">
+
+      <h3>Rhema Bible Church</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Cnr Rabie and Hans Schoeman Sts, Randpark Ridge, Randburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span><span class="church-link-tag">Call</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Somerset West</h2>
+      <div class="church-grid"><a href="/churches/western-cape/somerset-west/hillsong-church-somerset-west.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Somerset West" data-province="Western Cape">
+
+      <h3>Hillsong Church Somerset West</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">The Pines Center, Reese Road, Somerset West, Somerset West</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span><span class="church-link-tag">Call</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Stellenbosch</h2>
+      <div class="church-grid"><a href="/churches/western-cape/stellenbosch/hillsong-church-stellenbosch.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Stellenbosch" data-province="Western Cape">
+
+      <h3>Hillsong Church Stellenbosch</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">HB Thom Theatre, 15 Victoria St, Stellenbosch, Stellenbosch</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Website</span></div>
+    </article>
+  </a></div>
+    </section><section class="content-section">
+      <h2>Tembisa</h2>
+      <div class="church-grid"><a href="/churches/gauteng/tembisa/christian-revival-church-tembisa.html" class="church-card-link">
+    <article class="church-card" data-denomination="Pentecostal" data-city="Tembisa" data-province="Gauteng">
+
+      <h3>Christian Revival Church Tembisa</h3>
+      <div class="church-denomination">Pentecostal</div>
+      <div class="church-address">Umthambeka, Tembisa, Tembisa</div>
+      <div class="church-service-times"><strong>Service Times:</strong> Sunday 9:00 AM</div>
+      <div class="church-contact"><span class="church-link-tag">View details</span></div>
+    </article>
+  </a></div>
+    </section>
+    </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/about.html">About</a> |
+        <a href="/contact.html">Contact</a> |
+        <a href="/privacy.html">Privacy</a> |
+        <a href="/claim.html">Add or Claim Your Church</a> |
+        <a href="/featured.html">Get Featured</a> |
+        <a href="/blog/">Blog</a>
+      </p>
+    </div>
+  </footer>
   <script>
-    const churches = [{"name":"Christian Revival Church Tembisa","slug":"christian-revival-church-tembisa","city":"Tembisa","lat":-25.9976,"lng":28.2283},{"name":"Durban Christian Centre","slug":"durban-christian-centre-durban","city":"Durban","lat":-29.923,"lng":30.958},{"name":"Durban Christian Centre South","slug":"durban-christian-centre-south","city":"Durban","lat":-30.052,"lng":30.884},{"name":"Grace Bible Church Soweto","slug":"grace-bible-church-johannesburg","city":"Johannesburg","lat":-26.196,"lng":28.039},{"name":"Grace Family Church Durban","slug":"grace-family-church-durban","city":"Durban","lat":-29.723,"lng":31.068},{"name":"Highway Christian Community","slug":"highway-christian-community-pinetown","city":"Pinetown","lat":-29.816,"lng":30.861},{"name":"Highway Christian Community","slug":"highway-christian-community-pinetown-durban","city":"Durban","lat":-29.817,"lng":30.861},{"name":"Hillsong Cape Town","slug":"hillsong-cape-town","city":"Cape Town","lat":-33.8892,"lng":18.5131},{"name":"Hillsong Church Durban","slug":"hillsong-church-durban","city":"Durban","lat":-29.8551,"lng":30.9958},{"name":"Hillsong Church Somerset West","slug":"hillsong-church-somerset-west","city":"Somerset West","lat":-34.079,"lng":18.843},{"name":"Hillsong Church Stellenbosch","slug":"hillsong-church-stellenbosch","city":"Stellenbosch","lat":0,"lng":0},{"name":"New Covenant Fellowship","slug":"new-covenant-fellowship-durban","city":"Durban","lat":-29.806,"lng":31.012},{"name":"New Life Christian Church Boksburg","slug":"new-life-christian-church-boksburg","city":"Boksburg","lat":-26.2139,"lng":28.259},{"name":"Rhema Bible Church","slug":"rhema-bible-church-johannesburg","city":"Johannesburg","lat":-26.102,"lng":27.971},{"name":"Rhema Bible Church","slug":"rhema-bible-church-randburg","city":"Randburg","lat":0,"lng":0},{"name":"Rivers Church Sandton","slug":"rivers-church-sandton-johannesburg","city":"Johannesburg","lat":-26.107,"lng":28.052},{"name":"The Life Church Johannesburg","slug":"the-life-church-johannesburg","city":"Johannesburg","lat":-26.074,"lng":28.01},{"name":"The River Church Johannesburg","slug":"the-river-church-johannesburg","city":"Johannesburg","lat":-26.1929,"lng":28.0341}];
-    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const markers = [];
-    churches.forEach(church => {
-      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
-      const marker = L.marker([church.lat, church.lng]).addTo(map);
-      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
-      markers.push(marker);
-    });
-
-    if (markers.length) {
-      const group = L.featureGroup(markers);
-      map.fitBounds(group.getBounds().pad(0.2));
-    }
-
-    const cityFilter = document.getElementById('city-filter');
-    if (cityFilter) {
-      cityFilter.addEventListener('change', event => {
-        const value = event.target.value;
-        const cards = document.querySelectorAll('.church-card');
-        cards.forEach(card => {
-          const city = card.dataset.city || '';
-          const show = value === 'all' || city === value;
-          card.style.display = show ? 'block' : 'none';
-        });
+    var headerEl = document.querySelector('header');
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && headerEl) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = headerEl.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
       });
-    }
-
-    function escapeHtml(value) {
-      return String(value || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
     }
   </script>
 </body>

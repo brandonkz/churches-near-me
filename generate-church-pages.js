@@ -600,7 +600,7 @@ ${JSON.stringify(breadcrumbSchema, null, 2)}
     <div class="container">
       <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
       <p style="margin-top: 8px;">
-        <a href="/submit.html">Add Your Church</a> | 
+        <a href="/submit.html">Add Your Church</a> |
         <a href="/featured.html">Get Featured (R199/mo)</a>
       </p>
     </div>

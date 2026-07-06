@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCB9V8S30Y"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-YCB9V8S30Y");</script>
+<script>window.dataLayer=window.dataLayer|[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-YCB9V8S30Y");</script>
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -12,18 +12,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Claim Your Church | ChurchesNearMe South Africa</title>
   <meta name="description" content="Claim your church listing on ChurchesNearMe.co.za. Update your info, add service times, photos, and reach more people looking for a church home.">
-  <link rel="canonical" href="https://churchesnearme.co.za/claim.html">
+  <link rel="canonical" href="https://www.churchesnearme.co.za/claim.html">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#1a2744">
   <meta property="og:title" content="Claim Your Church | ChurchesNearMe South Africa">
   <meta property="og:description" content="Claim your church listing on ChurchesNearMe.co.za. Update your info and reach more people.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://churchesnearme.co.za/claim.html">
+  <meta property="og:url" content="https://www.churchesnearme.co.za/claim.html">
   <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
   <meta property="og:locale" content="en_ZA">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Claim Your Church | ChurchesNearMe South Africa">
   <meta name="twitter:description" content="Claim your church listing on ChurchesNearMe.co.za. Update your info and reach more people.">
+  <meta name="twitter:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -173,10 +175,9 @@
         </button>
         <nav class="nav-menu" id="primary-nav" aria-label="Primary">
           <a href="/">Home</a>
-          <a href="/claim.html">Add Your Church</a>
-          <a href="/claim.html">Claim Your Church</a>
+          <a href="/claim.html">Add or Claim Your Church</a>
           <a href="/featured.html">Get Featured</a>
-          <a href="/blog/index.html">Blog</a>
+          <a href="/blog/">Blog</a>
         </nav>
       </div>
     </div>
@@ -321,8 +322,8 @@
       <form name="PayFastPayNowForm" action="https://www.payfast.co.za/eng/process" method="post" style="margin-bottom:16px;">
         <input type="hidden" name="merchant_id" value="10803069">
         <input type="hidden" name="merchant_key" value="heptrxgjismzp">
-        <input type="hidden" name="return_url" value="https://churchesnearme.co.za/claim.html?payment=success">
-        <input type="hidden" name="cancel_url" value="https://churchesnearme.co.za/claim.html?payment=cancelled">
+        <input type="hidden" name="return_url" value="https://www.churchesnearme.co.za/claim.html?payment=success">
+        <input type="hidden" name="cancel_url" value="https://www.churchesnearme.co.za/claim.html?payment=cancelled">
         <input type="hidden" name="notify_url" value="https://fuddzrlnbrseofguuikp.supabase.co/functions/v1/payfast-itn">
         <input type="hidden" name="m_payment_id" id="payfastPaymentId" value="cnm_claim_r299">
         <input type="hidden" name="amount" value="0.00">
@@ -350,7 +351,7 @@
   <footer>
     <div class="container">
       <p>© 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
-      <p><a href="/claim.html">Add Your Church</a> | <a href="/claim.html">Claim Your Church</a> | <a href="/featured.html">Get Featured</a> | <a href="/blog/index.html">Blog</a></p>
+      <p><a href="/claim.html">Add or Claim Your Church</a> | <a href="/featured.html">Get Featured</a> | <a href="/blog/">Blog</a></p>
     </div>
   </footer>
 
@@ -380,10 +381,10 @@
           byCity[city].forEach(function(c) {
             var opt = document.createElement('option');
             opt.value = c.id;
-            opt.textContent = c.name + ' (' + (c.denomination || 'Church') + ')';
+            opt.textContent = c.name + ' (' + (c.denomination | 'Church') + ')';
             opt.dataset.slug = c.slug;
             opt.dataset.city = c.city;
-            opt.dataset.denom = c.denomination || '';
+            opt.dataset.denom = c.denomination | '';
             opt.dataset.name = c.name;
             group.appendChild(opt);
           });
@@ -414,7 +415,7 @@
 
     function showPreview(church) {
       var el = document.getElementById('churchPreview');
-      el.innerHTML = '<div class="church-preview"><h2>' + church.name + '</h2><div class="cp-denom">' + (church.denomination || 'Church') + '</div><div class="cp-addr">📍 ' + church.city + '</div><a href="/churches/' + church.slug + '/" style="color:var(--gold);font-size:0.9rem;">View current listing →</a></div>';
+      el.innerHTML = '<div class="church-preview"><h2>' + church.name + '</h2><div class="cp-denom">' + (church.denomination | 'Church') + '</div><div class="cp-addr">📍 ' + church.city + '</div><a href="/church.html?slug=' + church.slug + '" style="color:var(--gold);font-size:0.9rem;">View current listing →</a></div>';
       el.style.display = 'block';
     }
 
@@ -430,10 +431,10 @@
         var opt = isManual ? null : document.getElementById('churchSelect').options[document.getElementById('churchSelect').selectedIndex];
 
         var claim = {
-          name: isManual ? document.getElementById('manualName').value : (opt.dataset.name || 'Unknown'),
-          denomination: isManual ? document.getElementById('manualDenom').value : (opt.dataset.denom || ''),
+          name: isManual ? document.getElementById('manualName').value : (opt.dataset.name | 'Unknown'),
+          denomination: isManual ? document.getElementById('manualDenom').value : (opt.dataset.denom | ''),
           address: isManual ? document.getElementById('manualAddress').value : '',
-          city: isManual ? document.getElementById('manualCity').value : (opt.dataset.city || ''),
+          city: isManual ? document.getElementById('manualCity').value : (opt.dataset.city | ''),
           province: '',
           phone: document.getElementById('claimPhone').value,
           email: document.getElementById('claimEmail').value,
@@ -502,12 +503,12 @@
       // Option 1: Yoco Payment Link (create at dashboard.yoco.com/payment-links)
       // Option 2: PayFast subscription (payfast.co.za)
       // For now, open a mailto as fallback
-      var churchName = document.getElementById('churchSelect').options[document.getElementById('churchSelect').selectedIndex].dataset.name || 'Unknown';
+      var churchName = document.getElementById('churchSelect').options[document.getElementById('churchSelect').selectedIndex].dataset.name | 'Unknown';
       var email = document.getElementById('claimEmail').value;
-      
+
       // Replace this URL with your actual Yoco payment link
       var paymentUrl = 'https://pay.yoco.com/churchesnearme';
-      
+
       // If no payment link set up yet, email fallback
       if (paymentUrl === 'https://pay.yoco.com/churchesnearme') {
         window.location.href = 'mailto:info@churchesnearme.co.za?subject=Church Claim Payment - ' + encodeURIComponent(churchName) + '&body=Hi,%0A%0AI submitted a claim for ' + encodeURIComponent(churchName) + '.%0A%0APlease send me payment details for the R299/month early bird plan.%0A%0AEmail: ' + encodeURIComponent(email) + '%0A%0AThanks';

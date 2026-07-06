@@ -4,6 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ChurchesNearMe — War Room</title>
+  <meta property="og:url" content="https://www.churchesnearme.co.za/war-room.html">
+  <link rel="canonical" href="https://www.churchesnearme.co.za/war-room.html">
 <style>
   :root{
     --bg:#0a0a0a;
@@ -83,15 +85,19 @@
   .note-entry{padding:8px;border-bottom:1px solid var(--border);color:var(--muted);font-size:12px}
   @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
 </style>
+  <meta property="og:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
 </head>
 <body>
+    <h1 class="sr-only">ChurchesNearMe War Room</h1>
 <div class="wrap" id="app" style="display:none">
   <div class="header">
     <div>
       <div class="title">ChurchesNearMe — War Room 🏛️</div>
       <div class="meta">Last updated: <span id="lastUpdated"></span></div>
     </div>
-    <div class="meta"><a href="https://churchesnearme.co.za" target="_blank" rel="noopener">Back to main site →</a></div>
+    <div class="meta"><a href="https://www.churchesnearme.co.za" target="_blank" rel="noopener">Back to main site →</a></div>
   </div>
 
   <section class="stats">
@@ -310,7 +316,7 @@
     <div class="card">
       <h2>Quick Actions</h2>
       <div class="actions">
-        <a class="btn" href="https://churchesnearme.co.za" target="_blank" rel="noopener">View Site</a>
+        <a class="btn" href="https://www.churchesnearme.co.za" target="_blank" rel="noopener">View Site</a>
         <a class="btn" href="https://github.com/brandonkz/churches-near-me" target="_blank" rel="noopener">GitHub Repo</a>
         <a class="btn" href="https://npfbrorgnwhrbpfbqiuh.supabase.co" target="_blank" rel="noopener">Supabase Dashboard</a>
         <a class="btn" href="https://npfbrorgnwhrbpfbqiuh.supabase.co" target="_blank" rel="noopener">Check Paid Submissions</a>
@@ -357,7 +363,7 @@
 
   // localStorage helpers
   const save = (k,v)=>localStorage.setItem(k,v);
-  const load = (k)=>localStorage.getItem(k)||'';
+  const load = (k)=>localStorage.getItem(k)|'';
 
   // Competitor notes
   const competitorNotes = document.getElementById('competitorNotes');
@@ -374,7 +380,7 @@
   const noteInput = document.getElementById('noteInput');
   const notesKey = 'cnm_notes_log';
   const renderNotes = () => {
-    const notes = JSON.parse(load(notesKey) || '[]');
+    const notes = JSON.parse(load(notesKey) | '[]');
     noteLog.innerHTML = notes.map(n=>`<div class="note-entry"><strong>${n.time}</strong><br/>${n.text}</div>`).join('');
   };
   renderNotes();
@@ -384,7 +390,7 @@
       e.preventDefault();
       const text = noteInput.value.trim();
       if(!text) return;
-      const notes = JSON.parse(load(notesKey) || '[]');
+      const notes = JSON.parse(load(notesKey) | '[]');
       notes.unshift({time:new Date().toLocaleString(), text:text.replace(/\n/g,'<br/>')});
       save(notesKey, JSON.stringify(notes));
       noteInput.value='';

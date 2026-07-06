@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-07-06T07:37:34.383Z",
+  "churches": 631,
+  "churchPages": 631,
+  "oldChurchRedirects": 631,
+  "cityPages": 50,
+  "denominationPages": 35,
+  "combinedPages": 31,
+  "directoryUpdateRedirects": 22,
+  "canonicalHost": "https://www.churchesnearme.co.za",
+  "manualGscSubmissionNeeded": true,
+  "bareDomainRedirect": "Set DNS/provider redirect from churchesnearme.co.za to www.churchesnearme.co.za if not already configured."
+}

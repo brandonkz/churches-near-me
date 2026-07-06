@@ -1,155 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nondenominational Churches in South Africa | Churches Near Me</title>
-  <meta name="description" content="Explore Nondenominational churches near me across South Africa. Browse 1 verified churches, view locations by city, and connect with Nondenominational congregations.">
-  <link rel="canonical" href="https://churchesnearme.co.za/denominations/nondenominational.html">
-  <meta property="og:title" content="Nondenominational Churches in South Africa">
-  <meta property="og:description" content="Explore Nondenominational churches near me across South Africa. Browse 1 verified churches, view locations by city, and connect with Nondenominational congregations.">
-  <meta property="og:url" content="https://churchesnearme.co.za/denominations/nondenominational.html">
+  <title>Nondenominational Churches in South Africa: Directory by City</title>
+  <meta name="description" content="Browse 1 Nondenominational churches in South Africa. Find listings by city with addresses, contact details and service times.">
+  <link rel="canonical" href="https://www.churchesnearme.co.za/denominations/nondenominational.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#1a2744">
+  <meta property="og:title" content="Nondenominational Churches in South Africa: Directory by City">
+  <meta property="og:description" content="Browse 1 Nondenominational churches in South Africa. Find listings by city with addresses, contact details and service times.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.churchesnearme.co.za/denominations/nondenominational.html">
+  <meta property="og:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <meta property="og:site_name" content="ChurchesNearMe.co.za">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nondenominational Churches in South Africa: Directory by City">
+  <meta name="twitter:description" content="Browse 1 Nondenominational churches in South Africa. Find listings by city with addresses, contact details and service times.">
+  <meta name="twitter:image" content="https://www.churchesnearme.co.za/assets/og-image.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css?v=2">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <style>
-    .denom-hero { padding: 48px 20px 24px; max-width: 1100px; margin: 0 auto; }
-    .denom-hero h1 { margin-bottom: 12px; }
-    .denom-hero p { max-width: 760px; }
-    .denom-blurb { color: #475569; margin-top: 8px; }
-    .updated { font-size: 13px; color: #94a3b8; margin-top: 8px; }
-    .filters { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
-    .filter-label { font-weight: 600; }
-    .filter-select { padding: 8px 12px; border-radius: 8px; border: 1px solid #d0d5dd; background: #fff; }
-    .church-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .church-card { background: #ffffff; border-radius: 16px; padding: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08); }
-    .church-card h3 { margin: 0 0 8px; }
-    .church-address { color: #475569; margin-bottom: 12px; }
-    .church-links { display: flex; gap: 12px; flex-wrap: wrap; }
-    .church-link { color: #1d4ed8; font-weight: 600; text-decoration: none; }
-    .map-wrapper { margin: 32px 0; }
-    #denom-map { height: 420px; border-radius: 16px; overflow: hidden; }
-    .empty-state { color: #64748b; }
-    .back-link { display: inline-block; margin-top: 24px; font-weight: 600; }
-    .faq-section { margin-top: 28px; }
-    .faq-section h2 { color: #0f172a; margin-bottom: 12px; font-size: 22px; }
-    .faq-list { display: grid; gap: 12px; }
-    .faq-item { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 16px; }
-    .faq-item h3 { margin: 0 0 6px 0; font-size: 16px; color: #0f172a; }
-    .faq-item p { margin: 0; color: #475569; line-height: 1.6; }
-  </style>
-</head>
-<body>
-  <main class="denom-hero">
-    <a href="/" class="back-link">← Back to homepage</a>
-    <h1>Nondenominational Churches in South Africa</h1>
-    <p>Explore Nondenominational churches near me across South Africa. Browse 1 verified churches, view locations by city, and connect with Nondenominational congregations.</p>
-    <p class="denom-blurb">Every Nondenominational church has its own culture and service style. Use the city filter to find congregations closest to you and explore a few before you settle.</p>
-    <div class="updated">Last updated: 2026-06-12</div>
-
-    <div class="filters">
-      <label class="filter-label" for="city-filter">Filter by city</label>
-  <select id="city-filter" class="filter-select">
-    <option value="all">All</option>
-    <option value="Johannesburg">Johannesburg</option>
-  </select>
-    </div>
-
-    <div class="map-wrapper">
-      <div id="denom-map" aria-label="Map of Nondenominational churches"></div>
-    </div>
-
-    <div class="church-grid">
-    <article class="church-card" data-denomination="Nondenominational" data-city="Johannesburg">
-        <h3><a href="/churches/fourways-community-church-johannesburg/">Fourways Community Church</a></h3>
-        <div class="church-denom">Nondenominational</div>
-        <div class="church-address">2 Capricorn Rd, Lone Hill, Fourways, Johannesburg</div>
-        <div class="church-links">
-          <a href="/churches/fourways-community-church-johannesburg/" class="church-link">View details</a>
-          
-        </div>
-      </article>
-  </div>
-
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        
-          <div class="faq-item">
-            <h3>What is a Nondenominational church?</h3>
-            <p>Nondenominational churches share a common tradition, but each congregation has its own worship style and community culture.</p>
-          </div>
-        
-          <div class="faq-item">
-            <h3>Which cities have Nondenominational churches?</h3>
-            <p>You can find Nondenominational churches in cities like Johannesburg and more across South Africa.</p>
-          </div>
-        
-          <div class="faq-item">
-            <h3>Can I add a Nondenominational church listing?</h3>
-            <p>Yes. Use the Add Your Church page to submit a listing and we will verify it.</p>
-          </div>
-        
-      </div>
-    </section>
-  </main>
-
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
+  "@type": "ItemList",
+  "itemListElement": [
     {
-      "@type": "LocalBusiness",
-      "name": "Fourways Community Church",
-      "url": "https://churchesnearme.co.za/churches/fourways-community-church-johannesburg/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2 Capricorn Rd, Lone Hill, Fourways",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -25.9976,
-        "longitude": 28.0108
-      }
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://www.churchesnearme.co.za/churches/gauteng/johannesburg/fourways-community-church-johannesburg.html",
+      "name": "Fourways Community Church"
     }
   ]
 }
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is a Nondenominational church?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nondenominational churches share a common tradition, but each congregation has its own worship style and community culture."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which cities have Nondenominational churches?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can find Nondenominational churches in cities like Johannesburg and more across South Africa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I add a Nondenominational church listing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Use the Add Your Church page to submit a listing and we will verify it."
-      }
-    }
-  ]
-}
-  </script>
+</script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -159,58 +51,72 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://churchesnearme.co.za/"
+      "item": "https://www.churchesnearme.co.za/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Nondenominational churches",
-      "item": "https://churchesnearme.co.za/denominations/nondenominational.html"
+      "item": "https://www.churchesnearme.co.za/denominations/nondenominational.html"
     }
   ]
 }
-  </script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a class="logo" href="/">ChurchesNearMe</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+          <a href="/" class="active">Home</a>
+          <a href="/claim.html">Add or Claim Your Church</a>
+          <a href="/featured.html">Get Featured</a>
+          <a href="/blog/">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="container--medium" id="main">
+      <h1>Nondenominational Churches in South Africa</h1>
+      <p class="lead">Browse 1 Nondenominational churches in South Africa. Find listings by city with addresses, contact details and service times.</p>
+      <section class="content-section">
+      <h2>Johannesburg</h2>
+      <div class="church-grid"><a href="/churches/gauteng/johannesburg/fourways-community-church-johannesburg.html" class="church-card-link">
+    <article class="church-card" data-denomination="Nondenominational" data-city="Johannesburg" data-province="Gauteng">
+
+      <h3>Fourways Community Church</h3>
+      <div class="church-denomination">Nondenominational</div>
+      <div class="church-address">2 Capricorn Rd, Lone Hill, Fourways, Johannesburg</div>
+
+      <div class="church-contact"><span class="church-link-tag">View details</span><span class="church-link-tag">Call</span></div>
+    </article>
+  </a></div>
+    </section>
+    </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 ChurchesNearMe.co.za | Free church directory for South Africa</p>
+      <p style="margin-top: 8px;">
+        <a href="/about.html">About</a> |
+        <a href="/contact.html">Contact</a> |
+        <a href="/privacy.html">Privacy</a> |
+        <a href="/claim.html">Add or Claim Your Church</a> |
+        <a href="/featured.html">Get Featured</a> |
+        <a href="/blog/">Blog</a>
+      </p>
+    </div>
+  </footer>
   <script>
-    const churches = [{"name":"Fourways Community Church","slug":"fourways-community-church-johannesburg","city":"Johannesburg","lat":-25.9976,"lng":28.0108}];
-    const map = L.map('denom-map').setView([-29.0, 24.0], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const markers = [];
-    churches.forEach(church => {
-      if (!Number.isFinite(church.lat) || !Number.isFinite(church.lng)) return;
-      const marker = L.marker([church.lat, church.lng]).addTo(map);
-      marker.bindPopup('<strong>' + escapeHtml(church.name) + '</strong><br>' + escapeHtml(church.city || '') + '<br><a href="/churches/' + escapeHtml(church.slug) + '/">View page</a>');
-      markers.push(marker);
-    });
-
-    if (markers.length) {
-      const group = L.featureGroup(markers);
-      map.fitBounds(group.getBounds().pad(0.2));
-    }
-
-    const cityFilter = document.getElementById('city-filter');
-    if (cityFilter) {
-      cityFilter.addEventListener('change', event => {
-        const value = event.target.value;
-        const cards = document.querySelectorAll('.church-card');
-        cards.forEach(card => {
-          const city = card.dataset.city || '';
-          const show = value === 'all' || city === value;
-          card.style.display = show ? 'block' : 'none';
-        });
+    var headerEl = document.querySelector('header');
+    var navToggle = document.querySelector('.nav-toggle');
+    if (navToggle && headerEl) {
+      navToggle.addEventListener('click', function() {
+        var isOpen = headerEl.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', isOpen);
       });
-    }
-
-    function escapeHtml(value) {
-      return String(value || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
     }
   </script>
 </body>
